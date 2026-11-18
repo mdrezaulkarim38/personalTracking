@@ -1,0 +1,165 @@
+{
+  "categories": [
+    {
+      "name": "Python Backend",
+      "items": [
+        [
+          "Python 3",
+          "Primary backend language for APIs, AI workflows, evaluation tools, and service integrations."
+        ],
+        [
+          "Type hints and typing",
+          "Make service contracts and domain boundaries easier to review and validate."
+        ],
+        [
+          "Object-oriented Python",
+          "Model cohesive domain behavior without overcomplicating small services."
+        ],
+        [
+          "asyncio",
+          "Handle concurrent I/O with explicit cancellation and bounded concurrency."
+        ],
+        [
+          "FastAPI",
+          "Build typed REST APIs, dependency boundaries, and OpenAPI documentation."
+        ],
+        [
+          "Pydantic",
+          "Validate API payloads, configuration, and structured model output."
+        ],
+        [
+          "Pytest",
+          "Test application behavior, edge cases, fixtures, and async workflows."
+        ],
+        [
+          "HTTPX",
+          "Call external APIs and test ASGI endpoints."
+        ]
+      ]
+    },
+    {
+      "name": "Persistence and Background Work",
+      "items": [
+        [
+          "PostgreSQL",
+          "Primary relational store for application records, transactions, and full-text search."
+        ],
+        [
+          "SQLAlchemy 2.0",
+          "Typed SQL and ORM mapping for Python persistence."
+        ],
+        [
+          "Alembic",
+          "Version and apply relational schema migrations."
+        ],
+        [
+          "pgvector",
+          "Store embeddings and run vector similarity search in PostgreSQL."
+        ],
+        [
+          "Redis",
+          "Support caching, rate limits, ephemeral state, and queue coordination."
+        ],
+        [
+          "Celery",
+          "Run durable asynchronous jobs with retries and worker monitoring."
+        ]
+      ]
+    },
+    {
+      "name": "AI and LLM Engineering",
+      "items": [
+        [
+          "OpenAI-compatible APIs",
+          "Integrate hosted or local chat and embedding providers behind service interfaces."
+        ],
+        [
+          "Ollama",
+          "Run and evaluate local models for development and private workloads."
+        ],
+        [
+          "Embeddings",
+          "Represent text for semantic retrieval and similarity."
+        ],
+        [
+          "Structured outputs",
+          "Validate generated data against typed application schemas."
+        ],
+        [
+          "Tool calling",
+          "Expose narrowly scoped server-controlled operations to a model."
+        ],
+        [
+          "LangGraph",
+          "Orchestrate stateful, bounded, and human-in-the-loop agent workflows."
+        ],
+        [
+          "RAG and hybrid search",
+          "Retrieve grounded evidence using semantic and lexical signals."
+        ],
+        [
+          "LLM evaluation",
+          "Measure relevance, faithfulness, task success, latency, and spend."
+        ]
+      ]
+    },
+    {
+      "name": "Frontend and API Integration",
+      "items": [
+        [
+          "React",
+          "Build portfolio frontends for Python APIs."
+        ],
+        [
+          "TypeScript",
+          "Add checked data contracts to frontend code."
+        ],
+        [
+          "REST APIs",
+          "Provide stable resource-oriented contracts between UI and backend."
+        ],
+        [
+          "Server-Sent Events",
+          "Stream model progress and responses over HTTP."
+        ]
+      ]
+    },
+    {
+      "name": "Production Engineering",
+      "items": [
+        [
+          "Docker and Compose",
+          "Package services and reproducible local dependencies."
+        ],
+        [
+          "Git and GitHub",
+          "Review changes, publish project evidence, and collaborate remotely."
+        ],
+        [
+          "GitHub Actions",
+          "Run automated lint, tests, type checks, and deployment workflows."
+        ],
+        [
+          "Linux and Nginx",
+          "Operate Python services behind a production reverse proxy."
+        ],
+        [
+          "Cloud deployment",
+          "Deploy APIs, workers, databases, secrets, and storage."
+        ],
+        [
+          "Structured logging and monitoring",
+          "Diagnose errors, latency, queues, and application health."
+        ],
+        [
+          "OpenTelemetry",
+          "Instrument traces, metrics, and logs across APIs and AI calls."
+        ],
+        [
+          "Security and performance",
+          "Protect data and access while measuring throughput and cost."
+        ]
+      ]
+    }
+  ]
+}

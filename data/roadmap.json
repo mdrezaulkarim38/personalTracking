@@ -1,0 +1,1181 @@
+{
+  "learningStrategy": {
+    "title": "Keep .NET as your backend advantage; add AI engineering depth",
+    "summary": "You already have nearly four years of enterprise backend experience. This roadmap does not restart you as a beginner: it applies your C#, ASP.NET Core, SQL, security, and architecture skills to modern AI systems. The main portfolio projects use ASP.NET Core 10. Python remains a secondary skill you can add later if a target role specifically requires it.",
+    "steps": [
+      {
+        "weeks": "Weeks 1–3",
+        "title": "Learn AI concepts through .NET",
+        "detail": "Refresh modern async/streaming patterns only as needed, then learn model behavior and .NET AI abstractions."
+      },
+      {
+        "weeks": "Weeks 4–7",
+        "title": "Build secure AI APIs",
+        "detail": "Use ASP.NET Core 10, Microsoft.Extensions.AI, your enterprise backend strengths, and production API practices."
+      },
+      {
+        "weeks": "Weeks 8–12",
+        "title": "Build RAG and evaluation",
+        "detail": "Create document ingestion, embeddings, pgvector retrieval, citations, and repeatable evaluation."
+      },
+      {
+        "weeks": "Weeks 13–20",
+        "title": "Add controlled agents and production safeguards",
+        "detail": "Integrate business tools with permissions, approvals, security, cost controls, deployment, and observability."
+      },
+      {
+        "weeks": "Weeks 21–24",
+        "title": "Ship proof and prepare for remote .NET AI roles",
+        "detail": "Complete a capstone, polish portfolio evidence, and practice AI backend/system design interviews."
+      }
+    ],
+    "rule": "Use the linked docs, implement the practical exercise, then complete the tasks. Move on when the readiness check is true—not just when the week ends."
+  },
+  "phases": [
+    {
+      "id": "dotnet-phase-1",
+      "title": "AI Foundations for .NET Engineers",
+      "startWeek": 1,
+      "endWeek": 3,
+      "weeks": [
+        {
+          "week": 1,
+          "title": "Modern C# for AI Services",
+          "objective": "Refresh only the C# features that make AI backend code asynchronous, typed, testable, and safe.",
+          "topics": [
+            "Records, nullable reference types, generics, and result models",
+            "Task, ValueTask, CancellationToken, and async streams",
+            "Dependency injection, options, typed HttpClient, and configuration",
+            "Unit tests, mocks, and structured logging"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w01-t01",
+              "text": "Create a .NET 10 Web API solution with nullable reference types and analyzers enabled."
+            },
+            {
+              "id": "dotnet-w01-t02",
+              "text": "Build a typed service using records, options, DI, and cancellation-aware async methods."
+            },
+            {
+              "id": "dotnet-w01-t03",
+              "text": "Use IAsyncEnumerable<T> to stream sample events and test client cancellation."
+            },
+            {
+              "id": "dotnet-w01-t04",
+              "text": "Add unit tests and structured logs for success, validation failure, and cancellation."
+            }
+          ],
+          "deliverable": "A clean .NET 10 service foundation with async tests and streaming.",
+          "learningGuide": {
+            "steps": [
+              "Records, nullable reference types, generics, and result models",
+              "Task, ValueTask, CancellationToken, and async streams",
+              "Dependency injection, options, typed HttpClient, and configuration",
+              "Unit tests, mocks, and structured logging"
+            ],
+            "resources": [
+              "C# documentation",
+              "ASP.NET Core 10",
+              ".NET testing"
+            ],
+            "practice": "Use your existing C# experience; focus on async stream cancellation and current .NET APIs, not beginner syntax.",
+            "readyWhen": "You can explain cancellation propagation and stream typed events without blocking the request thread."
+          }
+        },
+        {
+          "week": 2,
+          "title": "LLM and Generative AI Foundations",
+          "objective": "Understand the model concepts needed to design reliable applications without trying to train a foundation model.",
+          "topics": [
+            "Tokens, context windows, sampling, model inference, and latency",
+            "Hosted versus local models, quantization, privacy, and cost",
+            "Embeddings and similarity at a conceptual level",
+            "Model limitations, nondeterminism, and hallucination"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w02-t01",
+              "text": "Compare responses from one hosted model and Ollama using the same test prompts."
+            },
+            {
+              "id": "dotnet-w02-t02",
+              "text": "Measure response latency and token usage for short and long contexts."
+            },
+            {
+              "id": "dotnet-w02-t03",
+              "text": "Write a concise model-selection note for a privacy-sensitive enterprise workflow."
+            },
+            {
+              "id": "dotnet-w02-t04",
+              "text": "Create a C# console experiment that records model, prompt version, duration, and outcome."
+            }
+          ],
+          "deliverable": "A model comparison report backed by a repeatable C# experiment.",
+          "learningGuide": {
+            "steps": [
+              "Tokens, context windows, sampling, model inference, and latency",
+              "Hosted versus local models, quantization, privacy, and cost",
+              "Embeddings and similarity at a conceptual level",
+              "Model limitations, nondeterminism, and hallucination"
+            ],
+            "resources": [
+              ".NET AI overview",
+              "Microsoft.Extensions.AI",
+              "Ollama",
+              "OpenAI API"
+            ],
+            "practice": "Learn model behavior and tradeoffs before choosing frameworks; use the same scenarios to compare providers.",
+            "readyWhen": "You can describe context limits, nondeterminism, privacy, latency, and cost tradeoffs for two providers."
+          }
+        },
+        {
+          "week": 3,
+          "title": "The .NET AI Stack and Provider Abstractions",
+          "objective": "Use .NET AI abstractions to keep application code testable and portable across providers.",
+          "topics": [
+            "IChatClient and IEmbeddingGenerator abstractions",
+            "Provider adapters for hosted and local models",
+            "Microsoft.Extensions.AI middleware, logging, and OpenTelemetry",
+            "Test doubles and deterministic application tests"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w03-t01",
+              "text": "Register a provider behind IChatClient with configuration from options."
+            },
+            {
+              "id": "dotnet-w03-t02",
+              "text": "Write one application service that works with two provider adapters."
+            },
+            {
+              "id": "dotnet-w03-t03",
+              "text": "Add a fake chat client and unit tests that do not call a live model."
+            },
+            {
+              "id": "dotnet-w03-t04",
+              "text": "Instrument model calls with duration, provider, and error telemetry."
+            }
+          ],
+          "deliverable": "A provider-switchable .NET AI service with deterministic tests.",
+          "learningGuide": {
+            "steps": [
+              "IChatClient and IEmbeddingGenerator abstractions",
+              "Provider adapters for hosted and local models",
+              "Microsoft.Extensions.AI middleware, logging, and OpenTelemetry",
+              "Test doubles and deterministic application tests"
+            ],
+            "resources": [
+              "Microsoft.Extensions.AI",
+              ".NET AI overview",
+              "OpenTelemetry .NET"
+            ],
+            "practice": "Treat the model as a dependency behind an interface, just as you would a database or payment gateway.",
+            "readyWhen": "The same application tests pass with a fake provider, Ollama, and a hosted provider."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dotnet-phase-2",
+      "title": "ASP.NET Core AI Backend Engineering",
+      "startWeek": 4,
+      "endWeek": 7,
+      "weeks": [
+        {
+          "week": 4,
+          "title": "ASP.NET Core 10 AI API Fundamentals",
+          "objective": "Build typed HTTP contracts for AI features using ASP.NET Core 10 Web API.",
+          "topics": [
+            "Controllers and Minimal APIs, endpoint groups, and OpenAPI",
+            "Request/response validation and ProblemDetails",
+            "DI scopes, configuration, options validation, and HttpClientFactory",
+            "Rate limits, cancellation, health checks, and API versioning"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w04-t01",
+              "text": "Create an AI API with chat, health, and model-capability endpoints."
+            },
+            {
+              "id": "dotnet-w04-t02",
+              "text": "Add validated request records and consistent ProblemDetails responses."
+            },
+            {
+              "id": "dotnet-w04-t03",
+              "text": "Configure provider settings with validated options and secret-safe logging."
+            },
+            {
+              "id": "dotnet-w04-t04",
+              "text": "Document APIs with OpenAPI and test contracts using WebApplicationFactory."
+            }
+          ],
+          "deliverable": "A documented ASP.NET Core 10 AI API shell with reliable validation.",
+          "learningGuide": {
+            "steps": [
+              "Controllers and Minimal APIs, endpoint groups, and OpenAPI",
+              "Request/response validation and ProblemDetails",
+              "DI scopes, configuration, options validation, and HttpClientFactory",
+              "Rate limits, cancellation, health checks, and API versioning"
+            ],
+            "resources": [
+              "ASP.NET Core 10",
+              "ASP.NET Core Web API",
+              ".NET AI overview",
+              ".NET testing"
+            ],
+            "practice": "Keep endpoint handlers thin: validate the request, call an application service, return a typed result.",
+            "readyWhen": "OpenAPI describes the contract, invalid requests return useful 4xx errors, and cancellation reaches the model call."
+          }
+        },
+        {
+          "week": 5,
+          "title": "Production .NET API Architecture and Testing",
+          "objective": "Apply your backend experience to AI endpoints while keeping boundaries and tests clear.",
+          "topics": [
+            "Application and infrastructure boundaries",
+            "EF Core or Dapper for relational access",
+            "Transactions, idempotency, and database migrations",
+            "Integration tests, Testcontainers, and API contract tests"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w05-t01",
+              "text": "Define domain, application, and infrastructure boundaries for an AI workflow."
+            },
+            {
+              "id": "dotnet-w05-t02",
+              "text": "Persist conversations and request metadata with EF Core or Dapper."
+            },
+            {
+              "id": "dotnet-w05-t03",
+              "text": "Add integration tests for data access and API behavior."
+            },
+            {
+              "id": "dotnet-w05-t04",
+              "text": "Document transaction, retry, idempotency, and failure boundaries."
+            }
+          ],
+          "deliverable": "A tested .NET API vertical slice with persistent conversation metadata.",
+          "learningGuide": {
+            "steps": [
+              "Application and infrastructure boundaries",
+              "EF Core or Dapper for relational access",
+              "Transactions, idempotency, and database migrations",
+              "Integration tests, Testcontainers, and API contract tests"
+            ],
+            "resources": [
+              "ASP.NET Core Web API",
+              "Entity Framework Core",
+              "SQL Server",
+              ".NET testing"
+            ],
+            "practice": "Use familiar clean architecture patterns only where they clarify AI workflow responsibilities; avoid layering for its own sake.",
+            "readyWhen": "A new developer can trace a request from endpoint through application service to persistence and tests."
+          }
+        },
+        {
+          "week": 6,
+          "title": "Identity, Authorization, and Tenant Isolation",
+          "objective": "Secure AI features using identity and authorization rules already familiar from enterprise systems.",
+          "topics": [
+            "JWT/OIDC authentication and claims",
+            "Role and resource-based authorization",
+            "Tenant-aware data access and prompt/context isolation",
+            "Secrets, input limits, upload safety, and audit trails"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w06-t01",
+              "text": "Secure AI endpoints with the chosen identity provider and explicit policies."
+            },
+            {
+              "id": "dotnet-w06-t02",
+              "text": "Enforce tenant filters in both conversation and document retrieval paths."
+            },
+            {
+              "id": "dotnet-w06-t03",
+              "text": "Add audit events for model requests and sensitive tool actions."
+            },
+            {
+              "id": "dotnet-w06-t04",
+              "text": "Test unauthenticated, unauthorized, cross-tenant, and oversized-input cases."
+            }
+          ],
+          "deliverable": "An authenticated .NET AI API with tested tenant isolation.",
+          "learningGuide": {
+            "steps": [
+              "JWT/OIDC authentication and claims",
+              "Role and resource-based authorization",
+              "Tenant-aware data access and prompt/context isolation",
+              "Secrets, input limits, upload safety, and audit trails"
+            ],
+            "resources": [
+              "ASP.NET Core 10",
+              "ASP.NET Core security",
+              "Entity Framework Core"
+            ],
+            "practice": "Model authorization before writing AI prompts; the model must never decide whether the caller is permitted.",
+            "readyWhen": "Automated tests prove one tenant cannot retrieve another tenant’s records or documents."
+          }
+        },
+        {
+          "week": 7,
+          "title": "Streaming, Background Work, and Resilience",
+          "objective": "Handle slow model calls and long-running AI tasks without fragile request behavior.",
+          "topics": [
+            "Server-Sent Events with ASP.NET Core 10",
+            "BackgroundService, queues, and durable job options",
+            "Timeouts, bounded retries, circuit breakers, and backpressure",
+            "Redis caching and coordination where appropriate"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w07-t01",
+              "text": "Stream tokens or progress using the ASP.NET Core 10 SSE result APIs."
+            },
+            {
+              "id": "dotnet-w07-t02",
+              "text": "Move document ingestion to a background worker with job status persistence."
+            },
+            {
+              "id": "dotnet-w07-t03",
+              "text": "Add timeouts and bounded retries for transient provider failures."
+            },
+            {
+              "id": "dotnet-w07-t04",
+              "text": "Use Redis for one explicitly scoped cache or coordination use case and test invalidation."
+            }
+          ],
+          "deliverable": "An AI API with streaming responses and reliable background ingestion.",
+          "learningGuide": {
+            "steps": [
+              "Server-Sent Events with ASP.NET Core 10",
+              "BackgroundService, queues, and durable job options",
+              "Timeouts, bounded retries, circuit breakers, and backpressure",
+              "Redis caching and coordination where appropriate"
+            ],
+            "resources": [
+              "ASP.NET Core 10",
+              "Redis",
+              ".NET resilience",
+              "OpenTelemetry .NET"
+            ],
+            "practice": "Keep long-running ingestion out of the request lifecycle and make user-facing streaming cancellable.",
+            "readyWhen": "A cancelled client stops unnecessary work, and failed jobs can be inspected and retried safely."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dotnet-phase-3",
+      "title": ".NET RAG and Knowledge Systems",
+      "startWeek": 8,
+      "endWeek": 12,
+      "weeks": [
+        {
+          "week": 8,
+          "title": "RAG Architecture and Retrieval Quality",
+          "objective": "Design retrieval around evidence quality, access boundaries, and explainable results.",
+          "topics": [
+            "Ingestion, extraction, metadata, and stable document identities",
+            "Chunking by structure, size, and overlap",
+            "Dense, lexical, and hybrid retrieval",
+            "Filters, reranking, relevance thresholds, and citations"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w08-t01",
+              "text": "Draw a RAG data flow and define document/chunk metadata."
+            },
+            {
+              "id": "dotnet-w08-t02",
+              "text": "Compare chunking strategies on a small representative enterprise corpus."
+            },
+            {
+              "id": "dotnet-w08-t03",
+              "text": "Implement lexical and vector retrieval with tenant and permission filters."
+            },
+            {
+              "id": "dotnet-w08-t04",
+              "text": "Return ranked evidence with source IDs, page references, and relevance scores."
+            }
+          ],
+          "deliverable": "A retrieval benchmark showing relevant chunks and source traceability.",
+          "learningGuide": {
+            "steps": [
+              "Ingestion, extraction, metadata, and stable document identities",
+              "Chunking by structure, size, and overlap",
+              "Dense, lexical, and hybrid retrieval",
+              "Filters, reranking, relevance thresholds, and citations"
+            ],
+            "resources": [
+              "PostgreSQL",
+              "pgvector",
+              "OpenAI API",
+              "Ollama"
+            ],
+            "practice": "Inspect what retrieval returns before tuning generation; poor evidence cannot be fixed by a stronger prompt.",
+            "readyWhen": "For representative questions, you can explain why each source was retrieved and why inaccessible sources are excluded."
+          }
+        },
+        {
+          "week": 9,
+          "title": "Embeddings and Vector Search in .NET",
+          "objective": "Generate embeddings through .NET abstractions and store/query vectors with PostgreSQL and pgvector.",
+          "topics": [
+            "Embedding dimensions and similarity metrics",
+            "IEmbeddingGenerator and provider-specific adapters",
+            "Vector schema/indexes and distance operators",
+            "Batching, metadata filters, and embedding model versioning"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w09-t01",
+              "text": "Add an embedding provider using IEmbeddingGenerator."
+            },
+            {
+              "id": "dotnet-w09-t02",
+              "text": "Create a pgvector schema with document, tenant, chunk, and model-version metadata."
+            },
+            {
+              "id": "dotnet-w09-t03",
+              "text": "Implement vector search and combine it with a lexical query."
+            },
+            {
+              "id": "dotnet-w09-t04",
+              "text": "Measure retrieval quality and latency across representative queries."
+            }
+          ],
+          "deliverable": "A .NET embedding and hybrid-search service using PostgreSQL/pgvector.",
+          "learningGuide": {
+            "steps": [
+              "Embedding dimensions and similarity metrics",
+              "IEmbeddingGenerator and provider-specific adapters",
+              "Vector schema/indexes and distance operators",
+              "Batching, metadata filters, and embedding model versioning"
+            ],
+            "resources": [
+              "Microsoft.Extensions.AI",
+              "PostgreSQL",
+              "pgvector"
+            ],
+            "practice": "Version embeddings with their model and ingestion configuration so re-indexing is deliberate.",
+            "readyWhen": "You can explain the chosen metric, index, metadata filters, and how embeddings are regenerated after model changes."
+          }
+        },
+        {
+          "week": 10,
+          "title": "Document Ingestion and Secure Knowledge Stores",
+          "objective": "Build a production-minded ingestion pipeline before adding answer generation.",
+          "topics": [
+            "PDF/text extraction and file validation",
+            "Chunk provenance, page references, and deduplication",
+            "Background ingestion, retries, and deletion workflows",
+            "Document-level and tenant-level authorization"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w10-t01",
+              "text": "Create an upload endpoint with size/type checks and tenant ownership."
+            },
+            {
+              "id": "dotnet-w10-t02",
+              "text": "Extract text and create chunks with page and document metadata."
+            },
+            {
+              "id": "dotnet-w10-t03",
+              "text": "Queue embedding and index work with retry-safe status transitions."
+            },
+            {
+              "id": "dotnet-w10-t04",
+              "text": "Implement document deletion that removes source text and vectors."
+            }
+          ],
+          "deliverable": "A secure document ingestion pipeline with traceable chunk provenance.",
+          "learningGuide": {
+            "steps": [
+              "PDF/text extraction and file validation",
+              "Chunk provenance, page references, and deduplication",
+              "Background ingestion, retries, and deletion workflows",
+              "Document-level and tenant-level authorization"
+            ],
+            "resources": [
+              "ASP.NET Core Web API",
+              "PostgreSQL",
+              "pgvector",
+              "Redis"
+            ],
+            "practice": "Treat uploaded documents as untrusted input and make deletion semantics explicit across original files and derived data.",
+            "readyWhen": "Every chunk can be traced to an authorized source document and deletion removes its searchable content."
+          }
+        },
+        {
+          "week": 11,
+          "title": "Grounded RAG Answers and Citations",
+          "objective": "Connect retrieval evidence to useful responses while making unsupported answers explicit.",
+          "topics": [
+            "Prompt construction and bounded context",
+            "Citation identifiers and evidence-to-answer mapping",
+            "Abstention when evidence is weak or missing",
+            "Streaming with source metadata and partial failures"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w11-t01",
+              "text": "Build a RAG application service that receives authorized evidence only."
+            },
+            {
+              "id": "dotnet-w11-t02",
+              "text": "Generate answers with citation markers tied to retrieved chunk IDs."
+            },
+            {
+              "id": "dotnet-w11-t03",
+              "text": "Return an explicit insufficient-evidence response when thresholds are not met."
+            },
+            {
+              "id": "dotnet-w11-t04",
+              "text": "Stream answer events and citations using an API contract tested by clients."
+            }
+          ],
+          "deliverable": "A cited document-answer endpoint with a tested abstention path.",
+          "learningGuide": {
+            "steps": [
+              "Prompt construction and bounded context",
+              "Citation identifiers and evidence-to-answer mapping",
+              "Abstention when evidence is weak or missing",
+              "Streaming with source metadata and partial failures"
+            ],
+            "resources": [
+              "Microsoft.Extensions.AI",
+              "ASP.NET Core 10",
+              "pgvector",
+              "OpenAI API"
+            ],
+            "practice": "Keep citations grounded in retrieved evidence and verify citation IDs server-side.",
+            "readyWhen": "Tests verify all citations point to retrieved authorized chunks and weak retrieval does not produce confident unsupported claims."
+          }
+        },
+        {
+          "week": 12,
+          "title": "RAG Evaluation and Regression Testing",
+          "objective": "Measure retrieval and answer quality so RAG changes can be reviewed rather than guessed.",
+          "topics": [
+            "Golden datasets and expected evidence",
+            "Retrieval recall/ranking and answer faithfulness",
+            "Model-as-judge limits and human review",
+            "Regression thresholds, prompt versioning, and experiment records"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w12-t01",
+              "text": "Create a versioned evaluation dataset from realistic questions and source passages."
+            },
+            {
+              "id": "dotnet-w12-t02",
+              "text": "Measure retrieval recall and citation correctness separately from answer quality."
+            },
+            {
+              "id": "dotnet-w12-t03",
+              "text": "Compare two chunking or reranking configurations."
+            },
+            {
+              "id": "dotnet-w12-t04",
+              "text": "Run evaluation from CI on a small deterministic subset and save reports."
+            }
+          ],
+          "deliverable": "An evaluated ASP.NET Core Enterprise Knowledge Assistant with ingestion, pgvector retrieval, grounded citations, and a documented quality baseline.",
+          "learningGuide": {
+            "steps": [
+              "Golden datasets and expected evidence",
+              "Retrieval recall/ranking and answer faithfulness",
+              "Model-as-judge limits and human review",
+              "Regression thresholds, prompt versioning, and experiment records"
+            ],
+            "resources": [
+              ".NET testing",
+              "Microsoft.Extensions.AI",
+              "PostgreSQL",
+              "OpenTelemetry .NET"
+            ],
+            "practice": "Evaluate retrieval and generation separately; one aggregate score can hide failure causes.",
+            "readyWhen": "You can explain retrieval failures from an evaluation set and demonstrate citation correctness, tenant isolation, and safe abstention in the working assistant."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dotnet-phase-4",
+      "title": "Enterprise AI Agents and Workflows",
+      "startWeek": 13,
+      "endWeek": 16,
+      "weeks": [
+        {
+          "week": 13,
+          "title": "Tool Calling and Bounded AI Workflows",
+          "objective": "Let models request business tools while keeping execution under normal application controls.",
+          "topics": [
+            "Tool/function schemas and structured outputs",
+            "Tool allowlists, input validation, and result shaping",
+            "Execution budgets and explicit stop conditions",
+            "Separating model planning from application authorization"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w13-t01",
+              "text": "Expose a read-only customer lookup tool with validated parameters."
+            },
+            {
+              "id": "dotnet-w13-t02",
+              "text": "Use structured output for tool arguments and reject malformed requests."
+            },
+            {
+              "id": "dotnet-w13-t03",
+              "text": "Limit tool count, execution time, and response size."
+            },
+            {
+              "id": "dotnet-w13-t04",
+              "text": "Record a trace of model request, selected tool, validated arguments, and result."
+            }
+          ],
+          "deliverable": "A bounded assistant that performs one safe, read-only business lookup.",
+          "learningGuide": {
+            "steps": [
+              "Tool/function schemas and structured outputs",
+              "Tool allowlists, input validation, and result shaping",
+              "Execution budgets and explicit stop conditions",
+              "Separating model planning from application authorization"
+            ],
+            "resources": [
+              "Microsoft.Extensions.AI",
+              "Semantic Kernel for .NET",
+              "ASP.NET Core 10"
+            ],
+            "practice": "The model can suggest a tool call; only your application can authorize and execute it.",
+            "readyWhen": "Tool arguments are validated, access is checked against the caller, and every run has an enforced budget."
+          }
+        },
+        {
+          "week": 14,
+          "title": "Semantic Kernel and Agent Workflows",
+          "objective": "Orchestrate multi-step .NET AI workflows with explicit state and controlled tools.",
+          "topics": [
+            "Semantic Kernel plugins and function choice",
+            "Agent/workflow state and bounded execution",
+            "Microsoft Agent Framework concepts and orchestration",
+            "Human approval and persistence boundaries"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w14-t01",
+              "text": "Build a Semantic Kernel plugin around a narrow business capability."
+            },
+            {
+              "id": "dotnet-w14-t02",
+              "text": "Model a workflow with explicit states, transitions, and a human approval point."
+            },
+            {
+              "id": "dotnet-w14-t03",
+              "text": "Persist resumable state without storing secrets or untrusted instructions as policy."
+            },
+            {
+              "id": "dotnet-w14-t04",
+              "text": "Compare a deterministic workflow with an agent loop and justify the tradeoff."
+            }
+          ],
+          "deliverable": "A resumable .NET AI workflow with a human approval checkpoint.",
+          "learningGuide": {
+            "steps": [
+              "Semantic Kernel plugins and function choice",
+              "Agent/workflow state and bounded execution",
+              "Microsoft Agent Framework concepts and orchestration",
+              "Human approval and persistence boundaries"
+            ],
+            "resources": [
+              "Semantic Kernel for .NET",
+              "Microsoft Agent Framework",
+              "ASP.NET Core 10"
+            ],
+            "practice": "Prefer deterministic workflows when business steps are known; add agent choice only where it creates measurable value.",
+            "readyWhen": "You can diagram state transitions and show the exact approval boundary before a side effect."
+          }
+        },
+        {
+          "week": 15,
+          "title": "Enterprise System Integration and Governance",
+          "objective": "Connect AI workflows to ERP/CRM services while preserving identity, tenant, and audit boundaries.",
+          "topics": [
+            "API adapters and anti-corruption boundaries",
+            "Claims/tenant propagation and permission checks",
+            "Approval workflows and audit logging",
+            "Idempotent writes and policy enforcement"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w15-t01",
+              "text": "Integrate a mock ERP customer/invoice API through a typed adapter."
+            },
+            {
+              "id": "dotnet-w15-t02",
+              "text": "Apply role and tenant checks inside each tool execution."
+            },
+            {
+              "id": "dotnet-w15-t03",
+              "text": "Require human approval for write operations and persist approval identity."
+            },
+            {
+              "id": "dotnet-w15-t04",
+              "text": "Create audit records linking user, model run, tool, approval, and outcome."
+            }
+          ],
+          "deliverable": "An AI Business Assistant that reads authorized records and gates writes for approval.",
+          "learningGuide": {
+            "steps": [
+              "API adapters and anti-corruption boundaries",
+              "Claims/tenant propagation and permission checks",
+              "Approval workflows and audit logging",
+              "Idempotent writes and policy enforcement"
+            ],
+            "resources": [
+              "ASP.NET Core 10",
+              "Semantic Kernel for .NET",
+              "Microsoft.Extensions.AI",
+              "SQL Server"
+            ],
+            "practice": "Keep business authorization in application services, not in prompt text or model-generated plans.",
+            "readyWhen": "Cross-tenant and unauthorized actions are blocked in tests; approved actions are auditable and idempotent."
+          }
+        },
+        {
+          "week": 16,
+          "title": "Reliable Agents and Failure Handling",
+          "objective": "Make AI workflows predictable under model, tool, and infrastructure failures.",
+          "topics": [
+            "Transient/permanent failure classes",
+            "Retries, deadlines, cancellation, and idempotency",
+            "Agent loops, tool call budgets, and safe stops",
+            "Prompt injection defense and observability"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w16-t01",
+              "text": "Inject provider timeout, malformed tool arguments, and downstream API errors."
+            },
+            {
+              "id": "dotnet-w16-t02",
+              "text": "Retry only safe operations and apply idempotency keys to writes."
+            },
+            {
+              "id": "dotnet-w16-t03",
+              "text": "Set max steps, token budget, wall-clock deadline, and cancellation paths."
+            },
+            {
+              "id": "dotnet-w16-t04",
+              "text": "Add adversarial prompt-injection cases and record safe rejection behavior."
+            }
+          ],
+          "deliverable": "A Secure ERP Action Assistant built with ASP.NET Core: bounded tool workflows, role and tenant checks, approval-gated writes, audit history, and adversarial tests.",
+          "learningGuide": {
+            "steps": [
+              "Transient/permanent failure classes",
+              "Retries, deadlines, cancellation, and idempotency",
+              "Agent loops, tool call budgets, and safe stops",
+              "Prompt injection defense and observability"
+            ],
+            "resources": [
+              "Microsoft Agent Framework",
+              "Semantic Kernel for .NET",
+              ".NET resilience",
+              "OpenTelemetry .NET"
+            ],
+            "practice": "Never retry a non-idempotent side effect blindly; retries need operation identity and explicit safety rules.",
+            "readyWhen": "Every action is permission-checked by application code, consequential writes require explicit approval, and timeout/retry/injection cases have repeatable tests."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dotnet-phase-5",
+      "title": "Production AI Engineering with .NET",
+      "startWeek": 17,
+      "endWeek": 20,
+      "weeks": [
+        {
+          "week": 17,
+          "title": "AI Application Security and Prompt Injection",
+          "objective": "Threat-model the full AI request path and implement defense in depth.",
+          "topics": [
+            "Direct/indirect prompt injection and untrusted retrieved content",
+            "Data exfiltration, tenant leakage, and tool abuse",
+            "Output validation, content handling, and secret protection",
+            "Security testing and incident-ready audit trails"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w17-t01",
+              "text": "Write a threat model for chat, RAG, streaming, and tool execution."
+            },
+            {
+              "id": "dotnet-w17-t02",
+              "text": "Add retrieval permission checks and output validation at service boundaries."
+            },
+            {
+              "id": "dotnet-w17-t03",
+              "text": "Test malicious documents, tool argument injection, and sensitive-data requests."
+            },
+            {
+              "id": "dotnet-w17-t04",
+              "text": "Review logs and traces to ensure prompts/secrets are not accidentally exposed."
+            }
+          ],
+          "deliverable": "A security test suite and threat model for an AI backend.",
+          "learningGuide": {
+            "steps": [
+              "Direct/indirect prompt injection and untrusted retrieved content",
+              "Data exfiltration, tenant leakage, and tool abuse",
+              "Output validation, content handling, and secret protection",
+              "Security testing and incident-ready audit trails"
+            ],
+            "resources": [
+              "ASP.NET Core security",
+              "Microsoft.Extensions.AI",
+              "Microsoft Agent Framework"
+            ],
+            "practice": "Prompt injection is a risk to contain, not a string pattern that can be perfectly filtered.",
+            "readyWhen": "Every high-risk threat has a control, owner boundary, and automated test or documented residual risk."
+          }
+        },
+        {
+          "week": 18,
+          "title": "Performance, Cost, and Model Routing",
+          "objective": "Tune AI systems based on measured quality, latency, and cost.",
+          "topics": [
+            "Token accounting and prompt/context efficiency",
+            "Provider/model selection and fallback policies",
+            "Semantic caching and tenant-safe cache keys",
+            "Concurrency, batching, rate limits, and load behavior"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w18-t01",
+              "text": "Capture baseline latency, token use, and answer quality per representative workflow."
+            },
+            {
+              "id": "dotnet-w18-t02",
+              "text": "Add a model routing policy for quality/cost or local/hosted constraints."
+            },
+            {
+              "id": "dotnet-w18-t03",
+              "text": "Implement tenant-safe caching with explicit invalidation."
+            },
+            {
+              "id": "dotnet-w18-t04",
+              "text": "Load-test streaming and retrieval endpoints; compare measured tradeoffs."
+            }
+          ],
+          "deliverable": "A performance report with a quality-preserving cost or latency improvement.",
+          "learningGuide": {
+            "steps": [
+              "Token accounting and prompt/context efficiency",
+              "Provider/model selection and fallback policies",
+              "Semantic caching and tenant-safe cache keys",
+              "Concurrency, batching, rate limits, and load behavior"
+            ],
+            "resources": [
+              "Microsoft.Extensions.AI",
+              "Redis",
+              "OpenTelemetry .NET",
+              "Docker"
+            ],
+            "practice": "Optimize only after collecting baseline measurements and protect quality with the evaluation set.",
+            "readyWhen": "Your report documents baseline, intervention, result, and quality/security checks."
+          }
+        },
+        {
+          "week": 19,
+          "title": "Deployment and .NET 10 Operations",
+          "objective": "Package and deploy the AI API with repeatable configuration and safe operations.",
+          "topics": [
+            "Docker and Docker Compose",
+            "Secrets and environment-specific configuration",
+            "CI/CD tests, migrations, and image publishing",
+            "Reverse proxies, TLS, health/readiness, and cloud deployment"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w19-t01",
+              "text": "Containerize the ASP.NET Core API and its worker."
+            },
+            {
+              "id": "dotnet-w19-t02",
+              "text": "Run PostgreSQL/pgvector and Redis through Compose for local development."
+            },
+            {
+              "id": "dotnet-w19-t03",
+              "text": "Build CI steps for tests, migration checks, and container creation."
+            },
+            {
+              "id": "dotnet-w19-t04",
+              "text": "Deploy a demo and document configuration, backup, rollback, and health checks."
+            }
+          ],
+          "deliverable": "A deployed .NET AI service with a repeatable local and CI workflow.",
+          "learningGuide": {
+            "steps": [
+              "Docker and Docker Compose",
+              "Secrets and environment-specific configuration",
+              "CI/CD tests, migrations, and image publishing",
+              "Reverse proxies, TLS, health/readiness, and cloud deployment"
+            ],
+            "resources": [
+              "ASP.NET Core 10",
+              "Docker",
+              "GitHub Actions",
+              "Nginx"
+            ],
+            "practice": "Keep secrets out of images and source; deployments should be reproducible from repository instructions.",
+            "readyWhen": "A clean checkout can run locally and the deployed service exposes useful health/readiness signals."
+          }
+        },
+        {
+          "week": 20,
+          "title": "Observability and Production Reliability",
+          "objective": "Operate AI applications with useful traces, metrics, and privacy-aware diagnostics.",
+          "topics": [
+            "Structured logs, metrics, traces, and correlation IDs",
+            "AI model and embedding telemetry",
+            "Worker and queue observability",
+            "SLIs, alerts, health endpoints, and incident debugging"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w20-t01",
+              "text": "Instrument API, retrieval, embedding, model, and tool boundaries."
+            },
+            {
+              "id": "dotnet-w20-t02",
+              "text": "Track latency, errors, token/cost usage, and queue age without logging secrets."
+            },
+            {
+              "id": "dotnet-w20-t03",
+              "text": "Define an SLI for response latency and ingestion completion."
+            },
+            {
+              "id": "dotnet-w20-t04",
+              "text": "Simulate a provider incident and write a short operational runbook."
+            }
+          ],
+          "deliverable": "An observable AI service with a runbook for provider and worker failures.",
+          "learningGuide": {
+            "steps": [
+              "Structured logs, metrics, traces, and correlation IDs",
+              "AI model and embedding telemetry",
+              "Worker and queue observability",
+              "SLIs, alerts, health endpoints, and incident debugging"
+            ],
+            "resources": [
+              "OpenTelemetry .NET",
+              "ASP.NET Core 10",
+              "Microsoft.Extensions.AI",
+              "Docker"
+            ],
+            "practice": "Use telemetry to locate a failing stage while minimizing sensitive data collection.",
+            "readyWhen": "A trace explains one end-to-end request and an operator can follow the runbook to diagnose a simulated outage."
+          }
+        }
+      ]
+    },
+    {
+      "id": "dotnet-phase-6",
+      "title": "Capstone and Remote Career Preparation",
+      "startWeek": 21,
+      "endWeek": 24,
+      "weeks": [
+        {
+          "week": 21,
+          "title": "Enterprise .NET AI Architecture",
+          "objective": "Design a maintainable, multi-tenant AI backend that fits enterprise systems.",
+          "topics": [
+            "Bounded contexts, service boundaries, and API versioning",
+            "Tenant-aware persistence and authorization",
+            "Queues, consistency, and failure isolation",
+            "Capacity planning and provider abstraction"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w21-t01",
+              "text": "Create an architecture diagram for the capstone and mark trust boundaries."
+            },
+            {
+              "id": "dotnet-w21-t02",
+              "text": "Record decisions for storage, provider selection, background processing, and tenancy."
+            },
+            {
+              "id": "dotnet-w21-t03",
+              "text": "Define API contracts and database constraints for conversations/documents/tools."
+            },
+            {
+              "id": "dotnet-w21-t04",
+              "text": "Review failure modes, scaling assumptions, and migration strategy."
+            }
+          ],
+          "deliverable": "A reviewable architecture pack with decisions and failure analysis.",
+          "learningGuide": {
+            "steps": [
+              "Bounded contexts, service boundaries, and API versioning",
+              "Tenant-aware persistence and authorization",
+              "Queues, consistency, and failure isolation",
+              "Capacity planning and provider abstraction"
+            ],
+            "resources": [
+              "ASP.NET Core 10",
+              "Entity Framework Core",
+              "Microsoft.Extensions.AI",
+              "OpenTelemetry .NET"
+            ],
+            "practice": "Reuse existing enterprise strengths, but make model, retrieval, and tool boundaries explicit.",
+            "readyWhen": "A reviewer can challenge your tradeoffs and see how security, scale, and failure handling are addressed."
+          }
+        },
+        {
+          "week": 22,
+          "title": "Enterprise AI Assistant Platform",
+          "objective": "Combine the skills into a secure, provider-flexible .NET AI application.",
+          "topics": [
+            "Provider abstraction and model configuration",
+            "RAG, citations, and conversation history",
+            "Permissioned tools, workflow state, and streaming",
+            "Evaluation, observability, and security controls"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w22-t01",
+              "text": "Implement provider selection through Microsoft.Extensions.AI abstractions."
+            },
+            {
+              "id": "dotnet-w22-t02",
+              "text": "Integrate tenant-safe RAG with citation and abstention behavior."
+            },
+            {
+              "id": "dotnet-w22-t03",
+              "text": "Add a controlled business tool with role checks and human approval."
+            },
+            {
+              "id": "dotnet-w22-t04",
+              "text": "Connect streaming, evaluation, OpenTelemetry, and admin configuration."
+            }
+          ],
+          "deliverable": "A portfolio-grade multi-tenant Enterprise AI Assistant Platform built with ASP.NET Core 10, RAG, controlled tools, evaluation, and production observability.",
+          "learningGuide": {
+            "steps": [
+              "Provider abstraction and model configuration",
+              "RAG, citations, and conversation history",
+              "Permissioned tools, workflow state, and streaming",
+              "Evaluation, observability, and security controls"
+            ],
+            "resources": [
+              "Microsoft.Extensions.AI",
+              "Semantic Kernel for .NET",
+              "Microsoft Agent Framework",
+              "pgvector",
+              "OpenTelemetry .NET"
+            ],
+            "practice": "Integrate only the AI capabilities you can evaluate, secure, and operate.",
+            "readyWhen": "A demo shows provider swap, cited RAG, an authorized tool, approval, streaming, and telemetry."
+          }
+        },
+        {
+          "week": 23,
+          "title": "Portfolio Quality and Public Demonstrations",
+          "objective": "Turn implementation work into credible evidence a remote employer can review.",
+          "topics": [
+            "Repository structure, architecture documentation, and API examples",
+            "Automated tests, deployment scripts, and security notes",
+            "Demo recording and clear project narrative",
+            "Accurate CV and GitHub presentation"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w23-t01",
+              "text": "Polish the .NET Task API and AI Document Intelligence repositories."
+            },
+            {
+              "id": "dotnet-w23-t02",
+              "text": "Write READMEs with architecture, setup, API examples, tests, limitations, and threat controls."
+            },
+            {
+              "id": "dotnet-w23-t03",
+              "text": "Publish diagrams and short demos showing tradeoffs rather than only UI output."
+            },
+            {
+              "id": "dotnet-w23-t04",
+              "text": "Make one project easy to launch with Docker Compose and seeded non-sensitive data."
+            }
+          ],
+          "deliverable": "Two polished .NET portfolio repositories and concise demo materials.",
+          "learningGuide": {
+            "steps": [
+              "Repository structure, architecture documentation, and API examples",
+              "Automated tests, deployment scripts, and security notes",
+              "Demo recording and clear project narrative",
+              "Accurate CV and GitHub presentation"
+            ],
+            "resources": [
+              "GitHub Actions",
+              "Docker",
+              "ASP.NET Core 10"
+            ],
+            "practice": "Make the evidence reproducible and be precise about what is learning work versus professional experience.",
+            "readyWhen": "A reviewer can launch the project, run tests, understand architecture, and see a working AI flow."
+          }
+        },
+        {
+          "week": 24,
+          "title": "Remote .NET AI Career Preparation",
+          "objective": "Prepare for AI backend interviews while positioning your enterprise .NET background accurately.",
+          "topics": [
+            "C#/.NET and ASP.NET Core interview fundamentals",
+            "LLM, RAG, evaluation, agent safety, and AI system design",
+            "Behavioral stories from enterprise backend experience",
+            "Remote communication, CV, LinkedIn, and application tracking"
+          ],
+          "tasks": [
+            {
+              "id": "dotnet-w24-t01",
+              "text": "Practice explaining the AI Document Intelligence architecture and evaluation choices."
+            },
+            {
+              "id": "dotnet-w24-t02",
+              "text": "Complete practical exercises in async .NET APIs, SQL, security, and RAG."
+            },
+            {
+              "id": "dotnet-w24-t03",
+              "text": "Prepare examples of tradeoffs, failures, and measurable project outcomes."
+            },
+            {
+              "id": "dotnet-w24-t04",
+              "text": "Apply to .NET AI Engineer, AI Backend Engineer, and enterprise AI application roles."
+            }
+          ],
+          "deliverable": "A truthful CV, interview portfolio, and focused remote .NET AI application plan.",
+          "learningGuide": {
+            "steps": [
+              "C#/.NET and ASP.NET Core interview fundamentals",
+              "LLM, RAG, evaluation, agent safety, and AI system design",
+              "Behavioral stories from enterprise backend experience",
+              "Remote communication, CV, LinkedIn, and application tracking"
+            ],
+            "resources": [
+              "C# documentation",
+              "ASP.NET Core 10",
+              "Microsoft.Extensions.AI",
+              "Semantic Kernel for .NET"
+            ],
+            "practice": "Target job descriptions that value your .NET enterprise history and AI application skills.",
+            "readyWhen": "You can explain a production-minded AI system, defend its tradeoffs, and accurately describe your Python as secondary learning."
+          }
+        }
+      ]
+    }
+  ]
+}

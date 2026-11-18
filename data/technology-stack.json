@@ -1,0 +1,138 @@
+{
+  "categories": [
+    {
+      "name": ".NET backend",
+      "items": [
+        [
+          "C#",
+          "Your established language; focus on modern async patterns, cancellation, nullable reference types, and maintainable service code."
+        ],
+        [
+          ".NET 10",
+          "Current platform baseline for the roadmap; verify support policy and patch updates before deployment."
+        ],
+        [
+          "ASP.NET Core 10 Web API",
+          "HTTP endpoints, middleware, dependency injection, OpenAPI, validation, SSE, and production hosting."
+        ],
+        [
+          "Microsoft.Extensions.DependencyInjection",
+          "Compose application services and lifetimes explicitly; understand scoped, singleton, and transient behavior."
+        ],
+        [
+          "EF Core",
+          "Relational persistence, migrations, query translation, and transactional application workflows."
+        ],
+        [
+          "Dapper",
+          "Use explicit SQL for targeted query paths where control and measured performance justify it."
+        ]
+      ]
+    },
+    {
+      "name": "Data and background work",
+      "items": [
+        [
+          "SQL Server / PostgreSQL",
+          "Relational business data, constraints, transactions, indexing, and tenant-safe query design."
+        ],
+        [
+          "Redis",
+          "Caching, rate limiting, and short-lived coordination data; define invalidation and failure behavior."
+        ],
+        [
+          "Hosted services and queues",
+          "Move long-running ingestion or evaluation work out of request paths with bounded, observable processing."
+        ],
+        [
+          "pgvector",
+          "Store and query embeddings in PostgreSQL for retrieval-backed applications."
+        ]
+      ]
+    },
+    {
+      "name": "AI and LLM engineering",
+      "items": [
+        [
+          "Microsoft.Extensions.AI",
+          "Common .NET abstractions for chat clients and embedding generators, helping isolate provider-specific code."
+        ],
+        [
+          "Ollama",
+          "Run local models for development and controlled experiments."
+        ],
+        [
+          "OpenAI-compatible APIs",
+          "Connect hosted or self-hosted providers behind configuration and a small application abstraction."
+        ],
+        [
+          "Semantic Kernel",
+          "Use plugins and orchestration for .NET AI workflows; keep authorization and business rules in application code."
+        ],
+        [
+          "Microsoft Agent Framework",
+          "Explore graph/workflow-oriented agent orchestration when its capabilities fit a controlled business process."
+        ],
+        [
+          "Embeddings, RAG, and tool calling",
+          "Build retrieval and bounded tool workflows with citations, evaluation, permission checks, and failure limits."
+        ]
+      ]
+    },
+    {
+      "name": "Frontend and integration",
+      "items": [
+        [
+          "React + TypeScript",
+          "Build a focused client when the backend project needs a usable interface; not required for every API portfolio project."
+        ],
+        [
+          "REST APIs",
+          "Use stable resource contracts, clear error formats, pagination, and versioning."
+        ],
+        [
+          "Server-Sent Events",
+          "Stream one-way model output or job progress with cancellation and reconnect behavior."
+        ]
+      ]
+    },
+    {
+      "name": "Production engineering",
+      "items": [
+        [
+          "Docker and Docker Compose",
+          "Package API, worker, database, cache, and local model dependencies consistently."
+        ],
+        [
+          "GitHub Actions",
+          "Run formatting, build, tests, and lightweight evaluation checks on pull requests."
+        ],
+        [
+          "OpenTelemetry",
+          "Correlate traces, metrics, and logs across HTTP, database, worker, and model calls."
+        ],
+        [
+          "Structured logging and monitoring",
+          "Make latency, failures, retries, usage, and health visible without logging secrets."
+        ],
+        [
+          "Linux, Nginx, and cloud deployment",
+          "Understand process hosting, TLS termination, configuration, network boundaries, and deployment operations."
+        ]
+      ]
+    },
+    {
+      "name": "Optional secondary skills",
+      "items": [
+        [
+          "Python",
+          "Useful for data-centric AI tooling and roles that require Python; learn later as an additive skill, not a parallel backend track."
+        ],
+        [
+          "FastAPI",
+          "A possible companion for a specialized Python model service when a concrete need justifies a second runtime."
+        ]
+      ]
+    }
+  ]
+}

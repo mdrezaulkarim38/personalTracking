@@ -1,0 +1,285 @@
+{
+  "categories": [
+    "C# and .NET fundamentals",
+    "ASP.NET Core and API design",
+    "Data and PostgreSQL",
+    "Authentication and security",
+    "LLM fundamentals and .NET integration",
+    "Embeddings and RAG",
+    "Agents and workflows",
+    "Evaluation and testing",
+    "Production and system design"
+  ],
+  "questions": [
+    {
+      "id": "dotnet-int-001",
+      "category": "C# and .NET fundamentals",
+      "difficulty": "Beginner",
+      "question": "How do nullable reference types improve correctness, and what gaps remain when external data enters an application?"
+    },
+    {
+      "id": "dotnet-int-002",
+      "category": "C# and .NET fundamentals",
+      "difficulty": "Intermediate",
+      "question": "Explain async/await, Task, and cancellation propagation in a web request."
+    },
+    {
+      "id": "dotnet-int-003",
+      "category": "C# and .NET fundamentals",
+      "difficulty": "Intermediate",
+      "question": "How would you choose between a record, class, and struct for a domain type?"
+    },
+    {
+      "id": "dotnet-int-004",
+      "category": "C# and .NET fundamentals",
+      "difficulty": "Intermediate",
+      "question": "What are dependency injection service lifetimes, and what bug can a captive dependency cause?"
+    },
+    {
+      "id": "dotnet-int-005",
+      "category": "C# and .NET fundamentals",
+      "difficulty": "Advanced",
+      "question": "How does garbage collection affect latency-sensitive services?"
+    },
+    {
+      "id": "dotnet-int-006",
+      "category": "ASP.NET Core and API design",
+      "difficulty": "Beginner",
+      "question": "Walk through an ASP.NET Core request from middleware to endpoint and response."
+    },
+    {
+      "id": "dotnet-int-007",
+      "category": "ASP.NET Core and API design",
+      "difficulty": "Intermediate",
+      "question": "How do you design consistent validation and ProblemDetails responses?"
+    },
+    {
+      "id": "dotnet-int-008",
+      "category": "ASP.NET Core and API design",
+      "difficulty": "Intermediate",
+      "question": "When would you choose controllers versus Minimal APIs?"
+    },
+    {
+      "id": "dotnet-int-009",
+      "category": "ASP.NET Core and API design",
+      "difficulty": "Advanced",
+      "question": "How do you implement API versioning without freezing the domain model?"
+    },
+    {
+      "id": "dotnet-int-010",
+      "category": "ASP.NET Core and API design",
+      "difficulty": "Advanced",
+      "question": "How do you stream model tokens over SSE and handle disconnect cancellation?"
+    },
+    {
+      "id": "dotnet-int-011",
+      "category": "Data and PostgreSQL",
+      "difficulty": "Beginner",
+      "question": "How do indexes affect reads and writes, and how do you verify an index helps?"
+    },
+    {
+      "id": "dotnet-int-012",
+      "category": "Data and PostgreSQL",
+      "difficulty": "Intermediate",
+      "question": "Explain transaction isolation and a business case where it matters."
+    },
+    {
+      "id": "dotnet-int-013",
+      "category": "Data and PostgreSQL",
+      "difficulty": "Intermediate",
+      "question": "How do EF Core tracking and no-tracking queries differ in use?"
+    },
+    {
+      "id": "dotnet-int-014",
+      "category": "Data and PostgreSQL",
+      "difficulty": "Intermediate",
+      "question": "When is Dapper a better fit than EF Core, and what responsibilities become yours?"
+    },
+    {
+      "id": "dotnet-int-015",
+      "category": "Data and PostgreSQL",
+      "difficulty": "Advanced",
+      "question": "How would you tenant-scope vector search using PostgreSQL and pgvector?"
+    },
+    {
+      "id": "dotnet-int-016",
+      "category": "Authentication and security",
+      "difficulty": "Intermediate",
+      "question": "How would you protect a multi-tenant invoice API against IDOR?"
+    },
+    {
+      "id": "dotnet-int-017",
+      "category": "Authentication and security",
+      "difficulty": "Advanced",
+      "question": "Describe refresh-token rotation and how reuse detection should behave."
+    },
+    {
+      "id": "dotnet-int-018",
+      "category": "Authentication and security",
+      "difficulty": "Beginner",
+      "question": "How do you store and rotate model provider secrets?"
+    },
+    {
+      "id": "dotnet-int-019",
+      "category": "Authentication and security",
+      "difficulty": "Advanced",
+      "question": "What does least privilege mean for an AI tool that can update ERP records?"
+    },
+    {
+      "id": "dotnet-int-020",
+      "category": "Authentication and security",
+      "difficulty": "Advanced",
+      "question": "How would you test prompt injection from retrieved documents?"
+    },
+    {
+      "id": "dotnet-int-021",
+      "category": "LLM fundamentals and .NET integration",
+      "difficulty": "Beginner",
+      "question": "What tradeoffs do context window, temperature, latency, and output length create?"
+    },
+    {
+      "id": "dotnet-int-022",
+      "category": "LLM fundamentals and .NET integration",
+      "difficulty": "Intermediate",
+      "question": "How would you use Microsoft.Extensions.AI to keep provider-specific details out of application services?"
+    },
+    {
+      "id": "dotnet-int-023",
+      "category": "LLM fundamentals and .NET integration",
+      "difficulty": "Intermediate",
+      "question": "What should be validated after a model returns schema-conforming JSON?"
+    },
+    {
+      "id": "dotnet-int-024",
+      "category": "LLM fundamentals and .NET integration",
+      "difficulty": "Intermediate",
+      "question": "How would you track token usage and cost across providers?"
+    },
+    {
+      "id": "dotnet-int-025",
+      "category": "LLM fundamentals and .NET integration",
+      "difficulty": "Beginner",
+      "question": "When is a local Ollama model useful, and what production constraints should be considered?"
+    },
+    {
+      "id": "dotnet-int-026",
+      "category": "Embeddings and RAG",
+      "difficulty": "Beginner",
+      "question": "What information is lost when text is chunked, and how would you preserve useful metadata?"
+    },
+    {
+      "id": "dotnet-int-027",
+      "category": "Embeddings and RAG",
+      "difficulty": "Intermediate",
+      "question": "How would you evaluate retrieval quality separately from answer quality?"
+    },
+    {
+      "id": "dotnet-int-028",
+      "category": "Embeddings and RAG",
+      "difficulty": "Intermediate",
+      "question": "When can hybrid search outperform vector-only retrieval?"
+    },
+    {
+      "id": "dotnet-int-029",
+      "category": "Embeddings and RAG",
+      "difficulty": "Intermediate",
+      "question": "What is reranking for, and how would you measure its latency/quality tradeoff?"
+    },
+    {
+      "id": "dotnet-int-030",
+      "category": "Embeddings and RAG",
+      "difficulty": "Advanced",
+      "question": "How should an assistant cite sources and abstain when evidence is weak?"
+    },
+    {
+      "id": "dotnet-int-031",
+      "category": "Agents and workflows",
+      "difficulty": "Intermediate",
+      "question": "How is a controlled workflow different from an unconstrained agent loop?"
+    },
+    {
+      "id": "dotnet-int-032",
+      "category": "Agents and workflows",
+      "difficulty": "Advanced",
+      "question": "How would you cap tool calls, total execution time, and repeated actions?"
+    },
+    {
+      "id": "dotnet-int-033",
+      "category": "Agents and workflows",
+      "difficulty": "Advanced",
+      "question": "How would you require human approval for a refund while preventing approval replay?"
+    },
+    {
+      "id": "dotnet-int-034",
+      "category": "Agents and workflows",
+      "difficulty": "Advanced",
+      "question": "What state should be persisted to resume a multi-step workflow safely?"
+    },
+    {
+      "id": "dotnet-int-035",
+      "category": "Agents and workflows",
+      "difficulty": "Intermediate",
+      "question": "Where could Semantic Kernel or Microsoft Agent Framework fit in an ASP.NET Core system?"
+    },
+    {
+      "id": "dotnet-int-036",
+      "category": "Evaluation and testing",
+      "difficulty": "Beginner",
+      "question": "How would you build a golden dataset for a document assistant?"
+    },
+    {
+      "id": "dotnet-int-037",
+      "category": "Evaluation and testing",
+      "difficulty": "Intermediate",
+      "question": "Which RAG metrics would you inspect when users report unsupported answers?"
+    },
+    {
+      "id": "dotnet-int-038",
+      "category": "Evaluation and testing",
+      "difficulty": "Intermediate",
+      "question": "How can you test tool selection without calling a real model in every unit test?"
+    },
+    {
+      "id": "dotnet-int-039",
+      "category": "Evaluation and testing",
+      "difficulty": "Advanced",
+      "question": "How do you manage nondeterminism in LLM regression checks?"
+    },
+    {
+      "id": "dotnet-int-040",
+      "category": "Evaluation and testing",
+      "difficulty": "Advanced",
+      "question": "What release gate would you use for prompt or retrieval changes?"
+    },
+    {
+      "id": "dotnet-int-041",
+      "category": "Production and system design",
+      "difficulty": "Beginner",
+      "question": "How do liveness and readiness checks differ for an API with a worker?"
+    },
+    {
+      "id": "dotnet-int-042",
+      "category": "Production and system design",
+      "difficulty": "Intermediate",
+      "question": "How would you trace one request across API, retrieval, model provider, and queue?"
+    },
+    {
+      "id": "dotnet-int-043",
+      "category": "Production and system design",
+      "difficulty": "Advanced",
+      "question": "Design a multi-tenant AI document assistant with deletion and usage limits."
+    },
+    {
+      "id": "dotnet-int-044",
+      "category": "Production and system design",
+      "difficulty": "Advanced",
+      "question": "How would you handle model provider timeouts without retry storms?"
+    },
+    {
+      "id": "dotnet-int-045",
+      "category": "Production and system design",
+      "difficulty": "Intermediate",
+      "question": "When would you introduce a separate Python service into an otherwise .NET AI backend?"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10152a"><title>AI Engineer Career Guide</title><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar" aria-label="Main navigation"><div class="brand"><span class="brand-mark">AI</span><span>Career Guide<small>24-week workspace</small></span></div><nav id="nav">
+<button class="nav-link active" data-view="dashboard">◫ <span>Dashboard</span></button><button class="nav-link" data-view="roadmap">▤ <span>Roadmap</span></button><button class="nav-link" data-view="routine">◷ <span>Daily routine</span></button><button class="nav-link" data-view="projects">⬡ <span>Projects</span></button><button class="nav-link" data-view="stack">⌘ <span>Technology stack</span></button><button class="nav-link" data-view="resources">↗ <span>Resources</span></button><button class="nav-link" data-view="interviews">▣ <span>Interview prep</span></button><button class="nav-link" data-view="checklist">✓ <span>Career readiness</span></button><button class="nav-link" data-view="journal">▧ <span>Learning journal</span></button><button class="nav-link" data-view="planner">▦ <span>Study planner</span></button><button class="nav-link" data-view="challenges">⌁ <span>Coding challenges</span></button><button class="nav-link" data-view="analytics">▥ <span>Analytics</span></button>
+</nav><div class="sidebar-foot"><div class="profile-mini"><div class="avatar">SE</div><div><strong>Software Engineer</strong><small>Bangladesh · AI track</small></div></div></div></aside>
+<div class="main-wrap"><header class="topbar"><button id="menuToggle" class="icon-btn mobile-only" aria-label="Open navigation">☰</button><div class="crumb" id="pageTitle">Dashboard</div><div class="top-actions"><span class="today" id="today"></span><button class="btn btn-quiet" id="exportBtn">Export progress</button><button class="btn btn-quiet" id="importBtn">Import progress</button><button class="btn btn-quiet" id="resetBtn" title="Reset saved progress">Reset</button><input id="importFile" type="file" accept="application/json,.json" hidden></div></header>
+<main id="content" tabindex="-1"><div class="loading">Loading your learning workspace…</div></main>
+<footer>Built for a backend engineer moving into production AI · Progress stays in this browser</footer></div>
+<dialog id="importPreview" class="dialog"><form method="dialog"><div class="eyebrow">Progress backup</div><h2>Review import</h2><div id="importSummary"></div><div class="toolbar space-top"><button class="btn" value="cancel">Cancel</button><button class="btn btn-primary" id="confirmImport" value="import">Replace saved progress</button></div></form></dialog></div><div id="toast" class="toast" role="status" aria-live="polite"></div><script type="module" src="js/app.js"></script>
+</body></html>

@@ -1,0 +1,917 @@
+{
+  "challenges": [
+    {
+      "id": "net-c01",
+      "title": "Normalize a customer code",
+      "topic": "C# fundamentals",
+      "category": ".NET / C# fundamentals",
+      "difficulty": "Beginner",
+      "description": "Accept a customer code, trim whitespace, normalize casing, and reject values outside a documented format.",
+      "problem": "Accept a customer code, trim whitespace, normalize casing, and reject values outside a documented format.",
+      "requirements": [
+        "Implement a pure method with nullable-safe input handling.",
+        "Return a typed result or clear validation errors.",
+        "Add tests for null, whitespace, valid, and invalid input."
+      ],
+      "hints": [
+        "Keep normalization separate from validation.",
+        "Prefer explicit result types over hidden state."
+      ],
+      "outcome": "Methods, strings, nullability, and unit testing."
+    },
+    {
+      "id": "net-c02",
+      "title": "Model an invoice with value objects",
+      "topic": "C# OOP",
+      "category": ".NET / C# fundamentals",
+      "difficulty": "Intermediate",
+      "description": "Model money and invoice lines so invalid negative quantities and mixed currencies cannot silently produce totals.",
+      "problem": "Model money and invoice lines so invalid negative quantities and mixed currencies cannot silently produce totals.",
+      "requirements": [
+        "Use immutable value objects.",
+        "Validate invariants at construction.",
+        "Test rounding and currency mismatch behavior."
+      ],
+      "hints": [
+        "Keep money amount and currency together.",
+        "Make invalid states difficult to represent."
+      ],
+      "outcome": "Records, encapsulation, domain invariants, and decimal arithmetic."
+    },
+    {
+      "id": "net-c03",
+      "title": "Build a bounded async fan-out",
+      "topic": "async/await",
+      "category": "Async and concurrency",
+      "difficulty": "Intermediate",
+      "description": "Call several independent supplier endpoints concurrently while enforcing a maximum of three in-flight calls.",
+      "problem": "Call several independent supplier endpoints concurrently while enforcing a maximum of three in-flight calls.",
+      "requirements": [
+        "Accept CancellationToken.",
+        "Limit concurrency.",
+        "Preserve partial-success information.",
+        "Test cancellation and supplier failure."
+      ],
+      "hints": [
+        "Task.WhenAll alone does not bound concurrency.",
+        "Use SemaphoreSlim or a bounded worker pattern."
+      ],
+      "outcome": "Async coordination, cancellation, and partial failure."
+    },
+    {
+      "id": "net-c04",
+      "title": "Stream a large CSV safely",
+      "topic": "IAsyncEnumerable",
+      "category": "Async and concurrency",
+      "difficulty": "Advanced",
+      "description": "Process a large CSV without loading it all into memory and stop promptly when the caller cancels.",
+      "problem": "Process a large CSV without loading it all into memory and stop promptly when the caller cancels.",
+      "requirements": [
+        "Expose asynchronous iteration.",
+        "Dispose streams correctly.",
+        "Report row-level validation issues."
+      ],
+      "hints": [
+        "Use async stream APIs and await using.",
+        "Do not retain all parsed rows."
+      ],
+      "outcome": "Async streams, resource lifetime, and memory-aware processing."
+    },
+    {
+      "id": "net-c05",
+      "title": "Create a cancellation-aware retry policy",
+      "topic": "Resilience",
+      "category": "Async and concurrency",
+      "difficulty": "Advanced",
+      "description": "Retry transient network failures with bounded exponential backoff, while never retrying validation errors or cancellation.",
+      "problem": "Retry transient network failures with bounded exponential backoff, while never retrying validation errors or cancellation.",
+      "requirements": [
+        "Set max attempts and jitter.",
+        "Honor Retry-After when present.",
+        "Avoid retrying non-idempotent operations by default."
+      ],
+      "hints": [
+        "Classify failures first.",
+        "Ensure delays are cancellable."
+      ],
+      "outcome": "Resilience, cancellation, idempotency, and retry budgets."
+    },
+    {
+      "id": "net-c06",
+      "title": "Add a request correlation middleware",
+      "topic": "Middleware",
+      "category": "ASP.NET Core 10",
+      "difficulty": "Intermediate",
+      "description": "Add or validate a request correlation ID and make it available to downstream logs and responses.",
+      "problem": "Add or validate a request correlation ID and make it available to downstream logs and responses.",
+      "requirements": [
+        "Implement middleware.",
+        "Reject oversized/malformed IDs or replace them safely.",
+        "Test response header and scoped logging behavior."
+      ],
+      "hints": [
+        "Avoid static mutable request state.",
+        "Use Activity/trace context when available."
+      ],
+      "outcome": "Middleware ordering and request-scoped observability."
+    },
+    {
+      "id": "net-c07",
+      "title": "Design a paginated search endpoint",
+      "topic": "API contracts",
+      "category": "ASP.NET Core 10",
+      "difficulty": "Beginner",
+      "description": "Implement a product search endpoint with bounded page size, sorting allowlist, and stable pagination.",
+      "problem": "Implement a product search endpoint with bounded page size, sorting allowlist, and stable pagination.",
+      "requirements": [
+        "Use request/response DTOs.",
+        "Validate query parameters.",
+        "Return total count only when requested."
+      ],
+      "hints": [
+        "Whitelist sortable fields.",
+        "Use deterministic tie-break ordering."
+      ],
+      "outcome": "HTTP contracts, validation, and efficient querying."
+    },
+    {
+      "id": "net-c08",
+      "title": "Standardize API validation errors",
+      "topic": "ProblemDetails",
+      "category": "ASP.NET Core 10",
+      "difficulty": "Intermediate",
+      "description": "Return one consistent ProblemDetails shape for model validation, domain conflicts, and unexpected failures.",
+      "problem": "Return one consistent ProblemDetails shape for model validation, domain conflicts, and unexpected failures.",
+      "requirements": [
+        "Map known exceptions without exposing stack traces.",
+        "Include trace ID.",
+        "Test status codes and response shape."
+      ],
+      "hints": [
+        "Separate client errors from server errors.",
+        "Centralize exception mapping."
+      ],
+      "outcome": "Error contracts and safe exception handling."
+    },
+    {
+      "id": "net-c09",
+      "title": "Implement endpoint authorization policy",
+      "topic": "Authorization",
+      "category": "ASP.NET Core 10",
+      "difficulty": "Intermediate",
+      "description": "Allow invoice reads to users with the BillingReader role and writes only to BillingAdmin, with resource tenant checks.",
+      "problem": "Allow invoice reads to users with the BillingReader role and writes only to BillingAdmin, with resource tenant checks.",
+      "requirements": [
+        "Use policy-based authorization.",
+        "Check resource ownership.",
+        "Test cross-tenant access denial."
+      ],
+      "hints": [
+        "Role checks alone do not enforce tenant ownership.",
+        "Authorize at the resource boundary."
+      ],
+      "outcome": "Policies, resource authorization, and tenant isolation."
+    },
+    {
+      "id": "net-c10",
+      "title": "Build an idempotent create endpoint",
+      "topic": "Idempotency",
+      "category": "API design",
+      "difficulty": "Advanced",
+      "description": "Make payment-intent creation safe when clients retry after network timeouts.",
+      "problem": "Make payment-intent creation safe when clients retry after network timeouts.",
+      "requirements": [
+        "Accept an idempotency key.",
+        "Persist key, request fingerprint, and outcome transactionally.",
+        "Reject key reuse with a different request."
+      ],
+      "hints": [
+        "Define retention and concurrency behavior.",
+        "Use a database uniqueness constraint."
+      ],
+      "outcome": "HTTP reliability and transactional idempotency."
+    },
+    {
+      "id": "net-c11",
+      "title": "Add an EF Core optimistic concurrency flow",
+      "topic": "Concurrency tokens",
+      "category": "EF Core and SQL",
+      "difficulty": "Intermediate",
+      "description": "Prevent two operators from overwriting each other when updating the same inventory record.",
+      "problem": "Prevent two operators from overwriting each other when updating the same inventory record.",
+      "requirements": [
+        "Configure a concurrency token.",
+        "Translate conflicts to a clear response.",
+        "Test stale update behavior."
+      ],
+      "hints": [
+        "Do not silently retry a conflicting user edit.",
+        "Return current version information safely."
+      ],
+      "outcome": "EF Core concurrency and conflict handling."
+    },
+    {
+      "id": "net-c12",
+      "title": "Find an N+1 query in an order API",
+      "topic": "Query performance",
+      "category": "EF Core and SQL",
+      "difficulty": "Intermediate",
+      "description": "A customer order endpoint issues one query per order line. Refactor it and prove the query count is bounded.",
+      "problem": "A customer order endpoint issues one query per order line. Refactor it and prove the query count is bounded.",
+      "requirements": [
+        "Capture SQL/query count in tests.",
+        "Return only required fields.",
+        "Avoid loading unbounded graphs."
+      ],
+      "hints": [
+        "Project into DTOs.",
+        "Compare query plans and payload needs."
+      ],
+      "outcome": "Query projection, loading strategies, and performance testing."
+    },
+    {
+      "id": "net-c13",
+      "title": "Create a migration-safe schema change",
+      "topic": "Migrations",
+      "category": "EF Core and SQL",
+      "difficulty": "Advanced",
+      "description": "Add a required normalized column to a large table without a single risky deployment step.",
+      "problem": "Add a required normalized column to a large table without a single risky deployment step.",
+      "requirements": [
+        "Design expand/backfill/contract steps.",
+        "Make backfill restartable.",
+        "Document rollback limitations."
+      ],
+      "hints": [
+        "Deploy nullable first.",
+        "Backfill in batches before enforcing constraints."
+      ],
+      "outcome": "Production database migration strategy."
+    },
+    {
+      "id": "net-c14",
+      "title": "Use Dapper for a reporting query",
+      "topic": "SQL mapping",
+      "category": "EF Core and SQL",
+      "difficulty": "Intermediate",
+      "description": "Implement a parameterized monthly revenue report with a date range and tenant filter.",
+      "problem": "Implement a parameterized monthly revenue report with a date range and tenant filter.",
+      "requirements": [
+        "Use parameterized SQL.",
+        "Map a typed result.",
+        "Add indexes based on query predicates."
+      ],
+      "hints": [
+        "Avoid string concatenation for filters.",
+        "Inspect query plan on realistic data."
+      ],
+      "outcome": "SQL safety and deliberate ORM/raw SQL tradeoffs."
+    },
+    {
+      "id": "net-c15",
+      "title": "Rotate refresh tokens with reuse detection",
+      "topic": "Refresh tokens",
+      "category": "Authentication and security",
+      "difficulty": "Advanced",
+      "description": "Implement refresh-token rotation that detects reuse and revokes the affected session family.",
+      "problem": "Implement refresh-token rotation that detects reuse and revokes the affected session family.",
+      "requirements": [
+        "Store token hashes, not raw secrets.",
+        "Rotate atomically.",
+        "Test concurrent refresh and replay."
+      ],
+      "hints": [
+        "A token family links rotations.",
+        "Use transaction isolation or optimistic concurrency."
+      ],
+      "outcome": "Session security and replay detection."
+    },
+    {
+      "id": "net-c16",
+      "title": "Prevent insecure direct object references",
+      "topic": "Tenant security",
+      "category": "Authentication and security",
+      "difficulty": "Intermediate",
+      "description": "A user changes an invoice ID in the URL and must never read another tenant’s invoice.",
+      "problem": "A user changes an invoice ID in the URL and must never read another tenant’s invoice.",
+      "requirements": [
+        "Scope query by tenant and authorization context.",
+        "Return consistent not-found behavior.",
+        "Add negative integration tests."
+      ],
+      "hints": [
+        "Do not load by ID and assume obscurity is security.",
+        "Test adjacent IDs across tenants."
+      ],
+      "outcome": "Authorization-aware data access."
+    },
+    {
+      "id": "net-c17",
+      "title": "Build a rate limit policy for chat",
+      "topic": "Rate limiting",
+      "category": "Authentication and security",
+      "difficulty": "Intermediate",
+      "description": "Protect a chat endpoint with per-user and per-tenant limits while allowing higher capacity for approved plans.",
+      "problem": "Protect a chat endpoint with per-user and per-tenant limits while allowing higher capacity for approved plans.",
+      "requirements": [
+        "Use ASP.NET Core rate limiting.",
+        "Define partition keys and rejection response.",
+        "Avoid relying only on IP address."
+      ],
+      "hints": [
+        "Check authenticated identity before partitioning.",
+        "Expose retry guidance without leaking internals."
+      ],
+      "outcome": "Abuse controls and fair resource allocation."
+    },
+    {
+      "id": "net-c18",
+      "title": "Redact secrets from structured logs",
+      "topic": "Logging",
+      "category": "Authentication and security",
+      "difficulty": "Beginner",
+      "description": "Ensure authorization headers, prompts containing secrets, and API keys never enter application logs.",
+      "problem": "Ensure authorization headers, prompts containing secrets, and API keys never enter application logs.",
+      "requirements": [
+        "Define safe logging fields.",
+        "Add a test with a sentinel secret.",
+        "Preserve correlation IDs and outcome data."
+      ],
+      "hints": [
+        "Prefer allowlisted fields over broad object serialization.",
+        "Inspect exception and HTTP logging middleware."
+      ],
+      "outcome": "Privacy-aware observability."
+    },
+    {
+      "id": "net-c19",
+      "title": "Wrap a provider with IChatClient",
+      "topic": "Microsoft.Extensions.AI",
+      "category": ".NET AI integration",
+      "difficulty": "Intermediate",
+      "description": "Build a small service that calls a chat model through Microsoft.Extensions.AI and can switch providers through configuration.",
+      "problem": "Build a small service that calls a chat model through Microsoft.Extensions.AI and can switch providers through configuration.",
+      "requirements": [
+        "Keep provider setup in composition root.",
+        "Pass cancellation and request options.",
+        "Test with a fake client."
+      ],
+      "hints": [
+        "Depend on the abstraction in application services.",
+        "Keep provider-specific options behind an adapter."
+      ],
+      "outcome": "Provider abstractions and testable AI integration."
+    },
+    {
+      "id": "net-c20",
+      "title": "Validate structured model output",
+      "topic": "JSON output",
+      "category": "LLM application engineering",
+      "difficulty": "Intermediate",
+      "description": "Ask a model for a shipment classification and safely validate the returned structured result before storing it.",
+      "problem": "Ask a model for a shipment classification and safely validate the returned structured result before storing it.",
+      "requirements": [
+        "Use a typed schema.",
+        "Handle malformed, missing, and out-of-range fields.",
+        "Never treat valid JSON as inherently correct."
+      ],
+      "hints": [
+        "Separate parsing, schema validation, and business validation.",
+        "Add a repair or abstention policy."
+      ],
+      "outcome": "Structured output validation and trust boundaries."
+    },
+    {
+      "id": "net-c21",
+      "title": "Stream a chat response over SSE",
+      "topic": "SSE",
+      "category": "LLM application engineering",
+      "difficulty": "Intermediate",
+      "description": "Expose model output as Server-Sent Events with a final completion event and client disconnect cancellation.",
+      "problem": "Expose model output as Server-Sent Events with a final completion event and client disconnect cancellation.",
+      "requirements": [
+        "Use correct content type and event framing.",
+        "Propagate cancellation upstream.",
+        "Handle provider errors without leaking internals."
+      ],
+      "hints": [
+        "Test partial chunks and disconnected clients.",
+        "Keep buffering disabled where appropriate."
+      ],
+      "outcome": "Streaming API design and resource control."
+    },
+    {
+      "id": "net-c22",
+      "title": "Add provider timeout and fallback rules",
+      "topic": "Provider reliability",
+      "category": "LLM application engineering",
+      "difficulty": "Advanced",
+      "description": "Primary model calls sometimes time out. Add a bounded fallback path that preserves output contract and records which provider answered.",
+      "problem": "Primary model calls sometimes time out. Add a bounded fallback path that preserves output contract and records which provider answered.",
+      "requirements": [
+        "Set per-provider timeout.",
+        "Fallback only on classified transient errors.",
+        "Avoid duplicate side-effecting tool calls."
+      ],
+      "hints": [
+        "Track provider and model metadata.",
+        "Set an overall request deadline."
+      ],
+      "outcome": "Timeouts, fallback, and deadline propagation."
+    },
+    {
+      "id": "net-c23",
+      "title": "Count tokens and enforce a request budget",
+      "topic": "Token budgets",
+      "category": "LLM application engineering",
+      "difficulty": "Intermediate",
+      "description": "Reject or trim a request whose system prompt, history, and retrieved context exceed a configured model budget.",
+      "problem": "Reject or trim a request whose system prompt, history, and retrieved context exceed a configured model budget.",
+      "requirements": [
+        "Reserve output tokens.",
+        "Preserve recent/conversation-relevant context by explicit policy.",
+        "Report a safe validation error."
+      ],
+      "hints": [
+        "Budget every prompt component.",
+        "Avoid logging full sensitive prompt content."
+      ],
+      "outcome": "Context management and cost control."
+    },
+    {
+      "id": "net-c24",
+      "title": "Build an embedding generation adapter",
+      "topic": "Embeddings",
+      "category": "RAG and retrieval",
+      "difficulty": "Intermediate",
+      "description": "Create a provider-neutral embedding service that batches texts and validates vector dimensions.",
+      "problem": "Create a provider-neutral embedding service that batches texts and validates vector dimensions.",
+      "requirements": [
+        "Use IEmbeddingGenerator or a narrow adapter.",
+        "Handle empty and oversized input.",
+        "Test provider dimension mismatch."
+      ],
+      "hints": [
+        "Store model and dimension metadata.",
+        "Batch within provider limits."
+      ],
+      "outcome": "Embedding integration and vector contract safety."
+    },
+    {
+      "id": "net-c25",
+      "title": "Design tenant-scoped pgvector retrieval",
+      "topic": "Vector search",
+      "category": "RAG and retrieval",
+      "difficulty": "Advanced",
+      "description": "Retrieve semantically similar chunks only from the caller’s tenant and selected document collection.",
+      "problem": "Retrieve semantically similar chunks only from the caller’s tenant and selected document collection.",
+      "requirements": [
+        "Filter tenant before returning candidates.",
+        "Use a parameterized query.",
+        "Test cross-tenant isolation."
+      ],
+      "hints": [
+        "Database row-level security can be additional defense.",
+        "Never filter tenants only after global top-k."
+      ],
+      "outcome": "Vector retrieval and isolation."
+    },
+    {
+      "id": "net-c26",
+      "title": "Compare chunking strategies",
+      "topic": "Chunking",
+      "category": "RAG and retrieval",
+      "difficulty": "Intermediate",
+      "description": "Evaluate fixed-size and section-aware chunking on a set of policy documents.",
+      "problem": "Evaluate fixed-size and section-aware chunking on a set of policy documents.",
+      "requirements": [
+        "Keep page/section source metadata.",
+        "Use a stable evaluation query set.",
+        "Report retrieval hit rate and citation completeness."
+      ],
+      "hints": [
+        "Overlap is a tradeoff, not a universal default.",
+        "Avoid splitting tables and headings blindly."
+      ],
+      "outcome": "RAG ingestion and empirical tuning."
+    },
+    {
+      "id": "net-c27",
+      "title": "Implement hybrid lexical and vector search",
+      "topic": "Hybrid search",
+      "category": "RAG and retrieval",
+      "difficulty": "Advanced",
+      "description": "A support knowledge base has exact product codes and semantic questions; combine both retrieval signals.",
+      "problem": "A support knowledge base has exact product codes and semantic questions; combine both retrieval signals.",
+      "requirements": [
+        "Implement lexical and vector candidate retrieval.",
+        "Fuse rankings with a documented strategy.",
+        "Compare against each method alone."
+      ],
+      "hints": [
+        "Normalize scores or use rank fusion.",
+        "Use exact identifiers as a strong signal."
+      ],
+      "outcome": "Hybrid retrieval and evaluation."
+    },
+    {
+      "id": "net-c28",
+      "title": "Add reranking behind an interface",
+      "topic": "Reranking",
+      "category": "RAG and retrieval",
+      "difficulty": "Advanced",
+      "description": "Improve top-k evidence ordering with a reranker without coupling the retrieval pipeline to one provider.",
+      "problem": "Improve top-k evidence ordering with a reranker without coupling the retrieval pipeline to one provider.",
+      "requirements": [
+        "Define reranker interface and timeout.",
+        "Keep original retrieval scores for diagnosis.",
+        "Measure quality and latency impact."
+      ],
+      "hints": [
+        "Rerank a candidate set, not the entire corpus.",
+        "Provide graceful fallback."
+      ],
+      "outcome": "Retrieval pipeline design and tradeoffs."
+    },
+    {
+      "id": "net-c29",
+      "title": "Return grounded citations from RAG",
+      "topic": "Citations",
+      "category": "RAG and retrieval",
+      "difficulty": "Intermediate",
+      "description": "Generate an answer that cites only retrieved chunk IDs and return source title, page, and excerpt for each citation.",
+      "problem": "Generate an answer that cites only retrieved chunk IDs and return source title, page, and excerpt for each citation.",
+      "requirements": [
+        "Validate cited IDs against retrieved context.",
+        "Abstain when evidence is insufficient.",
+        "Test unsupported claims."
+      ],
+      "hints": [
+        "Model-generated references are untrusted.",
+        "Build citation objects server-side from known chunks."
+      ],
+      "outcome": "Grounding and citation integrity."
+    },
+    {
+      "id": "net-c30",
+      "title": "Create a RAG golden evaluation set",
+      "topic": "RAG evaluation",
+      "category": "Evaluation and testing",
+      "difficulty": "Intermediate",
+      "description": "Create a small test set for retrieval quality and answer behavior across product and policy questions.",
+      "problem": "Create a small test set for retrieval quality and answer behavior across product and policy questions.",
+      "requirements": [
+        "Include expected evidence IDs and answer criteria.",
+        "Track dataset version.",
+        "Report retrieval hit rate and grounded answer review."
+      ],
+      "hints": [
+        "Include unanswerable queries.",
+        "Separate deterministic metrics from subjective judgments."
+      ],
+      "outcome": "Evaluation dataset design."
+    },
+    {
+      "id": "net-c31",
+      "title": "Detect retrieval regressions in CI",
+      "topic": "Regression tests",
+      "category": "Evaluation and testing",
+      "difficulty": "Advanced",
+      "description": "A chunking change improves one test but breaks several query families. Add a regression gate with tolerances.",
+      "problem": "A chunking change improves one test but breaks several query families. Add a regression gate with tolerances.",
+      "requirements": [
+        "Run deterministic retrieval tests.",
+        "Set meaningful thresholds and reporting.",
+        "Avoid flaky model-generation assertions."
+      ],
+      "hints": [
+        "Separate retrieval from generation where possible.",
+        "Keep a human review sample."
+      ],
+      "outcome": "AI regression testing and quality gates."
+    },
+    {
+      "id": "net-c32",
+      "title": "Build a fake chat client for unit tests",
+      "topic": "Testing",
+      "category": "Evaluation and testing",
+      "difficulty": "Intermediate",
+      "description": "Test prompt assembly and tool selection without calling a real or paid model.",
+      "problem": "Test prompt assembly and tool selection without calling a real or paid model.",
+      "requirements": [
+        "Inject a fake IChatClient.",
+        "Assert message roles and tool schema.",
+        "Keep tests deterministic."
+      ],
+      "hints": [
+        "Test application logic at the abstraction boundary.",
+        "Use integration tests for provider contracts separately."
+      ],
+      "outcome": "Dependency injection and deterministic AI tests."
+    },
+    {
+      "id": "net-c33",
+      "title": "Implement an approval-gated tool",
+      "topic": "Human approval",
+      "category": "Agents and workflows",
+      "difficulty": "Advanced",
+      "description": "An assistant may prepare but not execute a refund until an authorized employee approves the exact amount and invoice.",
+      "problem": "An assistant may prepare but not execute a refund until an authorized employee approves the exact amount and invoice.",
+      "requirements": [
+        "Separate propose, approve, and execute states.",
+        "Bind approval to immutable arguments and actor.",
+        "Expire stale approvals."
+      ],
+      "hints": [
+        "Re-authorize at execution time.",
+        "Make execution idempotent."
+      ],
+      "outcome": "Human-in-the-loop safety."
+    },
+    {
+      "id": "net-c34",
+      "title": "Add a bounded agent execution loop",
+      "topic": "Agent loop",
+      "category": "Agents and workflows",
+      "difficulty": "Advanced",
+      "description": "Run model-selected tools with a maximum number of calls, total time budget, and explicit terminal states.",
+      "problem": "Run model-selected tools with a maximum number of calls, total time budget, and explicit terminal states.",
+      "requirements": [
+        "Validate tool names and arguments.",
+        "Enforce call-count and deadline limits.",
+        "Persist each transition for diagnosis."
+      ],
+      "hints": [
+        "Treat the model as planner, not authority.",
+        "Stop on repeated or cyclic actions."
+      ],
+      "outcome": "Agent control flow and limits."
+    },
+    {
+      "id": "net-c35",
+      "title": "Model a support workflow with LangGraph-style states",
+      "topic": "Workflow design",
+      "category": "Agents and workflows",
+      "difficulty": "Advanced",
+      "description": "Represent classify, retrieve, answer, and escalation as explicit states with conditional routes.",
+      "problem": "Represent classify, retrieve, answer, and escalation as explicit states with conditional routes.",
+      "requirements": [
+        "Define typed state.",
+        "Make transitions testable.",
+        "Add human escalation branch."
+      ],
+      "hints": [
+        "Keep side effects out of routing predicates.",
+        "Persist only data needed to resume."
+      ],
+      "outcome": "Graph-based workflow modeling; framework-neutral principles transfer to .NET orchestration."
+    },
+    {
+      "id": "net-c36",
+      "title": "Defend a tool workflow against prompt injection",
+      "topic": "Prompt injection",
+      "category": "AI security",
+      "difficulty": "Advanced",
+      "description": "A retrieved document tells the assistant to export all customer records; ensure it remains data and cannot authorize tools.",
+      "problem": "A retrieved document tells the assistant to export all customer records; ensure it remains data and cannot authorize tools.",
+      "requirements": [
+        "Mark retrieved content as untrusted.",
+        "Enforce server-side tool authorization.",
+        "Add adversarial tests and audit outcomes."
+      ],
+      "hints": [
+        "Prompt instructions are not a security boundary.",
+        "Limit tool capability and returned data."
+      ],
+      "outcome": "Indirect injection defenses and least privilege."
+    },
+    {
+      "id": "net-c37",
+      "title": "Prevent cross-tenant retrieval leakage",
+      "topic": "Data isolation",
+      "category": "AI security",
+      "difficulty": "Advanced",
+      "description": "Two tenants upload similar documents. Prove retrieval, cache keys, citations, and logs cannot cross tenant boundaries.",
+      "problem": "Two tenants upload similar documents. Prove retrieval, cache keys, citations, and logs cannot cross tenant boundaries.",
+      "requirements": [
+        "Scope every query and cache key by tenant.",
+        "Test adversarial same-query cases.",
+        "Ensure telemetry does not contain document text."
+      ],
+      "hints": [
+        "Test the whole path, not only repository code.",
+        "Use tenant context from authenticated identity."
+      ],
+      "outcome": "End-to-end tenant isolation."
+    },
+    {
+      "id": "net-c38",
+      "title": "Make ingestion idempotent",
+      "topic": "Background processing",
+      "category": "Background work",
+      "difficulty": "Intermediate",
+      "description": "A queue may deliver the same document job twice. Avoid duplicate chunks and embeddings.",
+      "problem": "A queue may deliver the same document job twice. Avoid duplicate chunks and embeddings.",
+      "requirements": [
+        "Use idempotency key or unique constraints.",
+        "Track job state and retryable failures.",
+        "Make partial processing recoverable."
+      ],
+      "hints": [
+        "Persist progress in bounded steps.",
+        "Design deletion and reprocessing semantics."
+      ],
+      "outcome": "Reliable background processing."
+    },
+    {
+      "id": "net-c39",
+      "title": "Design a poison-message policy",
+      "topic": "Background processing",
+      "category": "Background work",
+      "difficulty": "Advanced",
+      "description": "A malformed PDF repeatedly crashes an ingestion worker. Quarantine it without blocking healthy work.",
+      "problem": "A malformed PDF repeatedly crashes an ingestion worker. Quarantine it without blocking healthy work.",
+      "requirements": [
+        "Set retry budget and backoff.",
+        "Record failure category and safe diagnostics.",
+        "Provide operator replay path."
+      ],
+      "hints": [
+        "Do not retry permanent validation failures endlessly.",
+        "Keep dead-letter content access controlled."
+      ],
+      "outcome": "Queue reliability and operations."
+    },
+    {
+      "id": "net-c40",
+      "title": "Instrument an AI request end to end",
+      "topic": "Tracing",
+      "category": "Production observability",
+      "difficulty": "Intermediate",
+      "description": "Trace an API call through retrieval, provider request, and database work while preserving useful correlation.",
+      "problem": "Trace an API call through retrieval, provider request, and database work while preserving useful correlation.",
+      "requirements": [
+        "Create spans with safe attributes.",
+        "Record latency and outcome metrics.",
+        "Exclude prompt and secret content."
+      ],
+      "hints": [
+        "Use trace context propagation.",
+        "Prefer low-cardinality metric labels."
+      ],
+      "outcome": "OpenTelemetry traces and privacy-aware metrics."
+    },
+    {
+      "id": "net-c41",
+      "title": "Build health checks with dependency readiness",
+      "topic": "Health checks",
+      "category": "Production observability",
+      "difficulty": "Beginner",
+      "description": "Expose liveness separately from readiness for API, database, cache, and worker conditions.",
+      "problem": "Expose liveness separately from readiness for API, database, cache, and worker conditions.",
+      "requirements": [
+        "Avoid expensive checks on every probe.",
+        "Return dependency-specific readiness.",
+        "Test startup and degraded modes."
+      ],
+      "hints": [
+        "Liveness should not restart for every temporary downstream outage.",
+        "Keep probe data minimal."
+      ],
+      "outcome": "Operational health semantics."
+    },
+    {
+      "id": "net-c42",
+      "title": "Containerize API, worker, and data services",
+      "topic": "Docker",
+      "category": "Deployment and DevOps",
+      "difficulty": "Intermediate",
+      "description": "Create a local multi-service environment for the API, background worker, PostgreSQL, and Redis.",
+      "problem": "Create a local multi-service environment for the API, background worker, PostgreSQL, and Redis.",
+      "requirements": [
+        "Use non-root runtime where practical.",
+        "Use health-aware startup and persistent dev volumes.",
+        "Keep secrets out of image layers."
+      ],
+      "hints": [
+        "Separate build and runtime stages.",
+        "Make configuration environment-driven."
+      ],
+      "outcome": "Docker and service composition."
+    },
+    {
+      "id": "net-c43",
+      "title": "Create a CI pipeline with integration tests",
+      "topic": "GitHub Actions",
+      "category": "Deployment and DevOps",
+      "difficulty": "Intermediate",
+      "description": "Validate format, build, unit tests, and a database-backed API test on pull requests.",
+      "problem": "Validate format, build, unit tests, and a database-backed API test on pull requests.",
+      "requirements": [
+        "Use least-privilege workflow permissions.",
+        "Cache dependencies safely.",
+        "Publish actionable failure output."
+      ],
+      "hints": [
+        "Pin actions to reviewed versions.",
+        "Avoid production secrets in pull requests."
+      ],
+      "outcome": "CI design and supply-chain awareness."
+    },
+    {
+      "id": "net-c44",
+      "title": "Design a multi-tenant AI assistant",
+      "topic": "System design",
+      "category": "System design",
+      "difficulty": "Advanced",
+      "description": "Design an assistant for several organizations with isolated documents, configurable providers, and usage limits.",
+      "problem": "Design an assistant for several organizations with isolated documents, configurable providers, and usage limits.",
+      "requirements": [
+        "Draw component and sequence diagrams.",
+        "Define data isolation and failure boundaries.",
+        "Explain scaling and cost controls."
+      ],
+      "hints": [
+        "Separate control plane and request path.",
+        "State assumptions and tradeoffs."
+      ],
+      "outcome": "System design communication and multi-tenant architecture."
+    },
+    {
+      "id": "net-c45",
+      "title": "Estimate capacity for streaming chat",
+      "topic": "Capacity planning",
+      "category": "System design",
+      "difficulty": "Advanced",
+      "description": "Estimate concurrent streams, provider limits, database load, and memory needs for a stated usage scenario.",
+      "problem": "Estimate concurrent streams, provider limits, database load, and memory needs for a stated usage scenario.",
+      "requirements": [
+        "Write assumptions and formulas.",
+        "Identify bottlenecks and backpressure behavior.",
+        "Propose load-test signals."
+      ],
+      "hints": [
+        "Model long-lived connections separately from request rate.",
+        "Include provider quotas."
+      ],
+      "outcome": "Capacity estimation and performance planning."
+    },
+    {
+      "id": "net-c46",
+      "title": "Secure model provider configuration",
+      "topic": "Secrets",
+      "category": "AI security",
+      "difficulty": "Intermediate",
+      "description": "Support local and hosted providers without exposing API keys in source, logs, or frontend configuration.",
+      "problem": "Support local and hosted providers without exposing API keys in source, logs, or frontend configuration.",
+      "requirements": [
+        "Use managed/environment secret sources.",
+        "Validate configuration at startup.",
+        "Document rotation procedure."
+      ],
+      "hints": [
+        "Never ship provider credentials to browser code.",
+        "Redact configuration diagnostics."
+      ],
+      "outcome": "Secret management and provider configuration."
+    },
+    {
+      "id": "net-c47",
+      "title": "Add conversation retention and deletion",
+      "topic": "Privacy",
+      "category": "AI security",
+      "difficulty": "Advanced",
+      "description": "Implement a tenant-configurable retention policy for conversation history, retrieved references, and audit records.",
+      "problem": "Implement a tenant-configurable retention policy for conversation history, retrieved references, and audit records.",
+      "requirements": [
+        "Define data categories and deletion semantics.",
+        "Ensure background cleanup is idempotent.",
+        "Test deletion across related records."
+      ],
+      "hints": [
+        "Audit data may need a distinct retention policy.",
+        "Avoid retaining prompts by default without a reason."
+      ],
+      "outcome": "Data lifecycle and privacy engineering."
+    },
+    {
+      "id": "net-c48",
+      "title": "Present an architecture tradeoff interview",
+      "topic": "System design",
+      "category": "System design",
+      "difficulty": "Advanced",
+      "description": "Explain when to keep AI orchestration inside ASP.NET Core and when a separate Python model service would be justified.",
+      "problem": "Explain when to keep AI orchestration inside ASP.NET Core and when a separate Python model service would be justified.",
+      "requirements": [
+        "Compare operational cost, library needs, team skills, and latency.",
+        "Propose a stable service contract if split.",
+        "State why a split is or is not needed for this scenario."
+      ],
+      "hints": [
+        "Do not add a second runtime without a concrete capability gap.",
+        "Discuss deployment and observability ownership."
+      ],
+      "outcome": "Pragmatic architecture decisions while keeping .NET as the primary path."
+    }
+  ]
+}

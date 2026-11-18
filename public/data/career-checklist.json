@@ -1,0 +1,69 @@
+{
+  "items": [
+    {
+      "id": "remote-readiness-1",
+      "label": "Confirm remote eligibility",
+      "detail": "Record an employer source for Bangladesh or confirmed contractor eligibility."
+    },
+    {
+      "id": "remote-readiness-2",
+      "label": "Verify time overlap",
+      "detail": "Convert expected working hours into UTC and Asia/Dhaka and confirm expectations."
+    },
+    {
+      "id": "remote-readiness-3",
+      "label": "Ship a Python backend service",
+      "detail": "Share tests, migrations, API contract and a clean staging run."
+    },
+    {
+      "id": "remote-readiness-4",
+      "label": "Publish the enterprise RAG case study",
+      "detail": "Report retrieval and answer quality, permission tests, release criteria and known limits."
+    },
+    {
+      "id": "remote-readiness-5",
+      "label": "Publish production evidence",
+      "detail": "Include traces, load envelope, cost, recovery and current security boundaries."
+    },
+    {
+      "id": "remote-readiness-6",
+      "label": "Prepare the .NET transition story",
+      "detail": "Use one concrete ERP or transaction example, then show its Python or AI equivalent."
+    },
+    {
+      "id": "remote-readiness-7",
+      "label": "Write a role-specific resume",
+      "detail": "Map three job requirements to verified work or clearly labeled portfolio evidence."
+    },
+    {
+      "id": "remote-readiness-8",
+      "label": "Record an English introduction",
+      "detail": "Explain your contribution, outcomes and next role in 90 seconds."
+    },
+    {
+      "id": "remote-readiness-9",
+      "label": "Complete two independent mocks",
+      "detail": "Cover Python, SQL, RAG, security, system design and operational ownership."
+    },
+    {
+      "id": "remote-readiness-10",
+      "label": "Attach an asynchronous handoff",
+      "detail": "Write a concise design decision and a production incident summary for remote review."
+    },
+    {
+      "id": "remote-readiness-11",
+      "label": "Build a remote application pipeline",
+      "detail": "Save qualified roles, proof links, feedback and next follow-up dates."
+    },
+    {
+      "id": "remote-readiness-12",
+      "label": "Review application outcomes",
+      "detail": "Use recurring feedback to revise the study plan and portfolio."
+    },
+    {
+      "id": "remote-readiness-13",
+      "label": "Collect senior ownership evidence",
+      "detail": "Demonstrate outcomes over releases, repeatable mentoring and operational decision ownership."
+    }
+  ]
+}

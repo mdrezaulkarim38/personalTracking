@@ -1,0 +1,19 @@
+{
+  "name": "AI Engineer Career Guide",
+  "location": "Bangladesh",
+  "background": "Experienced software developer with previous professional work in C#, ASP.NET Core Web APIs, REST services, EF Core, Dapper, SQL Server, React, JavaScript, TypeScript, authentication, and enterprise ERP/CRM/accounting/inventory systems; also has Docker fundamentals and early LLM application experience with Ollama, Semantic Kernel, Microsoft.Extensions.AI, and streaming/SSE.",
+  "pythonStatus": "Optional secondary skill only; not required alongside the primary .NET learning path. No professional Python experience is claimed.",
+  "careerDirection": "Experienced ASP.NET Core / .NET backend engineer specializing in AI and LLM application engineering.",
+  "goal": "Qualify for international remote .NET Backend, AI Backend, and enterprise AI application engineering roles by extending existing backend experience into production AI systems.",
+  "targetRoles": [
+    ".NET AI Engineer",
+    "AI Backend Engineer (.NET)",
+    "Enterprise AI Application Engineer",
+    "ASP.NET Core Backend Engineer with AI specialization",
+    "LLM Application Engineer (.NET)"
+  ],
+  "dailyTargetMinutes": 220,
+  "journeyWeeks": 24,
+  "curriculumVersion": 3,
+  "primaryStack": "C#, .NET 10, ASP.NET Core Web API"
+}

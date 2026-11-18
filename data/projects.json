@@ -1,0 +1,561 @@
+{
+  "projects": [
+    {
+      "id": "document-intelligence",
+      "name": "Enterprise Knowledge Assistant (RAG)",
+      "description": "An internal knowledge assistant that answers questions from tenant-owned policies, manuals, and operational documents with verifiable citations and safe abstention.",
+      "difficulty": "Advanced",
+      "technologies": [
+        "ASP.NET Core 10",
+        "Microsoft.Extensions.AI",
+        "PostgreSQL + pgvector",
+        "Ollama or hosted OpenAI-compatible model",
+        "React + TypeScript",
+        "OpenTelemetry",
+        "Docker Compose"
+      ],
+      "features": [
+        "PDF and office-document ingestion with durable job status",
+        "Hybrid lexical + vector retrieval with metadata and tenant filters",
+        "Reranking behind a replaceable interface",
+        "Answers grounded in page-level citations",
+        "Unanswerable-question handling and feedback capture",
+        "Retrieval and answer evaluation datasets"
+      ],
+      "requirements": [
+        "Write a concise problem statement, architecture diagram, and key tradeoff decisions.",
+        "Use ASP.NET Core 10 for the backend API; keep model/provider calls behind application interfaces.",
+        "Add unit, integration, security, and failure-path tests; do not rely on manual demos alone.",
+        "Publish Docker Compose setup, environment-variable template, API docs, runbook, and a polished GitHub README.",
+        "Treat document content as untrusted; prove prompt-injection and cross-tenant isolation defenses.",
+        "Define retention and deletion semantics for source files, extracted text, chunks, embeddings, and logs."
+      ],
+      "milestones": [
+        {
+          "id": "document-intelligence-ai-v4-m01",
+          "title": "Problem definition and threat model",
+          "description": "Define users, source collections, answer expectations, privacy boundaries, and abuse cases.",
+          "tasks": [
+            "Choose a concrete knowledge domain such as HR policy or support operations.",
+            "Specify answerable and unanswerable cases plus citation requirements.",
+            "Draw ingestion/query diagrams and identify trust boundaries."
+          ],
+          "deliverable": "Problem brief, architecture diagram, and threat model."
+        },
+        {
+          "id": "document-intelligence-ai-v4-m02",
+          "title": "Document ingestion pipeline",
+          "description": "Build a restartable ingestion workflow with status, validation, and safe failure handling.",
+          "tasks": [
+            "Add authenticated upload and file type/size validation.",
+            "Extract text with page and section metadata.",
+            "Persist processing status and retryable versus permanent failures."
+          ],
+          "deliverable": "A document can be uploaded and inspected with processing status."
+        },
+        {
+          "id": "document-intelligence-ai-v4-m03",
+          "title": "Chunking and embedding lifecycle",
+          "description": "Create versioned chunks that can be reprocessed when extraction or embedding models change.",
+          "tasks": [
+            "Compare fixed-size and structure-aware chunking on sample files.",
+            "Generate and store embeddings with model/dimension metadata.",
+            "Implement document re-ingestion and deletion."
+          ],
+          "deliverable": "Versioned chunk records with source traceability."
+        },
+        {
+          "id": "document-intelligence-ai-v4-m04",
+          "title": "Hybrid retrieval and reranking",
+          "description": "Retrieve relevant evidence with exact identifier support and measurable ranking quality.",
+          "tasks": [
+            "Implement tenant- and collection-scoped vector retrieval.",
+            "Add lexical search and a documented fusion strategy.",
+            "Evaluate optional reranking against the same query set."
+          ],
+          "deliverable": "Retrieval benchmark comparing lexical, vector, and hybrid methods."
+        },
+        {
+          "id": "document-intelligence-ai-v4-m05",
+          "title": "Grounded answer API",
+          "description": "Return answers users can audit rather than unsupported confident prose.",
+          "tasks": [
+            "Build context from top evidence with explicit trust boundaries.",
+            "Return citations from server-known source IDs, pages, and excerpts.",
+            "Abstain and explain missing evidence when confidence/evidence criteria fail."
+          ],
+          "deliverable": "Streaming answer endpoint with validated citations."
+        },
+        {
+          "id": "document-intelligence-ai-v4-m06",
+          "title": "Evaluation, security, and demo",
+          "description": "Prove quality, tenant isolation, and failure behavior in a reviewable portfolio demo.",
+          "tasks": [
+            "Create golden queries with expected evidence and unanswerable examples.",
+            "Measure retrieval hit rate, citation validity, latency, and cost.",
+            "Test malicious documents, cross-tenant access, provider timeout, and deletion.",
+            "Deploy with traces, dashboards/metrics, runbook, and recorded demo."
+          ],
+          "deliverable": "Deployed RAG system with an evaluation report and security test evidence."
+        }
+      ]
+    },
+    {
+      "id": "support-copilot",
+      "name": "Customer Support Resolution Copilot",
+      "description": "A support agent copilot that summarizes case history, retrieves approved knowledge, drafts replies, and recommends next steps without sending messages autonomously.",
+      "difficulty": "Advanced",
+      "technologies": [
+        "ASP.NET Core 10",
+        "Microsoft.Extensions.AI",
+        "SQL Server or PostgreSQL",
+        "Redis",
+        "SSE",
+        "React + TypeScript",
+        "OpenTelemetry"
+      ],
+      "features": [
+        "Case timeline summarization with source references",
+        "Knowledge retrieval grounded in approved articles",
+        "Draft response with policy and evidence links",
+        "Human review/edit/approve workflow",
+        "PII redaction and role-aware data access",
+        "Feedback and resolution outcome tracking"
+      ],
+      "requirements": [
+        "Write a concise problem statement, architecture diagram, and key tradeoff decisions.",
+        "Use ASP.NET Core 10 for the backend API; keep model/provider calls behind application interfaces.",
+        "Add unit, integration, security, and failure-path tests; do not rely on manual demos alone.",
+        "Publish Docker Compose setup, environment-variable template, API docs, runbook, and a polished GitHub README.",
+        "The assistant may draft but cannot send or close customer cases without an authorized human action.",
+        "Use synthetic or anonymized data and document PII handling."
+      ],
+      "milestones": [
+        {
+          "id": "support-copilot-ai-v4-m01",
+          "title": "Support workflow and safety boundary",
+          "description": "Map a real support journey and identify what the model may suggest versus execute.",
+          "tasks": [
+            "Define agent personas, case states, and supported intents.",
+            "Create a permission matrix for customer data and actions.",
+            "Write acceptance criteria for citation quality and safe fallback."
+          ],
+          "deliverable": "Workflow map, permission matrix, and evaluation plan."
+        },
+        {
+          "id": "support-copilot-ai-v4-m02",
+          "title": "Case context and knowledge retrieval",
+          "description": "Assemble only relevant, authorized context from case history and approved knowledge.",
+          "tasks": [
+            "Create case timeline API and tenant-scoped access.",
+            "Index support articles with version and publication status.",
+            "Retrieve evidence using filters and hybrid search."
+          ],
+          "deliverable": "Authorized case context and retrieval service."
+        },
+        {
+          "id": "support-copilot-ai-v4-m03",
+          "title": "Summary and response drafting",
+          "description": "Generate concise drafts with traceable factual claims.",
+          "tasks": [
+            "Create structured case summary and missing-information fields.",
+            "Draft a customer response tied to evidence IDs.",
+            "Add output validation, redaction, and unsupported-claim checks."
+          ],
+          "deliverable": "Case summary and editable cited reply draft."
+        },
+        {
+          "id": "support-copilot-ai-v4-m04",
+          "title": "Human review and feedback",
+          "description": "Keep the support professional in control and capture useful outcomes.",
+          "tasks": [
+            "Add approve/edit/reject workflow with actor and timestamp.",
+            "Never auto-send; record final approved content separately.",
+            "Capture usefulness and resolution feedback."
+          ],
+          "deliverable": "Auditable human-reviewed case workflow."
+        },
+        {
+          "id": "support-copilot-ai-v4-m05",
+          "title": "Quality and production hardening",
+          "description": "Measure whether the copilot improves response quality without adding risk.",
+          "tasks": [
+            "Build golden cases across routine, ambiguous, and adversarial requests.",
+            "Evaluate factuality, citation coverage, and PII leakage.",
+            "Add streaming, cancellation, timeouts, cost limits, telemetry, and demo."
+          ],
+          "deliverable": "A/B-style evaluation report and production-ready demonstration."
+        }
+      ]
+    },
+    {
+      "id": "document-operations",
+      "name": "Intelligent Document Operations Workflow",
+      "description": "An enterprise document processing service that classifies incoming contracts or invoices, extracts typed fields, flags exceptions, and routes work for human review.",
+      "difficulty": "Advanced",
+      "technologies": [
+        "ASP.NET Core 10",
+        "Microsoft.Extensions.AI",
+        "PostgreSQL or SQL Server",
+        "Background queue/worker",
+        "Object storage adapter",
+        "React + TypeScript",
+        "OpenTelemetry",
+        "Docker"
+      ],
+      "features": [
+        "Document classification and schema-constrained extraction",
+        "Confidence and evidence spans for extracted values",
+        "Business rule validation and exception queue",
+        "Human correction workflow and audit history",
+        "Idempotent asynchronous processing",
+        "Evaluation by document type and field"
+      ],
+      "requirements": [
+        "Write a concise problem statement, architecture diagram, and key tradeoff decisions.",
+        "Use ASP.NET Core 10 for the backend API; keep model/provider calls behind application interfaces.",
+        "Add unit, integration, security, and failure-path tests; do not rely on manual demos alone.",
+        "Publish Docker Compose setup, environment-variable template, API docs, runbook, and a polished GitHub README.",
+        "Model-extracted fields are suggestions until validated; consequential accounting or legal decisions require human review.",
+        "Store minimal document content and define retention/deletion controls."
+      ],
+      "milestones": [
+        {
+          "id": "document-operations-ai-v4-m01",
+          "title": "Choose workflow and define data contract",
+          "description": "Select one bounded document process with measurable business value.",
+          "tasks": [
+            "Choose invoice intake, contract clause review, or purchase-order matching.",
+            "Define typed output schema, required evidence spans, and exception categories.",
+            "Map current manual workflow and target service-level indicators."
+          ],
+          "deliverable": "Problem case, typed schema, and success metrics."
+        },
+        {
+          "id": "document-operations-ai-v4-m02",
+          "title": "Secure asynchronous intake",
+          "description": "Accept documents reliably without blocking HTTP requests.",
+          "tasks": [
+            "Implement authenticated upload and idempotency.",
+            "Store document reference and enqueue processing job.",
+            "Apply file validation, malware scanning integration point, and tenant scope."
+          ],
+          "deliverable": "Secure intake API and observable job lifecycle."
+        },
+        {
+          "id": "document-operations-ai-v4-m03",
+          "title": "Extraction and validation pipeline",
+          "description": "Combine model extraction with deterministic domain rules.",
+          "tasks": [
+            "Extract structured fields and evidence spans.",
+            "Validate dates, totals, identifiers, and cross-field consistency.",
+            "Route low-confidence or conflicting fields to review."
+          ],
+          "deliverable": "Typed extraction result with field-level validation."
+        },
+        {
+          "id": "document-operations-ai-v4-m04",
+          "title": "Human review and audit",
+          "description": "Make corrections attributable and replayable.",
+          "tasks": [
+            "Build review queue for exceptions.",
+            "Allow reviewers to correct fields and record reasons.",
+            "Store model/prompt version and before/after values in audit history."
+          ],
+          "deliverable": "Review UI and immutable audit trail."
+        },
+        {
+          "id": "document-operations-ai-v4-m05",
+          "title": "Evaluation and operations",
+          "description": "Demonstrate accuracy and safe handling across document variation.",
+          "tasks": [
+            "Create labeled documents covering clean, noisy, and adversarial inputs.",
+            "Measure field precision/recall and exception routing accuracy.",
+            "Test duplicate jobs, worker crash/retry, deletion, and tenant boundaries.",
+            "Package deployment and publish a measured case study."
+          ],
+          "deliverable": "Document workflow with evaluation results and operational runbook."
+        }
+      ]
+    },
+    {
+      "id": "business-assistant",
+      "name": "Secure ERP Action Assistant",
+      "description": "An AI assistant for ERP operators that answers questions and prepares bounded customer, invoice, and order actions, with application-enforced authorization and approval before writes.",
+      "difficulty": "Expert",
+      "technologies": [
+        "ASP.NET Core 10",
+        "Microsoft.Extensions.AI",
+        "Semantic Kernel or Microsoft Agent Framework",
+        "SQL Server",
+        "Redis",
+        "SSE",
+        "OpenTelemetry",
+        "Docker Compose"
+      ],
+      "features": [
+        "Read-only customer/invoice/order tools with narrow contracts",
+        "Role-, tenant-, and record-level authorization",
+        "Approval-bound write operations with expiry and idempotency",
+        "Execution limits, retries, and complete audit records",
+        "Conversation streaming and resumable workflow status",
+        "Adversarial tool-use evaluation"
+      ],
+      "requirements": [
+        "Write a concise problem statement, architecture diagram, and key tradeoff decisions.",
+        "Use ASP.NET Core 10 for the backend API; keep model/provider calls behind application interfaces.",
+        "Add unit, integration, security, and failure-path tests; do not rely on manual demos alone.",
+        "Publish Docker Compose setup, environment-variable template, API docs, runbook, and a polished GitHub README.",
+        "The model never determines user permissions; each tool re-authorizes against the authenticated actor.",
+        "Writes require explicit approval bound to exact arguments and expire when stale."
+      ],
+      "milestones": [
+        {
+          "id": "business-assistant-ai-v4-m01",
+          "title": "Select a high-value business workflow",
+          "description": "Start with a real enterprise process rather than a generic chatbot.",
+          "tasks": [
+            "Choose one workflow such as invoice dispute triage or order hold review.",
+            "Document actors, required data, permissions, side effects, and approval rules.",
+            "Define explicit non-goals and refusal/escalation conditions."
+          ],
+          "deliverable": "Workflow specification and threat model."
+        },
+        {
+          "id": "business-assistant-ai-v4-m02",
+          "title": "Secure business tool layer",
+          "description": "Expose focused operations that enforce business rules independent of the LLM.",
+          "tasks": [
+            "Implement customer, invoice, and order read tools.",
+            "Derive tenant/user identity from trusted server context.",
+            "Add resource-level authorization tests and data minimization."
+          ],
+          "deliverable": "Tool API with authorization tests."
+        },
+        {
+          "id": "business-assistant-ai-v4-m03",
+          "title": "Tool calling and workflow state",
+          "description": "Use model tool selection inside a bounded state machine.",
+          "tasks": [
+            "Define typed schemas and validation for every tool.",
+            "Limit tool count, execution duration, and repeated calls.",
+            "Persist workflow state and distinguish proposal, approval, and execution."
+          ],
+          "deliverable": "Resumable assistant workflow with explicit state transitions."
+        },
+        {
+          "id": "business-assistant-ai-v4-m04",
+          "title": "Approval-gated action execution",
+          "description": "Make side effects explicit, authorized, idempotent, and auditable.",
+          "tasks": [
+            "Create approval record bound to actor, action, and immutable arguments.",
+            "Re-authorize immediately before execution and reject expired approvals.",
+            "Use idempotency keys and store execution outcome."
+          ],
+          "deliverable": "Auditable approved action flow."
+        },
+        {
+          "id": "business-assistant-ai-v4-m05",
+          "title": "Adversarial evaluation and operations",
+          "description": "Show the assistant handles ambiguity, malicious content, and downstream failures safely.",
+          "tasks": [
+            "Create scenarios for prompt injection, privilege escalation, malformed tool calls, and provider outage.",
+            "Measure correct tool selection, policy compliance, and refusal/escalation.",
+            "Add traces, redacted logs, cost controls, CI evaluation gate, and demo."
+          ],
+          "deliverable": "Enterprise workflow assistant with security and evaluation evidence."
+        }
+      ]
+    },
+    {
+      "id": "evaluation-workbench",
+      "name": "LLM Evaluation and Routing Workbench",
+      "description": "A platform for comparing prompts, models, and retrieval configurations against versioned enterprise scenarios, then selecting providers by quality, latency, cost, and policy.",
+      "difficulty": "Advanced",
+      "technologies": [
+        "ASP.NET Core 10",
+        "Microsoft.Extensions.AI",
+        "PostgreSQL",
+        "Background workers",
+        "React + TypeScript",
+        "OpenTelemetry",
+        "Docker"
+      ],
+      "features": [
+        "Versioned golden datasets and prompt registry",
+        "Batch evaluation across providers/configurations",
+        "Quality, latency, failure, token, and cost comparisons",
+        "Human review for subjective outputs",
+        "Regression thresholds and CI integration",
+        "Policy-aware model routing experiments"
+      ],
+      "requirements": [
+        "Write a concise problem statement, architecture diagram, and key tradeoff decisions.",
+        "Use ASP.NET Core 10 for the backend API; keep model/provider calls behind application interfaces.",
+        "Add unit, integration, security, and failure-path tests; do not rely on manual demos alone.",
+        "Publish Docker Compose setup, environment-variable template, API docs, runbook, and a polished GitHub README.",
+        "Do not report model-judge scores as ground truth; label their limitations and use human review samples.",
+        "Avoid storing sensitive prompts/results longer than necessary."
+      ],
+      "milestones": [
+        {
+          "id": "evaluation-workbench-ai-v4-m01",
+          "title": "Evaluation model and dataset",
+          "description": "Define repeatable cases that reflect real user and business risk.",
+          "tasks": [
+            "Model scenarios, input variables, expected evidence, and scoring criteria.",
+            "Version prompts and datasets independently.",
+            "Include edge cases, unanswerable cases, and adversarial inputs."
+          ],
+          "deliverable": "Versioned scenario format and baseline set."
+        },
+        {
+          "id": "evaluation-workbench-ai-v4-m02",
+          "title": "Provider experiment runner",
+          "description": "Run controlled comparisons with reproducible configuration.",
+          "tasks": [
+            "Integrate multiple chat/embedding providers behind interfaces.",
+            "Add concurrency limits, timeouts, retries, and cancellation.",
+            "Record model, prompt, dataset, configuration, and run metadata."
+          ],
+          "deliverable": "Repeatable background experiment runner."
+        },
+        {
+          "id": "evaluation-workbench-ai-v4-m03",
+          "title": "Metrics and review workspace",
+          "description": "Make quality-cost tradeoffs inspectable at both aggregate and case level.",
+          "tasks": [
+            "Track latency percentiles, failures, token use, and cost estimates.",
+            "Compare per-case results and prompt/model versions.",
+            "Add blind human review for selected subjective dimensions."
+          ],
+          "deliverable": "Comparison dashboard with case-level drilldown."
+        },
+        {
+          "id": "evaluation-workbench-ai-v4-m04",
+          "title": "Regression and routing policy",
+          "description": "Turn experiments into a release decision aid.",
+          "tasks": [
+            "Configure quality and latency thresholds by scenario group.",
+            "Prototype routing policies with cost and capability constraints.",
+            "Fail CI on critical deterministic regressions and publish artifacts."
+          ],
+          "deliverable": "Evaluation CI workflow and documented routing tradeoffs."
+        },
+        {
+          "id": "evaluation-workbench-ai-v4-m05",
+          "title": "Reliability, security, and release",
+          "description": "Ship a usable internal tool with clear data controls.",
+          "tasks": [
+            "Test dataset access control, prompt redaction, and concurrent runs.",
+            "Instrument queue, provider, and evaluation stages.",
+            "Deploy and publish architecture, sample dataset, and demo results."
+          ],
+          "deliverable": "Portfolio-ready evaluation workbench."
+        }
+      ]
+    },
+    {
+      "id": "assistant-platform",
+      "name": "Multi-Tenant Enterprise AI Assistant Platform",
+      "description": "A capstone platform combining grounded knowledge, secure business tools, provider abstraction, evaluation, and production operations for multiple enterprise tenants.",
+      "difficulty": "Expert",
+      "technologies": [
+        "ASP.NET Core 10",
+        "Microsoft.Extensions.AI",
+        "Semantic Kernel / Microsoft Agent Framework",
+        "PostgreSQL + pgvector",
+        "Redis",
+        "React + TypeScript",
+        "Docker Compose",
+        "GitHub Actions",
+        "OpenTelemetry"
+      ],
+      "features": [
+        "Tenant-scoped knowledge ingestion and RAG",
+        "Provider abstraction with streaming and resilient policies",
+        "Bounded, approval-gated business workflows",
+        "Conversation history, retention, and access policies",
+        "Evaluation gates for retrieval, answers, and tool workflows",
+        "Operational telemetry, quotas, and incident runbooks"
+      ],
+      "requirements": [
+        "Write a concise problem statement, architecture diagram, and key tradeoff decisions.",
+        "Use ASP.NET Core 10 for the backend API; keep model/provider calls behind application interfaces.",
+        "Add unit, integration, security, and failure-path tests; do not rely on manual demos alone.",
+        "Publish Docker Compose setup, environment-variable template, API docs, runbook, and a polished GitHub README.",
+        "Publish a clear threat model and demonstrate cross-tenant denial tests.",
+        "Keep domain authorization and critical business rules outside model prompts.",
+        "Include a live or reproducible demo with synthetic data and honest limitations."
+      ],
+      "milestones": [
+        {
+          "id": "assistant-platform-ai-v4-m01",
+          "title": "Platform architecture and domain boundary",
+          "description": "Design a coherent platform around explicit tenant and capability boundaries.",
+          "tasks": [
+            "Define API, ingestion, retrieval, conversation, tool, evaluation, and worker modules.",
+            "Create architecture decision records for provider abstraction and data storage.",
+            "Set tenant quotas, data retention, and threat model."
+          ],
+          "deliverable": "Architecture pack and initial vertical-slice plan."
+        },
+        {
+          "id": "assistant-platform-ai-v4-m02",
+          "title": "Identity, tenant isolation, and data lifecycle",
+          "description": "Build isolation and deletion into the data model and execution path.",
+          "tasks": [
+            "Implement tenant-aware identity and authorization policies.",
+            "Scope relational, vector, cache, job, and object storage access by tenant.",
+            "Add retention and deletion workflow with integration tests."
+          ],
+          "deliverable": "Tenant-safe data foundation with isolation evidence."
+        },
+        {
+          "id": "assistant-platform-ai-v4-m03",
+          "title": "Provider gateway and conversation API",
+          "description": "Support multiple model providers without leaking provider assumptions across the app.",
+          "tasks": [
+            "Implement configuration-based chat/embedding provider selection.",
+            "Add streaming, cancellation, deadlines, usage capture, and bounded retries.",
+            "Persist conversation state under access and retention policies."
+          ],
+          "deliverable": "Observable provider-neutral conversation service."
+        },
+        {
+          "id": "assistant-platform-ai-v4-m04",
+          "title": "Knowledge and business capabilities",
+          "description": "Combine evidence-based answers with narrowly scoped enterprise actions.",
+          "tasks": [
+            "Integrate document ingestion, hybrid RAG, citations, and feedback.",
+            "Integrate a limited set of authorized business tools.",
+            "Add approval state machine for every consequential write."
+          ],
+          "deliverable": "End-to-end grounded assistant with safe business workflow."
+        },
+        {
+          "id": "assistant-platform-ai-v4-m05",
+          "title": "Evaluation, security, and SRE controls",
+          "description": "Demonstrate measurable quality and operational resilience.",
+          "tasks": [
+            "Run golden RAG and tool-use evaluation suites in CI.",
+            "Test injection, cross-tenant leakage, abuse, and failure recovery.",
+            "Add traces, metrics, structured redacted logs, health checks, and runbooks."
+          ],
+          "deliverable": "Release evidence: evaluation, security tests, and operational dashboards."
+        },
+        {
+          "id": "assistant-platform-ai-v4-m06",
+          "title": "Portfolio release and technical narrative",
+          "description": "Present a project that hiring teams can inspect and run.",
+          "tasks": [
+            "Create architecture and sequence diagrams plus key design decisions.",
+            "Provide Docker Compose quick start, seeded synthetic demo, and API docs.",
+            "Record a concise demo and write a case study with tradeoffs and limitations."
+          ],
+          "deliverable": "Polished GitHub repository and interview-ready system walkthrough."
+        }
+      ]
+    }
+  ]
+}

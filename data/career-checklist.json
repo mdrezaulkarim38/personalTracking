@@ -1,0 +1,104 @@
+{
+  "items": [
+    {
+      "id": "csharp-async",
+      "label": "Modern C# async",
+      "detail": "Use cancellation-aware asynchronous APIs, nullable annotations, and structured concurrency in a small reviewed exercise."
+    },
+    {
+      "id": "aspnet-api",
+      "label": "ASP.NET Core 10 API",
+      "detail": "Build a documented API with validation, consistent ProblemDetails, and integration tests."
+    },
+    {
+      "id": "api-design",
+      "label": "API design",
+      "detail": "Deliver stable contracts, pagination, filtering, versioning strategy, and idempotency where needed."
+    },
+    {
+      "id": "efcore",
+      "label": "EF Core and SQL",
+      "detail": "Model relational constraints, migrations, transactions, indexes, and query performance."
+    },
+    {
+      "id": "auth",
+      "label": "Authentication and authorization",
+      "detail": "Demonstrate secure token/session lifecycle and resource-level authorization tests."
+    },
+    {
+      "id": "security",
+      "label": "Backend security",
+      "detail": "Apply tenant isolation, rate limits, secret handling, input validation, and safe logging."
+    },
+    {
+      "id": "redis",
+      "label": "Caching and background work",
+      "detail": "Use Redis and a durable worker/queue approach with idempotency and failure handling."
+    },
+    {
+      "id": "ai-integration",
+      "label": ".NET AI integration",
+      "detail": "Use Microsoft.Extensions.AI or a documented provider abstraction for chat and embeddings."
+    },
+    {
+      "id": "structured-output",
+      "label": "Structured output and tools",
+      "detail": "Validate model output and secure every tool invocation in application code."
+    },
+    {
+      "id": "rag",
+      "label": "RAG implementation",
+      "detail": "Build ingestion, chunking, pgvector retrieval, citations, and tenant filtering."
+    },
+    {
+      "id": "hybrid",
+      "label": "Hybrid search and reranking",
+      "detail": "Compare lexical/vector retrieval and show measured retrieval improvements."
+    },
+    {
+      "id": "evaluation",
+      "label": "LLM evaluation",
+      "detail": "Maintain versioned datasets and repeatable quality, latency, and cost comparisons."
+    },
+    {
+      "id": "agents",
+      "label": "AI workflows",
+      "detail": "Implement bounded tool workflows with approvals, retries, and audit records."
+    },
+    {
+      "id": "ai-security",
+      "label": "AI security",
+      "detail": "Test direct/indirect prompt injection, data leakage, and unsafe tool execution."
+    },
+    {
+      "id": "observability",
+      "label": "Observability",
+      "detail": "Instrument API, workers, database, and model calls with privacy-aware telemetry."
+    },
+    {
+      "id": "docker",
+      "label": "Docker and deployment",
+      "detail": "Run a reproducible multi-service application and document deployment configuration."
+    },
+    {
+      "id": "ci",
+      "label": "CI/CD and GitHub",
+      "detail": "Run build, tests, security checks, and evaluation gates on pull requests."
+    },
+    {
+      "id": "portfolio",
+      "label": "Portfolio case studies",
+      "detail": "Publish polished repositories with architecture diagrams, demos, tradeoffs, and accurate personal contribution."
+    },
+    {
+      "id": "communication",
+      "label": "Remote collaboration",
+      "detail": "Explain technical decisions in clear written English and conduct structured asynchronous updates."
+    },
+    {
+      "id": "job-search",
+      "label": "Remote job readiness",
+      "detail": "Prepare role-specific CV/LinkedIn, interview practice, timezone expectations, and tracked applications."
+    }
+  ]
+}

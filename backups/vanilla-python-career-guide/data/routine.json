@@ -1,0 +1,54 @@
+{
+  "daily": [
+    {
+      "title": "Python/backend/AI concepts",
+      "minutes": 45,
+      "detail": "Study official documentation and capture questions linked to the selected roadmap week."
+    },
+    {
+      "title": "Hands-on coding",
+      "minutes": 90,
+      "detail": "Implement a focused Python exercise, API feature, AI workflow, or test."
+    },
+    {
+      "title": "Main project development",
+      "minutes": 60,
+      "detail": "Move one portfolio milestone forward using the week’s concepts."
+    },
+    {
+      "title": "Revision, notes, and interview preparation",
+      "minutes": 25,
+      "detail": "Write a short learning note, review a question, and plan the next session."
+    }
+  ],
+  "weekly": [
+    {
+      "day": "Saturday",
+      "focus": "Learn concepts and define weekly outcomes for the selected Python roadmap week."
+    },
+    {
+      "day": "Sunday",
+      "focus": "Hands-on Python coding and focused exercises."
+    },
+    {
+      "day": "Monday",
+      "focus": "Implement the week’s backend or AI feature."
+    },
+    {
+      "day": "Tuesday",
+      "focus": "Complete coding challenges and reinforce weak topics."
+    },
+    {
+      "day": "Wednesday",
+      "focus": "Develop the main Python project milestone."
+    },
+    {
+      "day": "Thursday",
+      "focus": "Test, debug, review security, and improve code quality."
+    },
+    {
+      "day": "Friday",
+      "focus": "Review the week, assess deliverables, and plan the next week."
+    }
+  ]
+}

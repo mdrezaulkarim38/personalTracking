@@ -1,0 +1,14 @@
+import type { Progress, PlannerTask } from '../types/domain';
+
+export function setProjectMilestone(progress: Progress, projectId: string, milestoneId: string, done: boolean) {
+  progress.projects[projectId] ??= { done: [], notes: '' }; const state=progress.projects[projectId];
+  state.done=done?[...new Set([...state.done,milestoneId])]:state.done.filter(id=>id!==milestoneId); return progress;
+}
+export function projectCompletion(doneIds: string[], milestoneIds: string[]) { const done=new Set(doneIds); const complete=milestoneIds.filter(id=>done.has(id)).length; return { complete, total: milestoneIds.length, percent: milestoneIds.length?Math.round(complete/milestoneIds.length*100):0 }; }
+export function setChallengeProgress(progress: Progress, id: string, patch: {attempted?:boolean;solved?:boolean;notes?:string}) { progress.challenges[id]={...(progress.challenges[id]??{}),...patch}; if(patch.solved)progress.challenges[id].attempted=true; return progress; }
+export function setInterviewProgress(progress: Progress, id: string, patch: {practiced?:boolean;revise?:boolean;difficult?:boolean;answer?:string;revisionNotes?:string}) { progress.interviews[id]={...(progress.interviews[id]??{}),...patch}; return progress; }
+export function addPlannerTask(progress: Progress, task: PlannerTask) { progress.planner[task.date]??={tasks:[]};progress.planner[task.date].tasks??=[];progress.planner[task.date].tasks!.push(task);return progress; }
+export function editPlannerTask(progress: Progress, originalDate: string, id: string, description: string, targetDate: string) { const original=progress.planner[originalDate]?.tasks?.find(task=>task.id===id);if(!original)return progress;original.description=description.trim();if(targetDate!==originalDate){progress.planner[originalDate].tasks=progress.planner[originalDate].tasks?.filter(task=>task.id!==id);progress.planner[targetDate]??={tasks:[]};progress.planner[targetDate].tasks??=[];original.date=targetDate;progress.planner[targetDate].tasks!.push(original)}return progress; }
+export function removePlannerTask(progress: Progress, date: string, id: string) { if(progress.planner[date])progress.planner[date].tasks=progress.planner[date].tasks?.filter(task=>task.id!==id);return progress; }
+export function toggleRoadmapTask(progress: Progress,id:string,done:boolean){progress.roadmap[id]=done;return progress;}
+export function analyticsSummary(progress: Progress){return {roadmapCompleted:Object.values(progress.roadmap).filter(Boolean).length,studyMinutes:progress.studySessions.reduce((n,s)=>n+s.durationMinutes,0),studySessions:progress.studySessions.length,challengesAttempted:Object.values(progress.challenges).filter(x=>x.attempted).length,challengesSolved:Object.values(progress.challenges).filter(x=>x.solved).length,interviewsPracticed:Object.values(progress.interviews).filter(x=>x.practiced).length,interviewsNeedingRevision:Object.values(progress.interviews).filter(x=>x.revise).length};}

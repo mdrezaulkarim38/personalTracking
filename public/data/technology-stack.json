@@ -1,0 +1,63 @@
+{
+  "categories": [
+    {
+      "name": "Python engineering",
+      "items": [
+        [
+          "Python and uv",
+          "Lock a repeatable environment and package typed API/worker code. L3."
+        ],
+        [
+          "pytest, Ruff and Pyright",
+          "Use integration tests, linting and static type checking. L3."
+        ],
+        [
+          "FastAPI and Pydantic",
+          "ASGI service and validated boundaries. L3, L4 for auth and streaming."
+        ]
+      ]
+    },
+    {
+      "name": "AI and retrieval",
+      "items": [
+        [
+          "NumPy, scikit-learn and PyTorch",
+          "Compute baselines, evaluate models and inspect tensors. L3."
+        ],
+        [
+          "PostgreSQL and pgvector",
+          "Use transactions and metadata constraints beside evaluated vector search. L4."
+        ],
+        [
+          "Provider SDK and Ollama",
+          "Choose managed inference or local experiments based on measured constraints. L3."
+        ],
+        [
+          "vLLM and PEFT",
+          "Optional model serving or adaptation after confirming a real need. L3 specialization."
+        ]
+      ]
+    },
+    {
+      "name": "Production",
+      "items": [
+        [
+          "RabbitMQ and Redis",
+          "Use a durable queue for jobs and bounded caching/quotas for latency. L4."
+        ],
+        [
+          "Docker, GitHub Actions and Azure",
+          "Deliver one quality-gated deployment and practice rollback. L3–L4."
+        ],
+        [
+          "OpenTelemetry",
+          "Trace requests across APIs, jobs and models without leaking prompts. L4."
+        ],
+        [
+          "MCP and ASP.NET Core",
+          "Integrate read-only tools or existing enterprise systems through explicit contracts. MCP L3."
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "daily": [
+    {
+      "title": "Theory",
+      "minutes": 45,
+      "detail": "Trace a mechanism and read the minimum relevant reference."
+    },
+    {
+      "title": "Independent practice",
+      "minutes": 75,
+      "detail": "Implement an unfamiliar variation and test it."
+    },
+    {
+      "title": "Portfolio delivery",
+      "minutes": 100,
+      "detail": "Advance one measured project outcome."
+    },
+    {
+      "title": "Revision",
+      "minutes": 20,
+      "detail": "Recall yesterday’s reasoning and record an evidence link."
+    }
+  ],
+  "weekly": [
+    {
+      "day": "Day 1",
+      "focus": "Read or derive a concept, then set a concrete target."
+    },
+    {
+      "day": "Day 2",
+      "focus": "Implement a focused example without copying it."
+    },
+    {
+      "day": "Day 3",
+      "focus": "Integrate into the project and add realistic edge cases."
+    },
+    {
+      "day": "Day 4",
+      "focus": "Test a failure mode and measure performance or quality."
+    },
+    {
+      "day": "Day 5",
+      "focus": "Review evidence, practice interview explanations and plan a follow-up."
+    },
+    {
+      "day": "Days 6–7",
+      "focus": "Rest or catch up. Review difficult topics after 1, 7 and 30 days."
+    }
+  ]
+}

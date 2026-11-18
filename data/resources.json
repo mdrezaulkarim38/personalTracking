@@ -1,0 +1,284 @@
+{
+  "resources": [
+    {
+      "name": "C# documentation",
+      "category": "C#",
+      "description": "Language reference, tutorials, and modern language features.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": ".NET 10 documentation",
+      "category": ".NET",
+      "description": "Official .NET platform documentation and current APIs.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "ASP.NET Core documentation",
+      "category": "ASP.NET Core",
+      "description": "Official web app and API documentation; select the ASP.NET Core 10 view for this roadmap.",
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "ASP.NET Core 10 release notes",
+      "category": "ASP.NET Core",
+      "description": "Version-specific platform changes and upgrade notes.",
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-10.0",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Microsoft.Extensions.AI",
+      "category": "AI .NET",
+      "description": "Abstractions and extensions for chat clients, embeddings, and provider integrations.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": ".NET AI overview",
+      "category": "AI .NET",
+      "description": "Microsoft overview of building AI-enabled applications with .NET.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/ai/overview",
+      "difficulty": "Beginner"
+    },
+    {
+      "name": "Semantic Kernel overview",
+      "category": "AI agents",
+      "description": "SDK overview for integrating AI models and orchestrating plugins/workflows.",
+      "url": "https://learn.microsoft.com/en-us/semantic-kernel/overview/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Microsoft Agent Framework overview",
+      "category": "AI agents",
+      "description": "Agent and workflow concepts for .NET and Python developers.",
+      "url": "https://learn.microsoft.com/en-us/agent-framework/overview/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "EF Core documentation",
+      "category": "Data",
+      "description": "ORM, querying, relationships, migrations, and database provider guidance.",
+      "url": "https://learn.microsoft.com/en-us/ef/core/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Dapper documentation",
+      "category": "Data",
+      "description": "Lightweight data access and SQL mapping.",
+      "url": "https://github.com/DapperLib/Dapper",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "SQL Server documentation",
+      "category": "Data",
+      "description": "Official SQL Server guides and reference.",
+      "url": "https://learn.microsoft.com/en-us/sql/sql-server/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "PostgreSQL documentation",
+      "category": "Data",
+      "description": "Official PostgreSQL manuals, SQL reference, and administration guidance.",
+      "url": "https://www.postgresql.org/docs/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "pgvector",
+      "category": "Data",
+      "description": "Vector similarity search extension for PostgreSQL.",
+      "url": "https://github.com/pgvector/pgvector",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Redis documentation",
+      "category": "Data",
+      "description": "Official Redis data structures, caching, and operations docs.",
+      "url": "https://redis.io/docs/latest/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "OpenAI API documentation",
+      "category": "LLM",
+      "description": "API references and guides for model interaction, structured output, and tools.",
+      "url": "https://platform.openai.com/docs/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Ollama documentation",
+      "category": "LLM",
+      "description": "Official local model runtime docs and API reference.",
+      "url": "https://docs.ollama.com/",
+      "difficulty": "Beginner"
+    },
+    {
+      "name": "Docker documentation",
+      "category": "Production",
+      "description": "Container concepts, Dockerfiles, Compose, and operational guidance.",
+      "url": "https://docs.docker.com/",
+      "difficulty": "Beginner"
+    },
+    {
+      "name": "GitHub Actions documentation",
+      "category": "CI/CD",
+      "description": "Workflow syntax and CI automation for repositories.",
+      "url": "https://docs.github.com/en/actions",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "OpenTelemetry .NET",
+      "category": "Observability",
+      "description": "Instrumentation and telemetry guidance for .NET services.",
+      "url": "https://opentelemetry.io/docs/languages/net/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "ASP.NET Core integration tests",
+      "category": "Testing",
+      "description": "Official integration testing guidance for ASP.NET Core applications.",
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-10.0",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "xUnit documentation",
+      "category": "Testing",
+      "description": ".NET unit testing framework documentation.",
+      "url": "https://xunit.net/",
+      "difficulty": "Beginner"
+    },
+    {
+      "name": "Python documentation (optional)",
+      "category": "Optional Python",
+      "description": "Keep as a reference for future targeted Python requirements; not part of the active backend track.",
+      "url": "https://docs.python.org/3/",
+      "difficulty": "Beginner"
+    },
+    {
+      "name": "FastAPI documentation (optional)",
+      "category": "Optional Python",
+      "description": "Reference for a future specialized Python service if a concrete role or project calls for it.",
+      "url": "https://fastapi.tiangolo.com/",
+      "difficulty": "Beginner"
+    },
+    {
+      "name": "Microsoft Learn: ASP.NET Core fundamentals",
+      "category": "ASP.NET Core",
+      "description": "Structured official learning path for building web apps and APIs.",
+      "url": "https://learn.microsoft.com/en-us/training/paths/aspnet-core-web-app/",
+      "difficulty": "Beginner"
+    },
+    {
+      "name": "ASP.NET Core 10",
+      "category": "ASP.NET Core",
+      "description": "ASP.NET Core 10 API fundamentals, middleware, OpenAPI, SSE, and hosting.",
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/?view=aspnetcore-10.0",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "ASP.NET Core Web API",
+      "category": "ASP.NET Core",
+      "description": "Build and document HTTP APIs with ASP.NET Core.",
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/web-api/?view=aspnetcore-10.0",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "ASP.NET Core security",
+      "category": "Security",
+      "description": "Official authentication, authorization, data protection, and security guidance.",
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/security/?view=aspnetcore-10.0",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Entity Framework Core",
+      "category": "Data",
+      "description": "Official EF Core ORM, migration, and query documentation.",
+      "url": "https://learn.microsoft.com/en-us/ef/core/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "SQL Server",
+      "category": "Data",
+      "description": "SQL Server documentation and relational database reference.",
+      "url": "https://learn.microsoft.com/en-us/sql/sql-server/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Redis",
+      "category": "Data",
+      "description": "Redis data structures, caching, and operations documentation.",
+      "url": "https://redis.io/docs/latest/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "Data",
+      "description": "Official PostgreSQL documentation.",
+      "url": "https://www.postgresql.org/docs/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "OpenAI API",
+      "category": "LLM",
+      "description": "Official API guides and reference.",
+      "url": "https://platform.openai.com/docs/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Ollama",
+      "category": "LLM",
+      "description": "Official Ollama docs and API.",
+      "url": "https://docs.ollama.com/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Docker",
+      "category": "Production",
+      "description": "Docker and Compose documentation.",
+      "url": "https://docs.docker.com/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "GitHub Actions",
+      "category": "CI/CD",
+      "description": "GitHub Actions workflows and syntax.",
+      "url": "https://docs.github.com/en/actions",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Nginx",
+      "category": "Production",
+      "description": "Official Nginx documentation for reverse proxy and web server configuration.",
+      "url": "https://nginx.org/en/docs/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": ".NET testing",
+      "category": "Testing",
+      "description": "Official .NET testing guidance and tools.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/testing/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": ".NET resilience",
+      "category": "Production",
+      "description": "Resilience patterns and HTTP fault handling in .NET.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/core/resilience/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Semantic Kernel for .NET",
+      "category": "AI agents",
+      "description": "Semantic Kernel SDK overview and .NET integration.",
+      "url": "https://learn.microsoft.com/en-us/semantic-kernel/overview/",
+      "difficulty": "Intermediate"
+    },
+    {
+      "name": "Microsoft Agent Framework",
+      "category": "AI agents",
+      "description": "Agent and workflow orchestration overview.",
+      "url": "https://learn.microsoft.com/en-us/agent-framework/overview/",
+      "difficulty": "Intermediate"
+    }
+  ]
+}

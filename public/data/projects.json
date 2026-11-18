@@ -1,0 +1,1052 @@
+{
+  "projects": [
+    {
+      "id": "reconciliation-cli",
+      "name": "Reconciliation CLI",
+      "difficulty": "Beginner",
+      "description": "Finance teams need exact ledger totals, duplicate reporting and useful rejects for large exports.",
+      "technologies": [
+        "Optional React report viewer",
+        "Python",
+        "pytest",
+        "uv"
+      ],
+      "features": [
+        "Stream CSV/JSONL",
+        "report exact totals",
+        "detect duplicate source IDs",
+        "write inspectable rejects"
+      ],
+      "requirements": [
+        "Files: canonical ledger, duplicate index and reject log. Interface: import, validate and summary commands.",
+        "Use Decimal and bounded streaming. Preserve prior outputs on malformed inputs. Omit sensitive rows from logs.",
+        "Ship a wheel and report runtime/peak memory for a 100k-row test."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Parser and domain logic",
+          "description": "Verify duplicate rules and encoding fixtures",
+          "tasks": [
+            "Verify duplicate rules and encoding fixtures"
+          ],
+          "deliverable": "Stable totals and golden files"
+        },
+        {
+          "id": "applied-2",
+          "title": "Streaming and failure handling",
+          "description": "Inject malformed input and interrupted output",
+          "tasks": [
+            "Inject malformed input and interrupted output"
+          ],
+          "deliverable": "Repeatable reconciliation with safe error reporting"
+        },
+        {
+          "id": "applied-3",
+          "title": "Distribution",
+          "description": "Install from a clean environment and record benchmark",
+          "tasks": [
+            "Install from a clean environment and record benchmark"
+          ],
+          "deliverable": "Independently reproducible CLI package"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "The CLI remains independently installable. If the viewer is added, it reads exported report data and needs no live backend.",
+          "tasks": [
+            "Build responsive screens: Optional reconciliation summary; Rejected rows report.",
+            "Connect the user actions: Load an exported JSON report; Filter rejected rows.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "No React required for this command-line foundation. Add an optional small React report viewer only after the CLI contract is stable.",
+        "screens": [
+          "Optional reconciliation summary",
+          "Rejected rows report"
+        ],
+        "interactions": [
+          "Load an exported JSON report",
+          "Filter rejected rows"
+        ],
+        "done": "The CLI remains independently installable. If the viewer is added, it reads exported report data and needs no live backend."
+      }
+    },
+    {
+      "id": "task-management-api",
+      "name": "Ticket REST API",
+      "difficulty": "Beginner",
+      "description": "Support teams need tenant-scoped ticket assignments, state transitions and audit history.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "Pydantic",
+        "PostgreSQL",
+        "SQLAlchemy",
+        "Docker"
+      ],
+      "features": [
+        "Create and list tickets",
+        "assign and transition work",
+        "preserve audit history"
+      ],
+      "requirements": [
+        "Tables: tenants, memberships, tickets, events. API: /tickets, /tickets/{id}/transitions, /ready.",
+        "Use OIDC, resource auth and optimistic concurrency. Test stale updates, rollback and tenant denial.",
+        "Deploy a container and report p95, errors and database pool usage."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Schema and contracts",
+          "description": "Implement migrations, routes and response schemas",
+          "tasks": [
+            "Implement migrations, routes and response schemas"
+          ],
+          "deliverable": "OpenAPI contract and seeded DB"
+        },
+        {
+          "id": "applied-2",
+          "title": "Security and consistency",
+          "description": "Test tenant isolation and conflicting transitions",
+          "tasks": [
+            "Test tenant isolation and conflicting transitions"
+          ],
+          "deliverable": "Audited transactions with rollback"
+        },
+        {
+          "id": "applied-3",
+          "title": "Staging and verification",
+          "description": "Deploy from CI and measure requests",
+          "tasks": [
+            "Deploy from CI and measure requests"
+          ],
+          "deliverable": "Reviewer can recreate app and tests"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "Demonstrate a complete ticket workflow against the running API, including an API error state.",
+          "tasks": [
+            "Build responsive screens: Ticket list; Ticket detail and transition form.",
+            "Connect the user actions: Create and assign a ticket; Show validation and permission errors; Refresh state from API.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "Optional small React client for demonstrating API contracts. Swagger/OpenAPI is enough for the first backend milestone.",
+        "screens": [
+          "Ticket list",
+          "Ticket detail and transition form"
+        ],
+        "interactions": [
+          "Create and assign a ticket",
+          "Show validation and permission errors",
+          "Refresh state from API"
+        ],
+        "done": "Demonstrate a complete ticket workflow against the running API, including an API error state."
+      }
+    },
+    {
+      "id": "support-copilot",
+      "name": "Support ticket assistant",
+      "difficulty": "Intermediate",
+      "description": "Triage needs a proposed urgency, category and response while reviewers manage uncertain cases.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "scikit-learn",
+        "PostgreSQL",
+        "Provider SDK"
+      ],
+      "features": [
+        "Classify tickets",
+        "draft replies",
+        "abstain or send to human review"
+      ],
+      "requirements": [
+        "Tables: tickets, suggestions, reviews, releases. API: /tickets/{id}/suggestions, /suggestions/{id}/review.",
+        "Validate structured outputs and preserve review. Use labeled held-out data, sanitized traces and draft-only permissions.",
+        "Ship in staging and compare rules, classifier and LLM on cost, latency and urgent false negatives."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Classifier baseline",
+          "description": "Create time-based split and compare thresholds",
+          "tasks": [
+            "Create time-based split and compare thresholds"
+          ],
+          "deliverable": "Baseline scorecard"
+        },
+        {
+          "id": "applied-2",
+          "title": "Model contract",
+          "description": "Implement validated drafts and abstention",
+          "tasks": [
+            "Implement validated drafts and abstention"
+          ],
+          "deliverable": "Reviewable suggestions with clean failure paths"
+        },
+        {
+          "id": "applied-3",
+          "title": "Evaluation and demo",
+          "description": "Score on 100+ labeled examples if available",
+          "tasks": [
+            "Score on 100+ labeled examples if available"
+          ],
+          "deliverable": "Measured release recommendation"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "An agent can review a suggestion end to end, see errors and confirm the decision persisted.",
+          "tasks": [
+            "Build responsive screens: Queue and ticket detail; Suggestion review panel; Feedback and evaluation summary.",
+            "Connect the user actions: Accept, edit or reject draft; See confidence or abstention; Submit feedback and show saved state.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React reviewer workspace for support agents.",
+        "screens": [
+          "Queue and ticket detail",
+          "Suggestion review panel",
+          "Feedback and evaluation summary"
+        ],
+        "interactions": [
+          "Accept, edit or reject draft",
+          "See confidence or abstention",
+          "Submit feedback and show saved state"
+        ],
+        "done": "An agent can review a suggestion end to end, see errors and confirm the decision persisted."
+      }
+    },
+    {
+      "id": "document-operations",
+      "name": "Document processing API",
+      "difficulty": "Intermediate",
+      "description": "A policy team needs versioned extraction, OCR, replay and deletion of derived content.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "Tesseract",
+        "RabbitMQ",
+        "Object storage"
+      ],
+      "features": [
+        "Upload files",
+        "extract text and coordinates",
+        "OCR scans",
+        "replay failed jobs"
+      ],
+      "requirements": [
+        "Tables: documents, versions, pages, jobs and artifacts. API: /documents, /jobs/{id}, /documents/{id}/versions.",
+        "Bound uploads and OCR resources. Scope object access and test duplicate intake, worker interruption and deletion.",
+        "Deploy worker separately and monitor queue lag, extraction errors and quality slices."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Native parsing",
+          "description": "Add source manifest, page spans and table fixtures",
+          "tasks": [
+            "Add source manifest, page spans and table fixtures"
+          ],
+          "deliverable": "Reproducible extraction"
+        },
+        {
+          "id": "applied-2",
+          "title": "OCR and durable jobs",
+          "description": "Add bounded OCR, retries and artifact versions",
+          "tasks": [
+            "Add bounded OCR, retries and artifact versions"
+          ],
+          "deliverable": "Versioned job pipeline"
+        },
+        {
+          "id": "applied-3",
+          "title": "Lifecycle",
+          "description": "Test replacement, crash recovery and deletion",
+          "tasks": [
+            "Test replacement, crash recovery and deletion"
+          ],
+          "deliverable": "Traceable results across replays"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "A user can follow an upload from queued through completed or failed and inspect its source version.",
+          "tasks": [
+            "Build responsive screens: Upload and document list; Processing status and extracted text; Version and deletion history.",
+            "Connect the user actions: Upload and retry a document; Poll job status; Inspect page provenance and delete a source.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React document intake and processing monitor.",
+        "screens": [
+          "Upload and document list",
+          "Processing status and extracted text",
+          "Version and deletion history"
+        ],
+        "interactions": [
+          "Upload and retry a document",
+          "Poll job status",
+          "Inspect page provenance and delete a source"
+        ],
+        "done": "A user can follow an upload from queued through completed or failed and inspect its source version."
+      }
+    },
+    {
+      "id": "semantic-search",
+      "name": "Semantic search engine",
+      "difficulty": "Intermediate",
+      "description": "Teams need both literal inventory matches and multilingual semantic policy search.",
+      "technologies": [
+        "React + TypeScript",
+        "NumPy",
+        "PostgreSQL",
+        "pgvector",
+        "Sentence Transformers"
+      ],
+      "features": [
+        "Expose ranked results",
+        "filter tenant and document metadata",
+        "support identifiers and paraphrases"
+      ],
+      "requirements": [
+        "Tables: chunks, embeddings and metadata. API: /search with safe filters and bounded k.",
+        "Use server-side scopes and measure filtered ANN recall, index size and query p95. Keep lexical and exact dense baselines.",
+        "Deploy a small staging index and publish benchmark scripts."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Exact baseline",
+          "description": "Match NumPy and SQL rankings",
+          "tasks": [
+            "Match NumPy and SQL rankings"
+          ],
+          "deliverable": "Relevance judgments and reproducible baseline"
+        },
+        {
+          "id": "applied-2",
+          "title": "Lexical and ANN",
+          "description": "Build FTS and compare exact vs HNSW",
+          "tasks": [
+            "Build FTS and compare exact vs HNSW"
+          ],
+          "deliverable": "Filtered benchmark"
+        },
+        {
+          "id": "applied-3",
+          "title": "Evaluation",
+          "description": "Compare with 60+ labeled queries if available",
+          "tasks": [
+            "Compare with 60+ labeled queries if available"
+          ],
+          "deliverable": "Study with quality, latency and storage trade-offs"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "A reviewer can reproduce a query, inspect ranked results and compare retrieval configurations.",
+          "tasks": [
+            "Build responsive screens: Search form and filter controls; Ranked results with metadata; Experiment comparison view.",
+            "Connect the user actions: Run exact, lexical and vector modes; Inspect score and latency; Save or export a benchmark run.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React search workbench for comparing retrieval results.",
+        "screens": [
+          "Search form and filter controls",
+          "Ranked results with metadata",
+          "Experiment comparison view"
+        ],
+        "interactions": [
+          "Run exact, lexical and vector modes",
+          "Inspect score and latency",
+          "Save or export a benchmark run"
+        ],
+        "done": "A reviewer can reproduce a query, inspect ranked results and compare retrieval configurations."
+      }
+    },
+    {
+      "id": "basic-rag",
+      "name": "Basic RAG chatbot",
+      "difficulty": "Intermediate",
+      "description": "Policy readers need answers supported by current evidence, with clear abstention when evidence is missing.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "pgvector",
+        "Provider SDK"
+      ],
+      "features": [
+        "Retrieve relevant chunks",
+        "answer with source spans",
+        "abstain",
+        "record feedback"
+      ],
+      "requirements": [
+        "Tables: queries, answers, answer_sources, eval_runs. API: /answers and /feedback.",
+        "Clip input and context. Validate citation IDs and versions. Separate unsupported claims from lookup failures.",
+        "Stage with token, latency and cost instrumentation. Test obsolete policies and unanswerables."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Baseline retrieval",
+          "description": "Add fixed chunks and indexed search",
+          "tasks": [
+            "Add fixed chunks and indexed search"
+          ],
+          "deliverable": "Evaluation queries with expected evidence"
+        },
+        {
+          "id": "applied-2",
+          "title": "Context and generation",
+          "description": "Enforce token budget and citation validation",
+          "tasks": [
+            "Enforce token budget and citation validation"
+          ],
+          "deliverable": "Grounded response service"
+        },
+        {
+          "id": "applied-3",
+          "title": "Evaluation",
+          "description": "Review answerable and unanswerable cases",
+          "tasks": [
+            "Review answerable and unanswerable cases"
+          ],
+          "deliverable": "Report where retrieval and generation fail"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "Every answer shows navigable source evidence or a clear no-answer state.",
+          "tasks": [
+            "Build responsive screens: Conversation view; Citations and source preview; Feedback and abstention state.",
+            "Connect the user actions: Ask a question and stream response; Open cited source spans; Report an answer issue.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React chat interface for the first grounded-answer workflow.",
+        "screens": [
+          "Conversation view",
+          "Citations and source preview",
+          "Feedback and abstention state"
+        ],
+        "interactions": [
+          "Ask a question and stream response",
+          "Open cited source spans",
+          "Report an answer issue"
+        ],
+        "done": "Every answer shows navigable source evidence or a clear no-answer state."
+      }
+    },
+    {
+      "id": "document-intelligence",
+      "name": "Enterprise RAG platform",
+      "difficulty": "Advanced",
+      "description": "Multiple tenants need scoped answers that remain correct through policy replacement, revocation and deletion.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "pgvector",
+        "RabbitMQ",
+        "Redis",
+        "Object storage",
+        "OpenTelemetry"
+      ],
+      "features": [
+        "Version and sync sources",
+        "extract and OCR",
+        "hybrid search and rerank",
+        "cited answers and abstention",
+        "review release quality"
+      ],
+      "requirements": [
+        "Tables: tenants, memberships, documents, versions, document_acl, chunks, embeddings, jobs, index_generations, audit_events. API: /documents, /answers, /citations/{id}, /admin/indexes.",
+        "Enforce tenant and ACL retrieval, parent context, cache and citation isolation. Test revoke, deletion, provider outage and index rollback.",
+        "Deploy API and worker separately. Track index freshness, filtered recall, unsupported claims, TTFT and spend. Use frozen judged queries and document the workload."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Source and permission model",
+          "description": "Persist immutable artifacts, version lifecycle, OCR and scoped retrieval",
+          "tasks": [
+            "Persist immutable artifacts, version lifecycle, OCR and scoped retrieval"
+          ],
+          "deliverable": "Revocation works across retrieval and citation fetch"
+        },
+        {
+          "id": "applied-2",
+          "title": "Quality experiments",
+          "description": "Compare lexical, dense, hybrid and reranked runs on roughly 120 reviewed questions",
+          "tasks": [
+            "Compare lexical, dense, hybrid and reranked runs on roughly 120 reviewed questions"
+          ],
+          "deliverable": "Report Recall@10, citation validity, claim support and quality slices"
+        },
+        {
+          "id": "applied-3",
+          "title": "Release and recovery",
+          "description": "Set acceptance targets such as Recall@10 ≥ 0.85 and citation validity ≥ 95%; validate no permission test failures, then rehearse index rollback",
+          "tasks": [
+            "Set acceptance targets such as Recall@10 ≥ 0.85 and citation validity ≥ 95%; validate no permission test failures, then rehearse index rollback"
+          ],
+          "deliverable": "Runbook, threat model, architecture and independently reproducible evaluation"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "Tenant members can ingest, search and cite authorized sources. Permission denial, processing failure and no-answer states are visible and tested.",
+          "tasks": [
+            "Build responsive screens: Workspace and source library; Ingestion status and access settings; Q&A with cited source preview; Evaluation and release comparison.",
+            "Connect the user actions: Upload and reprocess documents; Search using authorized filters; Inspect citations and version; Compare evaluation runs and report feedback.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React enterprise knowledge workspace with tenant-scoped source management and cited Q&A.",
+        "screens": [
+          "Workspace and source library",
+          "Ingestion status and access settings",
+          "Q&A with cited source preview",
+          "Evaluation and release comparison"
+        ],
+        "interactions": [
+          "Upload and reprocess documents",
+          "Search using authorized filters",
+          "Inspect citations and version",
+          "Compare evaluation runs and report feedback"
+        ],
+        "done": "Tenant members can ingest, search and cite authorized sources. Permission denial, processing failure and no-answer states are visible and tested."
+      }
+    },
+    {
+      "id": "research-assistant",
+      "name": "Evidence research assistant",
+      "difficulty": "Advanced",
+      "description": "Analysts need briefs with evidence, contradictions and explicit uncertainty from approved sources.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "pgvector",
+        "Worker"
+      ],
+      "features": [
+        "Queue research runs",
+        "collect bounded evidence",
+        "map claims to sources",
+        "publish a private draft"
+      ],
+      "requirements": [
+        "Tables: research_runs, steps, claims and sources. API: /research-jobs, status and report.",
+        "Read-only tools, source allowlist, fixed step/time/token budgets and provenance validation.",
+        "Compare deterministic and bounded decomposition; measure claims supported, completion, latency and cost."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Deterministic baseline",
+          "description": "Build single-pass evidence briefs",
+          "tasks": [
+            "Build single-pass evidence briefs"
+          ],
+          "deliverable": "Repeatable source-backed report"
+        },
+        {
+          "id": "applied-2",
+          "title": "Bounded research",
+          "description": "Add multi-step evidence retrieval with explicit stop reasons",
+          "tasks": [
+            "Add multi-step evidence retrieval with explicit stop reasons"
+          ],
+          "deliverable": "Every path terminates"
+        },
+        {
+          "id": "applied-3",
+          "title": "Decision report",
+          "description": "Compare briefs against reviewed cases",
+          "tasks": [
+            "Compare briefs against reviewed cases"
+          ],
+          "deliverable": "Measured reason for adding planning"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "A user can follow a run, inspect evidence for claims and distinguish completed, failed and cancelled outcomes.",
+          "tasks": [
+            "Build responsive screens: Research request form; Run progress and steps; Evidence ledger and final brief.",
+            "Connect the user actions: Start or cancel a bounded run; Inspect claim-to-source links; Review conflicting sources.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React research workspace for bounded, evidence-linked reports.",
+        "screens": [
+          "Research request form",
+          "Run progress and steps",
+          "Evidence ledger and final brief"
+        ],
+        "interactions": [
+          "Start or cancel a bounded run",
+          "Inspect claim-to-source links",
+          "Review conflicting sources"
+        ],
+        "done": "A user can follow a run, inspect evidence for claims and distinguish completed, failed and cancelled outcomes."
+      }
+    },
+    {
+      "id": "business-assistant",
+      "name": "Business operations agent",
+      "difficulty": "Advanced",
+      "description": "Inventory teams need reorder recommendations, approvals and recoverable ERP execution.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "RabbitMQ",
+        "MCP",
+        "ASP.NET Core adapter"
+      ],
+      "features": [
+        "Read inventory",
+        "preview reorder",
+        "obtain approval",
+        "reconcile uncertain writes"
+      ],
+      "requirements": [
+        "Tables: workflows, intents, approvals, executions and audit_events. API: propose, preview, approve and status endpoints.",
+        "Bind approval to actor, expiry and immutable action; use scoped credentials. Verify revocation, duplicates and timeout after commit.",
+        "Stage with mock ERP and report approval expiry, queue lag and effective outcomes."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Read tools",
+          "description": "Expose scoped MCP reads and typed responses",
+          "tasks": [
+            "Expose scoped MCP reads and typed responses"
+          ],
+          "deliverable": "Read-only contract tests"
+        },
+        {
+          "id": "applied-2",
+          "title": "Approval workflow",
+          "description": "Persist a deterministic approval and idempotency policy",
+          "tasks": [
+            "Persist a deterministic approval and idempotency policy"
+          ],
+          "deliverable": "Replay-safe transitions"
+        },
+        {
+          "id": "applied-3",
+          "title": "Reconciliation",
+          "description": "Inject failure after a mock commit and restart",
+          "tasks": [
+            "Inject failure after a mock commit and restart"
+          ],
+          "deliverable": "One effective external change and complete audit record"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "Approval is tied to the displayed action, actor and expiry. Duplicate, stale and failed writes show a recoverable state.",
+          "tasks": [
+            "Build responsive screens: Inventory and recommendation view; Action preview and impact; Approval inbox and execution status.",
+            "Connect the user actions: Review proposed changes; Approve or reject with reason; Track reconciliation after execution.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React operations approval console for safe ERP proposals.",
+        "screens": [
+          "Inventory and recommendation view",
+          "Action preview and impact",
+          "Approval inbox and execution status"
+        ],
+        "interactions": [
+          "Review proposed changes",
+          "Approve or reject with reason",
+          "Track reconciliation after execution"
+        ],
+        "done": "Approval is tied to the displayed action, actor and expiry. Duplicate, stale and failed writes show a recoverable state."
+      }
+    },
+    {
+      "id": "nl-to-sql",
+      "name": "Natural-language-to-SQL assistant",
+      "difficulty": "Advanced",
+      "description": "Finance users need safe access to predefined analytics and clarification for ambiguous requests.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "Pydantic",
+        "Provider SDK"
+      ],
+      "features": [
+        "Interpret analytics intent",
+        "preview allowed query",
+        "scope results",
+        "ask clarifying questions"
+      ],
+      "requirements": [
+        "Tables: query_runs, schema_versions and reporting views. API: /analytics/preview and /analytics/run.",
+        "Compile typed intent to approved parameterized queries; use restricted roles, scope, row/time caps and audit.",
+        "Deploy against synthetic reporting DB. Track execution accuracy, timeouts and plans."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Intent baseline",
+          "description": "Map metric, time and filter to typed requests",
+          "tasks": [
+            "Map metric, time and filter to typed requests"
+          ],
+          "deliverable": "Strong deterministic compiler"
+        },
+        {
+          "id": "applied-2",
+          "title": "Restriction and review",
+          "description": "Add scoped read-only access and failure cases",
+          "tasks": [
+            "Add scoped read-only access and failure cases"
+          ],
+          "deliverable": "Out-of-scope requests do not execute"
+        },
+        {
+          "id": "applied-3",
+          "title": "Evaluation",
+          "description": "Run golden queries and report ambiguity outcomes",
+          "tasks": [
+            "Run golden queries and report ambiguity outcomes"
+          ],
+          "deliverable": "Published execution accuracy and boundary tests"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "The UI never submits arbitrary SQL authority. A reviewer can see preview, restrictions and a clear denial for unsafe requests.",
+          "tasks": [
+            "Build responsive screens: Question input and clarification prompts; Approved query preview; Result table and audit details.",
+            "Connect the user actions: Answer clarification questions; Preview before execution; Inspect limits and export allowed results.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React analytics query builder with a natural-language request and inspectable safe plan.",
+        "screens": [
+          "Question input and clarification prompts",
+          "Approved query preview",
+          "Result table and audit details"
+        ],
+        "interactions": [
+          "Answer clarification questions",
+          "Preview before execution",
+          "Inspect limits and export allowed results"
+        ],
+        "done": "The UI never submits arbitrary SQL authority. A reviewer can see preview, restrictions and a clear denial for unsafe requests."
+      }
+    },
+    {
+      "id": "multimodal-invoices",
+      "name": "Multimodal invoice assistant",
+      "difficulty": "Advanced",
+      "description": "Accounting needs reviewable invoice fields and line items from scans with evidence coordinates.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "Tesseract",
+        "Vision Model",
+        "PostgreSQL",
+        "Object storage"
+      ],
+      "features": [
+        "Upload invoices",
+        "extract fields",
+        "validate totals",
+        "show evidence",
+        "track reviewer decisions"
+      ],
+      "requirements": [
+        "Tables: invoices, regions, fields and reviews. API: uploads, extraction, evidence and review.",
+        "Bound media bytes/pixels, scope attachments, redact logs and retain audit history.",
+        "Deploy separate worker and monitor field quality, latency and cost by scan type."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "OCR baseline",
+          "description": "Label difficult scans and extract fields with region IDs",
+          "tasks": [
+            "Label difficult scans and extract fields with region IDs"
+          ],
+          "deliverable": "Field-level baseline"
+        },
+        {
+          "id": "applied-2",
+          "title": "Vision comparison",
+          "description": "Compare scan slices and verify totals deterministically",
+          "tasks": [
+            "Compare scan slices and verify totals deterministically"
+          ],
+          "deliverable": "Measured OCR/vision trade-off"
+        },
+        {
+          "id": "applied-3",
+          "title": "Review",
+          "description": "Route uncertain fields to people",
+          "tasks": [
+            "Route uncertain fields to people"
+          ],
+          "deliverable": "Reproducible result with provenance"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "Each corrected field retains reviewer identity and source region. Uncertain totals remain pending review.",
+          "tasks": [
+            "Build responsive screens: Invoice queue and page viewer; Field values with evidence regions; Reviewer correction and history.",
+            "Connect the user actions: Zoom to evidence region; Correct and confirm uncertain fields; Compare extracted totals with deterministic checks.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React accounting review queue for extracted invoice fields and image evidence.",
+        "screens": [
+          "Invoice queue and page viewer",
+          "Field values with evidence regions",
+          "Reviewer correction and history"
+        ],
+        "interactions": [
+          "Zoom to evidence region",
+          "Correct and confirm uncertain fields",
+          "Compare extracted totals with deterministic checks"
+        ],
+        "done": "Each corrected field retains reviewer identity and source region. Uncertain totals remain pending review."
+      }
+    },
+    {
+      "id": "assistant-platform",
+      "name": "Production AI SaaS platform",
+      "difficulty": "Advanced",
+      "description": "Tenant admins need document onboarding, search, quotas, usage reporting and a reliable operations surface.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "pgvector",
+        "Redis",
+        "RabbitMQ",
+        "Docker",
+        "OpenTelemetry",
+        "CI/CD"
+      ],
+      "features": [
+        "Onboard tenants",
+        "ingest documents",
+        "provide scoped answers",
+        "enforce budgets",
+        "report usage and incidents"
+      ],
+      "requirements": [
+        "Core enterprise RAG schema plus tenants, memberships, entitlements and usage_events. API: /documents, /answers, /usage and admin endpoints.",
+        "OIDC/RBAC, scoped caches, capped retries, rollback, restore and third-party review. Measure no tenant interference at declared test load.",
+        "Deploy in one cloud. Dashboard tracks answer quality, cost, p95, queue lag and errors. Simulate provider slowdown and Redis outage."
+      ],
+      "milestones": [
+        {
+          "id": "applied-1",
+          "title": "Deploy and measure",
+          "description": "Ship CI build, cloud staging and per-tenant metrics",
+          "tasks": [
+            "Ship CI build, cloud staging and per-tenant metrics"
+          ],
+          "deliverable": "Reproducible deployment"
+        },
+        {
+          "id": "applied-2",
+          "title": "Scale and isolate",
+          "description": "Exercise quotas, noisy neighbor and restore",
+          "tasks": [
+            "Exercise quotas, noisy neighbor and restore"
+          ],
+          "deliverable": "Measured workload, recovery objectives and safety tests"
+        },
+        {
+          "id": "applied-3",
+          "title": "Operational handoff",
+          "description": "Run bad-release rollback and independent review",
+          "tasks": [
+            "Run bad-release rollback and independent review"
+          ],
+          "deliverable": "Runnable setup, decision log, alert ownership and game-day report"
+        },
+        {
+          "id": "frontend-ui",
+          "title": "Frontend workflow",
+          "description": "Tenant users only see their workspace. Admin actions are role-gated, audited and tested at API boundaries.",
+          "tasks": [
+            "Build responsive screens: Tenant document and answer workspace; Usage and quota view; Admin health, release and evaluation views.",
+            "Connect the user actions: Manage source lifecycle; Ask cited questions and submit feedback; Inspect tenant usage and operator release status.",
+            "Add loading, empty, validation, authorization and service-error states.",
+            "Test the main user journey and document frontend setup."
+          ],
+          "deliverable": "Runnable React UI with API integration, accessible controls and a recorded end-to-end demo."
+        }
+      ],
+      "frontend": {
+        "approach": "React tenant-facing AI workspace plus a separate operator console.",
+        "screens": [
+          "Tenant document and answer workspace",
+          "Usage and quota view",
+          "Admin health, release and evaluation views"
+        ],
+        "interactions": [
+          "Manage source lifecycle",
+          "Ask cited questions and submit feedback",
+          "Inspect tenant usage and operator release status"
+        ],
+        "done": "Tenant users only see their workspace. Admin actions are role-gated, audited and tested at API boundaries."
+      }
+    },
+    {
+      "id": "voice-transcription",
+      "name": "Voice to Text and Meeting Notes",
+      "difficulty": "Advanced",
+      "description": "Help distributed support and operations teams turn Bangla, English, and code-switched meeting or voice recordings into searchable, editable transcripts with timestamps and speaker labels.",
+      "technologies": [
+        "React + TypeScript",
+        "FastAPI",
+        "PostgreSQL",
+        "Object storage",
+        "Background workers",
+        "Whisper-compatible speech recognition"
+      ],
+      "features": [
+        "Upload audio or record in browser",
+        "Transcribe asynchronously with progress",
+        "Show timestamped transcript segments",
+        "Edit transcript and speaker labels",
+        "Search transcripts and export text or subtitle files",
+        "Optional meeting summary with source-linked claims"
+      ],
+      "requirements": [
+        "Tables: recordings, recording_versions, transcript_jobs, transcript_segments, speakers, corrections and audit_events. API: upload, job status, transcript read/edit, search and export.",
+        "Preserve original media provenance, language/model versions and segment timestamps. Keep transcription separate from optional summarization.",
+        "Measure word error rate (WER) and character error rate (CER) by language, noise, speaker overlap and audio quality. Report p50/p95 processing time and cost per audio minute."
+      ],
+      "frontend": {
+        "approach": "React transcription workspace with accessible upload/record controls, editable transcript and clear job states.",
+        "screens": [
+          "Recording library and upload",
+          "Recording and processing detail",
+          "Timestamped transcript editor with audio playback",
+          "Search and export",
+          "Optional summary with linked transcript evidence"
+        ],
+        "interactions": [
+          "Upload supported audio and see validation",
+          "Track queued, processing, completed and failed states",
+          "Play audio from a selected transcript timestamp",
+          "Edit text and speaker labels with saved correction history",
+          "Export TXT, SRT or VTT and inspect summary evidence"
+        ],
+        "done": "A user can submit audio, follow processing, align transcript segments with playback, correct and export the transcript. Errors and unsupported formats are clear. Optional summaries link claims to transcript segments."
+      },
+      "milestones": [
+        {
+          "id": "voice-baseline",
+          "title": "Audio intake and baseline",
+          "description": "Accept bounded audio uploads and establish transcription quality on a labeled sample.",
+          "tasks": [
+            "Validate MIME type, size and duration.",
+            "Create synthetic or permissioned Bangla, English and code-switched evaluation fixtures.",
+            "Record baseline WER/CER by language and acoustic condition."
+          ],
+          "deliverable": "Reproducible baseline report and safe upload contract."
+        },
+        {
+          "id": "voice-pipeline",
+          "title": "Durable transcription pipeline",
+          "description": "Process recordings asynchronously and preserve timestamps and model provenance.",
+          "tasks": [
+            "Persist job state and idempotency key.",
+            "Run a worker with bounded retries and failure status.",
+            "Store timestamped segments, language and model version."
+          ],
+          "deliverable": "Restart-safe transcription jobs with traceable segments."
+        },
+        {
+          "id": "voice-react",
+          "title": "React transcription workspace",
+          "description": "Implement the recording library, playback-aligned editor, progress and export workflow.",
+          "tasks": [
+            "Build responsive React and TypeScript screens.",
+            "Connect upload, status, read, edit, search and export APIs.",
+            "Test loading, empty, invalid upload, retry and failed-job states."
+          ],
+          "deliverable": "Runnable frontend demo from upload to corrected transcript export."
+        },
+        {
+          "id": "voice-quality",
+          "title": "Quality, privacy and operations",
+          "description": "Evaluate language and audio slices and deploy with retention and access controls.",
+          "tasks": [
+            "Add tenant authorization and configurable media retention/deletion.",
+            "Measure WER/CER, latency and cost by slice.",
+            "Add redacted telemetry and run a worker restart and deletion drill."
+          ],
+          "deliverable": "Evaluation report, threat boundaries, runbook and recovery evidence."
+        }
+      ]
+    }
+  ]
+}

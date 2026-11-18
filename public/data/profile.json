@@ -1,0 +1,22 @@
+{
+  "name": "Remote AI Engineer Career Guide",
+  "location": "Bangladesh",
+  "background": "3+ years with C#, ASP.NET Core, APIs, PostgreSQL fundamentals, SQL Server, React, enterprise ERP/CRM and early LLM/RAG integration.",
+  "pythonStatus": "Beginner, primary learning track",
+  "careerDirection": "Enterprise .NET backend engineer moving into remote Python and Applied AI engineering.",
+  "goal": "Qualify for remote AI backend and Applied AI roles, then grow into senior ownership through reliable production delivery.",
+  "targetRoles": [
+    "AI Backend Engineer",
+    "Applied AI Engineer",
+    "AI Engineer",
+    "Python AI Engineer",
+    "LLM Engineer",
+    "RAG Engineer",
+    "Generative AI Engineer",
+    "Senior AI Engineer"
+  ],
+  "dailyTargetMinutes": 240,
+  "journeyWeeks": 44,
+  "curriculumVersion": 5,
+  "primaryStack": "Python, FastAPI, PostgreSQL and pgvector"
+}
