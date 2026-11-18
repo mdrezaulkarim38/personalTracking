@@ -22,7 +22,8 @@
 .simple-dashboard-grid p { min-height: 3rem; line-height: 1.55; }
 .more-nav { margin: .5rem 0; }
 .more-nav-toggle { width: 100%; display: flex; justify-content: space-between; padding: .7rem 1rem; border: 0; background: transparent; color: inherit; cursor: pointer; font: inherit; }
-.more-nav-toggle:hover { background: var(--surface-hover, #f3f2fa); }
+.more-nav-toggle { border-radius: 8px; color: #a9b2c6; text-align: left; }
+.more-nav-toggle:hover, .more-nav-toggle:focus-visible { background: #202b42; color: #fff; }
 @media (max-width: 840px) { .simple-dashboard-grid { grid-template-columns: 1fr; } }
 .curriculum-guide h2 { margin: 0 0 .6rem; }
 .curriculum-guide p { margin: .5rem 0; }

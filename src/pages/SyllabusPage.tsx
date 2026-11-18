@@ -30,8 +30,8 @@ function TopicCard({ topic, saved }: { topic: SyllabusTopic; saved?: TopicProgre
           update(state => { state.topics[topic.id] = { evidence: next, status: status === 'Completed' && !next.trim() ? 'Assessment' : status }; });
         }}/>
       </label>
-      <label className="field-label">Progress
-        <select value={status} onChange={event => {
+      <label className="mt-3 flex w-fit items-center gap-3 text-sm font-medium text-muted">Progress
+        <select className="w-auto min-w-44 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-800 shadow-sm dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100" aria-label={`Progress for ${topic.title}`} value={status} onChange={event => {
           const next = TOPIC_STATUSES.find(value => value === event.target.value);
           if (next) update(state => { state.topics[topic.id] = { evidence, status: next }; });
         }}>
