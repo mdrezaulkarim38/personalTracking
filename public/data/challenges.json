@@ -1,1732 +1,864 @@
 {
   "challenges": [
     {
-      "id": "python-syntax-and-control-flow",
-      "title": "Syntax and control flow",
-      "topic": "python-syntax-and-control-flow",
-      "category": "Python language fluency",
+      "id": "senior-practice-01",
+      "title": "Bounded concurrent API aggregator",
+      "topic": "c#-and-asp.net-core",
+      "category": "C# and ASP.NET Core",
       "difficulty": "Intermediate",
-      "description": "Indentation, truthiness, None, branches, loops and f-strings.",
-      "problem": "Write a typed row validator.",
+      "description": "Call dependencies with cancellation, deadlines, bounded concurrency and partial-failure reporting.",
+      "problem": "Call dependencies with cancellation, deadlines, bounded concurrency and partial-failure reporting.",
       "requirements": [
-        "Test zero, empty text, missing field and whitespace independently."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When can truthiness discard valid values?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Parser implementation."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "python-object-identity-and-money",
-      "title": "Object identity and money",
-      "topic": "python-object-identity-and-money",
-      "category": "Python language fluency",
+      "id": "senior-practice-02",
+      "title": "Consistent API error contract",
+      "topic": "c#-and-asp.net-core",
+      "category": "C# and ASP.NET Core",
       "difficulty": "Intermediate",
-      "description": "Names bind objects; aliasing, shallow copy, identity vs equality and Decimal.",
-      "problem": "Repair state leaking between two ledger imports.",
+      "description": "Map validation/errors to stable status codes without leaking internals.",
+      "problem": "Map validation/errors to stable status codes without leaking internals.",
       "requirements": [
-        "Independent runs produce exact deterministic totals."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Why can a mutable default affect later calls?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Memory layout."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "python-lists-tuples-and-deque",
-      "title": "Lists, tuples and deque",
-      "topic": "python-lists-tuples-and-deque",
-      "category": "Python language fluency",
+      "id": "senior-practice-03",
+      "title": "Authorization policy matrix",
+      "topic": "c#-and-asp.net-core",
+      "category": "C# and ASP.NET Core",
       "difficulty": "Intermediate",
-      "description": "Slicing, comprehensions, ordering, append and front-removal costs.",
-      "problem": "Write a bounded recent-record buffer.",
+      "description": "Express role/resource policies and test unauthorized/forbidden cases.",
+      "problem": "Express role/resource policies and test unauthorized/forbidden cases.",
       "requirements": [
-        "Demonstrate ordered output and bounded size."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When does a deque improve on a list?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Custom containers."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "python-dictionaries-and-sets",
-      "title": "Dictionaries and sets",
-      "topic": "python-dictionaries-and-sets",
-      "category": "Python language fluency",
+      "id": "senior-practice-04",
+      "title": "Idempotent command endpoint",
+      "topic": "c#-and-asp.net-core",
+      "category": "C# and ASP.NET Core",
       "difficulty": "Intermediate",
-      "description": "Hashability, composite keys, counting and set membership.",
-      "problem": "Deduplicate ledger records by source and ID.",
+      "description": "Prevent duplicate state transitions under retry.",
+      "problem": "Prevent duplicate state transitions under retry.",
       "requirements": [
-        "Preserve deterministic counts and justify average lookup costs."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Which tuples cannot be dict keys?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Hash table implementations."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "python-functions-and-scope",
-      "title": "Functions and scope",
-      "topic": "python-functions-and-scope",
-      "category": "Python language fluency",
+      "id": "senior-practice-05",
+      "title": "Streaming cancellation",
+      "topic": "c#-and-asp.net-core",
+      "category": "C# and ASP.NET Core",
       "difficulty": "Intermediate",
-      "description": "Positional and keyword args, closures, return values and LEGB scope.",
-      "problem": "Extract pure transformations from I/O.",
+      "description": "Stop provider work when an SSE client disconnects.",
+      "problem": "Stop provider work when an SSE client disconnects.",
       "requirements": [
-        "Run parametrized transformations without files."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When is a closure a useful dependency boundary?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Functional frameworks."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "python-modules-and-imports",
-      "title": "Modules and imports",
-      "topic": "python-modules-and-imports",
-      "category": "Python language fluency",
+      "id": "senior-practice-06",
+      "title": "Inventory reservation transaction",
+      "topic": "sql-server-and-ef-core",
+      "category": "SQL Server and EF Core",
       "difficulty": "Intermediate",
-      "description": "Module/package resolution, entry points and import side effects.",
-      "problem": "Separate CLI, read/parse and business modules.",
+      "description": "Prevent overselling under concurrency and explain consistency strategy.",
+      "problem": "Prevent overselling under concurrency and explain consistency strategy.",
       "requirements": [
-        "Imports perform no I/O and work from a clean install."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "How do you remove a cyclic import?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Import hooks."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "python-file-i-o-and-streaming",
-      "title": "File I/O and streaming",
-      "topic": "python-file-i-o-and-streaming",
-      "category": "Python language fluency",
+      "id": "senior-practice-07",
+      "title": "Query plan and index review",
+      "topic": "sql-server-and-ef-core",
+      "category": "SQL Server and EF Core",
       "difficulty": "Intermediate",
-      "description": "pathlib, CSV, JSONL, encoding, buffering and atomic replacement.",
-      "problem": "Stream and reconcile a large ledger export.",
+      "description": "Diagnose a slow query and justify an index with measured evidence.",
+      "problem": "Diagnose a slow query and justify an index with measured evidence.",
       "requirements": [
-        "Corrupt input preserves the previous output."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Why is encoding part of the interface?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Distributed file formats."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "python-errors-and-cleanup",
-      "title": "Errors and cleanup",
-      "topic": "python-errors-and-cleanup",
-      "category": "Python language fluency",
+      "id": "senior-practice-08",
+      "title": "Balanced journal posting",
+      "topic": "sql-server-and-ef-core",
+      "category": "SQL Server and EF Core",
       "difficulty": "Intermediate",
-      "description": "Typed exceptions, chaining, finally, exit codes and terminal errors.",
-      "problem": "Inject disk and format failures in a CLI.",
+      "description": "Enforce balance and prevent duplicate/partial posting with rollback and audit.",
+      "problem": "Enforce balance and prevent duplicate/partial posting with rollback and audit.",
       "requirements": [
-        "Report actionable causes without exposing sensitive rows."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Which layer turns an exception into an exit code?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Deep exception trees."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "python-environments-and-packaging",
-      "title": "Environments and packaging",
-      "topic": "python-environments-and-packaging",
-      "category": "Python language fluency",
+      "id": "senior-practice-09",
+      "title": "Optimistic concurrency conflict",
+      "topic": "sql-server-and-ef-core",
+      "category": "SQL Server and EF Core",
       "difficulty": "Intermediate",
-      "description": "Virtual environments, uv locking, pyproject, wheels and entry points.",
-      "problem": "Install the wheel in a separate environment.",
+      "description": "Detect stale edits and return a useful conflict response.",
+      "problem": "Detect stale edits and return a useful conflict response.",
       "requirements": [
-        "Installed command works from outside the repository."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "What can editable installation hide?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 3. Study later: Public package release automation."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "python-ruff-and-type-checking",
-      "title": "Ruff and type checking",
-      "topic": "python-ruff-and-type-checking",
-      "category": "Python language fluency",
+      "id": "senior-practice-10",
+      "title": "Tenant-aware API design",
+      "topic": "architecture-and-design",
+      "category": "Architecture and design",
       "difficulty": "Intermediate",
-      "description": "Lint, format, Pyright or mypy; generics, unions, narrowing and Any.",
-      "problem": "Set up CI and type a parsed payload.",
+      "description": "Design tenant identification, authorization, isolation and audit.",
+      "problem": "Design tenant identification, authorization, isolation and audit.",
       "requirements": [
-        "CI rejects wrong imports, nullable calls and payload types."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Which errors does static analysis miss?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Custom lint rules."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-python-objects-and-classes",
-      "title": "Objects and classes",
-      "topic": "advanced-python-objects-and-classes",
-      "category": "Advanced Python engineering",
+      "id": "senior-practice-11",
+      "title": "Safe schema migration",
+      "topic": "architecture-and-design",
+      "category": "Architecture and design",
       "difficulty": "Intermediate",
-      "description": "Identity, instance behavior and self.",
-      "problem": "Model an import job.",
+      "description": "Plan expand/backfill/contract rollout, monitoring and rollback.",
+      "problem": "Plan expand/backfill/contract rollout, monitoring and rollback.",
       "requirements": [
-        "Separate instances maintain independent state."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When is a pure function simpler?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Metaclasses."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-python-constructors-and-attributes",
-      "title": "Constructors and attributes",
-      "topic": "advanced-python-constructors-and-attributes",
-      "category": "Advanced Python engineering",
+      "id": "senior-practice-12",
+      "title": "Cache invalidation decision",
+      "topic": "architecture-and-design",
+      "category": "Architecture and design",
       "difficulty": "Intermediate",
-      "description": "__init__, invariants and instance attributes.",
-      "problem": "Reject invalid jobs at initialization.",
+      "description": "Choose keys, TTL, privacy scope and stale-data behavior.",
+      "problem": "Choose keys, TTL, privacy scope and stale-data behavior.",
       "requirements": [
-        "Tests cover missing and invalid fields."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Which data belongs in a constructor?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Custom __new__."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-python-class-attributes",
-      "title": "Class attributes",
-      "topic": "advanced-python-class-attributes",
-      "category": "Advanced Python engineering",
-      "difficulty": "Beginner",
-      "description": "Attribute sharing, lookup and shadowing.",
-      "problem": "Fix a shared-list error.",
-      "requirements": [
-        "Instances no longer share unintended mutations."
-      ],
-      "hints": [
-        "Where is the attribute resolved?"
-      ],
-      "outcome": "P0, Level 2. Study later: Custom lookup hooks."
-    },
-    {
-      "id": "advanced-python-instance-methods",
-      "title": "Instance methods",
-      "topic": "advanced-python-instance-methods",
-      "category": "Advanced Python engineering",
+      "id": "senior-practice-13",
+      "title": "Retry policy under outage",
+      "topic": "reliability-and-operations",
+      "category": "Reliability and operations",
       "difficulty": "Intermediate",
-      "description": "Bound methods, self and behavior on instance state.",
-      "problem": "Implement an import job transition.",
+      "description": "Bound retries without multiplying dependency load.",
+      "problem": "Bound retries without multiplying dependency load.",
       "requirements": [
-        "Reject invalid transitions and preserve invariants."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Why bind the behavior to the object?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Manual binding."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-python-class-methods",
-      "title": "Class methods",
-      "topic": "advanced-python-class-methods",
-      "category": "Advanced Python engineering",
-      "difficulty": "Beginner",
-      "description": "cls and alternate constructors.",
-      "problem": "Add from_row to a typed model.",
-      "requirements": [
-        "Subtype construction and validation work."
-      ],
-      "hints": [
-        "Why return cls(...) rather than a fixed class?"
-      ],
-      "outcome": "P1, Level 2. Study later: Factory hierarchies."
-    },
-    {
-      "id": "advanced-python-static-methods",
-      "title": "Static methods",
-      "topic": "advanced-python-static-methods",
-      "category": "Advanced Python engineering",
-      "difficulty": "Beginner",
-      "description": "Class namespace and unbound helpers.",
-      "problem": "Compare static method and module function.",
-      "requirements": [
-        "Show identical behavior and justify the API location."
-      ],
-      "hints": [
-        "Who owns this operation?"
-      ],
-      "outcome": "P1, Level 2. Study later: Descriptor internals."
-    },
-    {
-      "id": "advanced-python-encapsulation",
-      "title": "Encapsulation",
-      "topic": "advanced-python-encapsulation",
-      "category": "Advanced Python engineering",
+      "id": "senior-practice-14",
+      "title": "Outbox crash recovery",
+      "topic": "reliability-and-operations",
+      "category": "Reliability and operations",
       "difficulty": "Intermediate",
-      "description": "Public contract, underscore convention and mutation control.",
-      "problem": "Expose a read-only status view.",
+      "description": "Publish committed events and tolerate duplicate delivery.",
+      "problem": "Publish committed events and tolerate duplicate delivery.",
       "requirements": [
-        "All public mutations preserve invariants."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "What does a leading underscore guarantee?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 3. Study later: Emulating C# visibility."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-python-inheritance",
-      "title": "Inheritance",
-      "topic": "advanced-python-inheritance",
-      "category": "Advanced Python engineering",
-      "difficulty": "Beginner",
-      "description": "Subtype contracts and inherited behavior.",
-      "problem": "Implement a parser subtype.",
-      "requirements": [
-        "Run shared contract tests."
-      ],
-      "hints": [
-        "When does a subtype couple you to implementation?"
-      ],
-      "outcome": "P1, Level 2. Study later: Deep hierarchies."
-    },
-    {
-      "id": "advanced-python-overriding",
-      "title": "Overriding",
-      "topic": "advanced-python-overriding",
-      "category": "Advanced Python engineering",
-      "difficulty": "Beginner",
-      "description": "Dispatch, super and compatible behavior.",
-      "problem": "Override a parser hook.",
-      "requirements": [
-        "Base guarantees still hold."
-      ],
-      "hints": [
-        "What breaks when an override narrows input?"
-      ],
-      "outcome": "P1, Level 2. Study later: Template frameworks."
-    },
-    {
-      "id": "advanced-python-polymorphism",
-      "title": "Polymorphism",
-      "topic": "advanced-python-polymorphism",
-      "category": "Advanced Python engineering",
+      "id": "senior-practice-15",
+      "title": "Readiness and dependency health",
+      "topic": "reliability-and-operations",
+      "category": "Reliability and operations",
       "difficulty": "Intermediate",
-      "description": "Duck typing and substitutable adapters.",
-      "problem": "Swap native and OCR adapters.",
+      "description": "Separate liveness/readiness and represent degradation accurately.",
+      "problem": "Separate liveness/readiness and represent degradation accurately.",
       "requirements": [
-        "Run one suite against both."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Which errors belong in the contract?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 3. Study later: Multimethod dispatch."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-python-abstraction-and-abcs",
-      "title": "Abstraction and ABCs",
-      "topic": "advanced-python-abstraction-and-abcs",
-      "category": "Advanced Python engineering",
-      "difficulty": "Beginner",
-      "description": "Minimal consumer API, ABC and abstractmethod.",
-      "problem": "Block incomplete DocumentReader implementations.",
-      "requirements": [
-        "Incomplete implementation cannot be instantiated."
-      ],
-      "hints": [
-        "When is a structural protocol preferable?"
-      ],
-      "outcome": "P1, Level 2. Study later: Virtual registrations."
-    },
-    {
-      "id": "advanced-python-composition",
-      "title": "Composition",
-      "topic": "advanced-python-composition",
-      "category": "Advanced Python engineering",
+      "id": "senior-practice-16",
+      "title": "Incident review",
+      "topic": "reliability-and-operations",
+      "category": "Reliability and operations",
       "difficulty": "Intermediate",
-      "description": "Delegation and replaceable dependencies.",
-      "problem": "Compose parser, validator and sink.",
+      "description": "Write impact, timeline, mitigation, causes and actions.",
+      "problem": "Write impact, timeline, mitigation, causes and actions.",
       "requirements": [
-        "Swap the sink without subclassing."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Why compose this pipeline?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Inheritance scaffolding."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-python-multiple-inheritance-and-mro",
-      "title": "Multiple inheritance and MRO",
-      "topic": "advanced-python-multiple-inheritance-and-mro",
-      "category": "Advanced Python engineering",
-      "difficulty": "Beginner",
-      "description": "Mixins, diamond lookup and cooperative super.",
-      "problem": "Predict and check a tiny class hierarchy.",
-      "requirements": [
-        "Prediction matches __mro__ and output."
-      ],
-      "hints": [
-        "Why can base order change behavior?"
-      ],
-      "outcome": "P3, Level 2. Study later: Derive C3."
-    },
-    {
-      "id": "advanced-python-properties-and-descriptors",
-      "title": "Properties and descriptors",
-      "topic": "advanced-python-properties-and-descriptors",
-      "category": "Advanced Python engineering",
-      "difficulty": "Beginner",
-      "description": "property, getter/setter and descriptor protocol intuition.",
-      "problem": "Add a validated transition attribute.",
-      "requirements": [
-        "Invalid changes fail with useful errors."
-      ],
-      "hints": [
-        "Why can a property appear to be a field?"
-      ],
-      "outcome": "P2, Level 2. Study later: Descriptor framework."
-    },
-    {
-      "id": "advanced-python-dataclasses",
-      "title": "Dataclasses",
-      "topic": "advanced-python-dataclasses",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "description": "Generated methods, default_factory, frozen and equality.",
-      "problem": "Model an immutable document key.",
-      "requirements": [
-        "Check equality and independent defaults."
-      ],
-      "hints": [
-        "Does frozen deep-freeze nested data?"
-      ],
-      "outcome": "P0, Level 3. Study later: Code generation."
-    },
-    {
-      "id": "advanced-python-protocols-and-generics",
-      "title": "Protocols and generics",
-      "topic": "advanced-python-protocols-and-generics",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "description": "Structural typing, Protocol, TypeVar and runtime limits.",
-      "problem": "Check fake and real clients against one consumer interface.",
-      "requirements": [
-        "Checker rejects an incompatible implementation."
-      ],
-      "hints": [
-        "Where does runtime validation belong?"
-      ],
-      "outcome": "P1, Level 3. Study later: Advanced variance proofs."
-    },
-    {
-      "id": "advanced-python-solid-di-and-patterns",
-      "title": "SOLID, DI and patterns",
-      "topic": "advanced-python-solid-di-and-patterns",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "description": "Interface segregation, explicit lifetimes, adapter, strategy and composition root.",
-      "problem": "Inject a fake clock and swap two adapters.",
-      "requirements": [
-        "Tests expose no external resource dependencies and one rejected pattern is documented."
-      ],
-      "hints": [
-        "What change justifies an interface here?"
-      ],
-      "outcome": "P1, Level 3. Study later: A general-purpose DI container."
-    },
-    {
-      "id": "advanced-python-iterators-and-generators",
-      "title": "Iterators and generators",
-      "topic": "advanced-python-iterators-and-generators",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "description": "Iterable vs iterator, yield, exhaustion and cleanup.",
-      "problem": "Stream fixed-size batches.",
-      "requirements": [
-        "Memory grows with batch size rather than input length."
-      ],
-      "hints": [
-        "Which iterables can be replayed?"
-      ],
-      "outcome": "P0, Level 3. Study later: Generator schedulers."
-    },
-    {
-      "id": "advanced-python-decorators-and-context-managers",
-      "title": "Decorators and context managers",
-      "topic": "advanced-python-decorators-and-context-managers",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "description": "Closures, wraps, with, async with and cleanup on error.",
-      "problem": "Instrument calls and manage client lifetimes.",
-      "requirements": [
-        "Failures and cancellation release resources."
-      ],
-      "hints": [
-        "When may __exit__ suppress an exception?"
-      ],
-      "outcome": "P1, Level 3. Study later: Class rewriting."
-    },
-    {
-      "id": "advanced-python-pytest-fixtures-and-test-levels",
-      "title": "pytest fixtures and test levels",
-      "topic": "advanced-python-pytest-fixtures-and-test-levels",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "description": "Fixtures, parametrization, fake dependencies and database integration.",
-      "problem": "Add unit and integration tests.",
-      "requirements": [
-        "Tests isolate state and catch a seeded regression."
-      ],
-      "hints": [
-        "What does an HTTP stub hide?"
-      ],
-      "outcome": "P0, Level 3. Study later: Plugin development."
-    },
-    {
-      "id": "advanced-python-event-loop-and-structured-concurrency",
-      "title": "Event loop and structured concurrency",
-      "topic": "advanced-python-event-loop-and-structured-concurrency",
-      "category": "Advanced Python engineering",
-      "difficulty": "Advanced",
-      "description": "Awaitables, TaskGroup, deadlines, cancellation, queues and semaphores.",
-      "problem": "Bound concurrent downloads and cancel a parent.",
-      "requirements": [
-        "Assert peak concurrency and no orphan tasks."
-      ],
-      "hints": [
-        "Why does blocking I/O stall unrelated requests?"
-      ],
-      "outcome": "P1, Level 4. Study later: Event-loop internals."
-    },
-    {
-      "id": "advanced-python-threads-and-processes",
-      "title": "Threads and processes",
-      "topic": "advanced-python-threads-and-processes",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "description": "GIL considerations, shared memory, locks, serialization, process startup and pools.",
-      "problem": "Compare threads for I/O and processes for parsing.",
-      "requirements": [
-        "Measure throughput and repair a shared-state bug."
-      ],
-      "hints": [
-        "What makes a process pool slower on small input?"
-      ],
-      "outcome": "P1, Level 3. Study later: Distributed compute."
-    },
-    {
-      "id": "advanced-python-memory-and-profiling",
-      "title": "Memory and profiling",
-      "topic": "advanced-python-memory-and-profiling",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "description": "References, cycles, RSS, cProfile and tracemalloc.",
-      "problem": "Diagnose and remove retained batches.",
-      "requirements": [
-        "Publish before/after timings and accuracy."
-      ],
-      "hints": [
-        "Why might RSS stay elevated?"
-      ],
-      "outcome": "P1, Level 3. Study later: Allocator internals."
-    },
-    {
-      "id": "advanced-python-python-application-architecture",
-      "title": "Python application architecture",
-      "topic": "advanced-python-python-application-architecture",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "description": "Domain modules, adapters, configuration and transaction ownership.",
-      "problem": "Separate API and worker entry points around a shared service.",
-      "requirements": [
-        "Domain tests run independently from HTTP and the database."
-      ],
-      "hints": [
-        "Where should a transaction start and end?"
-      ],
-      "outcome": "P1, Level 3. Study later: Layer-for-layer .NET translation."
-    },
-    {
-      "id": "math-ml-scalars-vectors-and-matrices",
-      "title": "Scalars, vectors and matrices",
-      "topic": "math-ml-scalars-vectors-and-matrices",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "description": "Concept, hand calculation, NumPy and interpretation; shapes, transpose and broadcasting.",
-      "problem": "Predict then implement matrix products, vector operations and projections.",
-      "requirements": [
-        "Hand results and NumPy agree; detect an unintended broadcast."
-      ],
-      "hints": [
-        "What does each output axis mean?"
-      ],
-      "outcome": "P0, Level 3. Study later: Tensor algebra proofs."
-    },
-    {
-      "id": "math-ml-dot-product-and-cosine",
-      "title": "Dot product and cosine",
-      "topic": "math-ml-dot-product-and-cosine",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "description": "Hand calculation, derivation intuition, NumPy; norms and normalization.",
-      "problem": "Implement cosine with a defined zero-vector policy.",
-      "requirements": [
-        "Matches reference calculations with safe zero handling."
-      ],
-      "hints": [
-        "When do dot and cosine rankings agree?"
-      ],
-      "outcome": "P0, Level 3. Study later: Metric-space theory."
-    },
-    {
-      "id": "math-ml-eigenvectors-and-svd",
-      "title": "Eigenvectors and SVD",
-      "topic": "math-ml-eigenvectors-and-svd",
-      "category": "Applied math and machine learning",
-      "difficulty": "Beginner",
-      "description": "Concept and interpretation; principal directions and compression.",
-      "problem": "Inspect PCA explained variance.",
-      "requirements": [
-        "Explain a direction and trade-off."
-      ],
-      "hints": [
-        "When could dimensionality reduction hurt retrieval?"
-      ],
-      "outcome": "P3, Level 1. Study later: Decomposition proofs."
-    },
-    {
-      "id": "math-ml-probability-and-bayes",
-      "title": "Probability and Bayes",
-      "topic": "math-ml-probability-and-bayes",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "description": "Concept, hand, NumPy and interpretation; expectation, variance, base rates and conditional probability.",
-      "problem": "Simulate rare alerts then hand-check posterior.",
-      "requirements": [
-        "Estimates align within sampling error."
-      ],
-      "hints": [
-        "Why can most positive predictions be false?"
-      ],
-      "outcome": "P0, Level 3. Study later: Measure theory."
-    },
-    {
-      "id": "math-ml-statistics-and-uncertainty",
-      "title": "Statistics and uncertainty",
-      "topic": "math-ml-statistics-and-uncertainty",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "description": "Concept and interpretation; sampling bias, percentiles, intervals and paired bootstrap.",
-      "problem": "Implement bootstrap for a paired quality delta.",
-      "requirements": [
-        "Report an interval and effective sampling unit."
-      ],
-      "hints": [
-        "When should you resample by document or tenant?"
-      ],
-      "outcome": "P1, Level 3. Study later: Asymptotic proofs."
-    },
-    {
-      "id": "math-ml-derivatives-gradients-and-losses",
-      "title": "Derivatives, gradients and losses",
-      "topic": "math-ml-derivatives-gradients-and-losses",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "description": "Hand and NumPy; derive scalar MSE derivative, chain rule, cross-entropy intuition, SGD and learning rate.",
-      "problem": "Train a tiny regressor and check finite differences.",
-      "requirements": [
-        "Analytic and numerical gradients agree and plot shows convergence."
-      ],
-      "hints": [
-        "Why can a large learning rate diverge?"
-      ],
-      "outcome": "P0, Level 3. Study later: Optimizer proofs."
-    },
-    {
-      "id": "math-ml-regression",
-      "title": "Regression",
-      "topic": "math-ml-regression",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "description": "Linear baseline, MAE/RMSE and residuals.",
-      "problem": "Predict resolution time from allowed features.",
-      "requirements": [
-        "Report median baseline and errors by severity."
-      ],
-      "hints": [
-        "When is MAE preferable?"
-      ],
-      "outcome": "P0, Level 3. Study later: Complex forecasting."
-    },
-    {
-      "id": "math-ml-classification",
-      "title": "Classification",
-      "topic": "math-ml-classification",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "description": "Logistic and tree baselines, precision/recall/F1, PR-AUC and calibration.",
-      "problem": "Set urgent-ticket threshold on validation data.",
-      "requirements": [
-        "Report held-out false negatives and threshold cost."
-      ],
-      "hints": [
-        "How can discrimination and calibration disagree?"
-      ],
-      "outcome": "P0, Level 3. Study later: Ensemble sweeps."
-    },
-    {
-      "id": "math-ml-clustering",
-      "title": "Clustering",
-      "topic": "math-ml-clustering",
-      "category": "Applied math and machine learning",
-      "difficulty": "Beginner",
-      "description": "K-means, scaling, centroids and stability.",
-      "problem": "Explore recurring topics in embedding data.",
-      "requirements": [
-        "Assess stability and review a sample for coherence."
-      ],
-      "hints": [
-        "Why isn't a cluster automatically a label?"
-      ],
-      "outcome": "P1, Level 2. Study later: Spectral clustering."
-    },
-    {
-      "id": "math-ml-features-validation-and-leakage",
-      "title": "Features, validation and leakage",
-      "topic": "math-ml-features-validation-and-leakage",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "description": "Categorical/text features, missing data, pipelines, grouped/temporal splits, underfit and overfit.",
-      "problem": "Compare naive and safe validation and show learning curves.",
-      "requirements": [
-        "Preprocessing runs within folds and holdout stays locked."
-      ],
-      "hints": [
-        "Can a ticket ID leak timing?"
-      ],
-      "outcome": "P0, Level 3. Study later: Feature stores."
-    },
-    {
-      "id": "data-data-contracts-and-provenance",
-      "title": "Data contracts and provenance",
-      "topic": "data-data-contracts-and-provenance",
-      "category": "Document data engineering",
-      "difficulty": "Intermediate",
-      "description": "Schemas, encoding, hashes, raw versions, object storage and quarantine.",
-      "problem": "Write immutable source manifests.",
-      "requirements": [
-        "Rebuild a derived artifact from the original bytes."
-      ],
-      "hints": [
-        "Why separate business identity from content hash?"
-      ],
-      "outcome": "P1, Level 3. Study later: Lakehouse platforms."
-    },
-    {
-      "id": "data-parsing-and-cleaning",
-      "title": "Parsing and cleaning",
-      "topic": "data-parsing-and-cleaning",
-      "category": "Document data engineering",
-      "difficulty": "Intermediate",
-      "description": "Native text, PDF reading order, tables, Unicode and source offsets.",
-      "problem": "Build adapters and golden fixtures.",
-      "requirements": [
-        "Preserve page references and a representative table."
-      ],
-      "hints": [
-        "What evidence can aggressive cleanup destroy?"
-      ],
-      "outcome": "P1, Level 3. Study later: General web crawling."
-    },
-    {
-      "id": "data-ocr-and-document-lifecycle",
-      "title": "OCR and document lifecycle",
-      "topic": "data-ocr-and-document-lifecycle",
-      "category": "Document data engineering",
-      "difficulty": "Advanced",
-      "description": "Page rasterization, confidence, language packs, idempotent versions and tombstones.",
-      "problem": "Add OCR fallback and replay replace/delete concurrently.",
-      "requirements": [
-        "Demonstrate final-state consistency and measure OCR quality."
-      ],
-      "hints": [
-        "How can replay resurrect a deleted source?"
-      ],
-      "outcome": "P1, Level 4. Study later: Training OCR."
-    },
-    {
-      "id": "data-columnar-storage-and-batch-processing",
-      "title": "Columnar storage and batch processing",
-      "topic": "data-columnar-storage-and-batch-processing",
-      "category": "Document data engineering",
-      "difficulty": "Beginner",
-      "description": "Row vs column formats, Parquet, filtering and chunked reads.",
-      "problem": "Benchmark one evaluation export.",
-      "requirements": [
-        "Report representative size and scan time."
-      ],
-      "hints": [
-        "When is CSV adequate?"
-      ],
-      "outcome": "P2, Level 2. Study later: Spark and Airflow."
-    },
-    {
-      "id": "backend-fastapi-routing-and-openapi",
-      "title": "FastAPI routing and OpenAPI",
-      "topic": "backend-fastapi-routing-and-openapi",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "description": "ASGI, routes, status codes, pagination and response contracts.",
-      "problem": "Build versioned ticket routes and diff OpenAPI.",
-      "requirements": [
-        "Contract tests detect breaking schema changes."
-      ],
-      "hints": [
-        "When do you return 202?"
-      ],
-      "outcome": "P0, Level 3. Study later: Multiple web frameworks."
-    },
-    {
-      "id": "backend-pydantic-request-response-models",
-      "title": "Pydantic request/response models",
-      "topic": "backend-pydantic-request-response-models",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "description": "Coercion, strict fields, errors and serialization boundaries.",
-      "problem": "Separate request, domain and response models.",
-      "requirements": [
-        "Invalid input fails and internal fields never serialize."
-      ],
-      "hints": [
-        "When is coercion dangerous?"
-      ],
-      "outcome": "P0, Level 3. Study later: Validator runtime internals."
-    },
-    {
-      "id": "backend-fastapi-dependency-injection-and-exceptions",
-      "title": "FastAPI dependency injection and exceptions",
-      "topic": "backend-fastapi-dependency-injection-and-exceptions",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "description": "Depends, request scope, yield, overrides and domain error translation.",
-      "problem": "Inject identity and a session, map conflict and timeout.",
-      "requirements": [
-        "Resources close on errors and logs omit secrets."
-      ],
-      "hints": [
-        "Who owns transaction rollback?"
-      ],
-      "outcome": "P1, Level 3. Study later: Generic DI containers."
-    },
-    {
-      "id": "backend-authentication-and-authorization",
-      "title": "Authentication and authorization",
-      "topic": "backend-authentication-and-authorization",
-      "category": "Python backend engineering",
-      "difficulty": "Advanced",
-      "description": "OIDC, issuer, audience, expiry, tenant and resource-level permission.",
-      "problem": "Authorize ticket access with an IdP and test revoked roles.",
-      "requirements": [
-        "Wrong-tenant and expired-token tests deny correctly."
-      ],
-      "hints": [
-        "Where does a JWT stop proving access?"
-      ],
-      "outcome": "P1, Level 4. Study later: Implementing OIDC."
-    },
-    {
-      "id": "backend-sqlalchemy-and-postgresql-plans",
-      "title": "SQLAlchemy and PostgreSQL plans",
-      "topic": "backend-sqlalchemy-and-postgresql-plans",
-      "category": "Python backend engineering",
-      "difficulty": "Advanced",
-      "description": "Sessions, Alembic, pool, isolation, constraints, locks, indexes and EXPLAIN ANALYZE.",
-      "problem": "Tune queue polling under concurrent writes.",
-      "requirements": [
-        "Explain plan and lock behavior with rollback fixtures."
-      ],
-      "hints": [
-        "Why shouldn't two async tasks share a session?"
-      ],
-      "outcome": "P1, Level 4. Study later: Several ORMs."
-    },
-    {
-      "id": "backend-async-endpoints-and-sse",
-      "title": "Async endpoints and SSE",
-      "topic": "backend-async-endpoints-and-sse",
-      "category": "Python backend engineering",
-      "difficulty": "Advanced",
-      "description": "Offload blocking work, cancellation, backpressure and streaming response semantics.",
-      "problem": "Stream a mock model and disconnect mid-response.",
-      "requirements": [
-        "Disconnect releases upstream resources and load tests show bounded concurrency."
-      ],
-      "hints": [
-        "What can fail after HTTP headers are sent?"
-      ],
-      "outcome": "P1, Level 4. Study later: WebSockets without a use case."
-    },
-    {
-      "id": "backend-lifespan-middleware-and-testing",
-      "title": "Lifespan, middleware and testing",
-      "topic": "backend-lifespan-middleware-and-testing",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "description": "ASGI request wrapping, correlation IDs, shared clients, test overrides and graceful shutdown.",
-      "problem": "Add lifespan and HTTPX integration tests.",
-      "requirements": [
-        "Trace IDs survive streaming and each client closes on shutdown."
-      ],
-      "hints": [
-        "How does worker count change open connections?"
-      ],
-      "outcome": "P1, Level 3. Study later: Custom ASGI server."
-    },
-    {
-      "id": "backend-background-tasks-and-deployment",
-      "title": "Background tasks and deployment",
-      "topic": "backend-background-tasks-and-deployment",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "description": "In-process tasks versus durable workers, readiness and proxy deadlines.",
-      "problem": "Move critical work to a worker, deploy the API and restart during a job.",
-      "requirements": [
-        "Deployment drains properly and critical jobs resume."
-      ],
-      "hints": [
-        "Which work may disappear on restart?"
-      ],
-      "outcome": "P1, Level 3. Study later: Workflow engines at small scale."
-    },
-    {
-      "id": "transformers-neural-layers-and-autograd",
-      "title": "Neural layers and autograd",
-      "topic": "transformers-neural-layers-and-autograd",
-      "category": "Neural networks and transformers",
-      "difficulty": "Intermediate",
-      "description": "Hand gradient, PyTorch modules, affine layers, nonlinearities, backprop and train/eval.",
-      "problem": "Train a small classifier and verify a gradient.",
-      "requirements": [
-        "Diagnose one failed training run."
-      ],
-      "hints": [
-        "Why do stacked linear layers collapse?"
-      ],
-      "outcome": "P0, Level 3. Study later: Training foundation models."
-    },
-    {
-      "id": "transformers-tokenization-and-representations",
-      "title": "Tokenization and representations",
-      "topic": "transformers-tokenization-and-representations",
-      "category": "Neural networks and transformers",
-      "difficulty": "Intermediate",
-      "description": "Bytes, subwords, special IDs, padding, truncation, embeddings, pooling and positions.",
-      "problem": "Compare English and Bangla token counts and inspect position handling.",
-      "requirements": [
-        "Explain retrieval vectors vs token embeddings and choose a safe cutoff."
-      ],
-      "hints": [
-        "Why is character count a poor token proxy?"
-      ],
-      "outcome": "P0, Level 3. Study later: Training a tokenizer."
-    },
-    {
-      "id": "transformers-qkv-and-scaled-attention",
-      "title": "QKV and scaled attention",
-      "topic": "transformers-qkv-and-scaled-attention",
-      "category": "Neural networks and transformers",
-      "difficulty": "Intermediate",
-      "description": "Compute by hand and NumPy: QK transpose, scaling, masking, softmax and V.",
-      "problem": "Implement a tiny attention example.",
-      "requirements": [
-        "Compare shapes and values with PyTorch."
-      ],
-      "hints": [
-        "Why scale logits by square root of the key dimension?"
-      ],
-      "outcome": "P0, Level 3. Study later: CUDA kernels."
-    },
-    {
-      "id": "transformers-transformer-blocks-and-architectures",
-      "title": "Transformer blocks and architectures",
-      "topic": "transformers-transformer-blocks-and-architectures",
-      "category": "Neural networks and transformers",
-      "difficulty": "Intermediate",
-      "description": "Heads, feed-forward, residuals, normalization, encoder/decoder, cross-attention and pretraining.",
-      "problem": "Implement masked block fragment and inspect model cards.",
-      "requirements": [
-        "Future-token changes cannot affect earlier masked output."
-      ],
-      "hints": [
-        "Which models can attend bidirectionally?"
-      ],
-      "outcome": "P1, Level 3. Study later: Full transformer implementation."
-    },
-    {
-      "id": "transformers-generation-kv-cache-and-gpu",
-      "title": "Generation, KV cache and GPU",
-      "topic": "transformers-generation-kv-cache-and-gpu",
-      "category": "Neural networks and transformers",
-      "difficulty": "Advanced",
-      "description": "Logits, greedy/temperature/top-p, prefill/decode, context scaling, device transfer and cache memory.",
-      "problem": "Implement sampling and profile local inference.",
-      "requirements": [
-        "Estimate KV bytes and explain TTFT, decode and memory changes."
-      ],
-      "hints": [
-        "Why does cache memory rise with context?"
-      ],
-      "outcome": "P1, Level 4. Study later: GPU kernels."
-    },
-    {
-      "id": "llm-app-provider-adapter-and-prompt-versions",
-      "title": "Provider adapter and prompt versions",
-      "topic": "llm-app-provider-adapter-and-prompt-versions",
+      "id": "senior-practice-17",
+      "title": "Structured output validation",
+      "topic": "llm-application-engineering",
       "category": "LLM application engineering",
       "difficulty": "Intermediate",
-      "description": "Roles, templates, examples, context budget, output usage and upstream errors.",
-      "problem": "Build a thin adapter and compare two prompt versions.",
+      "description": "Reject malformed output and keep decisions deterministic.",
+      "problem": "Reject malformed output and keep decisions deterministic.",
       "requirements": [
-        "Trace the prompt and model configuration for each result."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Which provider differences leak through an abstraction?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 3. Study later: General-purpose framework."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "llm-app-structured-output-and-model-selection",
-      "title": "Structured output and model selection",
-      "topic": "llm-app-structured-output-and-model-selection",
+      "id": "senior-practice-18",
+      "title": "Model comparison harness",
+      "topic": "llm-application-engineering",
       "category": "LLM application engineering",
-      "difficulty": "Advanced",
-      "description": "Schema constraints, semantic validation, bounded repair, refusals and cost-quality routing.",
-      "problem": "Compare rules, classifier and model on the ticket set.",
-      "requirements": [
-        "Distinguish refusal, truncation, timeout and valid-but-wrong answers."
-      ],
-      "hints": [
-        "Why is schema validity insufficient?"
-      ],
-      "outcome": "P1, Level 4. Study later: Custom decoders."
-    },
-    {
-      "id": "search-embeddings-and-multilingual-fit",
-      "title": "Embeddings and multilingual fit",
-      "topic": "search-embeddings-and-multilingual-fit",
-      "category": "Embeddings and semantic search",
-      "difficulty": "Advanced",
-      "description": "Bi-encoders, pooling, normalization, model dimensions, prefixes and versioning.",
-      "problem": "Compare two models on one judged corpus.",
-      "requirements": [
-        "Publish language and identifier slices under matched settings."
-      ],
-      "hints": [
-        "Why rebuild an index when embeddings change?"
-      ],
-      "outcome": "P1, Level 4. Study later: Training embeddings."
-    },
-    {
-      "id": "search-exact-similarity-and-rank-metrics",
-      "title": "Exact similarity and rank metrics",
-      "topic": "search-exact-similarity-and-rank-metrics",
-      "category": "Embeddings and semantic search",
       "difficulty": "Intermediate",
-      "description": "Dot, cosine, L2, top-k, ties, Recall@k, MRR and nDCG.",
-      "problem": "Match SQL rankings to NumPy and hand-check metrics.",
+      "description": "Compare fixed cases with quality and latency/cost context.",
+      "problem": "Compare fixed cases with quality and latency/cost context.",
       "requirements": [
-        "Metrics match tiny fixture math and model results use held-out labels."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "How can MRR rise while recall falls?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 3. Study later: Learning to rank."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "search-lexical-retrieval-and-filters",
-      "title": "Lexical retrieval and filters",
-      "topic": "search-lexical-retrieval-and-filters",
-      "category": "Embeddings and semantic search",
-      "difficulty": "Advanced",
-      "description": "Inverted indexes, analyzers, BM25 intuition, metadata and authorization filtering.",
-      "problem": "Build PostgreSQL lexical search for IDs, phrases and private versions.",
-      "requirements": [
-        "Search fixtures cover exact identifiers and unauthorized documents."
-      ],
-      "hints": [
-        "How does tokenization affect a SKU?"
-      ],
-      "outcome": "P1, Level 4. Study later: Large search clusters."
-    },
-    {
-      "id": "search-pgvector-ann",
-      "title": "pgvector ANN",
-      "topic": "search-pgvector-ann",
-      "category": "Embeddings and semantic search",
-      "difficulty": "Advanced",
-      "description": "HNSW graph intuition, IVFFlat clustering, operator classes, build and search settings.",
-      "problem": "Benchmark exact vs ANN under representative filters.",
-      "requirements": [
-        "Report recall, p95, build time and index bytes."
-      ],
-      "hints": [
-        "When can index-time filtering reduce candidate recall?"
-      ],
-      "outcome": "P1, Level 4. Study later: Additional vector database."
-    },
-    {
-      "id": "rag-fixed-windows-and-overlap",
-      "title": "Fixed windows and overlap",
-      "topic": "rag-fixed-windows-and-overlap",
-      "category": "Grounded RAG",
+      "id": "senior-practice-19",
+      "title": "Context budget manager",
+      "topic": "llm-application-engineering",
+      "category": "LLM application engineering",
       "difficulty": "Intermediate",
-      "description": "Token lengths, stride, stable IDs, offsets and duplicate evidence.",
-      "problem": "Sweep lengths and overlap settings.",
+      "description": "Select context under a token budget while preserving citations.",
+      "problem": "Select context under a token budget while preserving citations.",
       "requirements": [
-        "Report boundary recall and duplicate tokens."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When does overlap waste context?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P0, Level 3. Study later: Per-document tuning."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "rag-sentence-and-recursive-splitting",
-      "title": "Sentence and recursive splitting",
-      "topic": "rag-sentence-and-recursive-splitting",
-      "category": "Grounded RAG",
+      "id": "senior-practice-20",
+      "title": "Provider timeout and fallback",
+      "topic": "llm-application-engineering",
+      "category": "LLM application engineering",
       "difficulty": "Intermediate",
-      "description": "Sentence grouping, separators, fallbacks and long input.",
-      "problem": "Compare sentence and recursive cuts.",
+      "description": "Handle provider failure with a clear degraded response.",
+      "problem": "Handle provider failure with a clear degraded response.",
       "requirements": [
-        "Token limits and offsets hold on long and multilingual fixtures."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "How can sentence splitting fail on abbreviations?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 3. Study later: Training segmenters."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "rag-structure-aware-chunks",
-      "title": "Structure-aware chunks",
-      "topic": "rag-structure-aware-chunks",
-      "category": "Grounded RAG",
+      "id": "senior-practice-21",
+      "title": "Document-aware chunking",
+      "topic": "rag-and-evaluation",
+      "category": "RAG and evaluation",
       "difficulty": "Advanced",
-      "description": "Headings, tables, page coordinates and provenance.",
-      "problem": "Preserve rows and heading context.",
+      "description": "Preserve structure/source spans and compare strategies.",
+      "problem": "Preserve structure/source spans and compare strategies.",
       "requirements": [
-        "Table answers link to correct rows and pages."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When should a section be divided further?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 4. Study later: Layout training."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "rag-context-citations-and-abstention",
-      "title": "Context, citations and abstention",
-      "topic": "rag-context-citations-and-abstention",
-      "category": "Grounded RAG",
+      "id": "senior-practice-22",
+      "title": "Retrieval recall evaluation",
+      "topic": "rag-and-evaluation",
+      "category": "RAG and evaluation",
       "difficulty": "Advanced",
-      "description": "Deduplication, budget, conflict and claim-to-source spans.",
-      "problem": "Build restricted context and validate citation handles.",
+      "description": "Measure relevant-source retrieval on fixed queries.",
+      "problem": "Measure relevant-source retrieval on fixed queries.",
       "requirements": [
-        "Reject unknown citations and score unsupported claims."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Can the correct document still lack the claimed evidence?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 4. Study later: Using a judge as an oracle."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "rag-index-consistency-and-lifecycle",
-      "title": "Index consistency and lifecycle",
-      "topic": "rag-index-consistency-and-lifecycle",
-      "category": "Grounded RAG",
+      "id": "senior-practice-23",
+      "title": "Hybrid retrieval ablation",
+      "topic": "rag-and-evaluation",
+      "category": "RAG and evaluation",
       "difficulty": "Advanced",
-      "description": "Generation swaps, embedding versions, replay and tombstones.",
-      "problem": "Activate a new index and roll back after a source deletion.",
+      "description": "Compare lexical, vector and hybrid retrieval on one dataset.",
+      "problem": "Compare lexical, vector and hybrid retrieval on one dataset.",
       "requirements": [
-        "Readers see complete generations and deleted artifacts stay inactive."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "How does rollback avoid resurrecting removed sources?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 4. Study later: Federated indexes."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "rag-enterprise-citation-verification",
-      "title": "Enterprise citation verification",
-      "topic": "rag-enterprise-citation-verification",
-      "category": "Grounded RAG",
+      "id": "senior-practice-24",
+      "title": "Citation validation",
+      "topic": "rag-and-evaluation",
+      "category": "RAG and evaluation",
       "difficulty": "Advanced",
-      "description": "Authenticated navigation, document version, span provenance and no-answer handling.",
-      "problem": "Verify citations direct readers to active, authorized evidence.",
+      "description": "Ensure citations map to permitted source spans.",
+      "problem": "Ensure citations map to permitted source spans.",
       "requirements": [
-        "Revocation makes stale cited sources inaccessible."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Why isn't a valid ID sufficient?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 4. Study later: Complex attribution models."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-rag-semantic-parent-child-and-contextual-chunks",
-      "title": "Semantic, parent-child and contextual chunks",
-      "topic": "advanced-rag-semantic-parent-child-and-contextual-chunks",
-      "category": "Advanced retrieval",
+      "id": "senior-practice-25",
+      "title": "Unknown-answer behavior",
+      "topic": "rag-and-evaluation",
+      "category": "RAG and evaluation",
       "difficulty": "Advanced",
-      "description": "Similarity boundaries, small-to-large retrieval and contextual enrichment.",
-      "problem": "Run matched ablations with source and ACL preservation.",
+      "description": "Abstain when evidence is insufficient.",
+      "problem": "Abstain when evidence is insufficient.",
       "requirements": [
-        "Report quality, token cost, duplication and provenance."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Can a parent cross a permission boundary?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P2, Level 4. Study later: Deep chunk hierarchies."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-rag-hybrid-and-reranking",
-      "title": "Hybrid and reranking",
-      "topic": "advanced-rag-hybrid-and-reranking",
-      "category": "Advanced retrieval",
+      "id": "senior-practice-26",
+      "title": "Indirect prompt injection test",
+      "topic": "ai-security-and-tools",
+      "category": "AI security and tools",
       "difficulty": "Advanced",
-      "description": "Sparse/dense union, rank fusion, cross-encoder batching and cutoff.",
-      "problem": "Compare sparse, dense, hybrid and reranked retrieval.",
+      "description": "Verify malicious document instructions cannot expand authority.",
+      "problem": "Verify malicious document instructions cannot expand authority.",
       "requirements": [
-        "Report held-out recall, quality delta and p95."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "What can reranking never recover?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 4. Study later: Learned rankers."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "advanced-rag-rewrites-compression-and-multi-hop",
-      "title": "Rewrites, compression and multi-hop",
-      "topic": "advanced-rag-rewrites-compression-and-multi-hop",
-      "category": "Advanced retrieval",
+      "id": "senior-practice-27",
+      "title": "Tenant isolation proof",
+      "topic": "ai-security-and-tools",
+      "category": "AI security and tools",
       "difficulty": "Advanced",
-      "description": "Query expansion, drift, context extraction, routing and bounded decomposition.",
-      "problem": "Compare original query against one bounded second step.",
+      "description": "Prove users cannot retrieve another tenant's chunks.",
+      "problem": "Prove users cannot retrieve another tenant's chunks.",
       "requirements": [
-        "Preserve IDs and report evidence retention and cost."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When should rewriting be bypassed?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P2, Level 4. Study later: Graph databases without measured value."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "eval-gold-sets-and-retrieval-answer-separation",
-      "title": "Gold sets and retrieval/answer separation",
-      "topic": "eval-gold-sets-and-retrieval-answer-separation",
-      "category": "Evaluation and LLMOps",
+      "id": "senior-practice-28",
+      "title": "Read-only typed tool",
+      "topic": "ai-security-and-tools",
+      "category": "AI security and tools",
       "difficulty": "Advanced",
-      "description": "Grouped splits, hard negatives, recall, correctness, support and abstention.",
-      "problem": "Create a human rubric and labeled dataset.",
+      "description": "Expose a validated business API as a narrow tool.",
+      "problem": "Expose a validated business API as a narrow tool.",
       "requirements": [
-        "Localize failed outputs to retrieval, context or answer stages."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When should an answer have been impossible?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 4. Study later: Large labeling platforms."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "eval-calibrating-model-judges",
-      "title": "Calibrating model judges",
-      "topic": "eval-calibrating-model-judges",
-      "category": "Evaluation and LLMOps",
+      "id": "senior-practice-29",
+      "title": "Human approval workflow",
+      "topic": "ai-security-and-tools",
+      "category": "AI security and tools",
       "difficulty": "Advanced",
-      "description": "Rubrics, position/verbosity bias and disagreement.",
-      "problem": "Compare judge runs with a reviewed subset.",
+      "description": "Keep proposals in draft until an authorized person confirms.",
+      "problem": "Keep proposals in draft until an authorized person confirms.",
       "requirements": [
-        "Publish agreement and examples of mismatch."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Which slice needs human review?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P2, Level 4. Study later: Judge fine-tuning."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "eval-version-lineage-and-staged-rollout",
-      "title": "Version lineage and staged rollout",
-      "topic": "eval-version-lineage-and-staged-rollout",
-      "category": "Evaluation and LLMOps",
+      "id": "senior-practice-30",
+      "title": "Privacy-aware AI trace",
+      "topic": "ai-security-and-tools",
+      "category": "AI security and tools",
       "difficulty": "Advanced",
-      "description": "Version model, prompt, parser, index, dataset and code; paired comparisons and rollback.",
-      "problem": "Create an evaluation manifest and block a seeded regression.",
+      "description": "Record metadata without secrets or excess prompt content.",
+      "problem": "Record metadata without secrets or excess prompt content.",
       "requirements": [
-        "Reviewer reproduces artifact selection and observes rollback."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When does a good average hide a dangerous slice?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 4. Study later: Dedicated model registry product."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "eval-drift-feedback-and-monitoring",
-      "title": "Drift, feedback and monitoring",
-      "topic": "eval-drift-feedback-and-monitoring",
-      "category": "Evaluation and LLMOps",
-      "difficulty": "Advanced",
-      "description": "Input shifts, outcome proxies, feedback bias and alert owners.",
-      "problem": "Simulate a quality regression and write a triage runbook.",
-      "requirements": [
-        "Show one alert, root cause investigation and follow-up."
-      ],
-      "hints": [
-        "Why can approval rate mislead?"
-      ],
-      "outcome": "P1, Level 4. Study later: Automated retraining."
-    },
-    {
-      "id": "security-tenant-isolation-and-privacy",
-      "title": "Tenant isolation and privacy",
-      "topic": "security-tenant-isolation-and-privacy",
-      "category": "Defensive AI security",
-      "difficulty": "Advanced",
-      "description": "Actor claims, ACL, row-level policies, object keys, cache namespaces, retention and vendor handling.",
-      "problem": "Test cross-tenant access with the real application role.",
-      "requirements": [
-        "Denials cover search, fetch, cache and job results; deletion is traced."
-      ],
-      "hints": [
-        "What can a privileged service account bypass?"
-      ],
-      "outcome": "P1, Level 4. Study later: Dedicated database per tenant by default."
-    },
-    {
-      "id": "security-prompt-injection-defenses-and-responsible-ai",
-      "title": "Prompt injection defenses and responsible AI",
-      "topic": "security-prompt-injection-defenses-and-responsible-ai",
-      "category": "Defensive AI security",
-      "difficulty": "Advanced",
-      "description": "Untrusted inputs, server policy, objective harm, human review and redacted logging.",
-      "problem": "Verify with inert fixtures that document content cannot grant rights.",
-      "requirements": [
-        "Model or document instructions cannot change tool/data authority."
-      ],
-      "hints": [
-        "Which boundary remains effective even if model output is wrong?"
-      ],
-      "outcome": "P1, Level 4. Study later: Offensive automation."
-    },
-    {
-      "id": "security-safe-query-compilation",
-      "title": "Safe query compilation",
-      "topic": "security-safe-query-compilation",
-      "category": "Defensive AI security",
-      "difficulty": "Advanced",
-      "description": "Typed intents, templates, read-only views, bound parameters and tenant scopes.",
-      "problem": "Compile allowed analytics requests into approved queries.",
-      "requirements": [
-        "Forbidden operations never reach the reporting connection."
-      ],
-      "hints": [
-        "Why does validating SQL syntax fail to establish authorization?"
-      ],
-      "outcome": "P1, Level 4. Study later: Broad production schema access."
-    },
-    {
-      "id": "security-limits-clarification-and-audit",
-      "title": "Limits, clarification and audit",
-      "topic": "security-limits-clarification-and-audit",
-      "category": "Defensive AI security",
-      "difficulty": "Advanced",
-      "description": "Ambiguity, row caps, statement timeout, audit and result accuracy.",
-      "problem": "Test reporting rejection and timing boundaries.",
-      "requirements": [
-        "Report execution accuracy and predictable denial behavior."
-      ],
-      "hints": [
-        "When should the assistant ask a follow-up?"
-      ],
-      "outcome": "P1, Level 4. Study later: Autonomous database modification."
-    },
-    {
-      "id": "agents-deterministic-and-model-led-planning",
-      "title": "Deterministic and model-led planning",
-      "topic": "agents-deterministic-and-model-led-planning",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "description": "Explicit states, dynamic information gathering, step budgets and stopping.",
-      "problem": "Compare fixed research flow with bounded decomposition.",
-      "requirements": [
-        "Measure success, evidence support and steps under the same fixtures."
-      ],
-      "hints": [
-        "When does model-led planning justify its cost?"
-      ],
-      "outcome": "P1, Level 4. Study later: Unbounded loops."
-    },
-    {
-      "id": "agents-agent-evaluation-and-team-patterns",
-      "title": "Agent evaluation and team patterns",
-      "topic": "agents-agent-evaluation-and-team-patterns",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "description": "Trajectory constraints, replay, role separation and handoff cost.",
-      "problem": "Compare a two-role design to typed stages.",
-      "requirements": [
-        "Unauthorized effects fail evaluation even when answers look correct."
-      ],
-      "hints": [
-        "Can different trajectories be valid?"
-      ],
-      "outcome": "P2, Level 4. Study later: Agent swarms."
-    },
-    {
-      "id": "agents-tool-calling-and-mcp-primitives",
-      "title": "Tool calling and MCP primitives",
-      "topic": "agents-tool-calling-and-mcp-primitives",
-      "category": "Business workflows and MCP",
+      "id": "senior-practice-31",
+      "title": "Reproducible Docker environment",
+      "topic": "cloud-and-delivery",
+      "category": "Cloud and delivery",
       "difficulty": "Intermediate",
-      "description": "Schema, typed execution, host/client/server, tools/resources/prompts and negotiation.",
-      "problem": "Implement a read-only MCP inventory service and client.",
+      "description": "Run API/dependencies from clean checkout with safe sample config.",
+      "problem": "Run API/dependencies from clean checkout with safe sample config.",
       "requirements": [
-        "Discovery succeeds and malformed calls cause no effects."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Who executes a model's tool request?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 3. Study later: Writing a transport implementation."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "agents-mcp-authorization-and-compatibility",
-      "title": "MCP authorization and compatibility",
-      "topic": "agents-mcp-authorization-and-compatibility",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "description": "Protocol pinning, transport trust, scopes, capability drift and availability.",
-      "problem": "Scope read tools and simulate unavailable or incompatible service.",
-      "requirements": [
-        "Wrong scope, timeout and schema change fail safely."
-      ],
-      "hints": [
-        "Where does execution authority belong?"
-      ],
-      "outcome": "P1, Level 4. Study later: Organization-wide tool registry."
-    },
-    {
-      "id": "agents-state-checkpoints-and-approval",
-      "title": "State, checkpoints and approval",
-      "topic": "agents-state-checkpoints-and-approval",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "description": "Workflow vs chat memory, TTL, immutable intent, approval binding and final checks.",
-      "problem": "Persist and resume an ERP approval flow.",
-      "requirements": [
-        "Mutated, stale and revoked approvals fail safely."
-      ],
-      "hints": [
-        "What if the approver changes roles before execution?"
-      ],
-      "outcome": "P1, Level 4. Study later: Unbounded memory."
-    },
-    {
-      "id": "agents-failure-recovery-and-reconciliation",
-      "title": "Failure recovery and reconciliation",
-      "topic": "agents-failure-recovery-and-reconciliation",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "description": "Unknown outcomes, idempotency, status probes, compensation and dead letters.",
-      "problem": "Simulate timeout after a mock ERP commit.",
-      "requirements": [
-        "Restart reconciles to one effective external operation."
-      ],
-      "hints": [
-        "When must a human resolve ambiguity?"
-      ],
-      "outcome": "P1, Level 4. Study later: Exactly-once claims across independent systems."
-    },
-    {
-      "id": "production-redis-cache-and-rate-limits",
-      "title": "Redis cache and rate limits",
-      "topic": "production-redis-cache-and-rate-limits",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "description": "Strings, hashes, sorted sets, TTL, cache-aside, invalidation, stampedes and atomic quotas.",
-      "problem": "Build scoped cache and load-test tenant limits.",
-      "requirements": [
-        "Test stale entries, concurrent limits and cache outage."
-      ],
-      "hints": [
-        "When is fail-open unacceptable?"
-      ],
-      "outcome": "P1, Level 4. Study later: Redis as source of truth."
-    },
-    {
-      "id": "production-rabbitmq-outbox-and-workers",
-      "title": "RabbitMQ, outbox and workers",
-      "topic": "production-rabbitmq-outbox-and-workers",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "description": "Exchanges, confirms, acks, prefetch, backpressure, retry budgets, DLQ and outbox.",
-      "problem": "Kill workers before and after commit.",
-      "requirements": [
-        "Deduplicate replay and recover incomplete jobs."
-      ],
-      "hints": [
-        "How do consumer acks differ from publisher confirms?"
-      ],
-      "outcome": "P1, Level 4. Study later: Kafka without replay need."
-    },
-    {
-      "id": "production-docker-ci-and-cloud-staging",
-      "title": "Docker, CI and cloud staging",
-      "topic": "production-docker-ci-and-cloud-staging",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "description": "Layers, non-root images, signals, CI artifacts, IAM, network boundaries and health checks.",
-      "problem": "Deploy API and workers from CI artifacts on one cloud.",
-      "requirements": [
-        "Staging reproduces builds and handles backward-compatible migration."
-      ],
-      "hints": [
-        "Why does graceful drain matter?"
-      ],
-      "outcome": "P1, Level 4. Study later: Multiple clouds and Kubernetes."
-    },
-    {
-      "id": "production-opentelemetry-traces-and-metrics",
-      "title": "OpenTelemetry traces and metrics",
-      "topic": "production-opentelemetry-traces-and-metrics",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "description": "Context propagation, redacted structured logs, histograms and cardinality.",
-      "problem": "Trace an API request across a queue and model call.",
-      "requirements": [
-        "Locate a bottleneck without private prompts in telemetry."
-      ],
-      "hints": [
-        "Which metadata should never become a label?"
-      ],
-      "outcome": "P1, Level 4. Study later: Operating a telemetry platform."
-    },
-    {
-      "id": "production-capacity-latency-and-cost",
-      "title": "Capacity, latency and cost",
-      "topic": "production-capacity-latency-and-cost",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "description": "Traffic envelope, TTFT, p95, quotas, saturation, per-task cost and resource isolation.",
-      "problem": "Model 10x load and run a noisy-neighbor test.",
-      "requirements": [
-        "State workload, bottlenecks, error rates and per-tenant behavior."
-      ],
-      "hints": [
-        "When should a tenant get dedicated capacity?"
-      ],
-      "outcome": "P1, Level 4. Study later: Sharding before evidence."
-    },
-    {
-      "id": "production-timeouts-retries-and-circuit-breakers",
-      "title": "Timeouts, retries and circuit breakers",
-      "topic": "production-timeouts-retries-and-circuit-breakers",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "description": "End-to-end deadlines, jitter, error categories, bulkheads, shedding and breaker state.",
-      "problem": "Inject provider slowness and Redis failure.",
-      "requirements": [
-        "Bound retries and backlog while keeping authoritative data consistent."
-      ],
-      "hints": [
-        "How do retries amplify an incident?"
-      ],
-      "outcome": "P1, Level 4. Study later: Service mesh."
-    },
-    {
-      "id": "production-slo-restore-and-rollback",
-      "title": "SLO, restore and rollback",
-      "topic": "production-slo-restore-and-rollback",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "description": "SLIs, error budgets, RTO/RPO, canaries, database restore and incident ownership.",
-      "problem": "Rehearse bad release, restore and measured recovery.",
-      "requirements": [
-        "Publish restore timing and check post-restore deletion rules."
-      ],
-      "hints": [
-        "Can healthy uptime hide an AI quality outage?"
-      ],
-      "outcome": "P1, Level 4. Study later: Multi-region failover before need."
-    },
-    {
-      "id": "adaptation-open-weights-quantization-and-serving",
-      "title": "Open weights, quantization and serving",
-      "topic": "adaptation-open-weights-quantization-and-serving",
-      "category": "Model adaptation and serving",
+      "id": "senior-practice-32",
+      "title": "CI quality gate",
+      "topic": "cloud-and-delivery",
+      "category": "Cloud and delivery",
       "difficulty": "Intermediate",
-      "description": "License, templates, weight/KV precision, GPU memory, continuous batching and vLLM.",
-      "problem": "Compare local settings or a managed and local model.",
+      "description": "Automate build/checks with clear failures and inspectable artifacts.",
+      "problem": "Automate build/checks with clear failures and inspectable artifacts.",
       "requirements": [
-        "Report quality, TTFT, throughput and peak VRAM."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Why can batching hurt first-token latency?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P2, Level 3. Study later: Multi-node serving."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "adaptation-fine-tuning-lora-and-qlora",
-      "title": "Fine-tuning, LoRA and QLoRA",
-      "topic": "adaptation-fine-tuning-lora-and-qlora",
-      "category": "Model adaptation and serving",
+      "id": "senior-practice-33",
+      "title": "Deployment rollback plan",
+      "topic": "cloud-and-delivery",
+      "category": "Cloud and delivery",
       "difficulty": "Intermediate",
-      "description": "SFT datasets, leakage, masked labels, low-rank updates and quantized bases.",
-      "problem": "Prepare licensed examples and train one adapter if compute permits; compare memory separately.",
+      "description": "Define health criteria and rollback for app/schema changes.",
+      "problem": "Define health criteria and rollback for app/schema changes.",
       "requirements": [
-        "Compare held-out quality and count trainable parameters."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When is current knowledge better served by RAG?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P2, Level 3. Study later: Pretraining or kernel development."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "multimodal-ocr-vision-and-multimodal-retrieval",
-      "title": "OCR, vision and multimodal retrieval",
-      "topic": "multimodal-ocr-vision-and-multimodal-retrieval",
-      "category": "Multimodal document AI",
+      "id": "senior-practice-34",
+      "title": "Cloud budget review",
+      "topic": "cloud-and-delivery",
+      "category": "Cloud and delivery",
       "difficulty": "Intermediate",
-      "description": "Image patch intuition, resolution, text/image embeddings, evidence regions and costs.",
-      "problem": "Compare OCR and vision; add page/region retrieval for hard cases.",
+      "description": "Estimate usage, set guardrails and document cleanup.",
+      "problem": "Estimate usage, set guardrails and document cleanup.",
       "requirements": [
-        "Measure field accuracy and page recall and preserve coordinates."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "When is text extraction enough?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P2, Level 3. Study later: Training vision backbones."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "multimodal-media-lifecycle-and-validation",
-      "title": "Media lifecycle and validation",
-      "topic": "multimodal-media-lifecycle-and-validation",
-      "category": "Multimodal document AI",
-      "difficulty": "Intermediate",
-      "description": "MIME, pixel limits, review status, retention and deterministic verification.",
-      "problem": "Validate invoices and handle bounded media uploads.",
-      "requirements": [
-        "Reject invalid media and route uncertain totals to review."
-      ],
-      "hints": [
-        "Which amounts can be verified deterministically?"
-      ],
-      "outcome": "P1, Level 3. Study later: Streaming media systems."
-    },
-    {
-      "id": "senior-system-design-and-migrations",
-      "title": "System design and migrations",
-      "topic": "senior-system-design-and-migrations",
-      "category": "System design and senior ownership",
+      "id": "senior-practice-35",
+      "title": "ADR defense",
+      "topic": "senior-ownership",
+      "category": "Senior ownership",
       "difficulty": "Advanced",
-      "description": "Modular boundaries, staged migrations, dual reads, dependency isolation and cost models.",
-      "problem": "Design and review an embedding cutover with a rollback exercise.",
+      "description": "Write context, alternatives, decision, consequences and revisit triggers.",
+      "problem": "Write context, alternatives, decision, consequences and revisit triggers.",
       "requirements": [
-        "Demonstrate cutover consistency and document scaling limits."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "What evidence would justify splitting API and worker further?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 4. Study later: Microservices as default."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "senior-architecture-review-and-standards",
-      "title": "Architecture review and standards",
-      "topic": "senior-architecture-review-and-standards",
-      "category": "System design and senior ownership",
+      "id": "senior-practice-36",
+      "title": "Delivery slicing",
+      "topic": "senior-ownership",
+      "category": "Senior ownership",
       "difficulty": "Advanced",
-      "description": "ADRs, quality gates, budgets, owner assignment and operational feedback.",
-      "problem": "Lead review, write two ADRs and run a game day.",
+      "description": "Break vague work into increments, acceptance criteria and risks.",
+      "problem": "Break vague work into increments, acceptance criteria and risks.",
       "requirements": [
-        "Independent review, peer adoption and follow-up decision evidence."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "What new evidence would make you retire a standard?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P2, Level 5. Study later: Claiming seniority from a demo."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "senior-mentoring-and-communication",
-      "title": "Mentoring and communication",
-      "topic": "senior-mentoring-and-communication",
-      "category": "System design and senior ownership",
+      "id": "senior-practice-37",
+      "title": "Design review feedback",
+      "topic": "senior-ownership",
+      "category": "Senior ownership",
       "difficulty": "Advanced",
-      "description": "Teach debugging, review trade-offs and communicate scope to stakeholders.",
-      "problem": "Mentor a peer through a delivery problem and request feedback.",
+      "description": "Review assumptions, failure modes, security and operability.",
+      "problem": "Review assumptions, failure modes, security and operability.",
       "requirements": [
-        "Peer independently applies the method and gives attributable feedback."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "How did you verify the person could repeat the reasoning?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P2, Level 5. Study later: Measuring mentoring by advice volume."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "remote-python-and-sql-interviews",
-      "title": "Python and SQL interviews",
-      "topic": "remote-python-and-sql-interviews",
-      "category": "Remote AI career preparation",
-      "difficulty": "Intermediate",
-      "description": "Complexity, streaming, joins, windows, query plans and cancellation.",
-      "problem": "Run timed unfamiliar coding and SQL prompts.",
-      "requirements": [
-        "Explain edge cases, complexity and measured plan changes."
-      ],
-      "hints": [
-        "Why did this index help?"
-      ],
-      "outcome": "P0, Level 3. Study later: Competitive programming grind."
-    },
-    {
-      "id": "remote-ai-design-and-english-communication",
-      "title": "AI design and English communication",
-      "topic": "remote-ai-design-and-english-communication",
-      "category": "Remote AI career preparation",
+      "id": "senior-practice-38",
+      "title": "Mentoring explanation",
+      "topic": "senior-ownership",
+      "category": "Senior ownership",
       "difficulty": "Advanced",
-      "description": "Evaluation, safety, SLOs, trade-offs, evidence and concise asynchronous updates.",
-      "problem": "Record 90-second introduction, design review and incident story.",
+      "description": "Teach a debugging/design method and seek feedback.",
+      "problem": "Teach a debugging/design method and seek feedback.",
       "requirements": [
-        "Two independent mocks and a focused retest."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Which experiment would change your recommendation?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 4. Study later: Memorized architecture scripts."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "remote-remote-role-analysis-and-portfolio",
-      "title": "Remote role analysis and portfolio",
-      "topic": "remote-remote-role-analysis-and-portfolio",
-      "category": "Remote AI career preparation",
-      "difficulty": "Intermediate",
-      "description": "Role evidence, Bangladesh eligibility, UTC overlap, case studies and transparent claims.",
-      "problem": "Tailor two applications and record three proof links per role.",
+      "id": "senior-practice-39",
+      "title": "Capacity and SLO design",
+      "topic": "senior-ownership",
+      "category": "Senior ownership",
+      "difficulty": "Advanced",
+      "description": "State workload, saturation, latency target and response.",
+      "problem": "State workload, saturation, latency target and response.",
       "requirements": [
-        "Each target has eligibility source, next action and evidence."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "Which claim is strongest and how can a reviewer verify it?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 3. Study later: Certificate collection."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     },
     {
-      "id": "remote-remote-application-feedback-loop",
-      "title": "Remote application feedback loop",
-      "topic": "remote-remote-application-feedback-loop",
-      "category": "Remote AI career preparation",
+      "id": "senior-practice-40",
+      "title": "Role evidence mapping",
+      "topic": "remote-job-readiness",
+      "category": "Remote job readiness",
       "difficulty": "Intermediate",
-      "description": "Pipeline stages, follow-up, written communication and feedback patterns.",
-      "problem": "Log opportunities, mock feedback and a revision action.",
+      "description": "Map vacancy requirements to accurate evidence and identify gaps.",
+      "problem": "Map vacancy requirements to accurate evidence and identify gaps.",
       "requirements": [
-        "Review pipeline after two weeks and update target roles from evidence."
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
       ],
       "hints": [
-        "What distinguishes a repeated skills gap from poor role fit?"
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
       ],
-      "outcome": "P1, Level 3. Study later: Automated bulk application."
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
+    },
+    {
+      "id": "senior-practice-41",
+      "title": "Async incident handoff",
+      "topic": "remote-job-readiness",
+      "category": "Remote job readiness",
+      "difficulty": "Intermediate",
+      "description": "Write impact, evidence, steps, blocker and requested decision.",
+      "problem": "Write impact, evidence, steps, blocker and requested decision.",
+      "requirements": [
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
+      ],
+      "hints": [
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
+      ],
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
+    },
+    {
+      "id": "senior-practice-42",
+      "title": "Project interview narrative",
+      "topic": "remote-job-readiness",
+      "category": "Remote job readiness",
+      "difficulty": "Intermediate",
+      "description": "Explain problem, contribution, trade-offs, evidence and limits.",
+      "problem": "Explain problem, contribution, trade-offs, evidence and limits.",
+      "requirements": [
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
+      ],
+      "hints": [
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
+      ],
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
+    },
+    {
+      "id": "senior-practice-43",
+      "title": "Bangladesh eligibility check",
+      "topic": "remote-job-readiness",
+      "category": "Remote job readiness",
+      "difficulty": "Intermediate",
+      "description": "Record location eligibility, UTC overlap and follow-up.",
+      "problem": "Record location eligibility, UTC overlap and follow-up.",
+      "requirements": [
+        "State assumptions and boundaries.",
+        "Implement or document a concrete approach.",
+        "Include failure cases and reviewable evidence."
+      ],
+      "hints": [
+        "Start with the business constraint.",
+        "Keep authorization and business rules in application code.",
+        "Explain alternatives, trade-offs and verification."
+      ],
+      "outcome": "Senior-level evidence: an artifact, meaningful verification, clear explanation and honest limitations."
     }
   ]
 }

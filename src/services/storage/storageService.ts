@@ -4,7 +4,7 @@ import type { Progress, StaticData } from '../../types/domain';
 
 export const STORAGE_KEY = 'ai-career-guide-v1';
 export const SCHEMA_VERSION = 4;
-export const CURRICULUM_VERSION = 5;
+export const CURRICULUM_VERSION = 7;
 const dateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/);
 const journalSchema = z.object({ id: z.string(), date: dateSchema, topics: z.string(), learned: z.string(), problems: z.string(), solutions: z.string(), next: z.string(), tags: z.array(z.string()).optional() });
 const progressSchema = z.object({
@@ -24,7 +24,7 @@ const progressSchema = z.object({
   })).default([]),
   preferences: z.object({ dailyTargetMinutes: z.number().positive(), theme: z.enum(['light','dark']), bookmarks: z.array(z.string()) })
 });
-export const freshProgress = (): Progress => ({ topics: {}, applications: [], schemaVersion: SCHEMA_VERSION, curriculumVersion: CURRICULUM_VERSION, roadmap: {}, weekNotes: {}, projects: {}, checklist: {}, interviews: {}, challenges: {}, journal: [], planner: {}, studySessions: [], selectedWeek: 1, expandedWeek: 1, calendarOffsetWeeks: 0, selectedView: 'dashboard', preferences: { dailyTargetMinutes: 240, theme: 'light', bookmarks: [] } });
+export const freshProgress = (): Progress => ({ topics: {}, applications: [], schemaVersion: SCHEMA_VERSION, curriculumVersion: CURRICULUM_VERSION, roadmap: {}, weekNotes: {}, projects: {}, checklist: {}, interviews: {}, challenges: {}, journal: [], planner: {}, studySessions: [], selectedWeek: 1, expandedWeek: 1, calendarOffsetWeeks: 0, selectedView: 'dashboard', preferences: { dailyTargetMinutes: 180, theme: 'light', bookmarks: [] } });
 export function validateProgress(value: unknown): value is Progress { return progressSchema.safeParse(value).success; }
 export function parseProgress(value: unknown): Progress | null { const result = progressSchema.safeParse(value); return result.success ? result.data as Progress : null; }
 export function readRaw(): string | null { try { return localStorage.getItem(STORAGE_KEY); } catch { return null; } }

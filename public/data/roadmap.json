@@ -1,1657 +1,1681 @@
 {
   "learningStrategy": {
-    "title": "Python-first applied AI for remote roles",
-    "summary": "You bring 3+ years of enterprise software engineering in Bangladesh, .NET backend strengths, beginner Python and early RAG experience. Build Python competence, measure retrieval and model behavior, then deploy secure services and present reproducible evidence to remote employers.",
+    "title": "Senior ownership through shipped evidence",
+    "summary": "This 44-week sequence starts with your existing experience, deepens backend and AI delivery, and ends with senior-level ownership and a qualified remote application pipeline. Apply early when evidence matches. Pace the calendar around work and energy.",
     "steps": [
       {
-        "weeks": "Units 1–8",
-        "title": "Python engineering foundations",
-        "detail": "Worker benchmark and profiling report"
+        "weeks": "01–04",
+        "title": "Position and prepare",
+        "detail": "Audit CV evidence, target senior scope and start qualified applications."
       },
       {
-        "weeks": "Units 9–16",
-        "title": "Applied ML and Python AI services",
-        "detail": "Versioned native PDF parser"
+        "weeks": "05–16",
+        "title": "Backend and data depth",
+        "detail": "Strengthen C#, ASP.NET Core, SQL Server, architecture and business invariants."
       },
       {
-        "weeks": "Units 17–24",
-        "title": "Data, model internals and retrieval",
-        "detail": "P6 basic RAG"
+        "weeks": "17–24",
+        "title": "Reliable delivery",
+        "detail": "Build distributed-systems judgment, containers, cloud and CI habits."
       },
       {
-        "weeks": "Units 25–32",
-        "title": "Enterprise RAG, evaluation and business tools",
-        "detail": "P9 operations agent"
+        "weeks": "25–36",
+        "title": "Production AI",
+        "detail": "Integrate .NET AI, measure RAG, secure tools and practice operations."
       },
       {
-        "weeks": "Units 33–40",
-        "title": "Production reliability, optimization and multimodal",
-        "detail": "P12 production AI SaaS staging"
-      },
-      {
-        "weeks": "Units 41–44",
-        "title": "Senior ownership and remote career preparation",
-        "detail": "Prioritized pipeline and tailored role evidence"
+        "weeks": "37–44",
+        "title": "Senior ownership",
+        "detail": "Practice design review, mentoring, interviews and application feedback."
       }
     ],
-    "rule": "Complete work only after an independent implementation, relevant tests, and an evidence review. Pick a schedule based on available hours."
+    "rule": "Each week produces inspectable evidence. Separate professional experience, existing projects and planned work. A local demo is not a production-scale claim."
   },
   "phases": [
     {
-      "id": "foundations",
-      "title": "Python engineering foundations",
+      "id": "career",
+      "title": "Senior-role positioning and evidence",
       "startWeek": 1,
-      "endWeek": 8,
+      "endWeek": 4,
       "weeks": [
         {
           "week": 1,
-          "title": "Python values and control",
-          "deliverable": "Placement note and input validator",
-          "objective": "Write a typed row validator.",
+          "title": "Verify your CV against real evidence",
+          "objective": "Check every job date, title, technology and achievement against your records, repositories or other proof. Correct uncertain claims before applying.",
           "topics": [
-            "Syntax and control flow",
-            "Object identity and money"
+            "CV evidence",
+            "Case studies"
           ],
           "tasks": [
             {
-              "id": "evidence-python-syntax-and-control-flow",
-              "text": "Write a typed row validator. Test zero, empty text, missing field and whitespace independently."
+              "id": "w01-build",
+              "text": "Copy every CV bullet into a table with columns: claim, where it happened, your exact contribution, proof/link, and status (professional work, existing personal project, or planned)."
             },
             {
-              "id": "evidence-python-object-identity-and-money",
-              "text": "Repair state leaking between two ledger imports. Independent runs produce exact deterministic totals."
+              "id": "w01-evidence",
+              "text": "Check employer names, titles and month/year dates against your own records. Specifically confirm the Chainomation start date shown as December 2026–Present on the supplied resume."
+            }
+            ,
+            {
+              "id": "w01-correct",
+              "text": "Remove or rewrite claims you cannot prove. Do not invent impact numbers; mark an unknown fact for confirmation."
+            },
+            {
+              "id": "w01-draft",
+              "text": "Create a corrected CV draft that leads with .NET backend, business systems and your verified AI projects."
             }
           ],
+          "deliverable": "An evidence table for every CV claim, a corrected CV draft, and a short list of facts you still need to confirm.",
           "learningGuide": {
             "steps": [
-              "Syntax and control flow — Indentation, truthiness, None, branches, loops and f-strings.",
-              "Object identity and money — Names bind objects; aliasing, shallow copy, identity vs equality and Decimal."
+              "List each CV claim and label it professional experience, existing personal project, or planned work.",
+              "Confirm all employment dates, titles, technologies and responsibilities against records you trust.",
+              "Attach one proof item to every important claim: a public repository, sanitized work example, reference, or accurate explanation.",
+              "Rewrite unsupported claims and metrics; ask for confirmation on uncertain dates before using the CV."
             ],
             "resources": [
-              "Python Tutorial"
+              "GitHub profile",
+              "LinkedIn profile"
             ],
-            "practice": "Write a typed row validator.",
-            "readyWhen": "Test zero, empty text, missing field and whitespace independently. Independent runs produce exact deterministic totals."
+            "practice": "Audit your supplied resume one section at a time. Correct the Chainomation date only after confirming the actual start date.",
+            "readyWhen": "Every CV statement is accurate, your contribution is clear, important claims have evidence, and uncertain facts are flagged instead of guessed."
           }
         },
         {
           "week": 2,
-          "title": "Containers and functions",
-          "deliverable": "Deterministic duplicate detector",
-          "objective": "Write a bounded recent-record buffer.",
+          "title": "Find and compare senior remote vacancies",
+          "objective": "Use actual job postings to learn which senior .NET/backend and AI engineering roles hire in Bangladesh and what evidence they expect.",
           "topics": [
-            "Lists, tuples and deque",
-            "Dictionaries and sets",
-            "Functions and scope"
+            "Remote search",
+            "Eligibility"
           ],
           "tasks": [
             {
-              "id": "evidence-python-lists-tuples-and-deque",
-              "text": "Write a bounded recent-record buffer. Demonstrate ordered output and bounded size."
+              "id": "w02-build",
+              "text": "Find 10–15 active senior vacancies for Senior .NET Backend, Senior Backend, Senior AI Integration or Applied AI roles. Save the direct posting link and date checked."
             },
             {
-              "id": "evidence-python-dictionaries-and-sets",
-              "text": "Deduplicate ledger records by source and ID. Preserve deterministic counts and justify average lookup costs."
+              "id": "w02-evidence",
+              "text": "For each posting record: Bangladesh/contractor eligibility and source, UTC overlap, senior responsibilities, required stack, three evidence matches, and gaps."
+            }
+            ,
+            {
+              "id": "w02-patterns",
+              "text": "Count the requirements that repeat across postings. Separate must-have skills from optional tools and ignore roles that cannot hire from Bangladesh."
             },
             {
-              "id": "evidence-python-functions-and-scope",
-              "text": "Extract pure transformations from I/O. Run parametrized transformations without files."
+              "id": "w02-apply",
+              "text": "Save five qualified roles in Remote jobs. Apply to the two strongest matches now; record the CV version, proof links, date and follow-up."
             }
           ],
+          "deliverable": "A comparison of 10–15 real senior vacancies, five qualified roles in your tracker, two tailored applications, and a prioritized skills-gap list.",
           "learningGuide": {
             "steps": [
-              "Lists, tuples and deque — Slicing, comprehensions, ordering, append and front-removal costs.",
-              "Dictionaries and sets — Hashability, composite keys, counting and set membership.",
-              "Functions and scope — Positional and keyword args, closures, return values and LEGB scope."
+              "Search for the senior titles in your target list on company career sites and remote job boards.",
+              "Open the employer posting. Confirm location/contract eligibility; do not infer worldwide availability from the word remote.",
+              "Record responsibilities, required skills, UTC hours, proof you can show and missing evidence in a comparison table.",
+              "Use repeated gaps to choose what to study. Apply now when your evidence already matches; the roadmap is not a gate."
             ],
             "resources": [
-              "Python Tutorial"
+              "GitHub profile",
+              "LinkedIn profile"
             ],
-            "practice": "Write a bounded recent-record buffer.",
-            "readyWhen": "Demonstrate ordered output and bounded size. Preserve deterministic counts and justify average lookup costs. Run parametrized transformations without files."
+            "practice": "Use the Remote jobs page to save qualified postings and follow-ups. Note where each eligibility decision came from.",
+            "readyWhen": "You can explain why each saved vacancy fits, show evidence for its key requirements, and identify the exact next action for each application."
           }
         },
         {
           "week": 3,
-          "title": "Files and errors",
-          "deliverable": "Streaming CSV import with reject log",
-          "objective": "Separate CLI, read/parse and business modules.",
+          "title": "Turn real work into senior interview examples",
+          "objective": "Prepare accurate examples that show your contribution, technical judgment, collaboration and follow-through on real work.",
           "topics": [
-            "Modules and imports",
-            "File I/O and streaming",
-            "Errors and cleanup"
+            "Communication",
+            "Ownership"
           ],
           "tasks": [
             {
-              "id": "evidence-python-modules-and-imports",
-              "text": "Separate CLI, read/parse and business modules. Imports perform no I/O and work from a clean install."
+              "id": "w03-build",
+              "text": "Choose three real examples from your ERP/CRM, inventory/accounting, insurance, chatbot or summarizer work. Do not use a planned feature as an experience story."
             },
             {
-              "id": "evidence-python-file-i-o-and-streaming",
-              "text": "Stream and reconcile a large ledger export. Corrupt input preserves the previous output."
+              "id": "w03-evidence",
+              "text": "For each example write: context/problem, constraints, your exact role, options, decision and why, implementation/collaboration, verified result, lesson, and proof."
+            }
+            ,
+            {
+              "id": "w03-boundaries",
+              "text": "Separate your work from the team's work. If you have no verified metric, describe the observable result without inventing a number."
             },
             {
-              "id": "evidence-python-errors-and-cleanup",
-              "text": "Inject disk and format failures in a CLI. Report actionable causes without exposing sensitive rows."
+              "id": "w03-practice",
+              "text": "Record a 90-second answer for each story. Listen once, remove vague claims, and make your own contribution easy to understand."
             }
           ],
+          "deliverable": "Three concise, truthful senior interview stories with evidence links, clear ownership boundaries and a recorded spoken version.",
           "learningGuide": {
             "steps": [
-              "Modules and imports — Module/package resolution, entry points and import side effects.",
-              "File I/O and streaming — pathlib, CSV, JSONL, encoding, buffering and atomic replacement.",
-              "Errors and cleanup — Typed exceptions, chaining, finally, exit codes and terminal errors."
+              "Select three completed examples that you personally worked on and can discuss in detail.",
+              "Use a consistent story structure: problem and constraints; your responsibility; options; decision; delivery and collaboration; result; what you learned.",
+              "Attach an artifact where possible: sanitized design note, pull request, project link, screenshot or colleague who can confirm the work.",
+              "Practice out loud. State what you did, what the team did, what you would change, and which results you can actually verify."
             ],
             "resources": [
-              "Python Tutorial"
+              "GitHub profile",
+              "LinkedIn profile"
             ],
-            "practice": "Separate CLI, read/parse and business modules.",
-            "readyWhen": "Imports perform no I/O and work from a clean install. Corrupt input preserves the previous output. Report actionable causes without exposing sensitive rows."
+            "practice": "Use one real budget approval, accounting/inventory rule, CRM feature or AI-project failure. Protect employer/client confidential details.",
+            "readyWhen": "Each story is truthful, answers what you personally owned, explains a decision and its trade-offs, and fits a concise interview answer."
           }
         },
         {
           "week": 4,
-          "title": "Packaging the CLI",
-          "deliverable": "P1 reconciliation CLI wheel",
-          "objective": "Install the wheel in a separate environment.",
+          "title": "Prepare and send tailored applications",
+          "objective": "Turn your verified CV, interview examples and project evidence into a clear application for specific senior vacancies.",
           "topics": [
-            "Environments and packaging",
-            "Ruff and type checking"
+            "CV tailoring",
+            "Applications"
           ],
           "tasks": [
             {
-              "id": "evidence-python-environments-and-packaging",
-              "text": "Install the wheel in a separate environment. Installed command works from outside the repository."
+              "id": "w04-build",
+              "text": "Create two CV summaries: Senior .NET Backend and Senior AI Integration. Reorder skills and evidence for the vacancy; keep employment history and claims consistent."
             },
             {
-              "id": "evidence-python-ruff-and-type-checking",
-              "text": "Set up CI and type a parsed payload. CI rejects wrong imports, nullable calls and payload types."
+              "id": "w04-evidence",
+              "text": "For each application write a short role-specific note mapping three job requirements to your verified evidence and links. State gaps honestly."
+            }
+            ,
+            {
+              "id": "w04-profile",
+              "text": "Update LinkedIn/GitHub headlines and project summaries to match the CV. Link only to repositories that open and have truthful descriptions."
+            },
+            {
+              "id": "w04-submit",
+              "text": "Submit three to five well-matched applications if eligible; add status, date, CV version and a sensible follow-up date to the tracker."
             }
           ],
+          "deliverable": "Two targeted CV summaries, consistent professional profiles, three to five tracked applications, and next actions for each.",
           "learningGuide": {
             "steps": [
-              "Environments and packaging — Virtual environments, uv locking, pyproject, wheels and entry points.",
-              "Ruff and type checking — Lint, format, Pyright or mypy; generics, unions, narrowing and Any."
+              "Choose a real vacancy and highlight its senior responsibilities and top three technical requirements.",
+              "Reorder the CV summary, skills and project evidence to match those needs without changing factual claims.",
+              "Check links, dates, spelling, location eligibility and requested working-hour overlap.",
+              "Submit through the employer's stated process. Log the exact CV version, evidence links, status and follow-up."
             ],
             "resources": [
-              "Python Tutorial"
+              "GitHub profile",
+              "LinkedIn profile"
             ],
-            "practice": "Install the wheel in a separate environment.",
-            "readyWhen": "Installed command works from outside the repository. CI rejects wrong imports, nullable calls and payload types."
+            "practice": "Tailor one application for a senior .NET role and one for a senior AI integration role, if suitable eligible vacancies are available.",
+            "readyWhen": "Each application is accurate, tailored to a verified eligible vacancy, linked to evidence, and saved with a follow-up action."
           }
-        },
+        }
+      ]
+    },
+    {
+      "id": "backend",
+      "title": "Advanced C# and ASP.NET Core",
+      "startWeek": 5,
+      "endWeek": 8,
+      "weeks": [
         {
           "week": 5,
-          "title": "OOP and structural typing",
-          "deliverable": "Replaceable parser and typed fixtures",
-          "objective": "Model an import job.",
+          "title": "C# runtime and language depth",
+          "objective": "Review generics, records, nullability, LINQ, collections and allocation trade-offs.",
           "topics": [
-            "Objects and classes",
-            "Constructors and attributes",
-            "Class attributes",
-            "Instance methods",
-            "Class methods",
-            "Static methods",
-            "Encapsulation",
-            "Inheritance",
-            "Overriding",
-            "Polymorphism",
-            "Abstraction and ABCs",
-            "Composition",
-            "Multiple inheritance and MRO",
-            "Properties and descriptors",
-            "Dataclasses",
-            "Protocols and generics",
-            "SOLID, DI and patterns"
+            "C#",
+            "Runtime"
           ],
           "tasks": [
             {
-              "id": "evidence-advanced-python-objects-and-classes",
-              "text": "Model an import job. Separate instances maintain independent state."
+              "id": "w05-build",
+              "text": "Implement: Implement and benchmark a small data-processing feature; explain edge cases."
             },
             {
-              "id": "evidence-advanced-python-constructors-and-attributes",
-              "text": "Reject invalid jobs at initialization. Tests cover missing and invalid fields."
-            },
-            {
-              "id": "evidence-advanced-python-class-attributes",
-              "text": "Fix a shared-list error. Instances no longer share unintended mutations."
-            },
-            {
-              "id": "evidence-advanced-python-instance-methods",
-              "text": "Implement an import job transition. Reject invalid transitions and preserve invariants."
-            },
-            {
-              "id": "evidence-advanced-python-class-methods",
-              "text": "Add from_row to a typed model. Subtype construction and validation work."
-            },
-            {
-              "id": "evidence-advanced-python-static-methods",
-              "text": "Compare static method and module function. Show identical behavior and justify the API location."
-            },
-            {
-              "id": "evidence-advanced-python-encapsulation",
-              "text": "Expose a read-only status view. All public mutations preserve invariants."
-            },
-            {
-              "id": "evidence-advanced-python-inheritance",
-              "text": "Implement a parser subtype. Run shared contract tests."
-            },
-            {
-              "id": "evidence-advanced-python-overriding",
-              "text": "Override a parser hook. Base guarantees still hold."
-            },
-            {
-              "id": "evidence-advanced-python-polymorphism",
-              "text": "Swap native and OCR adapters. Run one suite against both."
-            },
-            {
-              "id": "evidence-advanced-python-abstraction-and-abcs",
-              "text": "Block incomplete DocumentReader implementations. Incomplete implementation cannot be instantiated."
-            },
-            {
-              "id": "evidence-advanced-python-composition",
-              "text": "Compose parser, validator and sink. Swap the sink without subclassing."
-            },
-            {
-              "id": "evidence-advanced-python-multiple-inheritance-and-mro",
-              "text": "Predict and check a tiny class hierarchy. Prediction matches __mro__ and output."
-            },
-            {
-              "id": "evidence-advanced-python-properties-and-descriptors",
-              "text": "Add a validated transition attribute. Invalid changes fail with useful errors."
-            },
-            {
-              "id": "evidence-advanced-python-dataclasses",
-              "text": "Model an immutable document key. Check equality and independent defaults."
-            },
-            {
-              "id": "evidence-advanced-python-protocols-and-generics",
-              "text": "Check fake and real clients against one consumer interface. Checker rejects an incompatible implementation."
-            },
-            {
-              "id": "evidence-advanced-python-solid-di-and-patterns",
-              "text": "Inject a fake clock and swap two adapters. Tests expose no external resource dependencies and one rejected pattern is documented."
+              "id": "w05-evidence",
+              "text": "Write reviewable evidence: Review generics, records, nullability, LINQ, collections and allocation trade-offs. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Implement and benchmark a small data-processing feature; explain edge cases.",
           "learningGuide": {
             "steps": [
-              "Objects and classes — Identity, instance behavior and self.",
-              "Constructors and attributes — __init__, invariants and instance attributes.",
-              "Class attributes — Attribute sharing, lookup and shadowing.",
-              "Instance methods — Bound methods, self and behavior on instance state.",
-              "Class methods — cls and alternate constructors.",
-              "Static methods — Class namespace and unbound helpers.",
-              "Encapsulation — Public contract, underscore convention and mutation control.",
-              "Inheritance — Subtype contracts and inherited behavior.",
-              "Overriding — Dispatch, super and compatible behavior.",
-              "Polymorphism — Duck typing and substitutable adapters.",
-              "Abstraction and ABCs — Minimal consumer API, ABC and abstractmethod.",
-              "Composition — Delegation and replaceable dependencies.",
-              "Multiple inheritance and MRO — Mixins, diamond lookup and cooperative super.",
-              "Properties and descriptors — property, getter/setter and descriptor protocol intuition.",
-              "Dataclasses — Generated methods, default_factory, frozen and equality.",
-              "Protocols and generics — Structural typing, Protocol, TypeVar and runtime limits.",
-              "SOLID, DI and patterns — Interface segregation, explicit lifetimes, adapter, strategy and composition root."
+              "Study the relevant concepts: C#, Runtime.",
+              "Implement and benchmark a small data-processing feature; explain edge cases.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Python Tutorial",
-              "asyncio",
-              "PyPA",
-              "pytest",
-              "Ruff"
+              "Microsoft .NET documentation",
+              "ASP.NET Core documentation",
+              "C# documentation"
             ],
-            "practice": "Model an import job.",
-            "readyWhen": "Separate instances maintain independent state. Tests cover missing and invalid fields. Instances no longer share unintended mutations. Reject invalid transitions and preserve invariants. Subtype construction and validation work. Show identical behavior and justify the API location. All public mutations preserve invariants. Run shared contract tests. Base guarantees still hold. Run one suite against both. Incomplete implementation cannot be instantiated. Swap the sink without subclassing. Prediction matches __mro__ and output. Invalid changes fail with useful errors. Check equality and independent defaults. Checker rejects an incompatible implementation. Tests expose no external resource dependencies and one rejected pattern is documented."
+            "practice": "Implement and benchmark a small data-processing feature; explain edge cases.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 6,
-          "title": "Generators and testing",
-          "deliverable": "Memory-bounded batches and pytest suite",
-          "objective": "Stream fixed-size batches.",
+          "title": "Async, cancellation and concurrency",
+          "objective": "Reason about async/await, cancellation propagation, bounded concurrency and thread safety.",
           "topics": [
-            "Iterators and generators",
-            "Decorators and context managers",
-            "pytest fixtures and test levels"
+            "Async",
+            "Concurrency"
           ],
           "tasks": [
             {
-              "id": "evidence-advanced-python-iterators-and-generators",
-              "text": "Stream fixed-size batches. Memory grows with batch size rather than input length."
+              "id": "w06-build",
+              "text": "Implement: Build concurrent dependency calls with deadlines, cancellation and failure tests."
             },
             {
-              "id": "evidence-advanced-python-decorators-and-context-managers",
-              "text": "Instrument calls and manage client lifetimes. Failures and cancellation release resources."
-            },
-            {
-              "id": "evidence-advanced-python-pytest-fixtures-and-test-levels",
-              "text": "Add unit and integration tests. Tests isolate state and catch a seeded regression."
+              "id": "w06-evidence",
+              "text": "Write reviewable evidence: Reason about async/await, cancellation propagation, bounded concurrency and thread safety. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Build concurrent dependency calls with deadlines, cancellation and failure tests.",
           "learningGuide": {
             "steps": [
-              "Iterators and generators — Iterable vs iterator, yield, exhaustion and cleanup.",
-              "Decorators and context managers — Closures, wraps, with, async with and cleanup on error.",
-              "pytest fixtures and test levels — Fixtures, parametrization, fake dependencies and database integration."
+              "Study the relevant concepts: Async, Concurrency.",
+              "Build concurrent dependency calls with deadlines, cancellation and failure tests.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Python Tutorial",
-              "asyncio",
-              "PyPA",
-              "pytest",
-              "Ruff"
+              "Microsoft .NET documentation",
+              "ASP.NET Core documentation",
+              "C# documentation"
             ],
-            "practice": "Stream fixed-size batches.",
-            "readyWhen": "Memory grows with batch size rather than input length. Failures and cancellation release resources. Tests isolate state and catch a seeded regression."
+            "practice": "Build concurrent dependency calls with deadlines, cancellation and failure tests.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 7,
-          "title": "Async cancellation",
-          "deliverable": "Deadline-bounded importer",
-          "objective": "Bound concurrent downloads and cancel a parent.",
+          "title": "ASP.NET Core request pipeline",
+          "objective": "Review middleware, DI lifetimes, configuration, validation and error contracts.",
           "topics": [
-            "Event loop and structured concurrency"
+            "ASP.NET Core",
+            "API design"
           ],
           "tasks": [
             {
-              "id": "evidence-advanced-python-event-loop-and-structured-concurrency",
-              "text": "Bound concurrent downloads and cancel a parent. Assert peak concurrency and no orphan tasks."
+              "id": "w07-build",
+              "text": "Implement: Add a consistent error contract, correlation and validation to an API."
+            },
+            {
+              "id": "w07-evidence",
+              "text": "Write reviewable evidence: Review middleware, DI lifetimes, configuration, validation and error contracts. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Add a consistent error contract, correlation and validation to an API.",
           "learningGuide": {
             "steps": [
-              "Event loop and structured concurrency — Awaitables, TaskGroup, deadlines, cancellation, queues and semaphores."
+              "Study the relevant concepts: ASP.NET Core, API design.",
+              "Add a consistent error contract, correlation and validation to an API.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Python Tutorial",
-              "asyncio",
-              "PyPA",
-              "pytest",
-              "Ruff"
+              "Microsoft .NET documentation",
+              "ASP.NET Core documentation",
+              "C# documentation"
             ],
-            "practice": "Bound concurrent downloads and cancel a parent.",
-            "readyWhen": "Assert peak concurrency and no orphan tasks."
+            "practice": "Add a consistent error contract, correlation and validation to an API.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 8,
-          "title": "Thread/process performance",
-          "deliverable": "Worker benchmark and profiling report",
-          "objective": "Compare threads for I/O and processes for parsing.",
+          "title": "Authentication and API contracts",
+          "objective": "Apply authorization, role/resource checks, pagination, OpenAPI and versioning.",
           "topics": [
-            "Threads and processes",
-            "Memory and profiling",
-            "Python application architecture"
+            "Authorization",
+            "OpenAPI"
           ],
           "tasks": [
             {
-              "id": "evidence-advanced-python-threads-and-processes",
-              "text": "Compare threads for I/O and processes for parsing. Measure throughput and repair a shared-state bug."
+              "id": "w08-build",
+              "text": "Implement: Test unauthenticated, forbidden, invalid and paginated requests end to end."
             },
             {
-              "id": "evidence-advanced-python-memory-and-profiling",
-              "text": "Diagnose and remove retained batches. Publish before/after timings and accuracy."
-            },
-            {
-              "id": "evidence-advanced-python-python-application-architecture",
-              "text": "Separate API and worker entry points around a shared service. Domain tests run independently from HTTP and the database."
+              "id": "w08-evidence",
+              "text": "Write reviewable evidence: Apply authorization, role/resource checks, pagination, OpenAPI and versioning. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Test unauthenticated, forbidden, invalid and paginated requests end to end.",
           "learningGuide": {
             "steps": [
-              "Threads and processes — GIL considerations, shared memory, locks, serialization, process startup and pools.",
-              "Memory and profiling — References, cycles, RSS, cProfile and tracemalloc.",
-              "Python application architecture — Domain modules, adapters, configuration and transaction ownership."
+              "Study the relevant concepts: Authorization, OpenAPI.",
+              "Test unauthenticated, forbidden, invalid and paginated requests end to end.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Python Tutorial",
-              "asyncio",
-              "PyPA",
-              "pytest",
-              "Ruff"
+              "Microsoft .NET documentation",
+              "ASP.NET Core documentation",
+              "C# documentation"
             ],
-            "practice": "Compare threads for I/O and processes for parsing.",
-            "readyWhen": "Measure throughput and repair a shared-state bug. Publish before/after timings and accuracy. Domain tests run independently from HTTP and the database."
+            "practice": "Test unauthenticated, forbidden, invalid and paginated requests end to end.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         }
       ]
     },
     {
-      "id": "applied",
-      "title": "Applied ML and Python AI services",
+      "id": "data",
+      "title": "SQL Server, EF Core and business invariants",
       "startWeek": 9,
-      "endWeek": 16,
+      "endWeek": 12,
       "weeks": [
         {
           "week": 9,
-          "title": "Vectors and matrices",
-          "deliverable": "NumPy similarity and shape workbook",
-          "objective": "Predict then implement matrix products, vector operations and projections.",
+          "title": "Relational modeling",
+          "objective": "Model business entities, keys, constraints, history and tenant boundaries.",
           "topics": [
-            "Scalars, vectors and matrices",
-            "Dot product and cosine",
-            "Eigenvectors and SVD"
+            "SQL Server",
+            "Data modeling"
           ],
           "tasks": [
             {
-              "id": "evidence-math-ml-scalars-vectors-and-matrices",
-              "text": "Predict then implement matrix products, vector operations and projections. Hand results and NumPy agree; detect an unintended broadcast."
+              "id": "w09-build",
+              "text": "Implement: Design an inventory/accounting schema and document invariants."
             },
             {
-              "id": "evidence-math-ml-dot-product-and-cosine",
-              "text": "Implement cosine with a defined zero-vector policy. Matches reference calculations with safe zero handling."
-            },
-            {
-              "id": "evidence-math-ml-eigenvectors-and-svd",
-              "text": "Inspect PCA explained variance. Explain a direction and trade-off."
+              "id": "w09-evidence",
+              "text": "Write reviewable evidence: Model business entities, keys, constraints, history and tenant boundaries. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Design an inventory/accounting schema and document invariants.",
           "learningGuide": {
             "steps": [
-              "Scalars, vectors and matrices — Concept, hand calculation, NumPy and interpretation; shapes, transpose and broadcasting.",
-              "Dot product and cosine — Hand calculation, derivation intuition, NumPy; norms and normalization.",
-              "Eigenvectors and SVD — Concept and interpretation; principal directions and compression."
+              "Study the relevant concepts: SQL Server, Data modeling.",
+              "Design an inventory/accounting schema and document invariants.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "ISLP",
-              "scikit-learn",
-              "NumPy"
+              "EF Core documentation",
+              "SQL Server documentation"
             ],
-            "practice": "Predict then implement matrix products, vector operations and projections.",
-            "readyWhen": "Hand results and NumPy agree; detect an unintended broadcast. Matches reference calculations with safe zero handling. Explain a direction and trade-off."
+            "practice": "Design an inventory/accounting schema and document invariants.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 10,
-          "title": "Probability and gradients",
-          "deliverable": "Rare-event simulation and gradient exercise",
-          "objective": "Simulate rare alerts then hand-check posterior.",
+          "title": "Query plans and indexes",
+          "objective": "Read plans, choose indexes, project needed columns and detect N+1 queries.",
           "topics": [
-            "Probability and Bayes",
-            "Statistics and uncertainty",
-            "Derivatives, gradients and losses"
+            "SQL Server",
+            "Performance"
           ],
           "tasks": [
             {
-              "id": "evidence-math-ml-probability-and-bayes",
-              "text": "Simulate rare alerts then hand-check posterior. Estimates align within sampling error."
+              "id": "w10-build",
+              "text": "Implement: Compare query performance before and after a justified index."
             },
             {
-              "id": "evidence-math-ml-statistics-and-uncertainty",
-              "text": "Implement bootstrap for a paired quality delta. Report an interval and effective sampling unit."
-            },
-            {
-              "id": "evidence-math-ml-derivatives-gradients-and-losses",
-              "text": "Train a tiny regressor and check finite differences. Analytic and numerical gradients agree and plot shows convergence."
+              "id": "w10-evidence",
+              "text": "Write reviewable evidence: Read plans, choose indexes, project needed columns and detect N+1 queries. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Compare query performance before and after a justified index.",
           "learningGuide": {
             "steps": [
-              "Probability and Bayes — Concept, hand, NumPy and interpretation; expectation, variance, base rates and conditional probability.",
-              "Statistics and uncertainty — Concept and interpretation; sampling bias, percentiles, intervals and paired bootstrap.",
-              "Derivatives, gradients and losses — Hand and NumPy; derive scalar MSE derivative, chain rule, cross-entropy intuition, SGD and learning rate."
+              "Study the relevant concepts: SQL Server, Performance.",
+              "Compare query performance before and after a justified index.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "ISLP",
-              "scikit-learn",
-              "NumPy"
+              "EF Core documentation",
+              "SQL Server documentation"
             ],
-            "practice": "Simulate rare alerts then hand-check posterior.",
-            "readyWhen": "Estimates align within sampling error. Report an interval and effective sampling unit. Analytic and numerical gradients agree and plot shows convergence."
+            "practice": "Compare query performance before and after a justified index.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 11,
-          "title": "Regression and classification",
-          "deliverable": "Ticket and resolution-time baselines",
-          "objective": "Predict resolution time from allowed features.",
+          "title": "Transactions and concurrency",
+          "objective": "Understand ACID, isolation, locking, optimistic concurrency and idempotency.",
           "topics": [
-            "Regression",
-            "Classification",
-            "Clustering"
+            "Transactions",
+            "EF Core"
           ],
           "tasks": [
             {
-              "id": "evidence-math-ml-regression",
-              "text": "Predict resolution time from allowed features. Report median baseline and errors by severity."
+              "id": "w11-build",
+              "text": "Implement: Reproduce a conflicting update and prove resolution with integration tests."
             },
             {
-              "id": "evidence-math-ml-classification",
-              "text": "Set urgent-ticket threshold on validation data. Report held-out false negatives and threshold cost."
-            },
-            {
-              "id": "evidence-math-ml-clustering",
-              "text": "Explore recurring topics in embedding data. Assess stability and review a sample for coherence."
+              "id": "w11-evidence",
+              "text": "Write reviewable evidence: Understand ACID, isolation, locking, optimistic concurrency and idempotency. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Reproduce a conflicting update and prove resolution with integration tests.",
           "learningGuide": {
             "steps": [
-              "Regression — Linear baseline, MAE/RMSE and residuals.",
-              "Classification — Logistic and tree baselines, precision/recall/F1, PR-AUC and calibration.",
-              "Clustering — K-means, scaling, centroids and stability."
+              "Study the relevant concepts: Transactions, EF Core.",
+              "Reproduce a conflicting update and prove resolution with integration tests.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "ISLP",
-              "scikit-learn",
-              "NumPy"
+              "EF Core documentation",
+              "SQL Server documentation"
             ],
-            "practice": "Predict resolution time from allowed features.",
-            "readyWhen": "Report median baseline and errors by severity. Report held-out false negatives and threshold cost. Assess stability and review a sample for coherence."
+            "practice": "Reproduce a conflicting update and prove resolution with integration tests.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 12,
-          "title": "Leakage and validation",
-          "deliverable": "Locked evaluation split and first assessment",
-          "objective": "Compare naive and safe validation and show learning curves.",
+          "title": "Business workflow integrity",
+          "objective": "Keep financial/inventory rules deterministic and enforce invariants at boundaries.",
           "topics": [
-            "Features, validation and leakage"
+            "Accounting",
+            "Domain rules"
           ],
           "tasks": [
             {
-              "id": "evidence-math-ml-features-validation-and-leakage",
-              "text": "Compare naive and safe validation and show learning curves. Preprocessing runs within folds and holdout stays locked."
+              "id": "w12-build",
+              "text": "Implement: Implement balanced journal posting or stock reservation with rollback and audit."
+            },
+            {
+              "id": "w12-evidence",
+              "text": "Write reviewable evidence: Keep financial/inventory rules deterministic and enforce invariants at boundaries. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Implement balanced journal posting or stock reservation with rollback and audit.",
           "learningGuide": {
             "steps": [
-              "Features, validation and leakage — Categorical/text features, missing data, pipelines, grouped/temporal splits, underfit and overfit."
+              "Study the relevant concepts: Accounting, Domain rules.",
+              "Implement balanced journal posting or stock reservation with rollback and audit.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "ISLP",
-              "scikit-learn",
-              "NumPy"
+              "EF Core documentation",
+              "SQL Server documentation"
             ],
-            "practice": "Compare naive and safe validation and show learning curves.",
-            "readyWhen": "Preprocessing runs within folds and holdout stays locked."
+            "practice": "Implement balanced journal posting or stock reservation with rollback and audit.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
-        },
+        }
+      ]
+    },
+    {
+      "id": "architecture",
+      "title": "Architecture and senior system design",
+      "startWeek": 13,
+      "endWeek": 16,
+      "weeks": [
         {
           "week": 13,
-          "title": "FastAPI contracts",
-          "deliverable": "Typed ticket routes and OpenAPI schema",
-          "objective": "Build versioned ticket routes and diff OpenAPI.",
+          "title": "Boundaries and modular design",
+          "objective": "Use cohesion, dependency direction and modular boundaries without unnecessary layers.",
           "topics": [
-            "FastAPI routing and OpenAPI",
-            "Pydantic request/response models",
-            "FastAPI dependency injection and exceptions"
+            "Architecture",
+            "Modular monolith"
           ],
           "tasks": [
             {
-              "id": "evidence-backend-fastapi-routing-and-openapi",
-              "text": "Build versioned ticket routes and diff OpenAPI. Contract tests detect breaking schema changes."
+              "id": "w13-build",
+              "text": "Implement: Map a business workflow and explain boundary choices."
             },
             {
-              "id": "evidence-backend-pydantic-request-response-models",
-              "text": "Separate request, domain and response models. Invalid input fails and internal fields never serialize."
-            },
-            {
-              "id": "evidence-backend-fastapi-dependency-injection-and-exceptions",
-              "text": "Inject identity and a session, map conflict and timeout. Resources close on errors and logs omit secrets."
+              "id": "w13-evidence",
+              "text": "Write reviewable evidence: Use cohesion, dependency direction and modular boundaries without unnecessary layers. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Map a business workflow and explain boundary choices.",
           "learningGuide": {
             "steps": [
-              "FastAPI routing and OpenAPI — ASGI, routes, status codes, pagination and response contracts.",
-              "Pydantic request/response models — Coercion, strict fields, errors and serialization boundaries.",
-              "FastAPI dependency injection and exceptions — Depends, request scope, yield, overrides and domain error translation."
+              "Study the relevant concepts: Architecture, Modular monolith.",
+              "Map a business workflow and explain boundary choices.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "FastAPI",
-              "PostgreSQL",
-              "SQLAlchemy",
-              "Pydantic"
+              "Azure Architecture Center",
+              "Google SRE books"
             ],
-            "practice": "Build versioned ticket routes and diff OpenAPI.",
-            "readyWhen": "Contract tests detect breaking schema changes. Invalid input fails and internal fields never serialize. Resources close on errors and logs omit secrets."
+            "practice": "Map a business workflow and explain boundary choices.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 14,
-          "title": "Transactions and identity",
-          "deliverable": "Tenant-scoped database integration",
-          "objective": "Authorize ticket access with an IdP and test revoked roles.",
+          "title": "System design from requirements",
+          "objective": "Turn uncertain needs into workload, availability, consistency, security and cost constraints.",
           "topics": [
-            "Authentication and authorization",
-            "SQLAlchemy and PostgreSQL plans"
+            "System design",
+            "ADRs"
           ],
           "tasks": [
             {
-              "id": "evidence-backend-authentication-and-authorization",
-              "text": "Authorize ticket access with an IdP and test revoked roles. Wrong-tenant and expired-token tests deny correctly."
+              "id": "w14-build",
+              "text": "Implement: Design a tenant-aware API with capacity assumptions and alternatives."
             },
             {
-              "id": "evidence-backend-sqlalchemy-and-postgresql-plans",
-              "text": "Tune queue polling under concurrent writes. Explain plan and lock behavior with rollback fixtures."
+              "id": "w14-evidence",
+              "text": "Write reviewable evidence: Turn uncertain needs into workload, availability, consistency, security and cost constraints. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Design a tenant-aware API with capacity assumptions and alternatives.",
           "learningGuide": {
             "steps": [
-              "Authentication and authorization — OIDC, issuer, audience, expiry, tenant and resource-level permission.",
-              "SQLAlchemy and PostgreSQL plans — Sessions, Alembic, pool, isolation, constraints, locks, indexes and EXPLAIN ANALYZE."
+              "Study the relevant concepts: System design, ADRs.",
+              "Design a tenant-aware API with capacity assumptions and alternatives.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "FastAPI",
-              "PostgreSQL",
-              "SQLAlchemy",
-              "Pydantic"
+              "Azure Architecture Center",
+              "Google SRE books"
             ],
-            "practice": "Authorize ticket access with an IdP and test revoked roles.",
-            "readyWhen": "Wrong-tenant and expired-token tests deny correctly. Explain plan and lock behavior with rollback fixtures."
+            "practice": "Design a tenant-aware API with capacity assumptions and alternatives.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 15,
-          "title": "Streaming and deployment",
-          "deliverable": "P2 ticket service in staging",
-          "objective": "Stream a mock model and disconnect mid-response.",
+          "title": "Caching, compatibility and migration",
+          "objective": "Reason about cache invalidation, API compatibility, migrations and safe rollout.",
           "topics": [
-            "Async endpoints and SSE",
-            "Lifespan, middleware and testing",
-            "Background tasks and deployment"
+            "Caching",
+            "Migrations"
           ],
           "tasks": [
             {
-              "id": "evidence-backend-async-endpoints-and-sse",
-              "text": "Stream a mock model and disconnect mid-response. Disconnect releases upstream resources and load tests show bounded concurrency."
+              "id": "w15-build",
+              "text": "Implement: Plan a backwards-compatible change with rollout and rollback."
             },
             {
-              "id": "evidence-backend-lifespan-middleware-and-testing",
-              "text": "Add lifespan and HTTPX integration tests. Trace IDs survive streaming and each client closes on shutdown."
-            },
-            {
-              "id": "evidence-backend-background-tasks-and-deployment",
-              "text": "Move critical work to a worker, deploy the API and restart during a job. Deployment drains properly and critical jobs resume."
+              "id": "w15-evidence",
+              "text": "Write reviewable evidence: Reason about cache invalidation, API compatibility, migrations and safe rollout. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Plan a backwards-compatible change with rollout and rollback.",
           "learningGuide": {
             "steps": [
-              "Async endpoints and SSE — Offload blocking work, cancellation, backpressure and streaming response semantics.",
-              "Lifespan, middleware and testing — ASGI request wrapping, correlation IDs, shared clients, test overrides and graceful shutdown.",
-              "Background tasks and deployment — In-process tasks versus durable workers, readiness and proxy deadlines."
+              "Study the relevant concepts: Caching, Migrations.",
+              "Plan a backwards-compatible change with rollout and rollback.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "FastAPI",
-              "PostgreSQL",
-              "SQLAlchemy",
-              "Pydantic"
+              "Azure Architecture Center",
+              "Google SRE books"
             ],
-            "practice": "Stream a mock model and disconnect mid-response.",
-            "readyWhen": "Disconnect releases upstream resources and load tests show bounded concurrency. Trace IDs survive streaming and each client closes on shutdown. Deployment drains properly and critical jobs resume."
+            "practice": "Plan a backwards-compatible change with rollout and rollback.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 16,
-          "title": "Source manifests and parsing",
-          "deliverable": "Versioned native PDF parser",
-          "objective": "Write immutable source manifests.",
+          "title": "Technical leadership in delivery",
+          "objective": "Break work into reviewable increments, surface risks and help teammates deliver.",
           "topics": [
-            "Data contracts and provenance",
-            "Parsing and cleaning"
+            "Ownership",
+            "Communication"
           ],
           "tasks": [
             {
-              "id": "evidence-data-data-contracts-and-provenance",
-              "text": "Write immutable source manifests. Rebuild a derived artifact from the original bytes."
+              "id": "w16-build",
+              "text": "Implement: Produce a delivery plan, ADR and review checklist."
             },
             {
-              "id": "evidence-data-parsing-and-cleaning",
-              "text": "Build adapters and golden fixtures. Preserve page references and a representative table."
+              "id": "w16-evidence",
+              "text": "Write reviewable evidence: Break work into reviewable increments, surface risks and help teammates deliver. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Produce a delivery plan, ADR and review checklist.",
           "learningGuide": {
             "steps": [
-              "Data contracts and provenance — Schemas, encoding, hashes, raw versions, object storage and quarantine.",
-              "Parsing and cleaning — Native text, PDF reading order, tables, Unicode and source offsets."
+              "Study the relevant concepts: Ownership, Communication.",
+              "Produce a delivery plan, ADR and review checklist.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "PostgreSQL",
-              "Tesseract"
+              "Azure Architecture Center",
+              "Google SRE books"
             ],
-            "practice": "Write immutable source manifests.",
-            "readyWhen": "Rebuild a derived artifact from the original bytes. Preserve page references and a representative table."
+            "practice": "Produce a delivery plan, ADR and review checklist.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         }
       ]
     },
     {
-      "id": "search",
-      "title": "Data, model internals and retrieval",
+      "id": "distributed",
+      "title": "Distributed systems and reliability",
       "startWeek": 17,
-      "endWeek": 24,
+      "endWeek": 20,
       "weeks": [
         {
           "week": 17,
-          "title": "OCR and replay",
-          "deliverable": "P4 document processing API",
-          "objective": "Add OCR fallback and replay replace/delete concurrently.",
+          "title": "HTTP and failure semantics",
+          "objective": "Classify failures, deadlines, retries, backoff and idempotency.",
           "topics": [
-            "OCR and document lifecycle",
-            "Columnar storage and batch processing"
+            "HTTP",
+            "Resilience"
           ],
           "tasks": [
             {
-              "id": "evidence-data-ocr-and-document-lifecycle",
-              "text": "Add OCR fallback and replay replace/delete concurrently. Demonstrate final-state consistency and measure OCR quality."
+              "id": "w17-build",
+              "text": "Implement: Add bounded retries only to safe operations and test duplicates."
             },
             {
-              "id": "evidence-data-columnar-storage-and-batch-processing",
-              "text": "Benchmark one evaluation export. Report representative size and scan time."
+              "id": "w17-evidence",
+              "text": "Write reviewable evidence: Classify failures, deadlines, retries, backoff and idempotency. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Add bounded retries only to safe operations and test duplicates.",
           "learningGuide": {
             "steps": [
-              "OCR and document lifecycle — Page rasterization, confidence, language packs, idempotent versions and tombstones.",
-              "Columnar storage and batch processing — Row vs column formats, Parquet, filtering and chunked reads."
+              "Study the relevant concepts: HTTP, Resilience.",
+              "Add bounded retries only to safe operations and test duplicates.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "PostgreSQL",
-              "Tesseract"
+              "ASP.NET Core documentation",
+              "OpenTelemetry documentation"
             ],
-            "practice": "Add OCR fallback and replay replace/delete concurrently.",
-            "readyWhen": "Demonstrate final-state consistency and measure OCR quality. Report representative size and scan time."
+            "practice": "Add bounded retries only to safe operations and test duplicates.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 18,
-          "title": "Neural networks and tokenization",
-          "deliverable": "Small classifier and language token report",
-          "objective": "Train a small classifier and verify a gradient.",
+          "title": "Messaging and background work",
+          "objective": "Understand delivery guarantees, acknowledgements, duplicates and dead letters.",
           "topics": [
-            "Neural layers and autograd",
-            "Tokenization and representations"
+            "Messaging",
+            "Background jobs"
           ],
           "tasks": [
             {
-              "id": "evidence-transformers-neural-layers-and-autograd",
-              "text": "Train a small classifier and verify a gradient. Diagnose one failed training run."
+              "id": "w18-build",
+              "text": "Implement: Implement a job contract with retry limits and observable terminal failure."
             },
             {
-              "id": "evidence-transformers-tokenization-and-representations",
-              "text": "Compare English and Bangla token counts and inspect position handling. Explain retrieval vectors vs token embeddings and choose a safe cutoff."
+              "id": "w18-evidence",
+              "text": "Write reviewable evidence: Understand delivery guarantees, acknowledgements, duplicates and dead letters. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Implement a job contract with retry limits and observable terminal failure.",
           "learningGuide": {
             "steps": [
-              "Neural layers and autograd — Hand gradient, PyTorch modules, affine layers, nonlinearities, backprop and train/eval.",
-              "Tokenization and representations — Bytes, subwords, special IDs, padding, truncation, embeddings, pooling and positions."
+              "Study the relevant concepts: Messaging, Background jobs.",
+              "Implement a job contract with retry limits and observable terminal failure.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "PyTorch",
-              "Hugging Face LLM Course",
-              "Attention Is All You Need"
+              "ASP.NET Core documentation",
+              "OpenTelemetry documentation"
             ],
-            "practice": "Train a small classifier and verify a gradient.",
-            "readyWhen": "Diagnose one failed training run. Explain retrieval vectors vs token embeddings and choose a safe cutoff."
+            "practice": "Implement a job contract with retry limits and observable terminal failure.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 19,
-          "title": "Transformer inference",
-          "deliverable": "Masked attention and prefill/decode benchmark",
-          "objective": "Implement a tiny attention example.",
+          "title": "Outbox and eventual consistency",
+          "objective": "Use an outbox when a database change must reliably publish an event.",
           "topics": [
-            "QKV and scaled attention",
-            "Transformer blocks and architectures",
-            "Generation, KV cache and GPU"
+            "Outbox",
+            "Consistency"
           ],
           "tasks": [
             {
-              "id": "evidence-transformers-qkv-and-scaled-attention",
-              "text": "Implement a tiny attention example. Compare shapes and values with PyTorch."
+              "id": "w19-build",
+              "text": "Implement: Test outbox restart and duplicate-consumer behavior."
             },
             {
-              "id": "evidence-transformers-transformer-blocks-and-architectures",
-              "text": "Implement masked block fragment and inspect model cards. Future-token changes cannot affect earlier masked output."
-            },
-            {
-              "id": "evidence-transformers-generation-kv-cache-and-gpu",
-              "text": "Implement sampling and profile local inference. Estimate KV bytes and explain TTFT, decode and memory changes."
+              "id": "w19-evidence",
+              "text": "Write reviewable evidence: Use an outbox when a database change must reliably publish an event. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Test outbox restart and duplicate-consumer behavior.",
           "learningGuide": {
             "steps": [
-              "QKV and scaled attention — Compute by hand and NumPy: QK transpose, scaling, masking, softmax and V.",
-              "Transformer blocks and architectures — Heads, feed-forward, residuals, normalization, encoder/decoder, cross-attention and pretraining.",
-              "Generation, KV cache and GPU — Logits, greedy/temperature/top-p, prefill/decode, context scaling, device transfer and cache memory."
+              "Study the relevant concepts: Outbox, Consistency.",
+              "Test outbox restart and duplicate-consumer behavior.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "PyTorch",
-              "Hugging Face LLM Course",
-              "Attention Is All You Need"
+              "ASP.NET Core documentation",
+              "OpenTelemetry documentation"
             ],
-            "practice": "Implement a tiny attention example.",
-            "readyWhen": "Compare shapes and values with PyTorch. Future-token changes cannot affect earlier masked output. Estimate KV bytes and explain TTFT, decode and memory changes."
+            "practice": "Test outbox restart and duplicate-consumer behavior.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 20,
-          "title": "Structured outputs and baselines",
-          "deliverable": "P3 support ticket assistant",
-          "objective": "Build a thin adapter and compare two prompt versions.",
+          "title": "Operational failure drills",
+          "objective": "Observe behavior during dependency outage, queue buildup and slow requests.",
           "topics": [
-            "Provider adapter and prompt versions",
-            "Structured output and model selection"
+            "Reliability",
+            "Incident response"
           ],
           "tasks": [
             {
-              "id": "evidence-llm-app-provider-adapter-and-prompt-versions",
-              "text": "Build a thin adapter and compare two prompt versions. Trace the prompt and model configuration for each result."
+              "id": "w20-build",
+              "text": "Implement: Run a failure drill and write impact, mitigation and follow-up."
             },
             {
-              "id": "evidence-llm-app-structured-output-and-model-selection",
-              "text": "Compare rules, classifier and model on the ticket set. Distinguish refusal, truncation, timeout and valid-but-wrong answers."
+              "id": "w20-evidence",
+              "text": "Write reviewable evidence: Observe behavior during dependency outage, queue buildup and slow requests. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Run a failure drill and write impact, mitigation and follow-up.",
           "learningGuide": {
             "steps": [
-              "Provider adapter and prompt versions — Roles, templates, examples, context budget, output usage and upstream errors.",
-              "Structured output and model selection — Schema constraints, semantic validation, bounded repair, refusals and cost-quality routing."
+              "Study the relevant concepts: Reliability, Incident response.",
+              "Run a failure drill and write impact, mitigation and follow-up.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Pydantic",
-              "OpenAI API documentation"
+              "ASP.NET Core documentation",
+              "OpenTelemetry documentation"
             ],
-            "practice": "Build a thin adapter and compare two prompt versions.",
-            "readyWhen": "Trace the prompt and model configuration for each result. Distinguish refusal, truncation, timeout and valid-but-wrong answers."
+            "practice": "Run a failure drill and write impact, mitigation and follow-up.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
-        },
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Cloud, containers and delivery",
+      "startWeek": 21,
+      "endWeek": 24,
+      "weeks": [
         {
           "week": 21,
-          "title": "Embeddings and exact search",
-          "deliverable": "Labeled embedding comparison",
-          "objective": "Compare two models on one judged corpus.",
+          "title": "Linux, networking and secrets",
+          "objective": "Use processes, logs, DNS, TLS, ports, configuration and safe secret handling.",
           "topics": [
-            "Embeddings and multilingual fit",
-            "Exact similarity and rank metrics"
+            "Linux",
+            "Networking"
           ],
           "tasks": [
             {
-              "id": "evidence-search-embeddings-and-multilingual-fit",
-              "text": "Compare two models on one judged corpus. Publish language and identifier slices under matched settings."
+              "id": "w21-build",
+              "text": "Implement: Diagnose a connection issue and document safe configuration."
             },
             {
-              "id": "evidence-search-exact-similarity-and-rank-metrics",
-              "text": "Match SQL rankings to NumPy and hand-check metrics. Metrics match tiny fixture math and model results use held-out labels."
+              "id": "w21-evidence",
+              "text": "Write reviewable evidence: Use processes, logs, DNS, TLS, ports, configuration and safe secret handling. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Diagnose a connection issue and document safe configuration.",
           "learningGuide": {
             "steps": [
-              "Embeddings and multilingual fit — Bi-encoders, pooling, normalization, model dimensions, prefixes and versioning.",
-              "Exact similarity and rank metrics — Dot, cosine, L2, top-k, ties, Recall@k, MRR and nDCG."
+              "Study the relevant concepts: Linux, Networking.",
+              "Diagnose a connection issue and document safe configuration.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "pgvector",
-              "PostgreSQL",
-              "Sentence Transformers"
+              "Docker documentation",
+              "GitHub Actions documentation",
+              "Azure Architecture Center"
             ],
-            "practice": "Compare two models on one judged corpus.",
-            "readyWhen": "Publish language and identifier slices under matched settings. Metrics match tiny fixture math and model results use held-out labels."
+            "practice": "Diagnose a connection issue and document safe configuration.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 22,
-          "title": "Lexical search and filters",
-          "deliverable": "Scoped lexical baseline",
-          "objective": "Build PostgreSQL lexical search for IDs, phrases and private versions.",
+          "title": "Docker and local environments",
+          "objective": "Build a reproducible app/database environment with health checks and persistent data.",
           "topics": [
-            "Lexical retrieval and filters"
+            "Docker",
+            "Compose"
           ],
           "tasks": [
             {
-              "id": "evidence-search-lexical-retrieval-and-filters",
-              "text": "Build PostgreSQL lexical search for IDs, phrases and private versions. Search fixtures cover exact identifiers and unauthorized documents."
+              "id": "w22-build",
+              "text": "Implement: Run the flagship app and dependencies from a clean checkout."
+            },
+            {
+              "id": "w22-evidence",
+              "text": "Write reviewable evidence: Build a reproducible app/database environment with health checks and persistent data. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Run the flagship app and dependencies from a clean checkout.",
           "learningGuide": {
             "steps": [
-              "Lexical retrieval and filters — Inverted indexes, analyzers, BM25 intuition, metadata and authorization filtering."
+              "Study the relevant concepts: Docker, Compose.",
+              "Run the flagship app and dependencies from a clean checkout.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "pgvector",
-              "PostgreSQL",
-              "Sentence Transformers"
+              "Docker documentation",
+              "GitHub Actions documentation",
+              "Azure Architecture Center"
             ],
-            "practice": "Build PostgreSQL lexical search for IDs, phrases and private versions.",
-            "readyWhen": "Search fixtures cover exact identifiers and unauthorized documents."
+            "practice": "Run the flagship app and dependencies from a clean checkout.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 23,
-          "title": "Approximate search",
-          "deliverable": "P5 semantic search benchmark",
-          "objective": "Benchmark exact vs ANN under representative filters.",
+          "title": "CI and deployment",
+          "objective": "Create quality gates, artifact delivery, environment configuration and checks.",
           "topics": [
-            "pgvector ANN"
+            "GitHub Actions",
+            "Deployment"
           ],
           "tasks": [
             {
-              "id": "evidence-search-pgvector-ann",
-              "text": "Benchmark exact vs ANN under representative filters. Report recall, p95, build time and index bytes."
+              "id": "w23-build",
+              "text": "Implement: Deploy one project through repeatable CI to an affordable environment."
+            },
+            {
+              "id": "w23-evidence",
+              "text": "Write reviewable evidence: Create quality gates, artifact delivery, environment configuration and checks. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Deploy one project through repeatable CI to an affordable environment.",
           "learningGuide": {
             "steps": [
-              "pgvector ANN — HNSW graph intuition, IVFFlat clustering, operator classes, build and search settings."
+              "Study the relevant concepts: GitHub Actions, Deployment.",
+              "Deploy one project through repeatable CI to an affordable environment.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "pgvector",
-              "PostgreSQL",
-              "Sentence Transformers"
+              "Docker documentation",
+              "GitHub Actions documentation",
+              "Azure Architecture Center"
             ],
-            "practice": "Benchmark exact vs ANN under representative filters.",
-            "readyWhen": "Report recall, p95, build time and index bytes."
+            "practice": "Deploy one project through repeatable CI to an affordable environment.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 24,
-          "title": "Chunking and evidence",
-          "deliverable": "P6 basic RAG",
-          "objective": "Sweep lengths and overlap settings.",
+          "title": "Cloud operations and cost",
+          "objective": "Understand identity, compute, network, storage, monitoring, budgets and teardown.",
           "topics": [
-            "Fixed windows and overlap",
-            "Sentence and recursive splitting",
-            "Structure-aware chunks",
-            "Context, citations and abstention"
+            "Azure",
+            "Cloud cost"
           ],
           "tasks": [
             {
-              "id": "evidence-rag-fixed-windows-and-overlap",
-              "text": "Sweep lengths and overlap settings. Report boundary recall and duplicate tokens."
+              "id": "w24-build",
+              "text": "Implement: Publish topology, spend guardrails and rollback procedure."
             },
             {
-              "id": "evidence-rag-sentence-and-recursive-splitting",
-              "text": "Compare sentence and recursive cuts. Token limits and offsets hold on long and multilingual fixtures."
-            },
-            {
-              "id": "evidence-rag-structure-aware-chunks",
-              "text": "Preserve rows and heading context. Table answers link to correct rows and pages."
-            },
-            {
-              "id": "evidence-rag-context-citations-and-abstention",
-              "text": "Build restricted context and validate citation handles. Reject unknown citations and score unsupported claims."
+              "id": "w24-evidence",
+              "text": "Write reviewable evidence: Understand identity, compute, network, storage, monitoring, budgets and teardown. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Publish topology, spend guardrails and rollback procedure.",
           "learningGuide": {
             "steps": [
-              "Fixed windows and overlap — Token lengths, stride, stable IDs, offsets and duplicate evidence.",
-              "Sentence and recursive splitting — Sentence grouping, separators, fallbacks and long input.",
-              "Structure-aware chunks — Headings, tables, page coordinates and provenance.",
-              "Context, citations and abstention — Deduplication, budget, conflict and claim-to-source spans."
+              "Study the relevant concepts: Azure, Cloud cost.",
+              "Publish topology, spend guardrails and rollback procedure.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "RAG paper",
-              "pgvector"
+              "Docker documentation",
+              "GitHub Actions documentation",
+              "Azure Architecture Center"
             ],
-            "practice": "Sweep lengths and overlap settings.",
-            "readyWhen": "Report boundary recall and duplicate tokens. Token limits and offsets hold on long and multilingual fixtures. Table answers link to correct rows and pages. Reject unknown citations and score unsupported claims."
+            "practice": "Publish topology, spend guardrails and rollback procedure.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         }
       ]
     },
     {
-      "id": "enterprise",
-      "title": "Enterprise RAG, evaluation and business tools",
+      "id": "llm",
+      "title": "LLM application engineering with .NET",
       "startWeek": 25,
-      "endWeek": 32,
+      "endWeek": 28,
       "weeks": [
         {
           "week": 25,
-          "title": "Gold sets and answer evaluation",
-          "deliverable": "Versioned evaluation harness",
-          "objective": "Create a human rubric and labeled dataset.",
+          "title": "Model behavior and provider choice",
+          "objective": "Understand tokens, context, sampling, hosted/local trade-offs and model limits.",
           "topics": [
-            "Gold sets and retrieval/answer separation",
-            "Calibrating model judges"
+            "LLMs",
+            "Ollama"
           ],
           "tasks": [
             {
-              "id": "evidence-eval-gold-sets-and-retrieval-answer-separation",
-              "text": "Create a human rubric and labeled dataset. Localize failed outputs to retrieval, context or answer stages."
+              "id": "w25-build",
+              "text": "Implement: Compare local Ollama and a hosted model on fixed cases and record constraints."
             },
             {
-              "id": "evidence-eval-calibrating-model-judges",
-              "text": "Compare judge runs with a reviewed subset. Publish agreement and examples of mismatch."
+              "id": "w25-evidence",
+              "text": "Write reviewable evidence: Understand tokens, context, sampling, hosted/local trade-offs and model limits. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Compare local Ollama and a hosted model on fixed cases and record constraints.",
           "learningGuide": {
             "steps": [
-              "Gold sets and retrieval/answer separation — Grouped splits, hard negatives, recall, correctness, support and abstention.",
-              "Calibrating model judges — Rubrics, position/verbosity bias and disagreement."
+              "Study the relevant concepts: LLMs, Ollama.",
+              "Compare local Ollama and a hosted model on fixed cases and record constraints.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "scikit-learn",
-              "OpenTelemetry"
+              "Microsoft Learn: .NET AI",
+              "Semantic Kernel documentation",
+              "Ollama documentation"
             ],
-            "practice": "Create a human rubric and labeled dataset.",
-            "readyWhen": "Localize failed outputs to retrieval, context or answer stages. Publish agreement and examples of mismatch."
+            "practice": "Compare local Ollama and a hosted model on fixed cases and record constraints.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 26,
-          "title": "Hybrid search and reranking",
-          "deliverable": "Controlled retrieval optimization report",
-          "objective": "Run matched ablations with source and ACL preservation.",
+          "title": ".NET AI abstractions",
+          "objective": "Use Semantic Kernel and Microsoft.Extensions.AI at clear application boundaries.",
           "topics": [
-            "Semantic, parent-child and contextual chunks",
-            "Hybrid and reranking",
-            "Rewrites, compression and multi-hop"
+            "Semantic Kernel",
+            "Microsoft.Extensions.AI"
           ],
           "tasks": [
             {
-              "id": "evidence-advanced-rag-semantic-parent-child-and-contextual-chunks",
-              "text": "Run matched ablations with source and ACL preservation. Report quality, token cost, duplication and provenance."
+              "id": "w26-build",
+              "text": "Implement: Separate provider integration from business logic and switch configuration."
             },
             {
-              "id": "evidence-advanced-rag-hybrid-and-reranking",
-              "text": "Compare sparse, dense, hybrid and reranked retrieval. Report held-out recall, quality delta and p95."
-            },
-            {
-              "id": "evidence-advanced-rag-rewrites-compression-and-multi-hop",
-              "text": "Compare original query against one bounded second step. Preserve IDs and report evidence retention and cost."
+              "id": "w26-evidence",
+              "text": "Write reviewable evidence: Use Semantic Kernel and Microsoft.Extensions.AI at clear application boundaries. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Separate provider integration from business logic and switch configuration.",
           "learningGuide": {
             "steps": [
-              "Semantic, parent-child and contextual chunks — Similarity boundaries, small-to-large retrieval and contextual enrichment.",
-              "Hybrid and reranking — Sparse/dense union, rank fusion, cross-encoder batching and cutoff.",
-              "Rewrites, compression and multi-hop — Query expansion, drift, context extraction, routing and bounded decomposition."
+              "Study the relevant concepts: Semantic Kernel, Microsoft.Extensions.AI.",
+              "Separate provider integration from business logic and switch configuration.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "pgvector",
-              "Sentence Transformers"
+              "Microsoft Learn: .NET AI",
+              "Semantic Kernel documentation",
+              "Ollama documentation"
             ],
-            "practice": "Run matched ablations with source and ACL preservation.",
-            "readyWhen": "Report quality, token cost, duplication and provenance. Report held-out recall, quality delta and p95. Preserve IDs and report evidence retention and cost."
+            "practice": "Separate provider integration from business logic and switch configuration.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 27,
-          "title": "Enterprise ACL and lifecycle",
-          "deliverable": "Tenant, revoke and deletion tests",
-          "objective": "Test cross-tenant access with the real application role.",
+          "title": "Structured output and streaming",
+          "objective": "Validate schema-bound responses and deliver progress with explicit stream contracts.",
           "topics": [
-            "Tenant isolation and privacy",
-            "Prompt injection defenses and responsible AI"
+            "Structured output",
+            "SSE"
           ],
           "tasks": [
             {
-              "id": "evidence-security-tenant-isolation-and-privacy",
-              "text": "Test cross-tenant access with the real application role. Denials cover search, fetch, cache and job results; deletion is traced."
+              "id": "w27-build",
+              "text": "Implement: Test stream completion, malformed output, cancellation and disconnect."
             },
             {
-              "id": "evidence-security-prompt-injection-defenses-and-responsible-ai",
-              "text": "Verify with inert fixtures that document content cannot grant rights. Model or document instructions cannot change tool/data authority."
+              "id": "w27-evidence",
+              "text": "Write reviewable evidence: Validate schema-bound responses and deliver progress with explicit stream contracts. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Test stream completion, malformed output, cancellation and disconnect.",
           "learningGuide": {
             "steps": [
-              "Tenant isolation and privacy — Actor claims, ACL, row-level policies, object keys, cache namespaces, retention and vendor handling.",
-              "Prompt injection defenses and responsible AI — Untrusted inputs, server policy, objective harm, human review and redacted logging."
+              "Study the relevant concepts: Structured output, SSE.",
+              "Test stream completion, malformed output, cancellation and disconnect.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "OWASP GenAI",
-              "PostgreSQL"
+              "Microsoft Learn: .NET AI",
+              "Semantic Kernel documentation",
+              "Ollama documentation"
             ],
-            "practice": "Test cross-tenant access with the real application role.",
-            "readyWhen": "Denials cover search, fetch, cache and job results; deletion is traced. Model or document instructions cannot change tool/data authority."
+            "practice": "Test stream completion, malformed output, cancellation and disconnect.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 28,
-          "title": "Enterprise ingestion and citations",
-          "deliverable": "P7 enterprise RAG beta",
-          "objective": "Activate a new index and roll back after a source deletion.",
+          "title": "Cost and quality baselines",
+          "objective": "Measure latency, usage and answer quality for a representative task.",
           "topics": [
-            "Index consistency and lifecycle",
-            "Enterprise citation verification"
+            "Evaluation",
+            "Cost control"
           ],
           "tasks": [
             {
-              "id": "evidence-rag-index-consistency-and-lifecycle",
-              "text": "Activate a new index and roll back after a source deletion. Readers see complete generations and deleted artifacts stay inactive."
+              "id": "w28-build",
+              "text": "Implement: Create a report with model, prompt, dataset, runtime and limitations."
             },
             {
-              "id": "evidence-rag-enterprise-citation-verification",
-              "text": "Verify citations direct readers to active, authorized evidence. Revocation makes stale cited sources inaccessible."
+              "id": "w28-evidence",
+              "text": "Write reviewable evidence: Measure latency, usage and answer quality for a representative task. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Create a report with model, prompt, dataset, runtime and limitations.",
           "learningGuide": {
             "steps": [
-              "Index consistency and lifecycle — Generation swaps, embedding versions, replay and tombstones.",
-              "Enterprise citation verification — Authenticated navigation, document version, span provenance and no-answer handling."
+              "Study the relevant concepts: Evaluation, Cost control.",
+              "Create a report with model, prompt, dataset, runtime and limitations.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "RAG paper",
-              "pgvector"
+              "Microsoft Learn: .NET AI",
+              "Semantic Kernel documentation",
+              "Ollama documentation"
             ],
-            "practice": "Activate a new index and roll back after a source deletion.",
-            "readyWhen": "Readers see complete generations and deleted artifacts stay inactive. Revocation makes stale cited sources inaccessible."
+            "practice": "Create a report with model, prompt, dataset, runtime and limitations.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
-        },
+        }
+      ]
+    },
+    {
+      "id": "rag",
+      "title": "Retrieval, document intelligence and evaluation",
+      "startWeek": 29,
+      "endWeek": 32,
+      "weeks": [
         {
           "week": 29,
-          "title": "Release gates and observability",
-          "deliverable": "P7 enterprise RAG release",
-          "objective": "Create an evaluation manifest and block a seeded regression.",
+          "title": "Document ingestion and provenance",
+          "objective": "Extract, version and normalize documents while preserving source and access metadata.",
           "topics": [
-            "Version lineage and staged rollout",
-            "Drift, feedback and monitoring"
+            "Document processing",
+            "Provenance"
           ],
           "tasks": [
             {
-              "id": "evidence-eval-version-lineage-and-staged-rollout",
-              "text": "Create an evaluation manifest and block a seeded regression. Reviewer reproduces artifact selection and observes rollback."
+              "id": "w29-build",
+              "text": "Implement: Build repeatable ingestion with visible parsing failures and versions."
             },
             {
-              "id": "evidence-eval-drift-feedback-and-monitoring",
-              "text": "Simulate a quality regression and write a triage runbook. Show one alert, root cause investigation and follow-up."
+              "id": "w29-evidence",
+              "text": "Write reviewable evidence: Extract, version and normalize documents while preserving source and access metadata. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Build repeatable ingestion with visible parsing failures and versions.",
           "learningGuide": {
             "steps": [
-              "Version lineage and staged rollout — Version model, prompt, parser, index, dataset and code; paired comparisons and rollback.",
-              "Drift, feedback and monitoring — Input shifts, outcome proxies, feedback bias and alert owners."
+              "Study the relevant concepts: Document processing, Provenance.",
+              "Build repeatable ingestion with visible parsing failures and versions.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "scikit-learn",
-              "OpenTelemetry"
+              "Semantic Kernel documentation",
+              "Qdrant documentation",
+              "pgvector"
             ],
-            "practice": "Create an evaluation manifest and block a seeded regression.",
-            "readyWhen": "Reviewer reproduces artifact selection and observes rollback. Show one alert, root cause investigation and follow-up."
+            "practice": "Build repeatable ingestion with visible parsing failures and versions.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 30,
-          "title": "Bounded research planning",
-          "deliverable": "P8 evidence research assistant",
-          "objective": "Compare fixed research flow with bounded decomposition.",
+          "title": "Chunking, embeddings and retrieval",
+          "objective": "Compare chunking/embedding choices; understand metadata filters and vector search.",
           "topics": [
-            "Deterministic and model-led planning",
-            "Agent evaluation and team patterns"
+            "Embeddings",
+            "Vector search"
           ],
           "tasks": [
             {
-              "id": "evidence-agents-deterministic-and-model-led-planning",
-              "text": "Compare fixed research flow with bounded decomposition. Measure success, evidence support and steps under the same fixtures."
+              "id": "w30-build",
+              "text": "Implement: Measure retrieval recall on a labeled query set."
             },
             {
-              "id": "evidence-agents-agent-evaluation-and-team-patterns",
-              "text": "Compare a two-role design to typed stages. Unauthorized effects fail evaluation even when answers look correct."
+              "id": "w30-evidence",
+              "text": "Write reviewable evidence: Compare chunking/embedding choices; understand metadata filters and vector search. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Measure retrieval recall on a labeled query set.",
           "learningGuide": {
             "steps": [
-              "Deterministic and model-led planning — Explicit states, dynamic information gathering, step budgets and stopping.",
-              "Agent evaluation and team patterns — Trajectory constraints, replay, role separation and handoff cost."
+              "Study the relevant concepts: Embeddings, Vector search.",
+              "Measure retrieval recall on a labeled query set.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "MCP",
-              "RabbitMQ"
+              "Semantic Kernel documentation",
+              "Qdrant documentation",
+              "pgvector"
             ],
-            "practice": "Compare fixed research flow with bounded decomposition.",
-            "readyWhen": "Measure success, evidence support and steps under the same fixtures. Unauthorized effects fail evaluation even when answers look correct."
+            "practice": "Measure retrieval recall on a labeled query set.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 31,
-          "title": "Business tools and MCP",
-          "deliverable": "Read-only inventory MCP tools",
-          "objective": "Implement a read-only MCP inventory service and client.",
+          "title": "Hybrid search, reranking and citations",
+          "objective": "Combine lexical and semantic retrieval and tie citations to source spans.",
           "topics": [
-            "Tool calling and MCP primitives",
-            "MCP authorization and compatibility"
+            "Hybrid search",
+            "Citations"
           ],
           "tasks": [
             {
-              "id": "evidence-agents-tool-calling-and-mcp-primitives",
-              "text": "Implement a read-only MCP inventory service and client. Discovery succeeds and malformed calls cause no effects."
+              "id": "w31-build",
+              "text": "Implement: Run retrieval ablations and display supporting sources."
             },
             {
-              "id": "evidence-agents-mcp-authorization-and-compatibility",
-              "text": "Scope read tools and simulate unavailable or incompatible service. Wrong scope, timeout and schema change fail safely."
+              "id": "w31-evidence",
+              "text": "Write reviewable evidence: Combine lexical and semantic retrieval and tie citations to source spans. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Run retrieval ablations and display supporting sources.",
           "learningGuide": {
             "steps": [
-              "Tool calling and MCP primitives — Schema, typed execution, host/client/server, tools/resources/prompts and negotiation.",
-              "MCP authorization and compatibility — Protocol pinning, transport trust, scopes, capability drift and availability."
+              "Study the relevant concepts: Hybrid search, Citations.",
+              "Run retrieval ablations and display supporting sources.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "MCP",
-              "RabbitMQ"
+              "Semantic Kernel documentation",
+              "Qdrant documentation",
+              "pgvector"
             ],
-            "practice": "Implement a read-only MCP inventory service and client.",
-            "readyWhen": "Discovery succeeds and malformed calls cause no effects. Wrong scope, timeout and schema change fail safely."
+            "practice": "Run retrieval ablations and display supporting sources.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 32,
-          "title": "Approval and recovery",
-          "deliverable": "P9 operations agent",
-          "objective": "Persist and resume an ERP approval flow.",
+          "title": "RAG evaluation and abstention",
+          "objective": "Separate retrieval from generation failures; handle unsupported questions honestly.",
           "topics": [
-            "State, checkpoints and approval",
-            "Failure recovery and reconciliation"
+            "RAG evaluation",
+            "Abstention"
           ],
           "tasks": [
             {
-              "id": "evidence-agents-state-checkpoints-and-approval",
-              "text": "Persist and resume an ERP approval flow. Mutated, stale and revoked approvals fail safely."
+              "id": "w32-build",
+              "text": "Implement: Evaluate grounding, relevance and unanswerable cases; publish failure slices."
             },
             {
-              "id": "evidence-agents-failure-recovery-and-reconciliation",
-              "text": "Simulate timeout after a mock ERP commit. Restart reconciles to one effective external operation."
+              "id": "w32-evidence",
+              "text": "Write reviewable evidence: Separate retrieval from generation failures; handle unsupported questions honestly. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Evaluate grounding, relevance and unanswerable cases; publish failure slices.",
           "learningGuide": {
             "steps": [
-              "State, checkpoints and approval — Workflow vs chat memory, TTL, immutable intent, approval binding and final checks.",
-              "Failure recovery and reconciliation — Unknown outcomes, idempotency, status probes, compensation and dead letters."
+              "Study the relevant concepts: RAG evaluation, Abstention.",
+              "Evaluate grounding, relevance and unanswerable cases; publish failure slices.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "MCP",
-              "RabbitMQ"
+              "Semantic Kernel documentation",
+              "Qdrant documentation",
+              "pgvector"
             ],
-            "practice": "Persist and resume an ERP approval flow.",
-            "readyWhen": "Mutated, stale and revoked approvals fail safely. Restart reconciles to one effective external operation."
+            "practice": "Evaluate grounding, relevance and unanswerable cases; publish failure slices.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         }
       ]
     },
     {
-      "id": "production",
-      "title": "Production reliability, optimization and multimodal",
+      "id": "safety",
+      "title": "Secure AI workflows and tool use",
       "startWeek": 33,
-      "endWeek": 40,
+      "endWeek": 36,
       "weeks": [
         {
           "week": 33,
-          "title": "Read-only SQL policies",
-          "deliverable": "Approved views and guard tests",
-          "objective": "Compile allowed analytics requests into approved queries.",
+          "title": "Threat modeling and prompt injection",
+          "objective": "Treat prompts, documents and outputs as untrusted; identify data-exfiltration paths.",
           "topics": [
-            "Safe query compilation"
+            "AI security",
+            "Prompt injection"
           ],
           "tasks": [
             {
-              "id": "evidence-security-safe-query-compilation",
-              "text": "Compile allowed analytics requests into approved queries. Forbidden operations never reach the reporting connection."
+              "id": "w33-build",
+              "text": "Implement: Test malicious retrieved content and sensitive-data requests."
+            },
+            {
+              "id": "w33-evidence",
+              "text": "Write reviewable evidence: Treat prompts, documents and outputs as untrusted; identify data-exfiltration paths. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Test malicious retrieved content and sensitive-data requests.",
           "learningGuide": {
             "steps": [
-              "Safe query compilation — Typed intents, templates, read-only views, bound parameters and tenant scopes."
+              "Study the relevant concepts: AI security, Prompt injection.",
+              "Test malicious retrieved content and sensitive-data requests.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "OWASP GenAI",
-              "PostgreSQL"
+              "OWASP Top 10 for LLM Applications",
+              "Semantic Kernel documentation"
             ],
-            "practice": "Compile allowed analytics requests into approved queries.",
-            "readyWhen": "Forbidden operations never reach the reporting connection."
+            "practice": "Test malicious retrieved content and sensitive-data requests.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 34,
-          "title": "SQL limits and clarification",
-          "deliverable": "P10 natural-language SQL assistant",
-          "objective": "Test reporting rejection and timing boundaries.",
+          "title": "Authorized retrieval and tenant isolation",
+          "objective": "Apply authorization before retrieval and enforce it in data access.",
           "topics": [
-            "Limits, clarification and audit"
+            "Authorization",
+            "Tenant isolation"
           ],
           "tasks": [
             {
-              "id": "evidence-security-limits-clarification-and-audit",
-              "text": "Test reporting rejection and timing boundaries. Report execution accuracy and predictable denial behavior."
+              "id": "w34-build",
+              "text": "Implement: Prove cross-tenant denial with integration tests."
+            },
+            {
+              "id": "w34-evidence",
+              "text": "Write reviewable evidence: Apply authorization before retrieval and enforce it in data access. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Prove cross-tenant denial with integration tests.",
           "learningGuide": {
             "steps": [
-              "Limits, clarification and audit — Ambiguity, row caps, statement timeout, audit and result accuracy."
+              "Study the relevant concepts: Authorization, Tenant isolation.",
+              "Prove cross-tenant denial with integration tests.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "OWASP GenAI",
-              "PostgreSQL"
+              "OWASP Top 10 for LLM Applications",
+              "Semantic Kernel documentation"
             ],
-            "practice": "Test reporting rejection and timing boundaries.",
-            "readyWhen": "Report execution accuracy and predictable denial behavior."
+            "practice": "Prove cross-tenant denial with integration tests.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 35,
-          "title": "Redis and durable queues",
-          "deliverable": "Cache and queue failure drill",
-          "objective": "Build scoped cache and load-test tenant limits.",
+          "title": "Typed tools and human approval",
+          "objective": "Expose narrow typed APIs, validate arguments and keep writes reviewable.",
           "topics": [
-            "Redis cache and rate limits",
-            "RabbitMQ, outbox and workers"
+            "Tool calling",
+            "Human review"
           ],
           "tasks": [
             {
-              "id": "evidence-production-redis-cache-and-rate-limits",
-              "text": "Build scoped cache and load-test tenant limits. Test stale entries, concurrent limits and cache outage."
+              "id": "w35-build",
+              "text": "Implement: Build a read-only tool and a draft requiring authorized human approval."
             },
             {
-              "id": "evidence-production-rabbitmq-outbox-and-workers",
-              "text": "Kill workers before and after commit. Deduplicate replay and recover incomplete jobs."
+              "id": "w35-evidence",
+              "text": "Write reviewable evidence: Expose narrow typed APIs, validate arguments and keep writes reviewable. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Build a read-only tool and a draft requiring authorized human approval.",
           "learningGuide": {
             "steps": [
-              "Redis cache and rate limits — Strings, hashes, sorted sets, TTL, cache-aside, invalidation, stampedes and atomic quotas.",
-              "RabbitMQ, outbox and workers — Exchanges, confirms, acks, prefetch, backpressure, retry budgets, DLQ and outbox."
+              "Study the relevant concepts: Tool calling, Human review.",
+              "Build a read-only tool and a draft requiring authorized human approval.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Docker",
-              "GitHub Actions",
-              "RabbitMQ",
-              "Redis",
-              "OpenTelemetry",
-              "Azure Container Apps"
+              "OWASP Top 10 for LLM Applications",
+              "Semantic Kernel documentation"
             ],
-            "practice": "Build scoped cache and load-test tenant limits.",
-            "readyWhen": "Test stale entries, concurrent limits and cache outage. Deduplicate replay and recover incomplete jobs."
+            "practice": "Build a read-only tool and a draft requiring authorized human approval.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 36,
-          "title": "Tracing and cloud deployment",
-          "deliverable": "Instrumented staging release",
-          "objective": "Deploy API and workers from CI artifacts on one cloud.",
+          "title": "AI release evaluation",
+          "objective": "Version prompts/models, compare fixed cases and define regression thresholds.",
           "topics": [
-            "Docker, CI and cloud staging",
-            "OpenTelemetry traces and metrics"
+            "Prompt versioning",
+            "Regression evaluation"
           ],
           "tasks": [
             {
-              "id": "evidence-production-docker-ci-and-cloud-staging",
-              "text": "Deploy API and workers from CI artifacts on one cloud. Staging reproduces builds and handles backward-compatible migration."
+              "id": "w36-build",
+              "text": "Implement: Create a release report and rollback rule for a prompt/provider change."
             },
             {
-              "id": "evidence-production-opentelemetry-traces-and-metrics",
-              "text": "Trace an API request across a queue and model call. Locate a bottleneck without private prompts in telemetry."
+              "id": "w36-evidence",
+              "text": "Write reviewable evidence: Version prompts/models, compare fixed cases and define regression thresholds. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Create a release report and rollback rule for a prompt/provider change.",
           "learningGuide": {
             "steps": [
-              "Docker, CI and cloud staging — Layers, non-root images, signals, CI artifacts, IAM, network boundaries and health checks.",
-              "OpenTelemetry traces and metrics — Context propagation, redacted structured logs, histograms and cardinality."
+              "Study the relevant concepts: Prompt versioning, Regression evaluation.",
+              "Create a release report and rollback rule for a prompt/provider change.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Docker",
-              "GitHub Actions",
-              "RabbitMQ",
-              "Redis",
-              "OpenTelemetry",
-              "Azure Container Apps"
+              "OWASP Top 10 for LLM Applications",
+              "Semantic Kernel documentation"
             ],
-            "practice": "Deploy API and workers from CI artifacts on one cloud.",
-            "readyWhen": "Staging reproduces builds and handles backward-compatible migration. Locate a bottleneck without private prompts in telemetry."
-          }
-        },
-        {
-          "week": 37,
-          "title": "Adaptation and serving",
-          "deliverable": "Model quality, VRAM and latency decision",
-          "objective": "Compare local settings or a managed and local model.",
-          "topics": [
-            "Open weights, quantization and serving",
-            "Fine-tuning, LoRA and QLoRA"
-          ],
-          "tasks": [
-            {
-              "id": "evidence-adaptation-open-weights-quantization-and-serving",
-              "text": "Compare local settings or a managed and local model. Report quality, TTFT, throughput and peak VRAM."
-            },
-            {
-              "id": "evidence-adaptation-fine-tuning-lora-and-qlora",
-              "text": "Prepare licensed examples and train one adapter if compute permits; compare memory separately. Compare held-out quality and count trainable parameters."
-            }
-          ],
-          "learningGuide": {
-            "steps": [
-              "Open weights, quantization and serving — License, templates, weight/KV precision, GPU memory, continuous batching and vLLM.",
-              "Fine-tuning, LoRA and QLoRA — SFT datasets, leakage, masked labels, low-rank updates and quantized bases."
-            ],
-            "resources": [
-              "Ollama",
-              "LoRA",
-              "QLoRA",
-              "vLLM"
-            ],
-            "practice": "Compare local settings or a managed and local model.",
-            "readyWhen": "Report quality, TTFT, throughput and peak VRAM. Compare held-out quality and count trainable parameters."
-          }
-        },
-        {
-          "week": 38,
-          "title": "Vision and OCR extraction",
-          "deliverable": "P11 multimodal invoice assistant",
-          "objective": "Compare OCR and vision; add page/region retrieval for hard cases.",
-          "topics": [
-            "OCR, vision and multimodal retrieval",
-            "Media lifecycle and validation"
-          ],
-          "tasks": [
-            {
-              "id": "evidence-multimodal-ocr-vision-and-multimodal-retrieval",
-              "text": "Compare OCR and vision; add page/region retrieval for hard cases. Measure field accuracy and page recall and preserve coordinates."
-            },
-            {
-              "id": "evidence-multimodal-media-lifecycle-and-validation",
-              "text": "Validate invoices and handle bounded media uploads. Reject invalid media and route uncertain totals to review."
-            }
-          ],
-          "learningGuide": {
-            "steps": [
-              "OCR, vision and multimodal retrieval — Image patch intuition, resolution, text/image embeddings, evidence regions and costs.",
-              "Media lifecycle and validation — MIME, pixel limits, review status, retention and deterministic verification."
-            ],
-            "resources": [
-              "Tesseract",
-              "Hugging Face LLM Course"
-            ],
-            "practice": "Compare OCR and vision; add page/region retrieval for hard cases.",
-            "readyWhen": "Measure field accuracy and page recall and preserve coordinates. Reject invalid media and route uncertain totals to review."
-          }
-        },
-        {
-          "week": 39,
-          "title": "Capacity and quotas",
-          "deliverable": "Tenant quota and load plan",
-          "objective": "Model 10x load and run a noisy-neighbor test.",
-          "topics": [
-            "Capacity, latency and cost",
-            "Timeouts, retries and circuit breakers"
-          ],
-          "tasks": [
-            {
-              "id": "evidence-production-capacity-latency-and-cost",
-              "text": "Model 10x load and run a noisy-neighbor test. State workload, bottlenecks, error rates and per-tenant behavior."
-            },
-            {
-              "id": "evidence-production-timeouts-retries-and-circuit-breakers",
-              "text": "Inject provider slowness and Redis failure. Bound retries and backlog while keeping authoritative data consistent."
-            }
-          ],
-          "learningGuide": {
-            "steps": [
-              "Capacity, latency and cost — Traffic envelope, TTFT, p95, quotas, saturation, per-task cost and resource isolation.",
-              "Timeouts, retries and circuit breakers — End-to-end deadlines, jitter, error categories, bulkheads, shedding and breaker state."
-            ],
-            "resources": [
-              "Docker",
-              "GitHub Actions",
-              "RabbitMQ",
-              "Redis",
-              "OpenTelemetry",
-              "Azure Container Apps"
-            ],
-            "practice": "Model 10x load and run a noisy-neighbor test.",
-            "readyWhen": "State workload, bottlenecks, error rates and per-tenant behavior. Bound retries and backlog while keeping authoritative data consistent."
-          }
-        },
-        {
-          "week": 40,
-          "title": "Release, backups and rollback",
-          "deliverable": "P12 production AI SaaS staging",
-          "objective": "Rehearse bad release, restore and measured recovery.",
-          "topics": [
-            "SLO, restore and rollback"
-          ],
-          "tasks": [
-            {
-              "id": "evidence-production-slo-restore-and-rollback",
-              "text": "Rehearse bad release, restore and measured recovery. Publish restore timing and check post-restore deletion rules."
-            }
-          ],
-          "learningGuide": {
-            "steps": [
-              "SLO, restore and rollback — SLIs, error budgets, RTO/RPO, canaries, database restore and incident ownership."
-            ],
-            "resources": [
-              "Docker",
-              "GitHub Actions",
-              "RabbitMQ",
-              "Redis",
-              "OpenTelemetry",
-              "Azure Container Apps"
-            ],
-            "practice": "Rehearse bad release, restore and measured recovery.",
-            "readyWhen": "Publish restore timing and check post-restore deletion rules."
+            "practice": "Create a release report and rollback rule for a prompt/provider change.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         }
       ]
     },
     {
-      "id": "remote",
-      "title": "Senior ownership and remote career preparation",
+      "id": "operations",
+      "title": "Production AI operations and observability",
+      "startWeek": 37,
+      "endWeek": 40,
+      "weeks": [
+        {
+          "week": 37,
+          "title": "Tracing and privacy-aware logs",
+          "objective": "Follow requests across API, retrieval, provider and workers without excess sensitive content.",
+          "topics": [
+            "OpenTelemetry",
+            "Serilog"
+          ],
+          "tasks": [
+            {
+              "id": "w37-build",
+              "text": "Implement: Add correlation and structured events; inspect a complete trace."
+            },
+            {
+              "id": "w37-evidence",
+              "text": "Write reviewable evidence: Follow requests across API, retrieval, provider and workers without excess sensitive content. Include decisions, edge cases and limitations."
+            }
+          ],
+          "deliverable": "Add correlation and structured events; inspect a complete trace.",
+          "learningGuide": {
+            "steps": [
+              "Study the relevant concepts: OpenTelemetry, Serilog.",
+              "Add correlation and structured events; inspect a complete trace.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
+            ],
+            "resources": [
+              "OpenTelemetry documentation",
+              "Google SRE books",
+              "Azure pricing calculator"
+            ],
+            "practice": "Add correlation and structured events; inspect a complete trace.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
+          }
+        },
+        {
+          "week": 38,
+          "title": "Latency, capacity and resilience",
+          "objective": "Set deadlines, bulkheads and indicators; bound retries and concurrency.",
+          "topics": [
+            "SLOs",
+            "Capacity"
+          ],
+          "tasks": [
+            {
+              "id": "w38-build",
+              "text": "Implement: Load-test a stated workload; report p95, errors and constraints."
+            },
+            {
+              "id": "w38-evidence",
+              "text": "Write reviewable evidence: Set deadlines, bulkheads and indicators; bound retries and concurrency. Include decisions, edge cases and limitations."
+            }
+          ],
+          "deliverable": "Load-test a stated workload; report p95, errors and constraints.",
+          "learningGuide": {
+            "steps": [
+              "Study the relevant concepts: SLOs, Capacity.",
+              "Load-test a stated workload; report p95, errors and constraints.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
+            ],
+            "resources": [
+              "OpenTelemetry documentation",
+              "Google SRE books",
+              "Azure pricing calculator"
+            ],
+            "practice": "Load-test a stated workload; report p95, errors and constraints.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
+          }
+        },
+        {
+          "week": 39,
+          "title": "Cost, caching and model routing",
+          "objective": "Measure cost drivers and use caching/routing only when quality/privacy remain acceptable.",
+          "topics": [
+            "Cost control",
+            "Caching"
+          ],
+          "tasks": [
+            {
+              "id": "w39-build",
+              "text": "Implement: Compare a cost-control change against baseline and quality."
+            },
+            {
+              "id": "w39-evidence",
+              "text": "Write reviewable evidence: Measure cost drivers and use caching/routing only when quality/privacy remain acceptable. Include decisions, edge cases and limitations."
+            }
+          ],
+          "deliverable": "Compare a cost-control change against baseline and quality.",
+          "learningGuide": {
+            "steps": [
+              "Study the relevant concepts: Cost control, Caching.",
+              "Compare a cost-control change against baseline and quality.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
+            ],
+            "resources": [
+              "OpenTelemetry documentation",
+              "Google SRE books",
+              "Azure pricing calculator"
+            ],
+            "practice": "Compare a cost-control change against baseline and quality.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
+          }
+        },
+        {
+          "week": 40,
+          "title": "Recovery and incident ownership",
+          "objective": "Practice rollback, restore, escalation, communication and follow-up.",
+          "topics": [
+            "Runbooks",
+            "Recovery"
+          ],
+          "tasks": [
+            {
+              "id": "w40-build",
+              "text": "Implement: Run a failure game day and publish recovery evidence."
+            },
+            {
+              "id": "w40-evidence",
+              "text": "Write reviewable evidence: Practice rollback, restore, escalation, communication and follow-up. Include decisions, edge cases and limitations."
+            }
+          ],
+          "deliverable": "Run a failure game day and publish recovery evidence.",
+          "learningGuide": {
+            "steps": [
+              "Study the relevant concepts: Runbooks, Recovery.",
+              "Run a failure game day and publish recovery evidence.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
+            ],
+            "resources": [
+              "OpenTelemetry documentation",
+              "Google SRE books",
+              "Azure pricing calculator"
+            ],
+            "practice": "Run a failure game day and publish recovery evidence.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
+          }
+        }
+      ]
+    },
+    {
+      "id": "senior",
+      "title": "Senior ownership, interviews and remote applications",
       "startWeek": 41,
       "endWeek": 44,
       "weeks": [
         {
           "week": 41,
-          "title": "System design and isolation",
-          "deliverable": "Capacity benchmark and independent design review",
-          "objective": "Design and review an embedding cutover with a rollback exercise.",
+          "title": "Architecture review and migration",
+          "objective": "Lead a review, surface alternatives and plan safe migration with rollback.",
           "topics": [
-            "System design and migrations"
+            "Architecture review",
+            "Migrations"
           ],
           "tasks": [
             {
-              "id": "evidence-senior-system-design-and-migrations",
-              "text": "Design and review an embedding cutover with a rollback exercise. Demonstrate cutover consistency and document scaling limits."
+              "id": "w41-build",
+              "text": "Implement: Defend an ADR and migration plan to a peer; record feedback."
+            },
+            {
+              "id": "w41-evidence",
+              "text": "Write reviewable evidence: Lead a review, surface alternatives and plan safe migration with rollback. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Defend an ADR and migration plan to a peer; record feedback.",
           "learningGuide": {
             "steps": [
-              "System design and migrations — Modular boundaries, staged migrations, dual reads, dependency isolation and cost models."
+              "Study the relevant concepts: Architecture review, Migrations.",
+              "Defend an ADR and migration plan to a peer; record feedback.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Google SRE books",
-              "OpenTelemetry"
+              "GitHub profile",
+              "LinkedIn profile",
+              "LeetCode",
+              "BBC Learning English"
             ],
-            "practice": "Design and review an embedding cutover with a rollback exercise.",
-            "readyWhen": "Demonstrate cutover consistency and document scaling limits."
+            "practice": "Defend an ADR and migration plan to a peer; record feedback.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 42,
-          "title": "Operational ownership",
-          "deliverable": "P12 SaaS release, runbook and game day",
-          "objective": "Lead review, write two ADRs and run a game day.",
+          "title": "Mentoring and cross-team communication",
+          "objective": "Give actionable feedback, teach debugging and communicate risks asynchronously.",
           "topics": [
-            "Architecture review and standards",
-            "Mentoring and communication"
+            "Mentoring",
+            "Async communication"
           ],
           "tasks": [
             {
-              "id": "evidence-senior-architecture-review-and-standards",
-              "text": "Lead review, write two ADRs and run a game day. Independent review, peer adoption and follow-up decision evidence."
+              "id": "w42-build",
+              "text": "Implement: Complete a peer review/mentoring exercise and capture attributable feedback."
             },
             {
-              "id": "evidence-senior-mentoring-and-communication",
-              "text": "Mentor a peer through a delivery problem and request feedback. Peer independently applies the method and gives attributable feedback."
+              "id": "w42-evidence",
+              "text": "Write reviewable evidence: Give actionable feedback, teach debugging and communicate risks asynchronously. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Complete a peer review/mentoring exercise and capture attributable feedback.",
           "learningGuide": {
             "steps": [
-              "Architecture review and standards — ADRs, quality gates, budgets, owner assignment and operational feedback.",
-              "Mentoring and communication — Teach debugging, review trade-offs and communicate scope to stakeholders."
+              "Study the relevant concepts: Mentoring, Async communication.",
+              "Complete a peer review/mentoring exercise and capture attributable feedback.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Google SRE books",
-              "OpenTelemetry"
+              "GitHub profile",
+              "LinkedIn profile",
+              "LeetCode",
+              "BBC Learning English"
             ],
-            "practice": "Lead review, write two ADRs and run a game day.",
-            "readyWhen": "Independent review, peer adoption and follow-up decision evidence. Peer independently applies the method and gives attributable feedback."
+            "practice": "Complete a peer review/mentoring exercise and capture attributable feedback.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 43,
-          "title": "Remote interview loops",
-          "deliverable": "Two technical mocks and portfolio review",
-          "objective": "Run timed unfamiliar coding and SQL prompts.",
+          "title": "Senior interview practice",
+          "objective": "Explain coding, SQL, system design, AI safety, incidents and leadership examples.",
           "topics": [
-            "Python and SQL interviews",
-            "AI design and English communication"
+            "Interview practice",
+            "English"
           ],
           "tasks": [
             {
-              "id": "evidence-remote-python-and-sql-interviews",
-              "text": "Run timed unfamiliar coding and SQL prompts. Explain edge cases, complexity and measured plan changes."
+              "id": "w43-build",
+              "text": "Implement: Complete two mock interviews and retest weak areas."
             },
             {
-              "id": "evidence-remote-ai-design-and-english-communication",
-              "text": "Record 90-second introduction, design review and incident story. Two independent mocks and a focused retest."
+              "id": "w43-evidence",
+              "text": "Write reviewable evidence: Explain coding, SQL, system design, AI safety, incidents and leadership examples. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Complete two mock interviews and retest weak areas.",
           "learningGuide": {
             "steps": [
-              "Python and SQL interviews — Complexity, streaming, joins, windows, query plans and cancellation.",
-              "AI design and English communication — Evaluation, safety, SLOs, trade-offs, evidence and concise asynchronous updates."
+              "Study the relevant concepts: Interview practice, English.",
+              "Complete two mock interviews and retest weak areas.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Python Tutorial",
-              "PostgreSQL",
-              "Google SRE books"
+              "GitHub profile",
+              "LinkedIn profile",
+              "LeetCode",
+              "BBC Learning English"
             ],
-            "practice": "Run timed unfamiliar coding and SQL prompts.",
-            "readyWhen": "Explain edge cases, complexity and measured plan changes. Two independent mocks and a focused retest."
+            "practice": "Complete two mock interviews and retest weak areas.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         },
         {
           "week": 44,
-          "title": "Remote applications",
-          "deliverable": "Prioritized pipeline and tailored role evidence",
-          "objective": "Tailor two applications and record three proof links per role.",
+          "title": "Qualified applications and feedback",
+          "objective": "Target senior scope, verify Bangladesh eligibility/overlap and tailor evidence.",
           "topics": [
-            "Remote role analysis and portfolio",
-            "Remote application feedback loop"
+            "Remote jobs",
+            "CV evidence"
           ],
           "tasks": [
             {
-              "id": "evidence-remote-remote-role-analysis-and-portfolio",
-              "text": "Tailor two applications and record three proof links per role. Each target has eligibility source, next action and evidence."
+              "id": "w44-build",
+              "text": "Implement: Submit tailored applications and turn responses into next actions."
             },
             {
-              "id": "evidence-remote-remote-application-feedback-loop",
-              "text": "Log opportunities, mock feedback and a revision action. Review pipeline after two weeks and update target roles from evidence."
+              "id": "w44-evidence",
+              "text": "Write reviewable evidence: Target senior scope, verify Bangladesh eligibility/overlap and tailor evidence. Include decisions, edge cases and limitations."
             }
           ],
+          "deliverable": "Submit tailored applications and turn responses into next actions.",
           "learningGuide": {
             "steps": [
-              "Remote role analysis and portfolio — Role evidence, Bangladesh eligibility, UTC overlap, case studies and transparent claims.",
-              "Remote application feedback loop — Pipeline stages, follow-up, written communication and feedback patterns."
+              "Study the relevant concepts: Remote jobs, CV evidence.",
+              "Submit tailored applications and turn responses into next actions.",
+              "Review failure modes, security and maintainability.",
+              "Explain trade-offs and save an evidence link."
             ],
             "resources": [
-              "Python Tutorial",
-              "PostgreSQL",
-              "Google SRE books"
+              "GitHub profile",
+              "LinkedIn profile",
+              "LeetCode",
+              "BBC Learning English"
             ],
-            "practice": "Tailor two applications and record three proof links per role.",
-            "readyWhen": "Each target has eligibility source, next action and evidence. Review pipeline after two weeks and update target roles from evidence."
+            "practice": "Submit tailored applications and turn responses into next actions.",
+            "readyWhen": "A reviewer can inspect your artifact and you can explain the approach, alternatives, limitations and operating considerations."
           }
         }
       ]

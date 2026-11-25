@@ -1,2122 +1,922 @@
 {
   "stages": [
     {
-      "id": "python",
-      "title": "Python language fluency",
-      "prerequisite": "Professional programming experience",
-      "objective": "Write an idiomatic, memory-bounded ledger CLI.",
-      "scenario": "Malformed exports, duplicates and mixed encodings arrive in a finance batch.",
-      "progression": "Row parser → packaged CLI → repeatable reconciliation.",
-      "gate": "Independently process malformed input from a clean checkout.",
+      "id": "career",
+      "title": "Senior-role positioning and evidence",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in senior-role positioning and evidence and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Verify dates, titles, scope and links; separate professional work, existing projects and plans.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
       "resources": [
-        "Python Tutorial"
+        "GitHub profile",
+        "LinkedIn profile"
       ],
       "topics": [
         {
-          "id": "python-syntax-and-control-flow",
-          "title": "Syntax and control flow",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            2,
-            1
-          ],
-          "concepts": "Indentation, truthiness, None, branches, loops and f-strings.",
-          "exercise": "Write a typed row validator.",
-          "assessment": "When can truthiness discard valid values?",
-          "pass": "Test zero, empty text, missing field and whitespace independently.",
-          "defer": "Parser implementation"
-        },
-        {
-          "id": "python-object-identity-and-money",
-          "title": "Object identity and money",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            2,
-            1,
-            1
-          ],
-          "concepts": "Names bind objects; aliasing, shallow copy, identity vs equality and Decimal.",
-          "exercise": "Repair state leaking between two ledger imports.",
-          "assessment": "Why can a mutable default affect later calls?",
-          "pass": "Independent runs produce exact deterministic totals.",
-          "defer": "Memory layout"
-        },
-        {
-          "id": "python-lists-tuples-and-deque",
-          "title": "Lists, tuples and deque",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            2,
-            2,
-            1
-          ],
-          "concepts": "Slicing, comprehensions, ordering, append and front-removal costs.",
-          "exercise": "Write a bounded recent-record buffer.",
-          "assessment": "When does a deque improve on a list?",
-          "pass": "Demonstrate ordered output and bounded size.",
-          "defer": "Custom containers"
-        },
-        {
-          "id": "python-dictionaries-and-sets",
-          "title": "Dictionaries and sets",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            2,
-            2,
-            1
-          ],
-          "concepts": "Hashability, composite keys, counting and set membership.",
-          "exercise": "Deduplicate ledger records by source and ID.",
-          "assessment": "Which tuples cannot be dict keys?",
-          "pass": "Preserve deterministic counts and justify average lookup costs.",
-          "defer": "Hash table implementations"
-        },
-        {
-          "id": "python-functions-and-scope",
-          "title": "Functions and scope",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            2,
-            1
-          ],
-          "concepts": "Positional and keyword args, closures, return values and LEGB scope.",
-          "exercise": "Extract pure transformations from I/O.",
-          "assessment": "When is a closure a useful dependency boundary?",
-          "pass": "Run parametrized transformations without files.",
-          "defer": "Functional frameworks"
-        },
-        {
-          "id": "python-modules-and-imports",
-          "title": "Modules and imports",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            2,
-            2,
-            1
-          ],
-          "concepts": "Module/package resolution, entry points and import side effects.",
-          "exercise": "Separate CLI, read/parse and business modules.",
-          "assessment": "How do you remove a cyclic import?",
-          "pass": "Imports perform no I/O and work from a clean install.",
-          "defer": "Import hooks"
-        },
-        {
-          "id": "python-file-i-o-and-streaming",
-          "title": "File I/O and streaming",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            3,
-            1
-          ],
-          "concepts": "pathlib, CSV, JSONL, encoding, buffering and atomic replacement.",
-          "exercise": "Stream and reconcile a large ledger export.",
-          "assessment": "Why is encoding part of the interface?",
-          "pass": "Corrupt input preserves the previous output.",
-          "defer": "Distributed file formats"
-        },
-        {
-          "id": "python-errors-and-cleanup",
-          "title": "Errors and cleanup",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            2,
-            2,
-            1
-          ],
-          "concepts": "Typed exceptions, chaining, finally, exit codes and terminal errors.",
-          "exercise": "Inject disk and format failures in a CLI.",
-          "assessment": "Which layer turns an exception into an exit code?",
-          "pass": "Report actionable causes without exposing sensitive rows.",
-          "defer": "Deep exception trees"
-        },
-        {
-          "id": "python-environments-and-packaging",
-          "title": "Environments and packaging",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            3,
-            1
-          ],
-          "concepts": "Virtual environments, uv locking, pyproject, wheels and entry points.",
-          "exercise": "Install the wheel in a separate environment.",
-          "assessment": "What can editable installation hide?",
-          "pass": "Installed command works from outside the repository.",
-          "defer": "Public package release automation"
-        },
-        {
-          "id": "python-ruff-and-type-checking",
-          "title": "Ruff and type checking",
+          "id": "career-01",
+          "title": "Verify your CV against real evidence",
           "priority": "P0",
           "depth": 3,
           "hours": [
             1,
             2,
-            2,
+            3,
             1
           ],
-          "concepts": "Lint, format, Pyright or mypy; generics, unions, narrowing and Any.",
-          "exercise": "Set up CI and type a parsed payload.",
-          "assessment": "Which errors does static analysis miss?",
-          "pass": "CI rejects wrong imports, nullable calls and payload types.",
-          "defer": "Custom lint rules"
-        }
-      ]
-    },
-    {
-      "id": "advanced-python",
-      "title": "Advanced Python engineering",
-      "prerequisite": "Python values, functions and modules",
-      "objective": "Build typed, testable, packaged services with explicit resource ownership.",
-      "scenario": "A large import mixes blocking downloads and CPU parsing.",
-      "progression": "Typed adapters → concurrent importer → benchmarked worker.",
-      "gate": "Cancellation releases resources; type checking, lint and tests pass.",
-      "resources": [
-        "Python Tutorial",
-        "asyncio",
-        "PyPA",
-        "pytest",
-        "Ruff"
-      ],
-      "topics": [
+          "concepts": "Every CV statement must have an accurate source and a clear status: professional work, existing personal project, or planned work. Do not use unverified dates or invented metrics.",
+          "exercise": "Create a table with one row per CV claim: exact claim, employer/project, your contribution, proof/link, and fact to confirm. Correct the Chainomation date only after checking it.",
+          "assessment": "Can you point to evidence for this claim? What did you personally do? Which facts still need confirmation?",
+          "pass": "All dates and titles have been checked; every important claim has evidence; planned work is not described as completed; uncertain facts are flagged rather than guessed.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
         {
-          "id": "advanced-python-objects-and-classes",
-          "title": "Objects and classes",
+          "id": "career-02",
+          "title": "Find and compare senior remote vacancies",
           "priority": "P0",
           "depth": 3,
           "hours": [
             1,
             2,
-            1,
+            3,
             1
           ],
-          "concepts": "Identity, instance behavior and self.",
-          "exercise": "Model an import job.",
-          "assessment": "When is a pure function simpler?",
-          "pass": "Separate instances maintain independent state.",
-          "defer": "Metaclasses"
+          "concepts": "Remote does not always mean worldwide. Check location and contractor rules from the employer posting, compare role scope with your evidence, and record hours in UTC and Dhaka time.",
+          "exercise": "Compare 10–15 active senior vacancies. For each, record posting URL/date, Bangladesh eligibility source, responsibilities, required skills, three evidence matches and gaps. Save five qualified roles and apply to the two strongest matches.",
+          "assessment": "Why is each saved vacancy eligible and a fit? Which three requirements can you prove? What is your next action?",
+          "pass": "A role comparison is complete, five eligible roles are in the tracker, two tailored applications are submitted when suitable vacancies exist, and repeated gaps are prioritized.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "advanced-python-constructors-and-attributes",
-          "title": "Constructors and attributes",
+          "id": "career-03",
+          "title": "Turn real work into senior interview examples",
           "priority": "P0",
           "depth": 3,
           "hours": [
             1,
             2,
-            1,
+            3,
             1
           ],
-          "concepts": "__init__, invariants and instance attributes.",
-          "exercise": "Reject invalid jobs at initialization.",
-          "assessment": "Which data belongs in a constructor?",
-          "pass": "Tests cover missing and invalid fields.",
-          "defer": "Custom __new__"
+          "concepts": "Senior interviews look for judgment and ownership: constraints, alternatives, decision, delivery, collaboration, outcome and learning. Be precise about your contribution versus the team's.",
+          "exercise": "Write three stories from completed ERP/CRM, inventory/accounting, insurance or AI-project work. Include a real artifact where possible, then record a concise 90-second answer for each.",
+          "assessment": "What was the problem and constraint? What did you own? What options did you consider? What evidence shows the result? What would you change?",
+          "pass": "Three truthful stories explain a decision and trade-off, distinguish personal/team contributions, cite evidence and fit a concise spoken answer.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "advanced-python-class-attributes",
-          "title": "Class attributes",
-          "priority": "P0",
-          "depth": 2,
-          "hours": [
-            1,
-            1,
-            1,
-            1
-          ],
-          "concepts": "Attribute sharing, lookup and shadowing.",
-          "exercise": "Fix a shared-list error.",
-          "assessment": "Where is the attribute resolved?",
-          "pass": "Instances no longer share unintended mutations.",
-          "defer": "Custom lookup hooks"
-        },
-        {
-          "id": "advanced-python-instance-methods",
-          "title": "Instance methods",
+          "id": "career-04",
+          "title": "Prepare and send tailored applications",
           "priority": "P0",
           "depth": 3,
           "hours": [
             1,
             2,
-            1,
-            1
-          ],
-          "concepts": "Bound methods, self and behavior on instance state.",
-          "exercise": "Implement an import job transition.",
-          "assessment": "Why bind the behavior to the object?",
-          "pass": "Reject invalid transitions and preserve invariants.",
-          "defer": "Manual binding"
-        },
-        {
-          "id": "advanced-python-class-methods",
-          "title": "Class methods",
-          "priority": "P1",
-          "depth": 2,
-          "hours": [
-            1,
-            1,
-            1,
-            1
-          ],
-          "concepts": "cls and alternate constructors.",
-          "exercise": "Add from_row to a typed model.",
-          "assessment": "Why return cls(...) rather than a fixed class?",
-          "pass": "Subtype construction and validation work.",
-          "defer": "Factory hierarchies"
-        },
-        {
-          "id": "advanced-python-static-methods",
-          "title": "Static methods",
-          "priority": "P1",
-          "depth": 2,
-          "hours": [
-            1,
-            1,
-            1,
-            1
-          ],
-          "concepts": "Class namespace and unbound helpers.",
-          "exercise": "Compare static method and module function.",
-          "assessment": "Who owns this operation?",
-          "pass": "Show identical behavior and justify the API location.",
-          "defer": "Descriptor internals"
-        },
-        {
-          "id": "advanced-python-encapsulation",
-          "title": "Encapsulation",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            1,
-            2,
-            1,
-            1
-          ],
-          "concepts": "Public contract, underscore convention and mutation control.",
-          "exercise": "Expose a read-only status view.",
-          "assessment": "What does a leading underscore guarantee?",
-          "pass": "All public mutations preserve invariants.",
-          "defer": "Emulating C# visibility"
-        },
-        {
-          "id": "advanced-python-inheritance",
-          "title": "Inheritance",
-          "priority": "P1",
-          "depth": 2,
-          "hours": [
-            1,
-            2,
-            1,
-            1
-          ],
-          "concepts": "Subtype contracts and inherited behavior.",
-          "exercise": "Implement a parser subtype.",
-          "assessment": "When does a subtype couple you to implementation?",
-          "pass": "Run shared contract tests.",
-          "defer": "Deep hierarchies"
-        },
-        {
-          "id": "advanced-python-overriding",
-          "title": "Overriding",
-          "priority": "P1",
-          "depth": 2,
-          "hours": [
-            1,
-            1,
-            1,
-            1
-          ],
-          "concepts": "Dispatch, super and compatible behavior.",
-          "exercise": "Override a parser hook.",
-          "assessment": "What breaks when an override narrows input?",
-          "pass": "Base guarantees still hold.",
-          "defer": "Template frameworks"
-        },
-        {
-          "id": "advanced-python-polymorphism",
-          "title": "Polymorphism",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            1,
-            2,
-            1,
-            1
-          ],
-          "concepts": "Duck typing and substitutable adapters.",
-          "exercise": "Swap native and OCR adapters.",
-          "assessment": "Which errors belong in the contract?",
-          "pass": "Run one suite against both.",
-          "defer": "Multimethod dispatch"
-        },
-        {
-          "id": "advanced-python-abstraction-and-abcs",
-          "title": "Abstraction and ABCs",
-          "priority": "P1",
-          "depth": 2,
-          "hours": [
-            1,
-            2,
-            1,
-            1
-          ],
-          "concepts": "Minimal consumer API, ABC and abstractmethod.",
-          "exercise": "Block incomplete DocumentReader implementations.",
-          "assessment": "When is a structural protocol preferable?",
-          "pass": "Incomplete implementation cannot be instantiated.",
-          "defer": "Virtual registrations"
-        },
-        {
-          "id": "advanced-python-composition",
-          "title": "Composition",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            1,
-            2,
-            2,
-            1
-          ],
-          "concepts": "Delegation and replaceable dependencies.",
-          "exercise": "Compose parser, validator and sink.",
-          "assessment": "Why compose this pipeline?",
-          "pass": "Swap the sink without subclassing.",
-          "defer": "Inheritance scaffolding"
-        },
-        {
-          "id": "advanced-python-multiple-inheritance-and-mro",
-          "title": "Multiple inheritance and MRO",
-          "priority": "P3",
-          "depth": 2,
-          "hours": [
-            1,
-            1,
-            0,
-            1
-          ],
-          "concepts": "Mixins, diamond lookup and cooperative super.",
-          "exercise": "Predict and check a tiny class hierarchy.",
-          "assessment": "Why can base order change behavior?",
-          "pass": "Prediction matches __mro__ and output.",
-          "defer": "Derive C3"
-        },
-        {
-          "id": "advanced-python-properties-and-descriptors",
-          "title": "Properties and descriptors",
-          "priority": "P2",
-          "depth": 2,
-          "hours": [
-            2,
-            2,
-            0,
-            1
-          ],
-          "concepts": "property, getter/setter and descriptor protocol intuition.",
-          "exercise": "Add a validated transition attribute.",
-          "assessment": "Why can a property appear to be a field?",
-          "pass": "Invalid changes fail with useful errors.",
-          "defer": "Descriptor framework"
-        },
-        {
-          "id": "advanced-python-dataclasses",
-          "title": "Dataclasses",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            1,
-            2,
-            1,
-            1
-          ],
-          "concepts": "Generated methods, default_factory, frozen and equality.",
-          "exercise": "Model an immutable document key.",
-          "assessment": "Does frozen deep-freeze nested data?",
-          "pass": "Check equality and independent defaults.",
-          "defer": "Code generation"
-        },
-        {
-          "id": "advanced-python-protocols-and-generics",
-          "title": "Protocols and generics",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            2,
-            1,
-            1
-          ],
-          "concepts": "Structural typing, Protocol, TypeVar and runtime limits.",
-          "exercise": "Check fake and real clients against one consumer interface.",
-          "assessment": "Where does runtime validation belong?",
-          "pass": "Checker rejects an incompatible implementation.",
-          "defer": "Advanced variance proofs"
-        },
-        {
-          "id": "advanced-python-solid-di-and-patterns",
-          "title": "SOLID, DI and patterns",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            2,
-            1
-          ],
-          "concepts": "Interface segregation, explicit lifetimes, adapter, strategy and composition root.",
-          "exercise": "Inject a fake clock and swap two adapters.",
-          "assessment": "What change justifies an interface here?",
-          "pass": "Tests expose no external resource dependencies and one rejected pattern is documented.",
-          "defer": "A general-purpose DI container"
-        },
-        {
-          "id": "advanced-python-iterators-and-generators",
-          "title": "Iterators and generators",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            2,
-            1
-          ],
-          "concepts": "Iterable vs iterator, yield, exhaustion and cleanup.",
-          "exercise": "Stream fixed-size batches.",
-          "assessment": "Which iterables can be replayed?",
-          "pass": "Memory grows with batch size rather than input length.",
-          "defer": "Generator schedulers"
-        },
-        {
-          "id": "advanced-python-decorators-and-context-managers",
-          "title": "Decorators and context managers",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            2,
-            1
-          ],
-          "concepts": "Closures, wraps, with, async with and cleanup on error.",
-          "exercise": "Instrument calls and manage client lifetimes.",
-          "assessment": "When may __exit__ suppress an exception?",
-          "pass": "Failures and cancellation release resources.",
-          "defer": "Class rewriting"
-        },
-        {
-          "id": "advanced-python-pytest-fixtures-and-test-levels",
-          "title": "pytest fixtures and test levels",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
             3,
             1
           ],
-          "concepts": "Fixtures, parametrization, fake dependencies and database integration.",
-          "exercise": "Add unit and integration tests.",
-          "assessment": "What does an HTTP stub hide?",
-          "pass": "Tests isolate state and catch a seeded regression.",
-          "defer": "Plugin development"
-        },
-        {
-          "id": "advanced-python-event-loop-and-structured-concurrency",
-          "title": "Event loop and structured concurrency",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            5,
-            5,
-            2
-          ],
-          "concepts": "Awaitables, TaskGroup, deadlines, cancellation, queues and semaphores.",
-          "exercise": "Bound concurrent downloads and cancel a parent.",
-          "assessment": "Why does blocking I/O stall unrelated requests?",
-          "pass": "Assert peak concurrency and no orphan tasks.",
-          "defer": "Event-loop internals"
-        },
-        {
-          "id": "advanced-python-threads-and-processes",
-          "title": "Threads and processes",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            4,
-            3,
-            1
-          ],
-          "concepts": "GIL considerations, shared memory, locks, serialization, process startup and pools.",
-          "exercise": "Compare threads for I/O and processes for parsing.",
-          "assessment": "What makes a process pool slower on small input?",
-          "pass": "Measure throughput and repair a shared-state bug.",
-          "defer": "Distributed compute"
-        },
-        {
-          "id": "advanced-python-memory-and-profiling",
-          "title": "Memory and profiling",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            2,
-            1
-          ],
-          "concepts": "References, cycles, RSS, cProfile and tracemalloc.",
-          "exercise": "Diagnose and remove retained batches.",
-          "assessment": "Why might RSS stay elevated?",
-          "pass": "Publish before/after timings and accuracy.",
-          "defer": "Allocator internals"
-        },
-        {
-          "id": "advanced-python-python-application-architecture",
-          "title": "Python application architecture",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            3,
-            1
-          ],
-          "concepts": "Domain modules, adapters, configuration and transaction ownership.",
-          "exercise": "Separate API and worker entry points around a shared service.",
-          "assessment": "Where should a transaction start and end?",
-          "pass": "Domain tests run independently from HTTP and the database.",
-          "defer": "Layer-for-layer .NET translation"
-        }
-      ]
-    },
-    {
-      "id": "math-ml",
-      "title": "Applied math and machine learning",
-      "prerequisite": "Python data processing and tests",
-      "objective": "Interpret formulas and evaluate practical models with honest baselines.",
-      "scenario": "High accuracy hides missed urgent tickets.",
-      "progression": "NumPy scorecard → classifier → calibrated policy.",
-      "gate": "Defend held-out split, threshold and results by slice.",
-      "resources": [
-        "ISLP",
-        "scikit-learn",
-        "NumPy"
-      ],
-      "topics": [
-        {
-          "id": "math-ml-scalars-vectors-and-matrices",
-          "title": "Scalars, vectors and matrices",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            1,
-            1
-          ],
-          "concepts": "Concept, hand calculation, NumPy and interpretation; shapes, transpose and broadcasting.",
-          "exercise": "Predict then implement matrix products, vector operations and projections.",
-          "assessment": "What does each output axis mean?",
-          "pass": "Hand results and NumPy agree; detect an unintended broadcast.",
-          "defer": "Tensor algebra proofs"
-        },
-        {
-          "id": "math-ml-dot-product-and-cosine",
-          "title": "Dot product and cosine",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            2,
-            1
-          ],
-          "concepts": "Hand calculation, derivation intuition, NumPy; norms and normalization.",
-          "exercise": "Implement cosine with a defined zero-vector policy.",
-          "assessment": "When do dot and cosine rankings agree?",
-          "pass": "Matches reference calculations with safe zero handling.",
-          "defer": "Metric-space theory"
-        },
-        {
-          "id": "math-ml-eigenvectors-and-svd",
-          "title": "Eigenvectors and SVD",
-          "priority": "P3",
-          "depth": 1,
-          "hours": [
-            2,
-            1,
-            0,
-            1
-          ],
-          "concepts": "Concept and interpretation; principal directions and compression.",
-          "exercise": "Inspect PCA explained variance.",
-          "assessment": "When could dimensionality reduction hurt retrieval?",
-          "pass": "Explain a direction and trade-off.",
-          "defer": "Decomposition proofs"
-        },
-        {
-          "id": "math-ml-probability-and-bayes",
-          "title": "Probability and Bayes",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            1,
-            1
-          ],
-          "concepts": "Concept, hand, NumPy and interpretation; expectation, variance, base rates and conditional probability.",
-          "exercise": "Simulate rare alerts then hand-check posterior.",
-          "assessment": "Why can most positive predictions be false?",
-          "pass": "Estimates align within sampling error.",
-          "defer": "Measure theory"
-        },
-        {
-          "id": "math-ml-statistics-and-uncertainty",
-          "title": "Statistics and uncertainty",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            3,
-            4,
-            2,
-            1
-          ],
-          "concepts": "Concept and interpretation; sampling bias, percentiles, intervals and paired bootstrap.",
-          "exercise": "Implement bootstrap for a paired quality delta.",
-          "assessment": "When should you resample by document or tenant?",
-          "pass": "Report an interval and effective sampling unit.",
-          "defer": "Asymptotic proofs"
-        },
-        {
-          "id": "math-ml-derivatives-gradients-and-losses",
-          "title": "Derivatives, gradients and losses",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            3,
-            4,
-            2,
-            1
-          ],
-          "concepts": "Hand and NumPy; derive scalar MSE derivative, chain rule, cross-entropy intuition, SGD and learning rate.",
-          "exercise": "Train a tiny regressor and check finite differences.",
-          "assessment": "Why can a large learning rate diverge?",
-          "pass": "Analytic and numerical gradients agree and plot shows convergence.",
-          "defer": "Optimizer proofs"
-        },
-        {
-          "id": "math-ml-regression",
-          "title": "Regression",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            2,
-            1
-          ],
-          "concepts": "Linear baseline, MAE/RMSE and residuals.",
-          "exercise": "Predict resolution time from allowed features.",
-          "assessment": "When is MAE preferable?",
-          "pass": "Report median baseline and errors by severity.",
-          "defer": "Complex forecasting"
-        },
-        {
-          "id": "math-ml-classification",
-          "title": "Classification",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            3,
-            4,
-            3,
-            1
-          ],
-          "concepts": "Logistic and tree baselines, precision/recall/F1, PR-AUC and calibration.",
-          "exercise": "Set urgent-ticket threshold on validation data.",
-          "assessment": "How can discrimination and calibration disagree?",
-          "pass": "Report held-out false negatives and threshold cost.",
-          "defer": "Ensemble sweeps"
-        },
-        {
-          "id": "math-ml-clustering",
-          "title": "Clustering",
-          "priority": "P1",
-          "depth": 2,
-          "hours": [
-            2,
-            3,
-            2,
-            1
-          ],
-          "concepts": "K-means, scaling, centroids and stability.",
-          "exercise": "Explore recurring topics in embedding data.",
-          "assessment": "Why isn't a cluster automatically a label?",
-          "pass": "Assess stability and review a sample for coherence.",
-          "defer": "Spectral clustering"
-        },
-        {
-          "id": "math-ml-features-validation-and-leakage",
-          "title": "Features, validation and leakage",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            4,
-            3,
-            1
-          ],
-          "concepts": "Categorical/text features, missing data, pipelines, grouped/temporal splits, underfit and overfit.",
-          "exercise": "Compare naive and safe validation and show learning curves.",
-          "assessment": "Can a ticket ID leak timing?",
-          "pass": "Preprocessing runs within folds and holdout stays locked.",
-          "defer": "Feature stores"
-        }
-      ]
-    },
-    {
-      "id": "data",
-      "title": "Document data engineering",
-      "prerequisite": "Python files, exceptions and tests",
-      "objective": "Create durable provenance from source to derived artifacts.",
-      "scenario": "Corrected scans replace older versions while work is in flight.",
-      "progression": "Canonicalizer → document API → replay and delete.",
-      "gate": "Replay preserves identity and deletion removes derived data.",
-      "resources": [
-        "PostgreSQL",
-        "Tesseract"
-      ],
-      "topics": [
-        {
-          "id": "data-data-contracts-and-provenance",
-          "title": "Data contracts and provenance",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            3,
-            1
-          ],
-          "concepts": "Schemas, encoding, hashes, raw versions, object storage and quarantine.",
-          "exercise": "Write immutable source manifests.",
-          "assessment": "Why separate business identity from content hash?",
-          "pass": "Rebuild a derived artifact from the original bytes.",
-          "defer": "Lakehouse platforms"
-        },
-        {
-          "id": "data-parsing-and-cleaning",
-          "title": "Parsing and cleaning",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Native text, PDF reading order, tables, Unicode and source offsets.",
-          "exercise": "Build adapters and golden fixtures.",
-          "assessment": "What evidence can aggressive cleanup destroy?",
-          "pass": "Preserve page references and a representative table.",
-          "defer": "General web crawling"
-        },
-        {
-          "id": "data-ocr-and-document-lifecycle",
-          "title": "OCR and document lifecycle",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            4,
-            5,
-            2
-          ],
-          "concepts": "Page rasterization, confidence, language packs, idempotent versions and tombstones.",
-          "exercise": "Add OCR fallback and replay replace/delete concurrently.",
-          "assessment": "How can replay resurrect a deleted source?",
-          "pass": "Demonstrate final-state consistency and measure OCR quality.",
-          "defer": "Training OCR"
-        },
-        {
-          "id": "data-columnar-storage-and-batch-processing",
-          "title": "Columnar storage and batch processing",
-          "priority": "P2",
-          "depth": 2,
-          "hours": [
-            2,
-            2,
-            2,
-            1
-          ],
-          "concepts": "Row vs column formats, Parquet, filtering and chunked reads.",
-          "exercise": "Benchmark one evaluation export.",
-          "assessment": "When is CSV adequate?",
-          "pass": "Report representative size and scan time.",
-          "defer": "Spark and Airflow"
+          "concepts": "Tailor the order and emphasis of accurate evidence to the role. Verify the posting, location, links, dates and overlap. Track the exact CV version and follow-up.",
+          "exercise": "Prepare senior .NET backend and AI integration CV summaries. Tailor them to real eligible postings, map three requirements to evidence, update profiles, and submit three to five well-matched applications if available.",
+          "assessment": "Does the application show proof for the vacancy's main requirements? Are all claims accurate and links working? Is the next action recorded?",
+          "pass": "The application pack is consistent, role-specific and truthful; each submitted application has proof links, a saved CV version and a follow-up date.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         }
       ]
     },
     {
       "id": "backend",
-      "title": "Python backend engineering",
-      "prerequisite": "Typed Python and working SQL knowledge",
-      "objective": "Build APIs that are correct across auth, transactions and disconnects.",
-      "scenario": "A streaming client disconnects while the database pool is saturated.",
-      "progression": "Ticket CRUD → durable processing → streaming service.",
-      "gate": "Deploy the API, show rollback and tenant-denial tests, then explain a slow trace.",
+      "title": "Advanced C# and ASP.NET Core",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in advanced c# and asp.net core and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Review generics, records, nullability, LINQ, collections and allocation trade-offs.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
       "resources": [
-        "FastAPI",
-        "PostgreSQL",
-        "SQLAlchemy",
-        "Pydantic"
+        "Microsoft .NET documentation",
+        "ASP.NET Core documentation",
+        "C# documentation"
       ],
       "topics": [
         {
-          "id": "backend-fastapi-routing-and-openapi",
-          "title": "FastAPI routing and OpenAPI",
+          "id": "backend-05",
+          "title": "C# runtime and language depth",
           "priority": "P0",
           "depth": 3,
           "hours": [
+            1,
             2,
-            3,
             3,
             1
           ],
-          "concepts": "ASGI, routes, status codes, pagination and response contracts.",
-          "exercise": "Build versioned ticket routes and diff OpenAPI.",
-          "assessment": "When do you return 202?",
-          "pass": "Contract tests detect breaking schema changes.",
-          "defer": "Multiple web frameworks"
+          "concepts": "Review generics, records, nullability, LINQ, collections and allocation trade-offs.",
+          "exercise": "Implement and benchmark a small data-processing feature; explain edge cases.",
+          "assessment": "Explain c# runtime and language depth using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "backend-pydantic-request-response-models",
-          "title": "Pydantic request/response models",
+          "id": "backend-06",
+          "title": "Async, cancellation and concurrency",
           "priority": "P0",
           "depth": 3,
           "hours": [
+            1,
             2,
-            3,
             3,
             1
           ],
-          "concepts": "Coercion, strict fields, errors and serialization boundaries.",
-          "exercise": "Separate request, domain and response models.",
-          "assessment": "When is coercion dangerous?",
-          "pass": "Invalid input fails and internal fields never serialize.",
-          "defer": "Validator runtime internals"
+          "concepts": "Reason about async/await, cancellation propagation, bounded concurrency and thread safety.",
+          "exercise": "Build concurrent dependency calls with deadlines, cancellation and failure tests.",
+          "assessment": "Explain async, cancellation and concurrency using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "backend-fastapi-dependency-injection-and-exceptions",
-          "title": "FastAPI dependency injection and exceptions",
-          "priority": "P1",
+          "id": "backend-07",
+          "title": "ASP.NET Core request pipeline",
+          "priority": "P0",
           "depth": 3,
           "hours": [
+            1,
             2,
-            3,
             3,
             1
           ],
-          "concepts": "Depends, request scope, yield, overrides and domain error translation.",
-          "exercise": "Inject identity and a session, map conflict and timeout.",
-          "assessment": "Who owns transaction rollback?",
-          "pass": "Resources close on errors and logs omit secrets.",
-          "defer": "Generic DI containers"
+          "concepts": "Review middleware, DI lifetimes, configuration, validation and error contracts.",
+          "exercise": "Add a consistent error contract, correlation and validation to an API.",
+          "assessment": "Explain asp.net core request pipeline using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "backend-authentication-and-authorization",
-          "title": "Authentication and authorization",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            2
-          ],
-          "concepts": "OIDC, issuer, audience, expiry, tenant and resource-level permission.",
-          "exercise": "Authorize ticket access with an IdP and test revoked roles.",
-          "assessment": "Where does a JWT stop proving access?",
-          "pass": "Wrong-tenant and expired-token tests deny correctly.",
-          "defer": "Implementing OIDC"
-        },
-        {
-          "id": "backend-sqlalchemy-and-postgresql-plans",
-          "title": "SQLAlchemy and PostgreSQL plans",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            5,
-            4,
-            2
-          ],
-          "concepts": "Sessions, Alembic, pool, isolation, constraints, locks, indexes and EXPLAIN ANALYZE.",
-          "exercise": "Tune queue polling under concurrent writes.",
-          "assessment": "Why shouldn't two async tasks share a session?",
-          "pass": "Explain plan and lock behavior with rollback fixtures.",
-          "defer": "Several ORMs"
-        },
-        {
-          "id": "backend-async-endpoints-and-sse",
-          "title": "Async endpoints and SSE",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Offload blocking work, cancellation, backpressure and streaming response semantics.",
-          "exercise": "Stream a mock model and disconnect mid-response.",
-          "assessment": "What can fail after HTTP headers are sent?",
-          "pass": "Disconnect releases upstream resources and load tests show bounded concurrency.",
-          "defer": "WebSockets without a use case"
-        },
-        {
-          "id": "backend-lifespan-middleware-and-testing",
-          "title": "Lifespan, middleware and testing",
-          "priority": "P1",
+          "id": "backend-08",
+          "title": "Authentication and API contracts",
+          "priority": "P0",
           "depth": 3,
           "hours": [
+            1,
             2,
-            3,
             3,
             1
           ],
-          "concepts": "ASGI request wrapping, correlation IDs, shared clients, test overrides and graceful shutdown.",
-          "exercise": "Add lifespan and HTTPX integration tests.",
-          "assessment": "How does worker count change open connections?",
-          "pass": "Trace IDs survive streaming and each client closes on shutdown.",
-          "defer": "Custom ASGI server"
-        },
-        {
-          "id": "backend-background-tasks-and-deployment",
-          "title": "Background tasks and deployment",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            3,
-            1
-          ],
-          "concepts": "In-process tasks versus durable workers, readiness and proxy deadlines.",
-          "exercise": "Move critical work to a worker, deploy the API and restart during a job.",
-          "assessment": "Which work may disappear on restart?",
-          "pass": "Deployment drains properly and critical jobs resume.",
-          "defer": "Workflow engines at small scale"
+          "concepts": "Apply authorization, role/resource checks, pagination, OpenAPI and versioning.",
+          "exercise": "Test unauthenticated, forbidden, invalid and paginated requests end to end.",
+          "assessment": "Explain authentication and api contracts using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         }
       ]
     },
     {
-      "id": "transformers",
-      "title": "Neural networks and transformers",
-      "prerequisite": "Applied linear algebra, gradients and NumPy",
-      "objective": "Trace tensor shapes from token IDs to generated tokens.",
-      "scenario": "Long prompts inflate time to first token and GPU memory.",
-      "progression": "Manual attention → PyTorch block → inference benchmark.",
-      "gate": "Implement masked attention and explain observed prefill/decode behavior.",
+      "id": "data",
+      "title": "SQL Server, EF Core and business invariants",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in sql server, ef core and business invariants and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Model business entities, keys, constraints, history and tenant boundaries.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
       "resources": [
-        "PyTorch",
-        "Hugging Face LLM Course",
-        "Attention Is All You Need"
+        "EF Core documentation",
+        "SQL Server documentation"
       ],
       "topics": [
         {
-          "id": "transformers-neural-layers-and-autograd",
-          "title": "Neural layers and autograd",
+          "id": "data-09",
+          "title": "Relational modeling",
           "priority": "P0",
           "depth": 3,
           "hours": [
-            3,
-            4,
-            3,
-            1
-          ],
-          "concepts": "Hand gradient, PyTorch modules, affine layers, nonlinearities, backprop and train/eval.",
-          "exercise": "Train a small classifier and verify a gradient.",
-          "assessment": "Why do stacked linear layers collapse?",
-          "pass": "Diagnose one failed training run.",
-          "defer": "Training foundation models"
-        },
-        {
-          "id": "transformers-tokenization-and-representations",
-          "title": "Tokenization and representations",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
+            1,
             2,
             3,
-            2,
             1
           ],
-          "concepts": "Bytes, subwords, special IDs, padding, truncation, embeddings, pooling and positions.",
-          "exercise": "Compare English and Bangla token counts and inspect position handling.",
-          "assessment": "Why is character count a poor token proxy?",
-          "pass": "Explain retrieval vectors vs token embeddings and choose a safe cutoff.",
-          "defer": "Training a tokenizer"
+          "concepts": "Model business entities, keys, constraints, history and tenant boundaries.",
+          "exercise": "Design an inventory/accounting schema and document invariants.",
+          "assessment": "Explain relational modeling using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "transformers-qkv-and-scaled-attention",
-          "title": "QKV and scaled attention",
+          "id": "data-10",
+          "title": "Query plans and indexes",
           "priority": "P0",
           "depth": 3,
           "hours": [
-            3,
-            4,
+            1,
+            2,
             3,
             1
           ],
-          "concepts": "Compute by hand and NumPy: QK transpose, scaling, masking, softmax and V.",
-          "exercise": "Implement a tiny attention example.",
-          "assessment": "Why scale logits by square root of the key dimension?",
-          "pass": "Compare shapes and values with PyTorch.",
-          "defer": "CUDA kernels"
+          "concepts": "Read plans, choose indexes, project needed columns and detect N+1 queries.",
+          "exercise": "Compare query performance before and after a justified index.",
+          "assessment": "Explain query plans and indexes using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "transformers-transformer-blocks-and-architectures",
-          "title": "Transformer blocks and architectures",
-          "priority": "P1",
+          "id": "data-11",
+          "title": "Transactions and concurrency",
+          "priority": "P0",
           "depth": 3,
           "hours": [
-            3,
-            4,
+            1,
+            2,
             3,
             1
           ],
-          "concepts": "Heads, feed-forward, residuals, normalization, encoder/decoder, cross-attention and pretraining.",
-          "exercise": "Implement masked block fragment and inspect model cards.",
-          "assessment": "Which models can attend bidirectionally?",
-          "pass": "Future-token changes cannot affect earlier masked output.",
-          "defer": "Full transformer implementation"
+          "concepts": "Understand ACID, isolation, locking, optimistic concurrency and idempotency.",
+          "exercise": "Reproduce a conflicting update and prove resolution with integration tests.",
+          "assessment": "Explain transactions and concurrency using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "transformers-generation-kv-cache-and-gpu",
-          "title": "Generation, KV cache and GPU",
-          "priority": "P1",
-          "depth": 4,
+          "id": "data-12",
+          "title": "Business workflow integrity",
+          "priority": "P0",
+          "depth": 3,
           "hours": [
+            1,
+            2,
             3,
-            5,
-            4,
-            2
+            1
           ],
-          "concepts": "Logits, greedy/temperature/top-p, prefill/decode, context scaling, device transfer and cache memory.",
-          "exercise": "Implement sampling and profile local inference.",
-          "assessment": "Why does cache memory rise with context?",
-          "pass": "Estimate KV bytes and explain TTFT, decode and memory changes.",
-          "defer": "GPU kernels"
+          "concepts": "Keep financial/inventory rules deterministic and enforce invariants at boundaries.",
+          "exercise": "Implement balanced journal posting or stock reservation with rollback and audit.",
+          "assessment": "Explain business workflow integrity using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         }
       ]
     },
     {
-      "id": "llm-app",
-      "title": "LLM application engineering",
-      "prerequisite": "Python backend and transformer inference",
-      "objective": "Place model behavior behind an explicit, measurable contract.",
-      "scenario": "An AI ticket draft is schema-valid but assigns an incorrect urgency.",
-      "progression": "Extractor → ticket assistant → provider release gate.",
-      "gate": "Separate timeout, truncation, refusal and schema failure; compare with a simple baseline.",
+      "id": "architecture",
+      "title": "Architecture and senior system design",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in architecture and senior system design and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Use cohesion, dependency direction and modular boundaries without unnecessary layers.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
       "resources": [
-        "Pydantic",
-        "OpenAI API documentation"
+        "Azure Architecture Center",
+        "Google SRE books"
       ],
       "topics": [
         {
-          "id": "llm-app-provider-adapter-and-prompt-versions",
-          "title": "Provider adapter and prompt versions",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            3,
-            1
-          ],
-          "concepts": "Roles, templates, examples, context budget, output usage and upstream errors.",
-          "exercise": "Build a thin adapter and compare two prompt versions.",
-          "assessment": "Which provider differences leak through an abstraction?",
-          "pass": "Trace the prompt and model configuration for each result.",
-          "defer": "General-purpose framework"
-        },
-        {
-          "id": "llm-app-structured-output-and-model-selection",
-          "title": "Structured output and model selection",
-          "priority": "P1",
+          "id": "architecture-13",
+          "title": "Boundaries and modular design",
+          "priority": "P0",
           "depth": 4,
           "hours": [
+            1,
             2,
-            4,
-            4,
+            3,
             1
           ],
-          "concepts": "Schema constraints, semantic validation, bounded repair, refusals and cost-quality routing.",
-          "exercise": "Compare rules, classifier and model on the ticket set.",
-          "assessment": "Why is schema validity insufficient?",
-          "pass": "Distinguish refusal, truncation, timeout and valid-but-wrong answers.",
-          "defer": "Custom decoders"
+          "concepts": "Use cohesion, dependency direction and modular boundaries without unnecessary layers.",
+          "exercise": "Map a business workflow and explain boundary choices.",
+          "assessment": "Explain boundaries and modular design using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "architecture-14",
+          "title": "System design from requirements",
+          "priority": "P0",
+          "depth": 4,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Turn uncertain needs into workload, availability, consistency, security and cost constraints.",
+          "exercise": "Design a tenant-aware API with capacity assumptions and alternatives.",
+          "assessment": "Explain system design from requirements using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "architecture-15",
+          "title": "Caching, compatibility and migration",
+          "priority": "P0",
+          "depth": 4,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Reason about cache invalidation, API compatibility, migrations and safe rollout.",
+          "exercise": "Plan a backwards-compatible change with rollout and rollback.",
+          "assessment": "Explain caching, compatibility and migration using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "architecture-16",
+          "title": "Technical leadership in delivery",
+          "priority": "P0",
+          "depth": 4,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Break work into reviewable increments, surface risks and help teammates deliver.",
+          "exercise": "Produce a delivery plan, ADR and review checklist.",
+          "assessment": "Explain technical leadership in delivery using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         }
       ]
     },
     {
-      "id": "search",
-      "title": "Embeddings and semantic search",
-      "prerequisite": "Vectors, document ingestion and PostgreSQL",
-      "objective": "Build an exact search baseline and measure when approximation helps.",
-      "scenario": "Exact part numbers and Bangla paraphrases both matter.",
-      "progression": "NumPy cosine → PostgreSQL search → filtered ANN benchmark.",
-      "gate": "Publish Recall@k, nDCG and latency on the same labeled workload.",
+      "id": "distributed",
+      "title": "Distributed systems and reliability",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in distributed systems and reliability and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Classify failures, deadlines, retries, backoff and idempotency.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
       "resources": [
-        "pgvector",
-        "PostgreSQL",
-        "Sentence Transformers"
+        "ASP.NET Core documentation",
+        "OpenTelemetry documentation"
       ],
       "topics": [
         {
-          "id": "search-embeddings-and-multilingual-fit",
-          "title": "Embeddings and multilingual fit",
-          "priority": "P1",
-          "depth": 4,
+          "id": "distributed-17",
+          "title": "HTTP and failure semantics",
+          "priority": "P0",
+          "depth": 3,
           "hours": [
+            1,
+            2,
             3,
-            4,
-            4,
             1
           ],
-          "concepts": "Bi-encoders, pooling, normalization, model dimensions, prefixes and versioning.",
-          "exercise": "Compare two models on one judged corpus.",
-          "assessment": "Why rebuild an index when embeddings change?",
-          "pass": "Publish language and identifier slices under matched settings.",
-          "defer": "Training embeddings"
+          "concepts": "Classify failures, deadlines, retries, backoff and idempotency.",
+          "exercise": "Add bounded retries only to safe operations and test duplicates.",
+          "assessment": "Explain http and failure semantics using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "search-exact-similarity-and-rank-metrics",
-          "title": "Exact similarity and rank metrics",
+          "id": "distributed-18",
+          "title": "Messaging and background work",
+          "priority": "P0",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Understand delivery guarantees, acknowledgements, duplicates and dead letters.",
+          "exercise": "Implement a job contract with retry limits and observable terminal failure.",
+          "assessment": "Explain messaging and background work using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "distributed-19",
+          "title": "Outbox and eventual consistency",
+          "priority": "P0",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Use an outbox when a database change must reliably publish an event.",
+          "exercise": "Test outbox restart and duplicate-consumer behavior.",
+          "assessment": "Explain outbox and eventual consistency using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "distributed-20",
+          "title": "Operational failure drills",
+          "priority": "P0",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Observe behavior during dependency outage, queue buildup and slow requests.",
+          "exercise": "Run a failure drill and write impact, mitigation and follow-up.",
+          "assessment": "Explain operational failure drills using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Cloud, containers and delivery",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in cloud, containers and delivery and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Use processes, logs, DNS, TLS, ports, configuration and safe secret handling.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
+      "resources": [
+        "Docker documentation",
+        "GitHub Actions documentation",
+        "Azure Architecture Center"
+      ],
+      "topics": [
+        {
+          "id": "delivery-21",
+          "title": "Linux, networking and secrets",
+          "priority": "P0",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Use processes, logs, DNS, TLS, ports, configuration and safe secret handling.",
+          "exercise": "Diagnose a connection issue and document safe configuration.",
+          "assessment": "Explain linux, networking and secrets using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "delivery-22",
+          "title": "Docker and local environments",
+          "priority": "P0",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Build a reproducible app/database environment with health checks and persistent data.",
+          "exercise": "Run the flagship app and dependencies from a clean checkout.",
+          "assessment": "Explain docker and local environments using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "delivery-23",
+          "title": "CI and deployment",
+          "priority": "P0",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Create quality gates, artifact delivery, environment configuration and checks.",
+          "exercise": "Deploy one project through repeatable CI to an affordable environment.",
+          "assessment": "Explain ci and deployment using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "delivery-24",
+          "title": "Cloud operations and cost",
+          "priority": "P0",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Understand identity, compute, network, storage, monitoring, budgets and teardown.",
+          "exercise": "Publish topology, spend guardrails and rollback procedure.",
+          "assessment": "Explain cloud operations and cost using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        }
+      ]
+    },
+    {
+      "id": "llm",
+      "title": "LLM application engineering with .NET",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in llm application engineering with .net and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Understand tokens, context, sampling, hosted/local trade-offs and model limits.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
+      "resources": [
+        "Microsoft Learn: .NET AI",
+        "Semantic Kernel documentation",
+        "Ollama documentation"
+      ],
+      "topics": [
+        {
+          "id": "llm-25",
+          "title": "Model behavior and provider choice",
           "priority": "P1",
           "depth": 3,
           "hours": [
+            1,
             2,
-            4,
             3,
             1
           ],
-          "concepts": "Dot, cosine, L2, top-k, ties, Recall@k, MRR and nDCG.",
-          "exercise": "Match SQL rankings to NumPy and hand-check metrics.",
-          "assessment": "How can MRR rise while recall falls?",
-          "pass": "Metrics match tiny fixture math and model results use held-out labels.",
-          "defer": "Learning to rank"
+          "concepts": "Understand tokens, context, sampling, hosted/local trade-offs and model limits.",
+          "exercise": "Compare local Ollama and a hosted model on fixed cases and record constraints.",
+          "assessment": "Explain model behavior and provider choice using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "search-lexical-retrieval-and-filters",
-          "title": "Lexical retrieval and filters",
+          "id": "llm-26",
+          "title": ".NET AI abstractions",
           "priority": "P1",
-          "depth": 4,
+          "depth": 3,
           "hours": [
+            1,
             2,
-            4,
-            4,
+            3,
             1
           ],
-          "concepts": "Inverted indexes, analyzers, BM25 intuition, metadata and authorization filtering.",
-          "exercise": "Build PostgreSQL lexical search for IDs, phrases and private versions.",
-          "assessment": "How does tokenization affect a SKU?",
-          "pass": "Search fixtures cover exact identifiers and unauthorized documents.",
-          "defer": "Large search clusters"
+          "concepts": "Use Semantic Kernel and Microsoft.Extensions.AI at clear application boundaries.",
+          "exercise": "Separate provider integration from business logic and switch configuration.",
+          "assessment": "Explain .net ai abstractions using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "search-pgvector-ann",
-          "title": "pgvector ANN",
+          "id": "llm-27",
+          "title": "Structured output and streaming",
           "priority": "P1",
-          "depth": 4,
+          "depth": 3,
           "hours": [
+            1,
+            2,
             3,
-            5,
-            4,
-            2
+            1
           ],
-          "concepts": "HNSW graph intuition, IVFFlat clustering, operator classes, build and search settings.",
-          "exercise": "Benchmark exact vs ANN under representative filters.",
-          "assessment": "When can index-time filtering reduce candidate recall?",
-          "pass": "Report recall, p95, build time and index bytes.",
-          "defer": "Additional vector database"
+          "concepts": "Validate schema-bound responses and deliver progress with explicit stream contracts.",
+          "exercise": "Test stream completion, malformed output, cancellation and disconnect.",
+          "assessment": "Explain structured output and streaming using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "llm-28",
+          "title": "Cost and quality baselines",
+          "priority": "P1",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Measure latency, usage and answer quality for a representative task.",
+          "exercise": "Create a report with model, prompt, dataset, runtime and limitations.",
+          "assessment": "Explain cost and quality baselines using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         }
       ]
     },
     {
       "id": "rag",
-      "title": "Grounded RAG",
-      "prerequisite": "Document processing, structured outputs and search",
-      "objective": "Build a versioned cited answer service with abstention.",
-      "scenario": "A current policy supersedes an older copy.",
-      "progression": "Fixed chunks → basic Q&A → versioned citations.",
-      "gate": "Localize errors to parsing, retrieval, context or generation.",
+      "title": "Retrieval, document intelligence and evaluation",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in retrieval, document intelligence and evaluation and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Extract, version and normalize documents while preserving source and access metadata.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
       "resources": [
-        "RAG paper",
+        "Semantic Kernel documentation",
+        "Qdrant documentation",
         "pgvector"
       ],
       "topics": [
         {
-          "id": "rag-fixed-windows-and-overlap",
-          "title": "Fixed windows and overlap",
-          "priority": "P0",
+          "id": "rag-29",
+          "title": "Document ingestion and provenance",
+          "priority": "P1",
           "depth": 3,
           "hours": [
             1,
-            3,
+            2,
             3,
             1
           ],
-          "concepts": "Token lengths, stride, stable IDs, offsets and duplicate evidence.",
-          "exercise": "Sweep lengths and overlap settings.",
-          "assessment": "When does overlap waste context?",
-          "pass": "Report boundary recall and duplicate tokens.",
-          "defer": "Per-document tuning"
+          "concepts": "Extract, version and normalize documents while preserving source and access metadata.",
+          "exercise": "Build repeatable ingestion with visible parsing failures and versions.",
+          "assessment": "Explain document ingestion and provenance using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "rag-sentence-and-recursive-splitting",
-          "title": "Sentence and recursive splitting",
+          "id": "rag-30",
+          "title": "Chunking, embeddings and retrieval",
           "priority": "P1",
           "depth": 3,
           "hours": [
+            1,
             2,
             3,
-            3,
             1
           ],
-          "concepts": "Sentence grouping, separators, fallbacks and long input.",
-          "exercise": "Compare sentence and recursive cuts.",
-          "assessment": "How can sentence splitting fail on abbreviations?",
-          "pass": "Token limits and offsets hold on long and multilingual fixtures.",
-          "defer": "Training segmenters"
+          "concepts": "Compare chunking/embedding choices; understand metadata filters and vector search.",
+          "exercise": "Measure retrieval recall on a labeled query set.",
+          "assessment": "Explain chunking, embeddings and retrieval using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "rag-structure-aware-chunks",
-          "title": "Structure-aware chunks",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Headings, tables, page coordinates and provenance.",
-          "exercise": "Preserve rows and heading context.",
-          "assessment": "When should a section be divided further?",
-          "pass": "Table answers link to correct rows and pages.",
-          "defer": "Layout training"
-        },
-        {
-          "id": "rag-context-citations-and-abstention",
-          "title": "Context, citations and abstention",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Deduplication, budget, conflict and claim-to-source spans.",
-          "exercise": "Build restricted context and validate citation handles.",
-          "assessment": "Can the correct document still lack the claimed evidence?",
-          "pass": "Reject unknown citations and score unsupported claims.",
-          "defer": "Using a judge as an oracle"
-        },
-        {
-          "id": "rag-index-consistency-and-lifecycle",
-          "title": "Index consistency and lifecycle",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Generation swaps, embedding versions, replay and tombstones.",
-          "exercise": "Activate a new index and roll back after a source deletion.",
-          "assessment": "How does rollback avoid resurrecting removed sources?",
-          "pass": "Readers see complete generations and deleted artifacts stay inactive.",
-          "defer": "Federated indexes"
-        },
-        {
-          "id": "rag-enterprise-citation-verification",
-          "title": "Enterprise citation verification",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Authenticated navigation, document version, span provenance and no-answer handling.",
-          "exercise": "Verify citations direct readers to active, authorized evidence.",
-          "assessment": "Why isn't a valid ID sufficient?",
-          "pass": "Revocation makes stale cited sources inaccessible.",
-          "defer": "Complex attribution models"
-        }
-      ]
-    },
-    {
-      "id": "advanced-rag",
-      "title": "Advanced retrieval",
-      "prerequisite": "Baseline RAG and labeled queries",
-      "objective": "Tune only quality failures seen in a controlled experiment.",
-      "scenario": "Ambiguous questions need evidence spread across multiple documents.",
-      "progression": "Fusion → reranking → measured routing and context policy.",
-      "gate": "Report paired quality, latency and cost alongside a rollback plan.",
-      "resources": [
-        "pgvector",
-        "Sentence Transformers"
-      ],
-      "topics": [
-        {
-          "id": "advanced-rag-semantic-parent-child-and-contextual-chunks",
-          "title": "Semantic, parent-child and contextual chunks",
-          "priority": "P2",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Similarity boundaries, small-to-large retrieval and contextual enrichment.",
-          "exercise": "Run matched ablations with source and ACL preservation.",
-          "assessment": "Can a parent cross a permission boundary?",
-          "pass": "Report quality, token cost, duplication and provenance.",
-          "defer": "Deep chunk hierarchies"
-        },
-        {
-          "id": "advanced-rag-hybrid-and-reranking",
-          "title": "Hybrid and reranking",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            5,
-            4,
-            1
-          ],
-          "concepts": "Sparse/dense union, rank fusion, cross-encoder batching and cutoff.",
-          "exercise": "Compare sparse, dense, hybrid and reranked retrieval.",
-          "assessment": "What can reranking never recover?",
-          "pass": "Report held-out recall, quality delta and p95.",
-          "defer": "Learned rankers"
-        },
-        {
-          "id": "advanced-rag-rewrites-compression-and-multi-hop",
-          "title": "Rewrites, compression and multi-hop",
-          "priority": "P2",
-          "depth": 4,
-          "hours": [
-            3,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Query expansion, drift, context extraction, routing and bounded decomposition.",
-          "exercise": "Compare original query against one bounded second step.",
-          "assessment": "When should rewriting be bypassed?",
-          "pass": "Preserve IDs and report evidence retention and cost.",
-          "defer": "Graph databases without measured value"
-        }
-      ]
-    },
-    {
-      "id": "eval",
-      "title": "Evaluation and LLMOps",
-      "prerequisite": "An AI feature with a baseline",
-      "objective": "Use reproducible evaluations to decide what ships.",
-      "scenario": "A cheaper model improves average scores but regresses on an important slice.",
-      "progression": "Hand-labeled benchmark → CI gate → staged rollout.",
-      "gate": "Seed a regression and show that evaluation blocks release.",
-      "resources": [
-        "scikit-learn",
-        "OpenTelemetry"
-      ],
-      "topics": [
-        {
-          "id": "eval-gold-sets-and-retrieval-answer-separation",
-          "title": "Gold sets and retrieval/answer separation",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Grouped splits, hard negatives, recall, correctness, support and abstention.",
-          "exercise": "Create a human rubric and labeled dataset.",
-          "assessment": "When should an answer have been impossible?",
-          "pass": "Localize failed outputs to retrieval, context or answer stages.",
-          "defer": "Large labeling platforms"
-        },
-        {
-          "id": "eval-calibrating-model-judges",
-          "title": "Calibrating model judges",
-          "priority": "P2",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            3,
-            1
-          ],
-          "concepts": "Rubrics, position/verbosity bias and disagreement.",
-          "exercise": "Compare judge runs with a reviewed subset.",
-          "assessment": "Which slice needs human review?",
-          "pass": "Publish agreement and examples of mismatch.",
-          "defer": "Judge fine-tuning"
-        },
-        {
-          "id": "eval-version-lineage-and-staged-rollout",
-          "title": "Version lineage and staged rollout",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            2
-          ],
-          "concepts": "Version model, prompt, parser, index, dataset and code; paired comparisons and rollback.",
-          "exercise": "Create an evaluation manifest and block a seeded regression.",
-          "assessment": "When does a good average hide a dangerous slice?",
-          "pass": "Reviewer reproduces artifact selection and observes rollback.",
-          "defer": "Dedicated model registry product"
-        },
-        {
-          "id": "eval-drift-feedback-and-monitoring",
-          "title": "Drift, feedback and monitoring",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Input shifts, outcome proxies, feedback bias and alert owners.",
-          "exercise": "Simulate a quality regression and write a triage runbook.",
-          "assessment": "Why can approval rate mislead?",
-          "pass": "Show one alert, root cause investigation and follow-up.",
-          "defer": "Automated retraining"
-        }
-      ]
-    },
-    {
-      "id": "security",
-      "title": "Defensive AI security",
-      "prerequisite": "Authentication and a working AI pipeline",
-      "objective": "Enforce identity, authority, privacy and safe review boundaries in code.",
-      "scenario": "Different tenants use shared indexes, workers and caches.",
-      "progression": "Permission tests → threat model → defensive release review.",
-      "gate": "Verify real application permissions, revocation and deletion across derived data.",
-      "resources": [
-        "OWASP GenAI",
-        "PostgreSQL"
-      ],
-      "topics": [
-        {
-          "id": "security-tenant-isolation-and-privacy",
-          "title": "Tenant isolation and privacy",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            4,
-            5,
-            2
-          ],
-          "concepts": "Actor claims, ACL, row-level policies, object keys, cache namespaces, retention and vendor handling.",
-          "exercise": "Test cross-tenant access with the real application role.",
-          "assessment": "What can a privileged service account bypass?",
-          "pass": "Denials cover search, fetch, cache and job results; deletion is traced.",
-          "defer": "Dedicated database per tenant by default"
-        },
-        {
-          "id": "security-prompt-injection-defenses-and-responsible-ai",
-          "title": "Prompt injection defenses and responsible AI",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Untrusted inputs, server policy, objective harm, human review and redacted logging.",
-          "exercise": "Verify with inert fixtures that document content cannot grant rights.",
-          "assessment": "Which boundary remains effective even if model output is wrong?",
-          "pass": "Model or document instructions cannot change tool/data authority.",
-          "defer": "Offensive automation"
-        },
-        {
-          "id": "security-safe-query-compilation",
-          "title": "Safe query compilation",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Typed intents, templates, read-only views, bound parameters and tenant scopes.",
-          "exercise": "Compile allowed analytics requests into approved queries.",
-          "assessment": "Why does validating SQL syntax fail to establish authorization?",
-          "pass": "Forbidden operations never reach the reporting connection.",
-          "defer": "Broad production schema access"
-        },
-        {
-          "id": "security-limits-clarification-and-audit",
-          "title": "Limits, clarification and audit",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Ambiguity, row caps, statement timeout, audit and result accuracy.",
-          "exercise": "Test reporting rejection and timing boundaries.",
-          "assessment": "When should the assistant ask a follow-up?",
-          "pass": "Report execution accuracy and predictable denial behavior.",
-          "defer": "Autonomous database modification"
-        }
-      ]
-    },
-    {
-      "id": "agents",
-      "title": "Business workflows and MCP",
-      "prerequisite": "Validated model outputs, evaluation and defensive authorization",
-      "objective": "Build useful bounded workflows that recover consistently.",
-      "scenario": "An ERP request times out after it might have committed.",
-      "progression": "Read tools → durable approval state machine → replay and reconciliation.",
-      "gate": "Restart around an approved write and verify one effective external operation.",
-      "resources": [
-        "MCP",
-        "RabbitMQ"
-      ],
-      "topics": [
-        {
-          "id": "agents-deterministic-and-model-led-planning",
-          "title": "Deterministic and model-led planning",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Explicit states, dynamic information gathering, step budgets and stopping.",
-          "exercise": "Compare fixed research flow with bounded decomposition.",
-          "assessment": "When does model-led planning justify its cost?",
-          "pass": "Measure success, evidence support and steps under the same fixtures.",
-          "defer": "Unbounded loops"
-        },
-        {
-          "id": "agents-agent-evaluation-and-team-patterns",
-          "title": "Agent evaluation and team patterns",
-          "priority": "P2",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            3,
-            1
-          ],
-          "concepts": "Trajectory constraints, replay, role separation and handoff cost.",
-          "exercise": "Compare a two-role design to typed stages.",
-          "assessment": "Can different trajectories be valid?",
-          "pass": "Unauthorized effects fail evaluation even when answers look correct.",
-          "defer": "Agent swarms"
-        },
-        {
-          "id": "agents-tool-calling-and-mcp-primitives",
-          "title": "Tool calling and MCP primitives",
+          "id": "rag-31",
+          "title": "Hybrid search, reranking and citations",
           "priority": "P1",
           "depth": 3,
           "hours": [
+            1,
             2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Schema, typed execution, host/client/server, tools/resources/prompts and negotiation.",
-          "exercise": "Implement a read-only MCP inventory service and client.",
-          "assessment": "Who executes a model's tool request?",
-          "pass": "Discovery succeeds and malformed calls cause no effects.",
-          "defer": "Writing a transport implementation"
-        },
-        {
-          "id": "agents-mcp-authorization-and-compatibility",
-          "title": "MCP authorization and compatibility",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Protocol pinning, transport trust, scopes, capability drift and availability.",
-          "exercise": "Scope read tools and simulate unavailable or incompatible service.",
-          "assessment": "Where does execution authority belong?",
-          "pass": "Wrong scope, timeout and schema change fail safely.",
-          "defer": "Organization-wide tool registry"
-        },
-        {
-          "id": "agents-state-checkpoints-and-approval",
-          "title": "State, checkpoints and approval",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
             3,
-            4,
-            5,
-            2
+            1
           ],
-          "concepts": "Workflow vs chat memory, TTL, immutable intent, approval binding and final checks.",
-          "exercise": "Persist and resume an ERP approval flow.",
-          "assessment": "What if the approver changes roles before execution?",
-          "pass": "Mutated, stale and revoked approvals fail safely.",
-          "defer": "Unbounded memory"
+          "concepts": "Combine lexical and semantic retrieval and tie citations to source spans.",
+          "exercise": "Run retrieval ablations and display supporting sources.",
+          "assessment": "Explain hybrid search, reranking and citations using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "agents-failure-recovery-and-reconciliation",
-          "title": "Failure recovery and reconciliation",
+          "id": "rag-32",
+          "title": "RAG evaluation and abstention",
           "priority": "P1",
-          "depth": 4,
+          "depth": 3,
           "hours": [
+            1,
             2,
-            4,
-            5,
-            2
+            3,
+            1
           ],
-          "concepts": "Unknown outcomes, idempotency, status probes, compensation and dead letters.",
-          "exercise": "Simulate timeout after a mock ERP commit.",
-          "assessment": "When must a human resolve ambiguity?",
-          "pass": "Restart reconciles to one effective external operation.",
-          "defer": "Exactly-once claims across independent systems"
+          "concepts": "Separate retrieval from generation failures; handle unsupported questions honestly.",
+          "exercise": "Evaluate grounding, relevance and unanswerable cases; publish failure slices.",
+          "assessment": "Explain rag evaluation and abstention using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         }
       ]
     },
     {
-      "id": "production",
-      "title": "Production and distributed systems",
-      "prerequisite": "API, quality gates and security",
-      "objective": "Deploy and operate a cost-bounded, observable AI service.",
-      "scenario": "Provider latency grows, the queue backs up and Redis is unavailable.",
-      "progression": "Compose → one-cloud staging → load and failure drill.",
-      "gate": "An independent reviewer can deploy, trace a failure, restore and roll back.",
+      "id": "safety",
+      "title": "Secure AI workflows and tool use",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in secure ai workflows and tool use and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Treat prompts, documents and outputs as untrusted; identify data-exfiltration paths.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
       "resources": [
-        "Docker",
-        "GitHub Actions",
-        "RabbitMQ",
-        "Redis",
-        "OpenTelemetry",
-        "Azure Container Apps"
+        "OWASP Top 10 for LLM Applications",
+        "Semantic Kernel documentation"
       ],
       "topics": [
         {
-          "id": "production-redis-cache-and-rate-limits",
-          "title": "Redis cache and rate limits",
+          "id": "safety-33",
+          "title": "Threat modeling and prompt injection",
           "priority": "P1",
-          "depth": 4,
+          "depth": 3,
           "hours": [
-            3,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Strings, hashes, sorted sets, TTL, cache-aside, invalidation, stampedes and atomic quotas.",
-          "exercise": "Build scoped cache and load-test tenant limits.",
-          "assessment": "When is fail-open unacceptable?",
-          "pass": "Test stale entries, concurrent limits and cache outage.",
-          "defer": "Redis as source of truth"
-        },
-        {
-          "id": "production-rabbitmq-outbox-and-workers",
-          "title": "RabbitMQ, outbox and workers",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            5,
-            5,
-            2
-          ],
-          "concepts": "Exchanges, confirms, acks, prefetch, backpressure, retry budgets, DLQ and outbox.",
-          "exercise": "Kill workers before and after commit.",
-          "assessment": "How do consumer acks differ from publisher confirms?",
-          "pass": "Deduplicate replay and recover incomplete jobs.",
-          "defer": "Kafka without replay need"
-        },
-        {
-          "id": "production-docker-ci-and-cloud-staging",
-          "title": "Docker, CI and cloud staging",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            4,
-            5,
-            2
-          ],
-          "concepts": "Layers, non-root images, signals, CI artifacts, IAM, network boundaries and health checks.",
-          "exercise": "Deploy API and workers from CI artifacts on one cloud.",
-          "assessment": "Why does graceful drain matter?",
-          "pass": "Staging reproduces builds and handles backward-compatible migration.",
-          "defer": "Multiple clouds and Kubernetes"
-        },
-        {
-          "id": "production-opentelemetry-traces-and-metrics",
-          "title": "OpenTelemetry traces and metrics",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Context propagation, redacted structured logs, histograms and cardinality.",
-          "exercise": "Trace an API request across a queue and model call.",
-          "assessment": "Which metadata should never become a label?",
-          "pass": "Locate a bottleneck without private prompts in telemetry.",
-          "defer": "Operating a telemetry platform"
-        },
-        {
-          "id": "production-capacity-latency-and-cost",
-          "title": "Capacity, latency and cost",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            3,
-            4,
-            4,
-            2
-          ],
-          "concepts": "Traffic envelope, TTFT, p95, quotas, saturation, per-task cost and resource isolation.",
-          "exercise": "Model 10x load and run a noisy-neighbor test.",
-          "assessment": "When should a tenant get dedicated capacity?",
-          "pass": "State workload, bottlenecks, error rates and per-tenant behavior.",
-          "defer": "Sharding before evidence"
-        },
-        {
-          "id": "production-timeouts-retries-and-circuit-breakers",
-          "title": "Timeouts, retries and circuit breakers",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
+            1,
             2,
-            4,
-            4,
+            3,
             1
           ],
-          "concepts": "End-to-end deadlines, jitter, error categories, bulkheads, shedding and breaker state.",
-          "exercise": "Inject provider slowness and Redis failure.",
-          "assessment": "How do retries amplify an incident?",
-          "pass": "Bound retries and backlog while keeping authoritative data consistent.",
-          "defer": "Service mesh"
+          "concepts": "Treat prompts, documents and outputs as untrusted; identify data-exfiltration paths.",
+          "exercise": "Test malicious retrieved content and sensitive-data requests.",
+          "assessment": "Explain threat modeling and prompt injection using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         },
         {
-          "id": "production-slo-restore-and-rollback",
-          "title": "SLO, restore and rollback",
+          "id": "safety-34",
+          "title": "Authorized retrieval and tenant isolation",
           "priority": "P1",
-          "depth": 4,
+          "depth": 3,
           "hours": [
+            1,
+            2,
             3,
-            4,
-            5,
-            2
+            1
           ],
-          "concepts": "SLIs, error budgets, RTO/RPO, canaries, database restore and incident ownership.",
-          "exercise": "Rehearse bad release, restore and measured recovery.",
-          "assessment": "Can healthy uptime hide an AI quality outage?",
-          "pass": "Publish restore timing and check post-restore deletion rules.",
-          "defer": "Multi-region failover before need"
+          "concepts": "Apply authorization before retrieval and enforce it in data access.",
+          "exercise": "Prove cross-tenant denial with integration tests.",
+          "assessment": "Explain authorized retrieval and tenant isolation using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "safety-35",
+          "title": "Typed tools and human approval",
+          "priority": "P1",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Expose narrow typed APIs, validate arguments and keep writes reviewable.",
+          "exercise": "Build a read-only tool and a draft requiring authorized human approval.",
+          "assessment": "Explain typed tools and human approval using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "safety-36",
+          "title": "AI release evaluation",
+          "priority": "P1",
+          "depth": 3,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Version prompts/models, compare fixed cases and define regression thresholds.",
+          "exercise": "Create a release report and rollback rule for a prompt/provider change.",
+          "assessment": "Explain ai release evaluation using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         }
       ]
     },
     {
-      "id": "adaptation",
-      "title": "Model adaptation and serving",
-      "prerequisite": "Transformer fundamentals and versioned evaluation",
-      "objective": "Decide when model adaptation or self-hosting improves outcomes.",
-      "scenario": "A domain workflow needs output consistency on limited hardware.",
-      "progression": "Local inference → adapter comparison → optional GPU serving.",
-      "gate": "Compare quality, license, privacy, VRAM, cost and latency on one holdout.",
+      "id": "operations",
+      "title": "Production AI operations and observability",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in production ai operations and observability and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Follow requests across API, retrieval, provider and workers without excess sensitive content.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
       "resources": [
-        "Ollama",
-        "LoRA",
-        "QLoRA",
-        "vLLM"
+        "OpenTelemetry documentation",
+        "Google SRE books",
+        "Azure pricing calculator"
       ],
       "topics": [
         {
-          "id": "adaptation-open-weights-quantization-and-serving",
-          "title": "Open weights, quantization and serving",
-          "priority": "P2",
-          "depth": 3,
-          "hours": [
-            3,
-            4,
-            4,
-            1
-          ],
-          "concepts": "License, templates, weight/KV precision, GPU memory, continuous batching and vLLM.",
-          "exercise": "Compare local settings or a managed and local model.",
-          "assessment": "Why can batching hurt first-token latency?",
-          "pass": "Report quality, TTFT, throughput and peak VRAM.",
-          "defer": "Multi-node serving"
-        },
-        {
-          "id": "adaptation-fine-tuning-lora-and-qlora",
-          "title": "Fine-tuning, LoRA and QLoRA",
-          "priority": "P2",
-          "depth": 3,
-          "hours": [
-            3,
-            4,
-            5,
-            1
-          ],
-          "concepts": "SFT datasets, leakage, masked labels, low-rank updates and quantized bases.",
-          "exercise": "Prepare licensed examples and train one adapter if compute permits; compare memory separately.",
-          "assessment": "When is current knowledge better served by RAG?",
-          "pass": "Compare held-out quality and count trainable parameters.",
-          "defer": "Pretraining or kernel development"
-        }
-      ]
-    },
-    {
-      "id": "multimodal",
-      "title": "Multimodal document AI",
-      "prerequisite": "OCR, grounded RAG and held-out evaluation",
-      "objective": "Combine text, layout and vision with inspectable evidence.",
-      "scenario": "Scanned invoices contain difficult tables and uncertain totals.",
-      "progression": "OCR baseline → vision extraction → multimodal retrieval.",
-      "gate": "Measure field and page accuracy, show abstention and retain provenance.",
-      "resources": [
-        "Tesseract",
-        "Hugging Face LLM Course"
-      ],
-      "topics": [
-        {
-          "id": "multimodal-ocr-vision-and-multimodal-retrieval",
-          "title": "OCR, vision and multimodal retrieval",
-          "priority": "P2",
-          "depth": 3,
-          "hours": [
-            3,
-            4,
-            4,
-            1
-          ],
-          "concepts": "Image patch intuition, resolution, text/image embeddings, evidence regions and costs.",
-          "exercise": "Compare OCR and vision; add page/region retrieval for hard cases.",
-          "assessment": "When is text extraction enough?",
-          "pass": "Measure field accuracy and page recall and preserve coordinates.",
-          "defer": "Training vision backbones"
-        },
-        {
-          "id": "multimodal-media-lifecycle-and-validation",
-          "title": "Media lifecycle and validation",
+          "id": "operations-37",
+          "title": "Tracing and privacy-aware logs",
           "priority": "P1",
-          "depth": 3,
+          "depth": 4,
           "hours": [
+            1,
             2,
             3,
+            1
+          ],
+          "concepts": "Follow requests across API, retrieval, provider and workers without excess sensitive content.",
+          "exercise": "Add correlation and structured events; inspect a complete trace.",
+          "assessment": "Explain tracing and privacy-aware logs using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "operations-38",
+          "title": "Latency, capacity and resilience",
+          "priority": "P1",
+          "depth": 4,
+          "hours": [
+            1,
+            2,
             3,
             1
           ],
-          "concepts": "MIME, pixel limits, review status, retention and deterministic verification.",
-          "exercise": "Validate invoices and handle bounded media uploads.",
-          "assessment": "Which amounts can be verified deterministically?",
-          "pass": "Reject invalid media and route uncertain totals to review.",
-          "defer": "Streaming media systems"
+          "concepts": "Set deadlines, bulkheads and indicators; bound retries and concurrency.",
+          "exercise": "Load-test a stated workload; report p95, errors and constraints.",
+          "assessment": "Explain latency, capacity and resilience using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "operations-39",
+          "title": "Cost, caching and model routing",
+          "priority": "P1",
+          "depth": 4,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Measure cost drivers and use caching/routing only when quality/privacy remain acceptable.",
+          "exercise": "Compare a cost-control change against baseline and quality.",
+          "assessment": "Explain cost, caching and model routing using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "operations-40",
+          "title": "Recovery and incident ownership",
+          "priority": "P1",
+          "depth": 4,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Practice rollback, restore, escalation, communication and follow-up.",
+          "exercise": "Run a failure game day and publish recovery evidence.",
+          "assessment": "Explain recovery and incident ownership using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         }
       ]
     },
     {
       "id": "senior",
-      "title": "System design and senior ownership",
-      "prerequisite": "Enterprise RAG and cloud staging",
-      "objective": "Set measurable standards, own trade-offs and grow other engineers.",
-      "scenario": "A large tenant needs isolation while the service has a tight cost budget.",
-      "progression": "Architecture review → capstone drill → real cross-team leadership.",
-      "gate": "Defend a measured decision and gather independent operational review.",
+      "title": "Senior ownership, interviews and remote applications",
+      "prerequisite": "Use existing professional backend experience; identify unknowns with a short diagnostic.",
+      "objective": "Build senior-level evidence in senior ownership, interviews and remote applications and apply it to work or a reviewable portfolio increment.",
+      "scenario": "Lead a review, surface alternatives and plan safe migration with rollback.",
+      "progression": "Add evidence to a case study and use the example in senior interviews.",
+      "gate": "Show an artifact, explain the decision and limitations, and describe how the result would be operated or reviewed.",
       "resources": [
-        "Google SRE books",
-        "OpenTelemetry"
+        "GitHub profile",
+        "LinkedIn profile",
+        "LeetCode",
+        "BBC Learning English"
       ],
       "topics": [
         {
-          "id": "senior-system-design-and-migrations",
-          "title": "System design and migrations",
+          "id": "senior-41",
+          "title": "Architecture review and migration",
           "priority": "P1",
           "depth": 4,
-          "hours": [
-            3,
-            4,
-            5,
-            2
-          ],
-          "concepts": "Modular boundaries, staged migrations, dual reads, dependency isolation and cost models.",
-          "exercise": "Design and review an embedding cutover with a rollback exercise.",
-          "assessment": "What evidence would justify splitting API and worker further?",
-          "pass": "Demonstrate cutover consistency and document scaling limits.",
-          "defer": "Microservices as default"
-        },
-        {
-          "id": "senior-architecture-review-and-standards",
-          "title": "Architecture review and standards",
-          "priority": "P2",
-          "depth": 5,
-          "hours": [
-            3,
-            4,
-            5,
-            2
-          ],
-          "concepts": "ADRs, quality gates, budgets, owner assignment and operational feedback.",
-          "exercise": "Lead review, write two ADRs and run a game day.",
-          "assessment": "What new evidence would make you retire a standard?",
-          "pass": "Independent review, peer adoption and follow-up decision evidence.",
-          "defer": "Claiming seniority from a demo"
-        },
-        {
-          "id": "senior-mentoring-and-communication",
-          "title": "Mentoring and communication",
-          "priority": "P2",
-          "depth": 5,
-          "hours": [
-            2,
-            4,
-            4,
-            2
-          ],
-          "concepts": "Teach debugging, review trade-offs and communicate scope to stakeholders.",
-          "exercise": "Mentor a peer through a delivery problem and request feedback.",
-          "assessment": "How did you verify the person could repeat the reasoning?",
-          "pass": "Peer independently applies the method and gives attributable feedback.",
-          "defer": "Measuring mentoring by advice volume"
-        }
-      ]
-    },
-    {
-      "id": "remote",
-      "title": "Remote AI career preparation",
-      "prerequisite": "One independently delivered portfolio project",
-      "objective": "Turn practical AI ability and enterprise experience into role-specific proof.",
-      "scenario": "An asynchronous international hiring loop evaluates written and spoken judgment.",
-      "progression": "Role mapping → technical mocks → applications and feedback.",
-      "gate": "Complete two mocks and tie each public claim to verifiable evidence.",
-      "resources": [
-        "Python Tutorial",
-        "PostgreSQL",
-        "Google SRE books"
-      ],
-      "topics": [
-        {
-          "id": "remote-python-and-sql-interviews",
-          "title": "Python and SQL interviews",
-          "priority": "P0",
-          "depth": 3,
-          "hours": [
-            2,
-            6,
-            2,
-            2
-          ],
-          "concepts": "Complexity, streaming, joins, windows, query plans and cancellation.",
-          "exercise": "Run timed unfamiliar coding and SQL prompts.",
-          "assessment": "Why did this index help?",
-          "pass": "Explain edge cases, complexity and measured plan changes.",
-          "defer": "Competitive programming grind"
-        },
-        {
-          "id": "remote-ai-design-and-english-communication",
-          "title": "AI design and English communication",
-          "priority": "P1",
-          "depth": 4,
-          "hours": [
-            2,
-            6,
-            3,
-            2
-          ],
-          "concepts": "Evaluation, safety, SLOs, trade-offs, evidence and concise asynchronous updates.",
-          "exercise": "Record 90-second introduction, design review and incident story.",
-          "assessment": "Which experiment would change your recommendation?",
-          "pass": "Two independent mocks and a focused retest.",
-          "defer": "Memorized architecture scripts"
-        },
-        {
-          "id": "remote-remote-role-analysis-and-portfolio",
-          "title": "Remote role analysis and portfolio",
-          "priority": "P1",
-          "depth": 3,
-          "hours": [
-            2,
-            3,
-            3,
-            1
-          ],
-          "concepts": "Role evidence, Bangladesh eligibility, UTC overlap, case studies and transparent claims.",
-          "exercise": "Tailor two applications and record three proof links per role.",
-          "assessment": "Which claim is strongest and how can a reviewer verify it?",
-          "pass": "Each target has eligibility source, next action and evidence.",
-          "defer": "Certificate collection"
-        },
-        {
-          "id": "remote-remote-application-feedback-loop",
-          "title": "Remote application feedback loop",
-          "priority": "P1",
-          "depth": 3,
           "hours": [
             1,
-            3,
             2,
+            3,
             1
           ],
-          "concepts": "Pipeline stages, follow-up, written communication and feedback patterns.",
-          "exercise": "Log opportunities, mock feedback and a revision action.",
-          "assessment": "What distinguishes a repeated skills gap from poor role fit?",
-          "pass": "Review pipeline after two weeks and update target roles from evidence.",
-          "defer": "Automated bulk application"
+          "concepts": "Lead a review, surface alternatives and plan safe migration with rollback.",
+          "exercise": "Defend an ADR and migration plan to a peer; record feedback.",
+          "assessment": "Explain architecture review and migration using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "senior-42",
+          "title": "Mentoring and cross-team communication",
+          "priority": "P1",
+          "depth": 4,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Give actionable feedback, teach debugging and communicate risks asynchronously.",
+          "exercise": "Complete a peer review/mentoring exercise and capture attributable feedback.",
+          "assessment": "Explain mentoring and cross-team communication using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "senior-43",
+          "title": "Senior interview practice",
+          "priority": "P1",
+          "depth": 4,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Explain coding, SQL, system design, AI safety, incidents and leadership examples.",
+          "exercise": "Complete two mock interviews and retest weak areas.",
+          "assessment": "Explain senior interview practice using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
+        },
+        {
+          "id": "senior-44",
+          "title": "Qualified applications and feedback",
+          "priority": "P1",
+          "depth": 4,
+          "hours": [
+            1,
+            2,
+            3,
+            1
+          ],
+          "concepts": "Target senior scope, verify Bangladesh eligibility/overlap and tailor evidence.",
+          "exercise": "Submit tailored applications and turn responses into next actions.",
+          "assessment": "Explain qualified applications and feedback using your implementation. What alternatives did you consider, what can fail and what evidence supports your decision?",
+          "pass": "Working implementation or documented professional example, meaningful verification, and a concise explanation of decisions and limitations.",
+          "defer": "Optional tools and advanced variants not required by target roles; add only when job evidence or project needs justify them."
         }
       ]
     }

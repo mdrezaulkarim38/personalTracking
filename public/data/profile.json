@@ -1,22 +1,24 @@
 {
-  "name": "Remote AI Engineer Career Guide",
-  "location": "Bangladesh",
-  "background": "3+ years with C#, ASP.NET Core, APIs, PostgreSQL fundamentals, SQL Server, React, enterprise ERP/CRM and early LLM/RAG integration.",
-  "pythonStatus": "Beginner, primary learning track",
-  "careerDirection": "Enterprise .NET backend engineer moving into remote Python and Applied AI engineering.",
-  "goal": "Qualify for remote AI backend and Applied AI roles, then grow into senior ownership through reliable production delivery.",
+  "name": "Senior Remote .NET + AI Engineering Career System",
+  "learner": "Md. Rezaul Karim",
+  "location": "Dhaka, Bangladesh",
+  "background": "Software engineer with professional C#, ASP.NET Core, SQL Server, React/Angular and ERP, CRM, inventory, insurance and accounting experience; portfolio projects use Semantic Kernel, Ollama, SSE and resilience patterns.",
+  "careerDirection": "Senior remote backend or AI engineering role, specializing in reliable .NET AI integration for business software.",
+  "goal": "Demonstrate senior technical judgment, end-to-end ownership, operational responsibility, mentoring and clear remote communication while applying to eligible international roles.",
   "targetRoles": [
-    "AI Backend Engineer",
-    "Applied AI Engineer",
-    "AI Engineer",
-    "Python AI Engineer",
-    "LLM Engineer",
-    "RAG Engineer",
-    "Generative AI Engineer",
-    "Senior AI Engineer"
+    "Senior .NET Backend Engineer",
+    "Senior ASP.NET Core Developer",
+    "Senior Backend Software Engineer (C#/.NET)",
+    "Senior AI Integration Engineer",
+    "Senior Applied AI Engineer",
+    "Senior AI Backend Engineer",
+    "Senior LLM Application Engineer",
+    "Senior RAG Engineer"
   ],
-  "dailyTargetMinutes": 240,
+  "primaryStack": "C#, ASP.NET Core, SQL Server, EF Core/Dapper, Semantic Kernel, Microsoft.Extensions.AI, Ollama, Docker and cloud fundamentals",
+  "supportingStack": "Python for data/evaluation work and vacancies that explicitly require it",
+  "weeklyHours": "12–20 flexible hours",
   "journeyWeeks": 44,
-  "curriculumVersion": 5,
-  "primaryStack": "Python, FastAPI, PostgreSQL and pgvector"
+  "curriculumVersion": 7,
+  "principle": "Build on demonstrated backend strengths; prove senior ownership and dependable AI delivery with inspectable evidence. Apply before the roadmap is finished."
 }

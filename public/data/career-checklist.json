@@ -1,69 +1,84 @@
 {
   "items": [
     {
-      "id": "remote-readiness-1",
-      "label": "Confirm remote eligibility",
-      "detail": "Record an employer source for Bangladesh or confirmed contractor eligibility."
+      "id": "dates",
+      "label": "Verify CV chronology and current status",
+      "detail": "Confirm each role date/title and project claim. Resolve Chainomation start date listed as December 2026–Present relative to 25 November 2026."
     },
     {
-      "id": "remote-readiness-2",
-      "label": "Verify time overlap",
-      "detail": "Convert expected working hours into UTC and Asia/Dhaka and confirm expectations."
+      "id": "proof",
+      "label": "Create a senior claim-to-proof matrix",
+      "detail": "Map system design, ownership, delivery, operations and collaboration to attributable evidence."
     },
     {
-      "id": "remote-readiness-3",
-      "label": "Ship a Python backend service",
-      "detail": "Share tests, migrations, API contract and a clean staging run."
+      "id": "chatbot",
+      "label": "Polish Smart FAQ Chatbot case study",
+      "detail": "Verify repository behavior; publish setup, architecture, demo, tests, failure behavior and limitations."
     },
     {
-      "id": "remote-readiness-4",
-      "label": "Publish the enterprise RAG case study",
-      "detail": "Report retrieval and answer quality, permission tests, release criteria and known limits."
+      "id": "summarizer",
+      "label": "Polish AI Text Summarizer case study",
+      "detail": "Document actual behavior and measure with stated conditions."
     },
     {
-      "id": "remote-readiness-5",
-      "label": "Publish production evidence",
-      "detail": "Include traces, load envelope, cost, recovery and current security boundaries."
+      "id": "capstone",
+      "label": "Ship one measured business AI workflow",
+      "detail": "Use authorized APIs and grounded sources; test permissions, evaluation, safe failure and cost/latency."
     },
     {
-      "id": "remote-readiness-6",
-      "label": "Prepare the .NET transition story",
-      "detail": "Use one concrete ERP or transaction example, then show its Python or AI equivalent."
+      "id": "deploy",
+      "label": "Demonstrate reproducible deployment",
+      "detail": "Provide CI, safe configuration, budget assumptions, health checks and rollback/runbook."
     },
     {
-      "id": "remote-readiness-7",
-      "label": "Write a role-specific resume",
-      "detail": "Map three job requirements to verified work or clearly labeled portfolio evidence."
+      "id": "design",
+      "label": "Prepare architecture and migration examples",
+      "detail": "Explain constraints, alternatives, decision, rollout, recovery and evidence."
     },
     {
-      "id": "remote-readiness-8",
-      "label": "Record an English introduction",
-      "detail": "Explain your contribution, outcomes and next role in 90 seconds."
+      "id": "operations",
+      "label": "Prepare operational ownership examples",
+      "detail": "Document observability, failure handling and follow-up without overstating scope."
     },
     {
-      "id": "remote-readiness-9",
-      "label": "Complete two independent mocks",
-      "detail": "Cover Python, SQL, RAG, security, system design and operational ownership."
+      "id": "collaboration",
+      "label": "Gather real collaboration evidence",
+      "detail": "Use attributable peer review, mentoring, knowledge sharing or cross-team examples."
     },
     {
-      "id": "remote-readiness-10",
-      "label": "Attach an asynchronous handoff",
-      "detail": "Write a concise design decision and a production incident summary for remote review."
+      "id": "mocks",
+      "label": "Complete two senior-role mock interviews",
+      "detail": "Cover C#, SQL, design, AI safety/evaluation, incidents, leadership and clear explanations."
     },
     {
-      "id": "remote-readiness-11",
-      "label": "Build a remote application pipeline",
-      "detail": "Save qualified roles, proof links, feedback and next follow-up dates."
+      "id": "eligibility",
+      "label": "Verify Bangladesh hiring eligibility",
+      "detail": "Save employer evidence; distinguish employee, contractor and location restrictions."
     },
     {
-      "id": "remote-readiness-12",
-      "label": "Review application outcomes",
-      "detail": "Use recurring feedback to revise the study plan and portfolio."
+      "id": "overlap",
+      "label": "Check time-zone overlap",
+      "detail": "Record UTC hours and Dhaka conversion; confirm unclear requirements."
     },
     {
-      "id": "remote-readiness-13",
-      "label": "Collect senior ownership evidence",
-      "detail": "Demonstrate outcomes over releases, repeatable mentoring and operational decision ownership."
+      "id": "apps",
+      "label": "Maintain tailored senior applications",
+      "detail": "Map requirements to proof; save CV version, status, follow-up and feedback."
+    },
+    {
+      "id": "feedback",
+      "label": "Review outcomes monthly",
+      "detail": "Use response/interview patterns to revise targeting, proof and learning priorities."
+    },
+    {
+      "id": "english",
+      "label": "Practice asynchronous English",
+      "detail": "Write updates/design notes and record a concise project explanation weekly."
+    },
+    {
+      "id": "security",
+      "label": "Review AI privacy and authorization",
+      "detail": "Test tenant isolation, prompt injection, log minimization and approval for consequential writes."
     }
   ]
 }

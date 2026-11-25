@@ -1,61 +1,82 @@
 {
   "categories": [
     {
-      "name": "Python engineering",
+      "name": "Primary backend — build on your advantage",
       "items": [
         [
-          "Python and uv",
-          "Lock a repeatable environment and package typed API/worker code. L3."
+          "C# and ASP.NET Core",
+          "Deepen async, cancellation, API contracts, authorization, validation, integration tests and operations. Primary stack."
         ],
         [
-          "pytest, Ruff and Pyright",
-          "Use integration tests, linting and static type checking. L3."
+          "SQL Server, EF Core and Dapper",
+          "Show schema, transaction, indexing and query-plan judgment using business workflows."
         ],
         [
-          "FastAPI and Pydantic",
-          "ASGI service and validated boundaries. L3, L4 for auth and streaming."
+          "Architecture and senior ownership",
+          "Make trade-offs explicit; lead safe delivery, migration and review with evidence."
         ]
       ]
     },
     {
-      "name": "AI and retrieval",
+      "name": "Production AI engineering",
       "items": [
         [
-          "NumPy, scikit-learn and PyTorch",
-          "Compute baselines, evaluate models and inspect tensors. L3."
+          "Semantic Kernel and Microsoft.Extensions.AI",
+          "Integrate models behind clear .NET boundaries; use abstractions when they reduce real coupling."
         ],
         [
-          "PostgreSQL and pgvector",
-          "Use transactions and metadata constraints beside evaluated vector search. L4."
+          "Ollama and hosted models",
+          "Compare quality, latency, privacy, cost and operations; local inference still has hardware costs."
         ],
         [
-          "Provider SDK and Ollama",
-          "Choose managed inference or local experiments based on measured constraints. L3."
+          "RAG, evaluation and safety",
+          "Ground answers in permission-filtered sources; test retrieval, abstention, injection and output validation."
         ],
         [
-          "vLLM and PEFT",
-          "Optional model serving or adaptation after confirming a real need. L3 specialization."
+          "Tool use and human review",
+          "Expose narrow APIs; keep permissions/business rules deterministic; review consequential writes."
         ]
       ]
     },
     {
-      "name": "Production",
+      "name": "Delivery and operations",
       "items": [
         [
-          "RabbitMQ and Redis",
-          "Use a durable queue for jobs and bounded caching/quotas for latency. L4."
+          "Docker and CI/CD",
+          "Make setup reproducible and automate build/quality checks."
         ],
         [
-          "Docker, GitHub Actions and Azure",
-          "Deliver one quality-gated deployment and practice rollback. L3–L4."
+          "Azure and cloud fundamentals",
+          "Understand identity, networking, deployment, monitoring, budgets and cleanup."
         ],
         [
-          "OpenTelemetry",
-          "Trace requests across APIs, jobs and models without leaking prompts. L4."
+          "Serilog, health checks and OpenTelemetry",
+          "Correlate API/provider/worker behavior while minimizing sensitive prompt logging."
         ],
         [
-          "MCP and ASP.NET Core",
-          "Integrate read-only tools or existing enterprise systems through explicit contracts. MCP L3."
+          "Reliability and cost",
+          "Bound timeouts, concurrency and retries; measure latency, errors, usage and recovery."
+        ]
+      ]
+    },
+    {
+      "name": "Supporting remote-role skills",
+      "items": [
+        [
+          "Python fundamentals",
+          "Support data/evaluation work and roles that require Python; retain .NET as lead specialization."
+        ],
+        [
+          "English and async collaboration",
+          "Practice clear updates, design notes, incident summaries and explanations."
+        ],
+        [
+          "Interview coding and system design",
+          "Practice C#, SQL and design; explain assumptions, complexity and alternatives."
+        ],
+        [
+          "AI fundamentals",
+          "Learn tokens, embeddings, retrieval and evaluation through experiments."
         ]
       ]
     }

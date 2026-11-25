@@ -1,220 +1,184 @@
 {
   "resources": [
     {
-      "name": "Python Tutorial",
-      "category": "Python",
-      "url": "https://docs.python.org/3/tutorial/",
-      "description": "Language fundamentals for experienced programmers."
-    },
-    {
-      "name": "asyncio",
-      "category": "Python",
-      "url": "https://docs.python.org/3/library/asyncio.html",
-      "description": "Async tasks, cancellation and lifetime."
-    },
-    {
-      "name": "PyPA",
-      "category": "Python",
-      "url": "https://packaging.python.org/",
-      "description": "Python project metadata, packaging and distributions."
-    },
-    {
-      "name": "pytest",
-      "category": "Python",
-      "url": "https://docs.pytest.org/",
-      "description": "Fixtures and parametrized testing."
-    },
-    {
-      "name": "Ruff",
-      "category": "Python",
-      "url": "https://docs.astral.sh/ruff/",
-      "description": "Linting and formatting."
-    },
-    {
-      "name": "ISLP",
-      "category": "Machine learning",
-      "url": "https://www.statlearning.com/",
-      "description": "Free applied statistics and Python ML labs."
-    },
-    {
-      "name": "scikit-learn",
-      "category": "Machine learning",
-      "url": "https://scikit-learn.org/stable/user_guide.html",
-      "description": "Pipelines, metrics and validation."
-    },
-    {
-      "name": "NumPy",
-      "category": "Machine learning",
-      "url": "https://numpy.org/doc/stable/",
-      "description": "Arrays, broadcasting and linear algebra."
-    },
-    {
-      "name": "PyTorch",
-      "category": "Models",
-      "url": "https://docs.pytorch.org/tutorials/",
-      "description": "Autograd, tensors and small model training."
-    },
-    {
-      "name": "Hugging Face LLM Course",
-      "category": "Models",
-      "url": "https://huggingface.co/learn/llm-course/",
-      "description": "Free tokenizer and transformer course."
-    },
-    {
-      "name": "Attention Is All You Need",
-      "category": "Research",
-      "url": "https://arxiv.org/abs/1706.03762",
-      "description": "Original transformer architecture."
-    },
-    {
-      "name": "FastAPI",
+      "name": "Microsoft .NET documentation",
       "category": "Backend",
-      "url": "https://fastapi.tiangolo.com/tutorial/",
-      "description": "Models, dependencies, testing and deployment."
+      "description": "C#, runtime and framework documentation.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/"
     },
     {
-      "name": "PostgreSQL",
+      "name": "ASP.NET Core documentation",
       "category": "Backend",
-      "url": "https://www.postgresql.org/docs/current/",
-      "description": "Query plans, isolation, indexes, row policies and FTS."
+      "description": "Official API, security, hosting and testing guides.",
+      "url": "https://learn.microsoft.com/en-us/aspnet/core/"
     },
     {
-      "name": "SQLAlchemy",
+      "name": "C# documentation",
       "category": "Backend",
-      "url": "https://docs.sqlalchemy.org/",
-      "description": "Sessions, pooling and SQL execution."
+      "description": "Language reference and practical guides.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/csharp/"
     },
     {
-      "name": "Pydantic",
-      "category": "Backend",
-      "url": "https://docs.pydantic.dev/",
-      "description": "Typed validation and serialization."
+      "name": "EF Core documentation",
+      "category": "Data",
+      "description": "Modeling, queries, performance and migrations.",
+      "url": "https://learn.microsoft.com/en-us/ef/core/"
+    },
+    {
+      "name": "SQL Server documentation",
+      "category": "Data",
+      "description": "Database engine, query performance and operations.",
+      "url": "https://learn.microsoft.com/en-us/sql/"
+    },
+    {
+      "name": "Microsoft Learn: .NET AI",
+      "category": "AI engineering",
+      "description": ".NET AI integration concepts and libraries.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/ai/"
+    },
+    {
+      "name": "Semantic Kernel documentation",
+      "category": "AI engineering",
+      "description": "Plugins, orchestration and model integration.",
+      "url": "https://learn.microsoft.com/en-us/semantic-kernel/"
+    },
+    {
+      "name": "Microsoft.Extensions.AI",
+      "category": "AI engineering",
+      "description": "Common abstractions for integrating AI services.",
+      "url": "https://learn.microsoft.com/en-us/dotnet/ai/microsoft-extensions-ai"
+    },
+    {
+      "name": "Ollama documentation",
+      "category": "AI engineering",
+      "description": "Local model setup and API reference.",
+      "url": "https://docs.ollama.com/"
+    },
+    {
+      "name": "OWASP Top 10 for LLM Applications",
+      "category": "Security",
+      "description": "Threats and mitigations for LLM applications.",
+      "url": "https://owasp.org/www-project-top-10-for-large-language-model-applications/"
+    },
+    {
+      "name": "Microsoft Responsible AI",
+      "category": "AI engineering",
+      "description": "Fairness, privacy, transparency and accountable AI design.",
+      "url": "https://www.microsoft.com/en-us/ai/responsible-ai"
+    },
+    {
+      "name": "OpenTelemetry documentation",
+      "category": "Operations",
+      "description": "Vendor-neutral traces, metrics and logs.",
+      "url": "https://opentelemetry.io/docs/"
+    },
+    {
+      "name": "Docker documentation",
+      "category": "Delivery",
+      "description": "Container images and Compose.",
+      "url": "https://docs.docker.com/"
+    },
+    {
+      "name": "GitHub Actions documentation",
+      "category": "Delivery",
+      "description": "Build and deployment automation.",
+      "url": "https://docs.github.com/en/actions"
+    },
+    {
+      "name": "Azure Architecture Center",
+      "category": "Cloud",
+      "description": "Cloud design patterns and architecture.",
+      "url": "https://learn.microsoft.com/en-us/azure/architecture/"
+    },
+    {
+      "name": "Azure pricing calculator",
+      "category": "Cloud",
+      "description": "Estimate costs before deployment.",
+      "url": "https://azure.microsoft.com/en-us/pricing/calculator/"
+    },
+    {
+      "name": "PostgreSQL documentation",
+      "category": "Supporting skills",
+      "description": "Relational database reference for cross-stack roles.",
+      "url": "https://www.postgresql.org/docs/"
     },
     {
       "name": "pgvector",
-      "category": "Retrieval",
-      "url": "https://github.com/pgvector/pgvector",
-      "description": "Exact and approximate PostgreSQL vector search."
+      "category": "AI engineering",
+      "description": "Vector similarity search for PostgreSQL.",
+      "url": "https://github.com/pgvector/pgvector"
     },
     {
-      "name": "Sentence Transformers",
-      "category": "Retrieval",
-      "url": "https://www.sbert.net/",
-      "description": "Bi-encoders and cross-encoders."
+      "name": "Qdrant documentation",
+      "category": "AI engineering",
+      "description": "Vector search concepts and product docs.",
+      "url": "https://qdrant.tech/documentation/"
     },
     {
-      "name": "RAG paper",
-      "category": "Research",
-      "url": "https://arxiv.org/abs/2005.11401",
-      "description": "Original retrieval-augmented generation paper."
-    },
-    {
-      "name": "Tesseract",
-      "category": "Documents",
-      "url": "https://tesseract-ocr.github.io/tessdoc/",
-      "description": "OCR documentation and configuration."
-    },
-    {
-      "name": "OpenAI API documentation",
-      "category": "Models",
-      "url": "https://platform.openai.com/docs/",
-      "description": "Hosted model interface and structured outputs."
-    },
-    {
-      "name": "Ollama",
-      "category": "Models",
-      "url": "https://docs.ollama.com/",
-      "description": "Local model experimentation."
-    },
-    {
-      "name": "LoRA",
-      "category": "Research",
-      "url": "https://arxiv.org/abs/2106.09685",
-      "description": "Low-rank model adaptation."
-    },
-    {
-      "name": "QLoRA",
-      "category": "Research",
-      "url": "https://arxiv.org/abs/2305.14314",
-      "description": "Adapter training over quantized weights."
-    },
-    {
-      "name": "vLLM",
-      "category": "Models",
-      "url": "https://docs.vllm.ai/",
-      "description": "Serving and inference benchmarking."
-    },
-    {
-      "name": "MCP",
-      "category": "Tool integration",
-      "url": "https://modelcontextprotocol.io/specification",
-      "description": "Protocol primitives and tool interfaces."
-    },
-    {
-      "name": "OWASP GenAI",
-      "category": "Security",
-      "url": "https://genai.owasp.org/llm-top-10/",
-      "description": "Risk categories and defensive principles."
-    },
-    {
-      "name": "Redis",
-      "category": "Operations",
-      "url": "https://redis.io/docs/latest/",
-      "description": "Cache structures, expiration and persistence."
-    },
-    {
-      "name": "RabbitMQ",
-      "category": "Operations",
-      "url": "https://www.rabbitmq.com/docs",
-      "description": "Queue semantics and reliability."
-    },
-    {
-      "name": "Docker",
-      "category": "Operations",
-      "url": "https://docs.docker.com/",
-      "description": "Images, builds and containers."
-    },
-    {
-      "name": "GitHub Actions",
-      "category": "Operations",
-      "url": "https://docs.github.com/en/actions",
-      "description": "Reproducible CI and deployment."
-    },
-    {
-      "name": "Azure Container Apps",
-      "category": "Operations",
-      "url": "https://learn.microsoft.com/en-us/azure/container-apps/",
-      "description": "One option for managed staging."
-    },
-    {
-      "name": "OpenTelemetry",
-      "category": "Operations",
-      "url": "https://opentelemetry.io/docs/",
-      "description": "Observability and context propagation."
+      "name": "Python tutorial",
+      "category": "Supporting skills",
+      "description": "Python basics for targeted supplementary work.",
+      "url": "https://docs.python.org/3/tutorial/"
     },
     {
       "name": "Google SRE books",
       "category": "Operations",
-      "url": "https://sre.google/books/",
-      "description": "Free reliability and operational practice books."
+      "description": "Reliability, monitoring and incident response.",
+      "url": "https://sre.google/books/"
     },
     {
-      "name": "Fluent Python",
-      "category": "Paid books",
-      "url": "https://www.oreilly.com/library/view/fluent-python-2nd/9781492056348/",
-      "description": "Optional deeper Python data model reading."
+      "name": "BBC Learning English",
+      "category": "Communication",
+      "description": "Listening, vocabulary and practical English.",
+      "url": "https://www.bbc.co.uk/learningenglish"
     },
     {
-      "name": "Designing Data-Intensive Applications",
-      "category": "Paid books",
-      "url": "https://dataintensive.net/",
-      "description": "Optional distributed systems reference."
+      "name": "British Council LearnEnglish",
+      "category": "Communication",
+      "description": "Structured English practice.",
+      "url": "https://learnenglish.britishcouncil.org/"
     },
     {
-      "name": "AI Engineering",
-      "category": "Paid books",
-      "url": "https://www.oreilly.com/library/view/ai-engineering/9781098166298/",
-      "description": "Optional production AI systems reference."
+      "name": "GitHub profile",
+      "category": "Portfolio",
+      "description": "Publish code and reviewable project evidence.",
+      "url": "https://github.com/mdrezaulkarim38"
+    },
+    {
+      "name": "LinkedIn profile",
+      "category": "Career",
+      "description": "Professional profile and networking.",
+      "url": "https://www.linkedin.com/in/mdrezaulkarim38/"
+    },
+    {
+      "name": "LeetCode",
+      "category": "Interview practice",
+      "description": "Timed coding interview practice.",
+      "url": "https://leetcode.com/supermanshuvo/"
+    },
+    {
+      "name": "Smart FAQ Chatbot repository",
+      "category": "Portfolio evidence",
+      "description": "Existing personal project repository. Verify the current implementation and README before using it as evidence.",
+      "url": "https://github.com/mdrezaulkarim38/smart-faq-chatbot"
+    },
+    {
+      "name": "AI Text Summarizer repository",
+      "category": "Portfolio evidence",
+      "description": "Existing personal project repository. Verify the current implementation and README before using it as evidence.",
+      "url": "https://github.com/mdrezaulkarim38/ai-text-summarizer"
+    },
+    {
+      "name": "ERP for SME live demo",
+      "category": "Portfolio evidence",
+      "description": "Business software demo listed in the resume and specialization notes.",
+      "url": "https://shohug-enterprise.web.app"
+    },
+    {
+      "name": "Bill Tracker repository",
+      "category": "Portfolio evidence",
+      "description": "Existing billing and payment tracking project listed in the resume.",
+      "url": "https://github.com/mdrezaulkarim38/BillTracker"
     }
   ]
 }

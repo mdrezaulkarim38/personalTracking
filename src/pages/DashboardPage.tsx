@@ -1,4 +1,4 @@
-import { ArrowRight, BookOpen, BriefcaseBusiness, FolderKanban } from 'lucide-react';
+import { ArrowRight, CircleCheck, FolderKanban, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useCareer } from '../app/ProgressContext';
 import { Card, PageHeading, ProgressBar } from '../components/common/UI';
@@ -6,49 +6,38 @@ import { progressTotals } from '../services/storage/storageService';
 
 export function DashboardPage() {
   const { data, progress } = useCareer();
-  const stats = progressTotals(progress, data);
-  const nextTopic = data.syllabus.stages.flatMap(stage => stage.topics)
-    .find(topic => progress.topics[topic.id]?.status !== 'Completed');
-  const nextProject = data.projects.projects.find(project =>
-    !progress.projects[project.id]?.done.includes(project.milestones.at(-1)?.id ?? '')
+  const totals = progressTotals(progress, data);
+  const weeks = data.roadmap.phases.flatMap(phase => phase.weeks);
+  const nextWeek = weeks.find(week => week.tasks.some(task => !progress.roadmap[task.id]));
+  const nextTask = nextWeek?.tasks.find(task => !progress.roadmap[task.id]);
+  const openProject = data.projects.projects.find(project =>
+    project.milestones.some(milestone => !progress.projects[project.id]?.done.includes(milestone.id))
   );
 
   return <>
-    <PageHeading
-      eyebrow="Your learning workspace"
-      title="Build your next AI engineering skill"
-      description="Follow one topic at a time, build practical projects, and prepare for remote roles."
-    />
-
-    <Card className="welcome-card">
-      <span className="eyebrow">YOUR NEXT TOPIC</span>
-      <h2>{nextTopic?.title ?? 'Review your portfolio and interview readiness'}</h2>
-      <p>{nextTopic?.concepts ?? 'Your learning topics are complete. Check your project evidence and remote applications.'}</p>
-      <div className="welcome-actions">
-        <Link className="button primary" to={nextTopic ? '/syllabus' : '/projects'}>
-          {nextTopic ? 'Start learning' : 'Review projects'} <ArrowRight size={15}/>
-        </Link>
-        <Link className="button secondary" to="/remote">Remote job tracker</Link>
-      </div>
-    </Card>
-
-    <div className="simple-dashboard-grid">
-      <Card>
-        <BookOpen size={20}/><h2>Learning progress</h2>
-        <p>{stats.completed} of {stats.total} practical exercises complete</p>
-        <ProgressBar value={stats.percent}/>
-        <Link className="text-link" to="/roadmap">View learning path <ArrowRight size={15}/></Link>
+    <PageHeading eyebrow="Your workspace" title="One step at a time" description="Build your .NET and AI evidence, then use it to pursue roles that fit your experience."/>
+    <section className="career-hero simple-hero"><div className="career-hero-copy">
+      <span className="career-hero-kicker"><Sparkles size={14}/> YOUR DIRECTION</span>
+      <h2>Senior .NET engineering.<br/><em>Useful AI in business software.</em></h2>
+      <p>Start with the next task below. Your learning path holds the guidance and references; Projects holds the work you can show.</p>
+    </div></section>
+    <Card className="learning-progress-card"><div className="learning-progress-head"><div><span className="eyebrow">LEARNING PROGRESS</span><h2>{totals.percent}% complete</h2><p>{totals.completed} of {totals.total} roadmap tasks completed</p></div><strong>{totals.remaining} left</strong></div><ProgressBar value={totals.percent} label="Overall learning path progress"/></Card>
+    <section className="simple-dashboard-grid">
+      <Card className="next-action-card">
+        <div className="dashboard-section-label"><span className="section-pulse"/> NEXT TASK</div>
+        {nextWeek && nextTask ? <>
+          <div className="next-action-week">WEEK {String(nextWeek.week).padStart(2,'0')} · {nextWeek.title}</div>
+          <h2>{nextTask.text}</h2>
+          <div className="daily-flow"><span><strong>Learn</strong> {nextWeek.learningGuide.steps[0]}</span><span><strong>Do</strong> {nextWeek.learningGuide.practice}</span><span><strong>Save</strong> {nextWeek.deliverable}</span></div>
+          <Link className="text-link" to="/roadmap">Open learning path <ArrowRight size={15}/></Link>
+        </> : <><h2>Your roadmap tasks are complete</h2><p>Review your project evidence and choose your next application.</p></>}
       </Card>
-      <Card>
-        <FolderKanban size={20}/><h2>Build a project</h2>
-        <p>{nextProject?.name ?? 'Review your completed projects'}</p>
+      <Card className="portfolio-nudge"><div className="bottom-card-icon"><FolderKanban size={18}/></div><span className="eyebrow">PROJECT WORK</span>
+        <h2>{openProject?.name ?? 'Review your portfolio'}</h2>
+        <p>Keep each milestone and its proof together. Show what you built, measured, and learned.</p>
         <Link className="text-link" to="/projects">Open projects <ArrowRight size={15}/></Link>
       </Card>
-      <Card>
-        <BriefcaseBusiness size={20}/><h2>Prepare for remote work</h2>
-        <p>Track role eligibility, working-hour overlap, applications, and follow-ups.</p>
-        <Link className="text-link" to="/remote">Open job tracker <ArrowRight size={15}/></Link>
-      </Card>
-    </div>
+    </section>
+    <p className="dashboard-footnote"><CircleCheck size={14}/> Apply for roles whenever your real experience and project evidence match the posting.</p>
   </>;
 }

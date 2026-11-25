@@ -1,50 +1,50 @@
 {
   "daily": [
     {
-      "title": "Theory",
-      "minutes": 45,
-      "detail": "Trace a mechanism and read the minimum relevant reference."
+      "title": "Study and recall",
+      "minutes": 35,
+      "detail": "Use official docs for one current gap, then explain the concept from memory."
     },
     {
-      "title": "Independent practice",
-      "minutes": 75,
-      "detail": "Implement an unfamiliar variation and test it."
+      "title": "Hands-on implementation",
+      "minutes": 70,
+      "detail": "Build or debug one bounded feature in the flagship project."
     },
     {
-      "title": "Portfolio delivery",
-      "minutes": 100,
-      "detail": "Advance one measured project outcome."
+      "title": "Project delivery",
+      "minutes": 55,
+      "detail": "Advance one portfolio or work outcome and leave it reviewable."
     },
     {
-      "title": "Revision",
+      "title": "Evidence and communication",
       "minutes": 20,
-      "detail": "Recall yesterday’s reasoning and record an evidence link."
+      "detail": "Capture a link or decision note, practice English and record the next action."
     }
   ],
   "weekly": [
     {
       "day": "Day 1",
-      "focus": "Read or derive a concept, then set a concrete target."
+      "focus": "C#/.NET or SQL depth; explain one decision aloud."
     },
     {
       "day": "Day 2",
-      "focus": "Implement a focused example without copying it."
+      "focus": "Flagship project implementation and focused review."
     },
     {
       "day": "Day 3",
-      "focus": "Integrate into the project and add realistic edge cases."
+      "focus": "AI/RAG evaluation or security experiment."
     },
     {
       "day": "Day 4",
-      "focus": "Test a failure mode and measure performance or quality."
+      "focus": "Deployment, operations, system design or failure drill."
     },
     {
       "day": "Day 5",
-      "focus": "Review evidence, practice interview explanations and plan a follow-up."
+      "focus": "Interview practice, role search, applications and weekly review."
     },
     {
       "day": "Days 6–7",
-      "focus": "Rest or catch up. Review difficult topics after 1, 7 and 30 days."
+      "focus": "Rest or catch up; use spaced review if useful."
     }
   ]
 }

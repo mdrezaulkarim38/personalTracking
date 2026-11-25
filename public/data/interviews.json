@@ -1,780 +1,221 @@
 {
   "categories": [
-    "Python language fluency",
-    "Advanced Python engineering",
-    "Applied math and machine learning",
-    "Document data engineering",
-    "Python backend engineering",
-    "Neural networks and transformers",
-    "LLM application engineering",
-    "Embeddings and semantic search",
-    "Grounded RAG",
-    "Advanced retrieval",
-    "Evaluation and LLMOps",
-    "Defensive AI security",
-    "Business workflows and MCP",
-    "Production and distributed systems",
-    "Model adaptation and serving",
-    "Multimodal document AI",
+    "Senior .NET and C#",
+    "SQL and data integrity",
     "System design and senior ownership",
-    "Remote AI career preparation"
+    "AI application engineering",
+    "Remote communication and delivery"
   ],
   "questions": [
     {
-      "id": "oral-python-syntax-and-control-flow",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "When can truthiness discard valid values?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-python-object-identity-and-money",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "Why can a mutable default affect later calls?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-python-lists-tuples-and-deque",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "When does a deque improve on a list?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-python-dictionaries-and-sets",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "Which tuples cannot be dict keys?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-python-functions-and-scope",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "When is a closure a useful dependency boundary?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-python-modules-and-imports",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "How do you remove a cyclic import?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-python-file-i-o-and-streaming",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "Why is encoding part of the interface?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-python-errors-and-cleanup",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "Which layer turns an exception into an exit code?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-python-environments-and-packaging",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "What can editable installation hide?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-python-ruff-and-type-checking",
-      "category": "Python language fluency",
-      "difficulty": "Intermediate",
-      "question": "Which errors does static analysis miss?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-objects-and-classes",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "When is a pure function simpler?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-constructors-and-attributes",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Which data belongs in a constructor?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-class-attributes",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Where is the attribute resolved?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-instance-methods",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Why bind the behavior to the object?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-class-methods",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Why return cls(...) rather than a fixed class?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-static-methods",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Who owns this operation?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-encapsulation",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "What does a leading underscore guarantee?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-inheritance",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "When does a subtype couple you to implementation?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-overriding",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "What breaks when an override narrows input?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-polymorphism",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Which errors belong in the contract?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-abstraction-and-abcs",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "When is a structural protocol preferable?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-composition",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Why compose this pipeline?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-multiple-inheritance-and-mro",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Why can base order change behavior?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-properties-and-descriptors",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Why can a property appear to be a field?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-dataclasses",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Does frozen deep-freeze nested data?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-protocols-and-generics",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Where does runtime validation belong?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-solid-di-and-patterns",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "What change justifies an interface here?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-iterators-and-generators",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "Which iterables can be replayed?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-decorators-and-context-managers",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "When may __exit__ suppress an exception?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-pytest-fixtures-and-test-levels",
-      "category": "Advanced Python engineering",
-      "difficulty": "Intermediate",
-      "question": "What does an HTTP stub hide?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-python-event-loop-and-structured-concurrency",
-      "category": "Advanced Python engineering",
+      "id": "interview-01",
+      "category": "Senior .NET and C#",
       "difficulty": "Advanced",
-      "question": "Why does blocking I/O stall unrelated requests?",
-      "questionType": "Technical"
+      "question": "How do you propagate cancellation across an ASP.NET Core request and dependencies?",
+      "questionType": "design"
     },
     {
-      "id": "oral-advanced-python-threads-and-processes",
-      "category": "Advanced Python engineering",
+      "id": "interview-02",
+      "category": "Senior .NET and C#",
+      "difficulty": "Advanced",
+      "question": "Explain a dependency-injection lifetime bug and how you diagnose it.",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-03",
+      "category": "Senior .NET and C#",
+      "difficulty": "Advanced",
+      "question": "When use IEnumerable versus IQueryable, and what can go wrong with deferred execution?",
+      "questionType": "discussion"
+    },
+    {
+      "id": "interview-04",
+      "category": "Senior .NET and C#",
+      "difficulty": "Advanced",
+      "question": "How do you design stable validation and error contracts for API clients?",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-05",
+      "category": "Senior .NET and C#",
+      "difficulty": "Advanced",
+      "question": "How would you investigate thread-pool starvation or rising latency?",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-06",
+      "category": "SQL and data integrity",
       "difficulty": "Intermediate",
-      "question": "What makes a process pool slower on small input?",
-      "questionType": "Technical"
+      "question": "How do you use an execution plan to decide whether an index is justified?",
+      "questionType": "design"
     },
     {
-      "id": "oral-advanced-python-memory-and-profiling",
-      "category": "Advanced Python engineering",
+      "id": "interview-07",
+      "category": "SQL and data integrity",
       "difficulty": "Intermediate",
-      "question": "Why might RSS stay elevated?",
-      "questionType": "Technical"
+      "question": "How prevent a journal voucher from posting twice under concurrency?",
+      "questionType": "design"
     },
     {
-      "id": "oral-advanced-python-python-application-architecture",
-      "category": "Advanced Python engineering",
+      "id": "interview-08",
+      "category": "SQL and data integrity",
       "difficulty": "Intermediate",
-      "question": "Where should a transaction start and end?",
-      "questionType": "Technical"
+      "question": "Explain optimistic concurrency and user-visible conflict resolution.",
+      "questionType": "design"
     },
     {
-      "id": "oral-math-ml-scalars-vectors-and-matrices",
-      "category": "Applied math and machine learning",
+      "id": "interview-09",
+      "category": "SQL and data integrity",
       "difficulty": "Intermediate",
-      "question": "What does each output axis mean?",
-      "questionType": "Technical"
+      "question": "How do isolation levels affect inventory reservation?",
+      "questionType": "design"
     },
     {
-      "id": "oral-math-ml-dot-product-and-cosine",
-      "category": "Applied math and machine learning",
+      "id": "interview-10",
+      "category": "SQL and data integrity",
       "difficulty": "Intermediate",
-      "question": "When do dot and cosine rankings agree?",
-      "questionType": "Technical"
+      "question": "How migrate a large table with low downtime risk?",
+      "questionType": "design"
     },
     {
-      "id": "oral-math-ml-eigenvectors-and-svd",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "question": "When could dimensionality reduction hurt retrieval?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-math-ml-probability-and-bayes",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "question": "Why can most positive predictions be false?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-math-ml-statistics-and-uncertainty",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "question": "When should you resample by document or tenant?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-math-ml-derivatives-gradients-and-losses",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "question": "Why can a large learning rate diverge?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-math-ml-regression",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "question": "When is MAE preferable?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-math-ml-classification",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "question": "How can discrimination and calibration disagree?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-math-ml-clustering",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "question": "Why isn't a cluster automatically a label?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-math-ml-features-validation-and-leakage",
-      "category": "Applied math and machine learning",
-      "difficulty": "Intermediate",
-      "question": "Can a ticket ID leak timing?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-data-data-contracts-and-provenance",
-      "category": "Document data engineering",
-      "difficulty": "Intermediate",
-      "question": "Why separate business identity from content hash?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-data-parsing-and-cleaning",
-      "category": "Document data engineering",
-      "difficulty": "Intermediate",
-      "question": "What evidence can aggressive cleanup destroy?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-data-ocr-and-document-lifecycle",
-      "category": "Document data engineering",
-      "difficulty": "Advanced",
-      "question": "How can replay resurrect a deleted source?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-data-columnar-storage-and-batch-processing",
-      "category": "Document data engineering",
-      "difficulty": "Intermediate",
-      "question": "When is CSV adequate?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-backend-fastapi-routing-and-openapi",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "question": "When do you return 202?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-backend-pydantic-request-response-models",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "question": "When is coercion dangerous?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-backend-fastapi-dependency-injection-and-exceptions",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "question": "Who owns transaction rollback?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-backend-authentication-and-authorization",
-      "category": "Python backend engineering",
-      "difficulty": "Advanced",
-      "question": "Where does a JWT stop proving access?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-backend-sqlalchemy-and-postgresql-plans",
-      "category": "Python backend engineering",
-      "difficulty": "Advanced",
-      "question": "Why shouldn't two async tasks share a session?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-backend-async-endpoints-and-sse",
-      "category": "Python backend engineering",
-      "difficulty": "Advanced",
-      "question": "What can fail after HTTP headers are sent?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-backend-lifespan-middleware-and-testing",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "question": "How does worker count change open connections?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-backend-background-tasks-and-deployment",
-      "category": "Python backend engineering",
-      "difficulty": "Intermediate",
-      "question": "Which work may disappear on restart?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-transformers-neural-layers-and-autograd",
-      "category": "Neural networks and transformers",
-      "difficulty": "Intermediate",
-      "question": "Why do stacked linear layers collapse?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-transformers-tokenization-and-representations",
-      "category": "Neural networks and transformers",
-      "difficulty": "Intermediate",
-      "question": "Why is character count a poor token proxy?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-transformers-qkv-and-scaled-attention",
-      "category": "Neural networks and transformers",
-      "difficulty": "Intermediate",
-      "question": "Why scale logits by square root of the key dimension?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-transformers-transformer-blocks-and-architectures",
-      "category": "Neural networks and transformers",
-      "difficulty": "Intermediate",
-      "question": "Which models can attend bidirectionally?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-transformers-generation-kv-cache-and-gpu",
-      "category": "Neural networks and transformers",
-      "difficulty": "Advanced",
-      "question": "Why does cache memory rise with context?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-llm-app-provider-adapter-and-prompt-versions",
-      "category": "LLM application engineering",
-      "difficulty": "Intermediate",
-      "question": "Which provider differences leak through an abstraction?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-llm-app-structured-output-and-model-selection",
-      "category": "LLM application engineering",
-      "difficulty": "Advanced",
-      "question": "Why is schema validity insufficient?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-search-embeddings-and-multilingual-fit",
-      "category": "Embeddings and semantic search",
-      "difficulty": "Advanced",
-      "question": "Why rebuild an index when embeddings change?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-search-exact-similarity-and-rank-metrics",
-      "category": "Embeddings and semantic search",
-      "difficulty": "Intermediate",
-      "question": "How can MRR rise while recall falls?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-search-lexical-retrieval-and-filters",
-      "category": "Embeddings and semantic search",
-      "difficulty": "Advanced",
-      "question": "How does tokenization affect a SKU?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-search-pgvector-ann",
-      "category": "Embeddings and semantic search",
-      "difficulty": "Advanced",
-      "question": "When can index-time filtering reduce candidate recall?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-rag-fixed-windows-and-overlap",
-      "category": "Grounded RAG",
-      "difficulty": "Intermediate",
-      "question": "When does overlap waste context?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-rag-sentence-and-recursive-splitting",
-      "category": "Grounded RAG",
-      "difficulty": "Intermediate",
-      "question": "How can sentence splitting fail on abbreviations?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-rag-structure-aware-chunks",
-      "category": "Grounded RAG",
-      "difficulty": "Advanced",
-      "question": "When should a section be divided further?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-rag-context-citations-and-abstention",
-      "category": "Grounded RAG",
-      "difficulty": "Advanced",
-      "question": "Can the correct document still lack the claimed evidence?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-rag-index-consistency-and-lifecycle",
-      "category": "Grounded RAG",
-      "difficulty": "Advanced",
-      "question": "How does rollback avoid resurrecting removed sources?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-rag-enterprise-citation-verification",
-      "category": "Grounded RAG",
-      "difficulty": "Advanced",
-      "question": "Why isn't a valid ID sufficient?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-rag-semantic-parent-child-and-contextual-chunks",
-      "category": "Advanced retrieval",
-      "difficulty": "Advanced",
-      "question": "Can a parent cross a permission boundary?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-rag-hybrid-and-reranking",
-      "category": "Advanced retrieval",
-      "difficulty": "Advanced",
-      "question": "What can reranking never recover?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-advanced-rag-rewrites-compression-and-multi-hop",
-      "category": "Advanced retrieval",
-      "difficulty": "Advanced",
-      "question": "When should rewriting be bypassed?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-eval-gold-sets-and-retrieval-answer-separation",
-      "category": "Evaluation and LLMOps",
-      "difficulty": "Advanced",
-      "question": "When should an answer have been impossible?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-eval-calibrating-model-judges",
-      "category": "Evaluation and LLMOps",
-      "difficulty": "Advanced",
-      "question": "Which slice needs human review?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-eval-version-lineage-and-staged-rollout",
-      "category": "Evaluation and LLMOps",
-      "difficulty": "Advanced",
-      "question": "When does a good average hide a dangerous slice?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-eval-drift-feedback-and-monitoring",
-      "category": "Evaluation and LLMOps",
-      "difficulty": "Advanced",
-      "question": "Why can approval rate mislead?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-security-tenant-isolation-and-privacy",
-      "category": "Defensive AI security",
-      "difficulty": "Advanced",
-      "question": "What can a privileged service account bypass?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-security-prompt-injection-defenses-and-responsible-ai",
-      "category": "Defensive AI security",
-      "difficulty": "Advanced",
-      "question": "Which boundary remains effective even if model output is wrong?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-security-safe-query-compilation",
-      "category": "Defensive AI security",
-      "difficulty": "Advanced",
-      "question": "Why does validating SQL syntax fail to establish authorization?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-security-limits-clarification-and-audit",
-      "category": "Defensive AI security",
-      "difficulty": "Advanced",
-      "question": "When should the assistant ask a follow-up?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-agents-deterministic-and-model-led-planning",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "question": "When does model-led planning justify its cost?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-agents-agent-evaluation-and-team-patterns",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "question": "Can different trajectories be valid?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-agents-tool-calling-and-mcp-primitives",
-      "category": "Business workflows and MCP",
-      "difficulty": "Intermediate",
-      "question": "Who executes a model's tool request?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-agents-mcp-authorization-and-compatibility",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "question": "Where does execution authority belong?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-agents-state-checkpoints-and-approval",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "question": "What if the approver changes roles before execution?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-agents-failure-recovery-and-reconciliation",
-      "category": "Business workflows and MCP",
-      "difficulty": "Advanced",
-      "question": "When must a human resolve ambiguity?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-production-redis-cache-and-rate-limits",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "question": "When is fail-open unacceptable?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-production-rabbitmq-outbox-and-workers",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "question": "How do consumer acks differ from publisher confirms?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-production-docker-ci-and-cloud-staging",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "question": "Why does graceful drain matter?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-production-opentelemetry-traces-and-metrics",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "question": "Which metadata should never become a label?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-production-capacity-latency-and-cost",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "question": "When should a tenant get dedicated capacity?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-production-timeouts-retries-and-circuit-breakers",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "question": "How do retries amplify an incident?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-production-slo-restore-and-rollback",
-      "category": "Production and distributed systems",
-      "difficulty": "Advanced",
-      "question": "Can healthy uptime hide an AI quality outage?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-adaptation-open-weights-quantization-and-serving",
-      "category": "Model adaptation and serving",
-      "difficulty": "Intermediate",
-      "question": "Why can batching hurt first-token latency?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-adaptation-fine-tuning-lora-and-qlora",
-      "category": "Model adaptation and serving",
-      "difficulty": "Intermediate",
-      "question": "When is current knowledge better served by RAG?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-multimodal-ocr-vision-and-multimodal-retrieval",
-      "category": "Multimodal document AI",
-      "difficulty": "Intermediate",
-      "question": "When is text extraction enough?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-multimodal-media-lifecycle-and-validation",
-      "category": "Multimodal document AI",
-      "difficulty": "Intermediate",
-      "question": "Which amounts can be verified deterministically?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-senior-system-design-and-migrations",
+      "id": "interview-11",
       "category": "System design and senior ownership",
       "difficulty": "Advanced",
-      "question": "What evidence would justify splitting API and worker further?",
-      "questionType": "Technical"
+      "question": "Design a multi-tenant document assistant with strict access controls and citations.",
+      "questionType": "design"
     },
     {
-      "id": "oral-senior-architecture-review-and-standards",
+      "id": "interview-12",
       "category": "System design and senior ownership",
       "difficulty": "Advanced",
-      "question": "What new evidence would make you retire a standard?",
-      "questionType": "Technical"
+      "question": "Describe a technical decision with alternatives, trade-offs and evidence.",
+      "questionType": "design"
     },
     {
-      "id": "oral-senior-mentoring-and-communication",
+      "id": "interview-13",
       "category": "System design and senior ownership",
       "difficulty": "Advanced",
-      "question": "How did you verify the person could repeat the reasoning?",
-      "questionType": "Technical"
+      "question": "How plan an API/database migration with rollback?",
+      "questionType": "design"
     },
     {
-      "id": "oral-remote-python-and-sql-interviews",
-      "category": "Remote AI career preparation",
-      "difficulty": "Intermediate",
-      "question": "Why did this index help?",
-      "questionType": "Technical"
-    },
-    {
-      "id": "oral-remote-ai-design-and-english-communication",
-      "category": "Remote AI career preparation",
+      "id": "interview-14",
+      "category": "System design and senior ownership",
       "difficulty": "Advanced",
-      "question": "Which experiment would change your recommendation?",
-      "questionType": "Technical"
+      "question": "How split an ambiguous request into safe increments?",
+      "questionType": "design"
     },
     {
-      "id": "oral-remote-remote-role-analysis-and-portfolio",
-      "category": "Remote AI career preparation",
-      "difficulty": "Intermediate",
-      "question": "Which claim is strongest and how can a reviewer verify it?",
-      "questionType": "Technical"
+      "id": "interview-15",
+      "category": "System design and senior ownership",
+      "difficulty": "Advanced",
+      "question": "Describe an incident, your role, communication and follow-up.",
+      "questionType": "design"
     },
     {
-      "id": "oral-remote-remote-application-feedback-loop",
-      "category": "Remote AI career preparation",
+      "id": "interview-16",
+      "category": "System design and senior ownership",
+      "difficulty": "Advanced",
+      "question": "How review a design with uncertain requirements and workload?",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-17",
+      "category": "System design and senior ownership",
+      "difficulty": "Advanced",
+      "question": "Give a specific example of helping another engineer succeed.",
+      "questionType": "discussion"
+    },
+    {
+      "id": "interview-18",
+      "category": "AI application engineering",
+      "difficulty": "Advanced",
+      "question": "Trace a RAG answer from ingestion to generation; where can it fail?",
+      "questionType": "discussion"
+    },
+    {
+      "id": "interview-19",
+      "category": "AI application engineering",
+      "difficulty": "Advanced",
+      "question": "How evaluate a chunking or reranking change?",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-20",
+      "category": "AI application engineering",
+      "difficulty": "Advanced",
+      "question": "How should a system respond when sources do not support an answer?",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-21",
+      "category": "AI application engineering",
+      "difficulty": "Advanced",
+      "question": "How protect against instructions embedded in retrieved documents?",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-22",
+      "category": "AI application engineering",
+      "difficulty": "Advanced",
+      "question": "How expose an AI tool without unauthorized actions?",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-23",
+      "category": "AI application engineering",
+      "difficulty": "Advanced",
+      "question": "Compare local and hosted inference for privacy-sensitive work.",
+      "questionType": "discussion"
+    },
+    {
+      "id": "interview-24",
+      "category": "AI application engineering",
+      "difficulty": "Advanced",
+      "question": "What should you log while minimizing sensitive prompt data?",
+      "questionType": "discussion"
+    },
+    {
+      "id": "interview-25",
+      "category": "AI application engineering",
+      "difficulty": "Advanced",
+      "question": "How regression-test prompt and provider changes?",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-26",
+      "category": "Remote communication and delivery",
       "difficulty": "Intermediate",
-      "question": "What distinguishes a repeated skills gap from poor role fit?",
-      "questionType": "Technical"
+      "question": "Give an async update with progress, next step, blocker and decision needed.",
+      "questionType": "discussion"
+    },
+    {
+      "id": "interview-27",
+      "category": "Remote communication and delivery",
+      "difficulty": "Intermediate",
+      "question": "How verify a remote role can hire/contract in Bangladesh?",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-28",
+      "category": "Remote communication and delivery",
+      "difficulty": "Intermediate",
+      "question": "Explain a project to a non-specialist in two minutes.",
+      "questionType": "design"
+    },
+    {
+      "id": "interview-29",
+      "category": "Remote communication and delivery",
+      "difficulty": "Intermediate",
+      "question": "What belongs in an async handoff when blocked?",
+      "questionType": "discussion"
+    },
+    {
+      "id": "interview-30",
+      "category": "Remote communication and delivery",
+      "difficulty": "Intermediate",
+      "question": "How respond when review feedback conflicts with your design?",
+      "questionType": "design"
     }
   ]
 }

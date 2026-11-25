@@ -1,89 +1,61 @@
-# AI Engineer Career Management System
+# Senior Remote .NET + AI Career Studio
 
-A browser-local career tracker for an experienced .NET engineer in Bangladesh transitioning into remote Applied AI and AI Backend roles. The curriculum uses Python as its primary implementation language and uses .NET experience as enterprise backend evidence.
+A browser-local career workspace for **Md. Rezaul Karim**, a Bangladesh-based software engineer targeting senior remote backend and AI engineering roles. The plan builds on professional C#, ASP.NET Core, SQL Server and ERP/CRM/accounting experience, then develops stronger evidence in production AI integration, system design, operations and technical leadership.
 
-- **Remote jobs** tracks eligibility, UTC overlap, application dates, portfolio evidence, pipeline status and follow-ups.
-- **Roadmap and topic syllabus** cover 44 learning units and 18 stages with exercises, target depth, evidence and assessments.
-- **Portfolio** defines 13 builds from a Python CLI through enterprise RAG, ERP workflows and a production AI SaaS capstone.
-- **Study schedule** offers 4-, 6- and 8-hour daily plans and project assessment gates.
+## Career direction
 
-## Stack
+**Positioning:** Senior .NET backend engineer specializing in dependable AI integration for business software.
 
-- React 19, TypeScript strict mode, Vite, React Router
-- Tailwind CSS 4 plus a small application stylesheet for the design system
-- Lucide React, Recharts, Zod
-- LocalStorage for user progress and external JSON for static content
-- Vitest, React Testing Library, jsdom
+**Target roles:** Senior .NET Backend Engineer, Senior ASP.NET Core Developer, Senior Backend Software Engineer, Senior AI Integration Engineer, Senior Applied AI Engineer, Senior AI Backend Engineer, Senior LLM Application Engineer and Senior RAG Engineer.
 
-There is no backend, server-side account, database service, or build-time content generator. Vite serves the frontend and JSON assets.
+The workspace distinguishes professional experience, existing personal projects and planned portfolio work. Verify every project claim against its repository before publishing. Python is a supporting skill for data/evaluation work and vacancies that require it; .NET remains the lead specialization.
+
+## What is inside
+
+- **Today:** one unfinished task with a learn, do and save evidence sequence.
+- **Learning path:** four focused views—This week, All weeks, AI topics and Career guide. The six-stage, 44-week path covers .NET backend depth, system design, AI engineering, operations, senior ownership, remote applications and adapting to AI-assisted development. Each week links to a focused starting reference.
+- **Portfolio:** six ordered tracks—polish the existing chatbot and summarizer; build a .NET accounting/inventory API and a measured RAG system; combine those foundations in a business AI capstone; keep a separate senior-ownership casebook. The casebook is evidence documentation, not a software build.
+- **Settings:** theme and local progress backups.
+
+The navigation has four pages: Today, Learning path, Projects and Settings. Old practice, job tracking, journal and analytics pages were removed to keep the workspace focused. Related study prompts and reference data remain available through the weekly learning path where relevant.
+
+## Start here
+
+1. Confirm CV dates and current employment status. The supplied resume lists Chainomation as “December 2026 – Present”; verify the date before sending applications because the plan was prepared on 25 November 2026.
+2. Review the dashboard and start the CV evidence audit in week 1.
+3. Polish the existing chatbot and summarizer before creating unrelated projects.
+4. Apply to suitable senior roles as soon as your evidence matches; do not wait for the whole roadmap.
+5. Use the weekly plan as a flexible guide: 12–20 focused hours per week, balanced with work, rest and English communication.
+
+## Product stack
+
+- React 19, TypeScript strict mode, Vite and React Router
+- Tailwind CSS 4 with an application design system
+- Lucide React, Recharts and Zod
+- Browser LocalStorage for progress; static curriculum JSON under public/data/
+- Vitest and React Testing Library
+
+There is no backend, account service or cloud sync. Static content is fetched and validated at runtime. User progress is stored in the browser and can be exported/restored as JSON.
+
+The root-level js/, css/ and data/ directories are retained from the earlier vanilla implementation for migration/history. The active React app does not load them; edit public/data/ for current curriculum content.
 
 ## Run locally
 
-Use Node.js 20.19+ or 22.12+ (Node 24 recommended) and npm:
+Use Node.js 20.19+ or 22.12+ and npm:
 
-```sh
-npm install
-npm run dev
-```
+- npm install
+- npm run dev
 
-Open `http://localhost:5500`. Vite uses port 5500 to match the previous static app origin, allowing the browser to see the existing LocalStorage key when the old app was opened at `http://localhost:5500`. Stop any old server on that port first. LocalStorage is origin-scoped: if your previous app used another hostname or port, export its progress there and import that JSON into this app. Production build and preview:
+Open http://localhost:5500. For a production build and local preview, use npm run build and npm run preview.
 
-```sh
-npm run build
-npm run preview
-```
+The project has typecheck and test scripts (npm run typecheck, npm test). They have not been run as part of this content and UI update.
 
-Quality checks:
+## Content and progress
 
-```sh
-npm run typecheck
-npm test
-```
+public/data/ is the active curriculum source. Roadmap tasks, topic IDs, project milestone IDs, interview questions and challenge IDs changed for curriculum version 7. On the next load, the migration gate previews affected records and requests confirmation. Existing journals, dated planner items and study sessions are preserved where valid; completion flags tied to replaced curriculum identities are not mapped to unrelated work. Export a backup before confirming migration if you want a separate recovery file.
 
-## Project structure
+User data remains local to the browser origin. Export backups periodically. Import is a full replacement after preview and confirmation.
 
-```text
-public/data/                 Static curriculum JSON, fetched at runtime
-src/app/                     Router, app entry, progress context
-src/components/              Shell and shared interface components
-src/pages/                   Dashboard, roadmap, planner, projects, practice, journal, analytics, settings
-src/services/dataService.ts  Fetch + Zod validation of JSON assets
-src/services/storage/        Versioned LocalStorage, migrations, import/export
-src/types/                   Shared application data and progress types
-src/utils/                   Date and streak helpers
-src/styles/                  Tailwind entry and responsive design system
- tests/                       Storage, migration, backup, progress, and date tests
-backups/vanilla-python-career-guide/  Original Vanilla JS source snapshot
-```
+## Evidence standard
 
-## Static curriculum data
-
-The front end loads and validates its curriculum from `public/data/`. `roadmap.json` lists 44 ordered learning units. `syllabus.json` provides 18 stages and detailed topics with stable identifiers, four-part time budgets, practice, oral checks and pass criteria. Canonical resource names referenced by either must exist in `resources.json`. The other assets define the diagnostic profile, schedules, 12 portfolio builds, technology selection, challenges, interview questions and remote readiness.
-
-Browser storage keeps topic assessment evidence, remote applications, study records and preferences. Settings exports include these records.
-
-## LocalStorage and migrations
-
-The storage service uses `ai-career-guide-v1` and schema version 4, with curriculum version 5. UI components do not access LocalStorage directly except the recovery/export boundary; state changes go through the context and validated storage service. Missing data uses a safe empty state. Invalid JSON is not overwritten automatically.
-
-On an older saved version, the migration gate previews record counts. To migrate browser storage directly, open the React app at the exact same scheme, hostname, and port used for the Vanilla app (the default is `http://localhost:5500`). The storage schema remains version 4; the curriculum version has advanced as project identities and milestone catalogs change. Existing saved records require explicit confirmation before migration. Roadmap, checklist, challenge, interview, and changed project milestone completion flags are not mapped to unrelated work. Journal entries, valid dated planner tasks/goals, study session dates/durations/topics, and notes for matching project identities are carried forward. Old week references on sessions are detached from the new curriculum, and the selected week resets to week 1. The old LocalStorage value remains untouched until the user chooses migration; the user can download a source backup first.
-
-The original Vanilla JS implementation is kept in `backups/vanilla-python-career-guide/` as a source snapshot. It contains source and content files, not browser LocalStorage: browser data cannot be read from another device or copied into project files. Migration reads the saved key in the user's current browser.
-
-## Backup and restore
-
-Settings → Export JSON downloads a versioned backup containing user progress and settings. Restore reads and validates the file, previews affected record counts, asks for confirmation, and creates an independent recovery copy of current progress before replacing the active state. Backups from the prior Vanilla JS format are supported when their version and data validate. Invalid or future-schema backups are rejected without changing active progress. Reset asks for confirmation and downloads a backup before clearing the active state.
-
-Backups are local files; store them somewhere safe. Clearing site data in the browser removes the active LocalStorage copy.
-
-## Tests
-
-Tests cover storage shape validation/persistence, roadmap progress math, migration preservation boundaries, legacy backup import, invalid backup rejection, and local date/streak calculations. UI flows are built from these service functions, but visual browser automation is not included in this repository.
-
-## Limitations
-
-- Progress is device/browser-local; there is no account sync or server backup.
-- Curriculum content is static JSON and is not editable in the application.
-- Backup import is a full replacement after explicit confirmation rather than a merge.
-- Study time is based only on sessions the learner records.
-- Package installation and checks require npm registry access or a populated npm cache.
+For senior-role claims, record the problem, constraints, alternatives, decision, your ownership, delivery steps, tests, operational behavior, result and follow-up. Use metrics only when you can verify them. A local demo is not evidence of production scale; planned work is not completed experience.
